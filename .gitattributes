@@ -1,0 +1,12 @@
+# Normaliza los finales de línea: LF en el repositorio, nativo en cada máquina.
+# Evita diffs falsos cuando el equipo trabaja en Windows y macOS.
+* text=auto eol=lf
+
+# Binarios: nunca tocar.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
+*.woff  binary
+*.woff2 binary
