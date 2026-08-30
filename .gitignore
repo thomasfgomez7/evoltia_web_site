@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Plataformas
+.vercel/
+.netlify/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# Temporales
+*.log
+tmp/

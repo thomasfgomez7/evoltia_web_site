@@ -1,0 +1,83 @@
+id,pagina,slug,seccion,componente,tipo_contenido,estado,fuente,responsable,prioridad,notas
+HOME-01,Home,/,Meta,SEO,meta_title,listo,derivado,Evoltia,P0,"44 caracteres"
+HOME-02,Home,/,Meta,SEO,meta_description,listo,derivado,Evoltia,P0,"149 caracteres"
+HOME-03,Home,/,Hero,Hero,etiqueta,listo,manual §07,Evoltia,P0,"Bajada descriptiva del logo: CONSULTORIA & TRANSFORMACION DIGITAL"
+HOME-04,Home,/,Hero,Hero,h1_claim,listo,manual §07,Evoltia,P0,"Claim literal. No se edita. Dos lineas. Punto en Magenta Pulso"
+HOME-05,Home,/,Hero,Hero,bajada,listo,pieza web-hero,Evoltia,P0,"Literal de web-hero-1920x720.png"
+HOME-06,Home,/,Hero,Button,cta_primario,listo,pieza web-hero,Evoltia,P0,"Agenda un diagnostico. Fija el registro voseo de todo el sitio"
+HOME-07,Home,/,Hero,Button,cta_secundario,listo,derivado,Evoltia,P0,"Como trabajamos"
+HOME-08,Home,/,Hero,Hero,microcopy,listo,cliente,Evoltia,P0,"Confirmado por el cliente: primera conversacion sin costo, respuesta en 48 h habiles"
+HOME-09,Home,/,Confianza,LogoBar,logo_aberturas_fisa,pendiente_archivo,cliente,Cliente,P1,"Unico cliente a publicar. Falta el archivo en site/assets/img/clientes/aberturas-fisa.png. El caso de estudio se trabaja en otra iteracion"
+HOME-10,Home,/,Problema,SectionHeader,h2_frase,listo,manual §07-A,Evoltia,P0,"Toda empresa esta en orbita."
+HOME-11,Home,/,Problema,Grafismo,cadena_separador,listo,manual §05,Evoltia,P0,"Cadena de tres nodos a -46 grados como separador"
+HOME-12,Home,/,Problema,SectionHeader,bajada,listo,manual §01,Evoltia,P0,"Del manifiesto"
+HOME-13,Home,/,Problema,FeatureCard,tarjeta_1,listo,manual §06,Evoltia,P0,"La informacion vive en seis planillas. Ejemplo literal de asi si"
+HOME-14,Home,/,Problema,FeatureCard,tarjeta_2,listo,manual §06,Evoltia,P0,"Tu equipo carga los mismos datos tres veces. Ejemplo literal"
+HOME-15,Home,/,Problema,FeatureCard,tarjeta_3,listo,derivado,Evoltia,P0,"Crecieron mas rapido que la operacion"
+HOME-16,Home,/,Servicios,SectionHeader,h2_frase,listo,manual §07-A,Evoltia,P0,"Primero el negocio. Despues el software. Bajada de la seccion confirmada por el cliente"
+HOME-17,Home,/,Servicios,ServiceCard,servicio_1,a_validar,derivado,Cliente,P0,"Diagnostico y hoja de ruta. Incorpora frase §07-B"
+HOME-18,Home,/,Servicios,ServiceCard,servicio_2,a_validar,derivado,Cliente,P0,"Automatizacion de procesos. Frase §07-B literal"
+HOME-19,Home,/,Servicios,ServiceCard,servicio_3,a_validar,derivado,Cliente,P0,"Datos e indicadores. Frase §07-C literal"
+HOME-20,Home,/,Servicios,ServiceCard,servicio_4,a_validar,derivado,Cliente,P0,"Inteligencia artificial aplicada. Frase §07-C literal"
+HOME-21,Home,/,Servicios,ServiceCard,servicio_5,a_validar,derivado,Cliente,P0,"Implementacion. Frase §07-D literal"
+HOME-22,Home,/,Servicios,ServiceCard,servicio_6,a_validar,derivado,Cliente,P0,"Adopcion y gestion del cambio. Frase §07-D literal"
+HOME-23,Home,/,Metodo,ProcessStep,etapa_01,listo,pieza post-03-metodo,Evoltia,P0,"Diagnostico. 4 semanas. Datos, no impresiones."
+HOME-24,Home,/,Metodo,ProcessStep,etapa_02,listo,pieza post-03-metodo,Evoltia,P0,"Priorizacion. Por impacto en el negocio."
+HOME-25,Home,/,Metodo,ProcessStep,etapa_03,listo,pieza post-03-metodo,Evoltia,P0,"Implementacion. Con tu equipo adentro."
+HOME-26,Home,/,Metodo,ProcessStep,etapa_04,listo,pieza post-03-metodo,Evoltia,P0,"Adopcion. Hasta que funciona solo."
+HOME-27,Home,/,Metodo,ProcessStep,entregables,a_validar,derivado,Cliente,P1,"Un entregable por etapa. Confirmar con el cliente"
+HOME-28,Home,/,Metodo,SectionHeader,frase_cierre,listo,manual §07-B,Evoltia,P0,"Si no se mide, no lo llamamos transformacion."
+HOME-29,Home,/,Caso,CaseHighlight,caso_destacado,bloqueado,pendiente,Cliente,P2,"Requiere autorizacion del sponsor. Sin consentApproved no se renderiza"
+HOME-30,Home,/,PorQue,SectionHeader,h2_frase,listo,manual §07-A,Evoltia,P0,"No vendemos tecnologia: disenamos decisiones."
+HOME-31,Home,/,PorQue,FeatureList,diferencial_1,listo,manual §01,Evoltia,P0,"Empezamos por la decision, no por la herramienta"
+HOME-32,Home,/,PorQue,FeatureList,diferencial_2,listo,manual §01,Evoltia,P0,"Cifras, plazos y entregables antes que adjetivos. Personalidad Concretos"
+HOME-33,Home,/,PorQue,FeatureList,diferencial_3,listo,manual §01,Evoltia,P0,"Trabajamos con tu equipo adentro"
+HOME-34,Home,/,PorQue,FeatureList,diferencial_4,listo,manual §01,Evoltia,P0,"Nos quedamos hasta que funciona solo"
+HOME-35,Home,/,FAQ,Accordion,faq_duracion,listo,manual §07-B,Evoltia,P1,"Cuatro semanas. Confirmado por el banco de frases"
+HOME-36,Home,/,FAQ,Accordion,faq_tamano,listo,manual §01,Evoltia,P1,"Empresas medianas. Direccion general, operaciones y finanzas"
+HOME-37,Home,/,FAQ,Accordion,faq_sistemas,listo,derivado,Evoltia,P1,
+HOME-38,Home,/,FAQ,Accordion,faq_desarrollo,placeholder,pendiente,Cliente,P1,"Definir si Evoltia implementa, integra proveedores o ambas"
+HOME-39,Home,/,FAQ,Accordion,faq_precio,placeholder,pendiente,Cliente,P1,"Definir politica de precios"
+HOME-40,Home,/,Contacto,SectionHeader,h2,listo,derivado,Evoltia,P0,"Contanos como trabaja tu operacion hoy."
+HOME-41,Home,/,Contacto,ContactForm,formulario,listo,derivado,Evoltia,P0,"Conversion primaria del sitio"
+HOME-42,Home,/,Contacto,ContactForm,texto_consentimiento,placeholder,pendiente,Cliente,P0,"Depende de la politica de privacidad"
+HOME-43,Home,/,Contacto,FeatureList,que_pasa_despues,listo,derivado,Evoltia,P0,"Tres pasos posteriores al envio"
+HOME-44,Home,/,Footer,Footer,descripcion,listo,manual §01,Evoltia,P0,"Literal: empresas medianas que ya crecieron mas de lo que su operacion aguanta"
+HOME-45,Home,/,Footer,Footer,datos_societarios,placeholder,pendiente,Cliente,P1,"Razon social CUIT y domicilio"
+HOME-46,Home,/,Footer,Footer,linkedin,placeholder,pendiente,Cliente,P1,
+HOME-47,Home,/,Global,CookieBanner,banner,condicional,derivado,Evoltia,P1,"Innecesario si se usa analitica sin cookies"
+SRV-01,Servicios,/servicios,Meta,SEO,meta,listo,derivado,Evoltia,P1,
+SRV-02,Servicios,/servicios,Hero,Hero,h1,listo,derivado,Evoltia,P1,
+SRV-03,Servicios,/servicios,Grilla,ServiceCard,seis_servicios,a_validar,derivado,Cliente,P1,"Reutiliza HOME-17 a HOME-22"
+SRV-04,Servicios,/servicios,Selector,ServiceFinder,arbol_decision,listo,derivado,Evoltia,P2,"Modulo de mayor valor para calificar leads"
+MET-01,Como trabajamos,/como-trabajamos,Meta,SEO,meta,listo,derivado,Evoltia,P0,
+MET-02,Como trabajamos,/como-trabajamos,Hero,Hero,h1,listo,derivado,Evoltia,P0,
+MET-03,Como trabajamos,/como-trabajamos,Etapas,ProcessTimeline,detalle_4_etapas,listo,pieza post-03-metodo,Evoltia,P0,
+MET-04,Como trabajamos,/como-trabajamos,Etapas,ProcessStep,duraciones,placeholder,pendiente,Cliente,P1,"Solo el diagnostico tiene duracion confirmada: 4 semanas"
+MET-05,Como trabajamos,/como-trabajamos,Entregables,FeatureList,lista_entregables,a_validar,derivado,Cliente,P0,
+MET-06,Como trabajamos,/como-trabajamos,Principios,FeatureList,principios,listo,manual §01,Evoltia,P1,"Personalidad: directos, concretos, cercanos, expertos"
+MET-07,Como trabajamos,/como-trabajamos,NoHacemos,FeatureList,que_no_hacemos,a_validar,manual §06,Cliente,P1,"Validar que el cliente este comodo con estas exclusiones"
+NOS-01,Nosotros,/nosotros,Meta,SEO,meta,listo,derivado,Evoltia,P1,
+NOS-02,Nosotros,/nosotros,Hero,RichText,manifiesto,listo,manual §01,Evoltia,P1,"Manifiesto literal del manual"
+NOS-03,Nosotros,/nosotros,Marca,RichText,significado_del_nombre,listo,manual §01,Evoltia,P1,"Evol + Volt + IA. Tres lecturas en una palabra"
+NOS-04,Nosotros,/nosotros,Marca,RichText,significado_isotipo,listo,manual §01,Evoltia,P1,"Orbita cerrada y cadena que la atraviesa"
+NOS-05,Nosotros,/nosotros,Equipo,TeamCard,miembros,placeholder,pendiente,Cliente,P1,"Nombres roles fotos y LinkedIn"
+NOS-06,Nosotros,/nosotros,Historia,RichText,origen,placeholder,pendiente,Cliente,P1,"Por que se formo Evoltia"
+CON-01,Contacto,/contacto,Meta,SEO,meta,listo,derivado,Evoltia,P0,
+CON-02,Contacto,/contacto,Form,ContactForm,formulario,listo,derivado,Evoltia,P0,
+CON-03,Contacto,/contacto,Canales,RichText,email,listo,manual,Evoltia,P0,"hola@evoltia.com literal del manual"
+CON-04,Contacto,/contacto,Canales,RichText,telefono,placeholder,pendiente,Cliente,P1,
+CON-05,Contacto,/contacto,Canales,FeatureList,que_pasa_despues,listo,derivado,Evoltia,P0,
+GRA-01,Gracias,/gracias,Todo,RichText,confirmacion,listo,derivado,Evoltia,P0,"noindex. Punto de disparo de la conversion"
+LEG-01,Privacidad,/legales/politica-de-privacidad,Todo,LegalDocument,texto,placeholder,pendiente,Cliente,P0,"Requiere revision legal profesional"
+LEG-02,Cookies,/legales/politica-de-cookies,Todo,LegalDocument,texto,placeholder,pendiente,Cliente,P0,"Innecesaria si no se usan cookies no esenciales"
+LEG-03,Terminos,/legales/terminos-y-condiciones,Todo,LegalDocument,texto,placeholder,pendiente,Cliente,P1,"Requiere revision legal profesional"
+E404-01,404,/404,Todo,RichText,mensaje,listo,derivado,Evoltia,P1,
+GLB-01,Global,-,Marca,Logo,logo_svg,bloqueado,pendiente,Cliente,P0,"El kit entrega PNG. Hacen falta SVG de las 4 versiones y los 4 isotipos"
+GLB-02,Global,-,Marca,Logo,logo_png_4_versiones,listo,kit de marca,Evoltia,P0,"principal, negativo, blanco, tinta. En site/assets/img"
+GLB-03,Global,-,Marca,Logo,isotipo_png_4_versiones,listo,kit de marca,Evoltia,P0,"color, blanco, negativo, tinta"
+GLB-04,Global,-,Marca,Tipografia,poppins,listo,manual §04,Evoltia,P0,"Pesos 300 400 500 700. SIL Open Font License"
+GLB-05,Global,-,Marca,Color,lavanda,a_validar,muestreado,Cliente,P1,"Nombrada en §03 pero no tabulada. Se usa #CEC4E8 del hero oficial"
+GLB-06,Global,-,Marca,Grafismo,cadena_y_orbita,listo,manual §05,Evoltia,P0,"Reemplaza al set de iconos. El manual dice que con esto alcanza"
+GLB-07,Global,-,SEO,OpenGraph,imagen_og,placeholder,derivado,Evoltia,P1,"Generar con next/og. Base: fondo-04-degrade-limpio del kit"
+GLB-08,Global,-,Imagen,Fotografia,banco_de_imagenes,no_aplica,manual §05,-,P3,"El manual descarta ilustraciones y texturas de stock"
