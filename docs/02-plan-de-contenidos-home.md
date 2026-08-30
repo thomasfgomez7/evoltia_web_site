@@ -41,17 +41,27 @@ Confirmado por el cliente.
 
 ---
 
-## 2 · Barra de confianza
+## 2 · Casos de éxito
 
-**Copy:** Empresas que ya cambiaron de trayectoria — confirmado por el cliente.
+**Posición:** inmediatamente después del hero. Es el bloque al que se le da más peso en la página, por pedido del cliente.
 
-**Un solo logo: Aberturas FISA.** Es el único cliente que se publica en esta iteración; el caso de estudio se trabaja aparte.
+**Etiqueta:** CASOS DE ÉXITO
+**H2 (frase §07-B):** Nos quedamos hasta que funciona solo.
 
-**Tratamiento:** el logo se apoya sobre una **tarjeta Blanca**. Es el uso que el §03 le da al Blanco —superficie apoyada sobre Papel— y además resuelve que el archivo del cliente venga con fondo blanco en lugar de transparente, que sobre Papel se notaría como un recuadro.
+**Un solo caso: Aberturas FISA.** Tarjeta a dos columnas —logo a la izquierda, contenido a la derecha— que se linealiza en móvil.
 
-**Archivo esperado:** `site/assets/img/clientes/aberturas-fisa.png`. Mientras no exista, el componente muestra una reserva con el nombre del cliente en lugar de una imagen rota.
+| Campo | Contenido |
+|---|---|
+| Sector | Fabricación de aberturas de aluminio · Villa Bosch, Buenos Aires |
+| Título | De la planilla impresa al proceso digital |
+| Texto | `[EJEMPLO]` A reemplazar por el cliente |
+| Enlace | `casos/aberturas-fisa/` |
 
-> **Nota de copy:** el rótulo está en plural y hoy acompaña a un solo logo. Se mantiene como lo aprobó el cliente. Si se prefiere ajustarlo mientras haya una sola marca, la alternativa en voz de marca sería **«El primero que cambió de trayectoria.»**
+**Tratamiento del logo:** 340 px de ancho sobre la tarjeta Blanca, que es el uso que el §03 le da al Blanco sobre Papel. El panel del logo **no** lleva fondo Papel: el archivo del cliente trae fondo blanco y sobre cualquier otro color se recortaría como un rectángulo. Los dos paneles se separan con un filete.
+
+**Interacción:** toda la tarjeta es clicable a través del enlace del título, expandido con `::after`. El lector de pantalla anuncia **un solo enlace** con texto significativo.
+
+**Navegación:** se sumó «Casos» al menú principal, que queda en cinco ítems. Los enlaces se fijaron con `white-space: nowrap` y el menú de escritorio pasa a mostrarse recién a partir de 1100 px; por debajo, cinco ítems más el CTA no entran en una línea.
 
 ---
 
@@ -121,9 +131,11 @@ Las cuatro etapas y sus bajadas son **literales de la pieza `post-03-metodo`**. 
 
 ---
 
-## 6 · Caso destacado
+## 6 · Página del caso — `casos/aberturas-fisa/`
 
-`[BLOQUEADO — requiere autorización del sponsor]`
+Publicada con **contenido de ejemplo**, marcado como tal en la propia página. Estructura: migas de pan · cabecera con el título del caso · ficha (logo, sector, alcance, duración) · punto de partida · qué hicimos · resultados con tres huecos de métrica · cita del cliente · CTA.
+
+`[PENDIENTE CLIENTE]` Texto real, métricas con su línea base, duración y cita con nombre y cargo.
 
 El componente no se renderiza sin `consentApproved`. Estructura cuando se libere: contexto → problema → qué hicimos → resultado con cifra → cita del cliente. **Sin métricas inventadas:** el §06 exige cifras reales ("Reducimos 40 % el tiempo de cierre contable en cuatro meses"), y una cifra inventada rompe exactamente la promesa de credibilidad sobre la que está construida la marca.
 
@@ -191,9 +203,12 @@ Una por sección. Ninguna se repite.
 | Sección | Frase | Grupo |
 |---|---|---|
 | Hero | Evolución con dirección. | Claim |
+| Casos de éxito | Nos quedamos hasta que funciona solo. | B |
 | El problema | Toda empresa está en órbita. | A |
 | Servicios | Primero el negocio. Después el software. | A |
 | Método | Si no se mide, no lo llamamos transformación. | B |
 | Por qué Evoltia | No vendemos tecnología: diseñamos decisiones. | A |
 
-Quedan sin usar y disponibles para otras páginas: *El cambio se planifica. La ventaja se construye.* · *Trazamos la trayectoria. Ustedes la recorren.* · *Menos PowerPoint. Más producción.* · *Nos quedamos hasta que funciona solo.* · *Tu operación, sin fricción.*
+Quedan sin usar y disponibles para otras páginas: *El cambio se planifica. La ventaja se construye.* · *Trazamos la trayectoria. Ustedes la recorren.* · *Menos PowerPoint. Más producción.*
+
+*Tu operación, sin fricción.* se usa como cierre de la página del caso.

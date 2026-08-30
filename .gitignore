@@ -15,6 +15,12 @@ node_modules/
 Thumbs.db
 desktop.ini
 
+# Herramientas locales
+# .claude/ guarda configuracion de Claude Code propia de cada maquina,
+# incluido settings.local.json con los permisos que aprobo cada persona.
+# No es parte del entregable.
+.claude/
+
 # Editores
 .idea/
 .vscode/
