@@ -68,6 +68,7 @@
       <ul class="nav__lista">
         <li><a class="nav__link" href="#servicios">Servicios</a></li>
         <li><a class="nav__link" href="#metodo">Cómo trabajamos</a></li>
+        <li><a class="nav__link" href="#casos">Casos</a></li>
         <li><a class="nav__link" href="#por-que">Por qué Evoltia</a></li>
         <li><a class="nav__link" href="#faq">Preguntas</a></li>
       </ul>
@@ -94,6 +95,7 @@
     <ul class="menu-movil__lista">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#metodo">Cómo trabajamos</a></li>
+      <li><a href="#casos">Casos</a></li>
       <li><a href="#por-que">Por qué Evoltia</a></li>
       <li><a href="#faq">Preguntas</a></li>
     </ul>
@@ -143,20 +145,49 @@
     </div>
   </section>
 
-  <!-- ================= CONFIANZA =================
-       Un solo cliente. El logo se apoya en una tarjeta Blanca: es el uso que el
-       §03 le da al Blanco sobre Papel, y además resuelve que el archivo del
-       cliente venga con fondo blanco en lugar de transparente. -->
-  <section class="confianza seccion--corta" aria-label="Clientes">
-    <div class="wrap confianza__inner">
-      <p class="confianza__label">Empresas que ya cambiaron de trayectoria</p>
-      <ul class="confianza__logos">
-        <li class="confianza__marca">
+  <!-- ================= CASOS DE ÉXITO =================
+       Va inmediatamente después del hero porque es el bloque que más peso
+       tiene que cargar en la página. El logo del cliente se apoya sobre una
+       tarjeta Blanca: es el uso que el §03 le da al Blanco sobre Papel, y
+       además resuelve que el archivo del cliente venga con fondo blanco.
+       Toda la tarjeta es clicable mediante el enlace del título (::after). -->
+  <section class="seccion caso-destacado" id="casos" aria-labelledby="casos-t">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="etiqueta">Casos de éxito</p>
+        <h2 class="titular" id="casos-t">Nos quedamos hasta que funciona solo.</h2>
+      </div>
+
+      <article class="caso reveal">
+        <div class="caso__marca">
           <img src="assets/img/clientes/aberturas-fisa.png"
                width="420" height="133"
                alt="Aberturas FISA">
-        </li>
-      </ul>
+        </div>
+
+        <div class="caso__cuerpo">
+          <p class="caso__sector">Fabricación de aberturas de aluminio · Villa Bosch, Buenos Aires</p>
+
+          <h3 class="caso__titulo">
+            <a href="casos/aberturas-fisa/" data-cta="caso-aberturas-fisa">
+              De la planilla impresa al proceso digital
+            </a>
+          </h3>
+
+          <p class="caso__texto">
+            <span class="pend">Texto de ejemplo</span>
+            Las órdenes de fabricación se imprimían en el local y se trasladaban a mano
+            hasta la fábrica, y el stock se verificaba a ojo. Relevamos la operación
+            completa, priorizamos por impacto y digitalizamos el circuito de producción
+            sin frenar la venta.
+          </p>
+
+          <span class="caso__cta">
+            Ver el caso completo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -542,7 +573,7 @@
         <ul>
           <li><a href="/nosotros">Nosotros</a></li>
           <li><a href="/como-trabajamos">Cómo trabajamos</a></li>
-          <li><a href="/casos">Casos</a></li>
+          <li><a href="casos/aberturas-fisa/">Casos</a></li>
           <li><a href="/contacto">Contacto</a></li>
         </ul>
       </nav>

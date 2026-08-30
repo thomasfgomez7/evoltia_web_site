@@ -231,9 +231,12 @@ button { font: inherit; }
 /* Tamaño mínimo del logo completo en pantalla: 140 px de ancho (§02) */
 .nav__logo img { width: 148px; }
 .nav__menu { display: none; }
-.nav__lista { display: flex; align-items: center; gap: var(--sp-6); }
+.nav__lista { display: flex; align-items: center; gap: var(--sp-5); }
 .nav__link {
   display: inline-block; padding: var(--sp-2) var(--sp-1);
+  /* Con cinco ítems, dejar que "Cómo trabajamos" se parta en dos líneas
+     desalinea toda la barra. */
+  white-space: nowrap;
   color: var(--lavanda); text-decoration: none; font-size: var(--fs-cuerpo); font-weight: 400;
   border-bottom: 2px solid transparent;
   transition: color 150ms var(--ease), border-color 150ms var(--ease);
@@ -248,7 +251,7 @@ button { font: inherit; }
   border-radius: var(--r-sm); color: var(--papel); cursor: pointer;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .nav__menu { display: flex; align-items: center; }
   .nav__cta { display: inline-flex; }
   .nav__toggle { display: none; }
@@ -333,30 +336,70 @@ button { font: inherit; }
 @media (min-width: 480px) { .hero__acciones .btn { flex: 0 0 auto; } }
 .hero__micro { margin-top: var(--sp-5); font-size: var(--fs-cuerpo); color: var(--lavanda); opacity: 0.8; }
 
-/* ---------- Barra de confianza ---------- */
-.confianza { background: var(--papel); border-bottom: 1px solid var(--borde-claro); }
-.confianza__inner { display: flex; flex-direction: column; gap: var(--sp-5); align-items: center; text-align: center; }
-.confianza__label { font-size: var(--fs-cuerpo); color: var(--gris); }
-.confianza__logos { display: flex; gap: var(--sp-5); flex-wrap: wrap; justify-content: center; }
+/* ---------- Caso de éxito destacado ---------- */
+.caso-destacado { border-bottom: 1px solid var(--borde-claro); }
 
-/* Tarjeta Blanca apoyada sobre Papel: uso correcto del Blanco segun el §03. */
-.confianza__marca {
-  display: grid; place-items: center;
-  padding: var(--sp-4) var(--sp-6);
+/* Tarjeta Blanca apoyada sobre Papel: uso correcto del Blanco según el §03. */
+.caso {
+  position: relative;
+  margin-top: var(--sp-8);
   background: var(--blanco);
   border: 1px solid var(--borde-claro);
-  border-radius: var(--r-md);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: grid;
+  transition: border-color 150ms var(--ease), box-shadow 200ms var(--ease);
 }
-.confianza__marca img { width: 168px; height: auto; }
+@media (min-width: 860px) {
+  /* El logo manda: se le da algo más de la mitad del ancho disponible. */
+  .caso { grid-template-columns: 5fr 6fr; align-items: stretch; }
+}
+.caso:hover { border-color: var(--orbita); box-shadow: var(--sombra); }
+.caso:has(a:focus-visible) { outline: 2px solid var(--orbita); outline-offset: 3px; }
 
-/* Slot de reserva para cuando todavia no hay archivo de logo. */
-.confianza__slot {
+/* Panel del logo, en Blanco como el resto de la tarjeta: el archivo del cliente
+   trae fondo blanco, y sobre cualquier otro color se recortaría como un
+   rectángulo. Los paneles se separan con un filete, no con un cambio de fondo. */
+.caso__marca {
   display: grid; place-items: center;
-  width: 168px; height: 76px;
-  border: 1px dashed #b9b4c4; border-radius: var(--r-md);
-  font-size: var(--fs-etiqueta); letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gris);
+  padding: var(--sp-9) var(--sp-6);
+  border-bottom: 1px solid var(--borde-claro);
 }
+@media (min-width: 860px) {
+  .caso__marca { border-bottom: 0; border-right: 1px solid var(--borde-claro); }
+}
+.caso__marca img { width: min(340px, 78%); height: auto; }
+
+.caso__cuerpo {
+  padding: var(--sp-7) var(--sp-6);
+  display: flex; flex-direction: column; gap: var(--sp-4);
+  justify-content: center;
+}
+@media (min-width: 860px) { .caso__cuerpo { padding: var(--sp-9) var(--sp-8); } }
+
+.caso__sector {
+  font-size: var(--fs-etiqueta); font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita);
+}
+.caso__titulo { font-size: var(--fs-h3); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; color: var(--nucleo); }
+/* El enlace del título cubre la tarjeta entera: un solo enlace anunciado. */
+.caso__titulo a { text-decoration: none; }
+.caso__titulo a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.caso__titulo a:focus-visible { outline: none; }
+
+.caso__texto { color: var(--gris); max-width: 52ch; }
+.caso__texto .pend { margin-right: var(--sp-2); vertical-align: 2px; }
+
+.caso__cta {
+  margin-top: var(--sp-2);
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-size: var(--fs-etiqueta); font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita);
+}
+.caso__cta svg { transition: transform 150ms var(--ease); }
+.caso:hover .caso__cta svg { transform: translateX(4px); }
 
 /* ---------- Grillas y tarjetas ---------- */
 .grid { display: grid; gap: var(--sp-5); }
@@ -470,6 +513,87 @@ button { font: inherit; }
   color: var(--blanco); max-width: 22ch;
 }
 
+/* ==========================================================================
+   Páginas interiores (caso de éxito)
+   ========================================================================== */
+
+/* Cabecera de página interior: sin degradé, pero con el aire que necesita
+   la nav fija. */
+.cabecera-interior {
+  padding-block: calc(var(--nav-h) + var(--sp-9)) var(--sp-10);
+}
+@media (min-width: 768px) {
+  .cabecera-interior { padding-block: calc(var(--nav-h) + var(--sp-10)) var(--sp-11); }
+}
+
+.migas { margin-bottom: var(--sp-7); }
+.migas ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); }
+.migas li { font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavanda); }
+.migas li + li::before { content: "/"; margin-right: var(--sp-2); opacity: 0.5; }
+.migas a { color: var(--senal); text-decoration: none; }
+.migas a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.migas [aria-current="page"] { opacity: 0.7; }
+
+/* Ficha: logo del cliente sobre Blanco y datos del proyecto. */
+.ficha { background: var(--papel); border-bottom: 1px solid var(--borde-claro); }
+.ficha .wrap { display: grid; gap: var(--sp-6); align-items: center; }
+@media (min-width: 860px) { .ficha .wrap { grid-template-columns: 1fr 2fr; gap: var(--sp-9); } }
+
+.ficha__marca {
+  display: grid; place-items: center;
+  padding: var(--sp-6);
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--r-md);
+}
+.ficha__marca img { width: min(260px, 80%); height: auto; }
+
+.ficha__datos { display: grid; gap: var(--sp-5); }
+@media (min-width: 640px) { .ficha__datos { grid-template-columns: repeat(3, 1fr); } }
+.ficha__datos dt {
+  font-size: var(--fs-etiqueta); font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita); margin-bottom: var(--sp-2);
+}
+.ficha__datos dd { margin: 0; color: var(--tinta); }
+
+/* Cuerpo del caso: una sola columna, medida de lectura cómoda. */
+.articulo { max-width: 68ch; }
+.articulo p { margin-bottom: var(--sp-5); color: var(--gris); }
+.articulo .subtitulo { color: var(--nucleo); margin-block: var(--sp-9) var(--sp-4); }
+.articulo .subtitulo:first-of-type { margin-top: 0; }
+
+.metricas { display: grid; gap: var(--sp-5); margin-block: var(--sp-7) var(--sp-9); }
+@media (min-width: 640px) { .metricas { grid-template-columns: repeat(3, 1fr); } }
+.metricas li {
+  padding: var(--sp-5);
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--r-md);
+  text-align: center;
+}
+.metricas__valor {
+  display: block; font-size: var(--fs-h3); font-weight: 700;
+  color: var(--orbita); line-height: 1.1;
+}
+.metricas__rotulo {
+  display: block; margin-top: var(--sp-2);
+  font-size: var(--fs-etiqueta); letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gris);
+}
+
+.cita {
+  margin: var(--sp-9) 0 0;
+  padding-left: var(--sp-6);
+  border-left: var(--conector) solid var(--senal);
+}
+.cita p { font-size: var(--fs-sub); line-height: 1.5; color: var(--nucleo); margin-bottom: var(--sp-4); }
+.cita cite {
+  font-style: normal;
+  font-size: var(--fs-etiqueta); letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gris);
+}
+
 /* ---------- FAQ ---------- */
 .faq { max-width: 760px; margin-inline: auto; margin-top: var(--sp-8); }
 .faq__item { border-bottom: 1px solid var(--borde-claro); }
@@ -571,7 +695,7 @@ button { font: inherit; }
   transform: translateY(110%); transition: transform 250ms var(--ease);
 }
 .cta-flotante.visible { transform: none; }
-@media (min-width: 1024px) { .cta-flotante { display: none; } }
+@media (min-width: 1100px) { .cta-flotante { display: none; } }
 
 /* ---------- Banner de cookies ---------- */
 .cookies {
