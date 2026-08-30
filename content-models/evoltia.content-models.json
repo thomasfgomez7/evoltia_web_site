@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evoltia.com/schemas/content-models.json",
+  "title": "Evoltia — modelos de contenido",
+  "description": "Modelos de contenido para el sitio de Evoltia. Derivados del plan de contenidos en docs/02 y docs/02b. Los campos marcados con x-placeholder requieren datos que el cliente aún no proveyó.",
+  "version": "1.0.0",
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Minúsculas, guiones, sin acentos ni barra final."
+    },
+    "imageRef": {
+      "type": "object",
+      "required": ["url", "alt"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "alt": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Vacío sólo si la imagen es puramente decorativa."
+        },
+        "width": { "type": "integer" },
+        "height": { "type": "integer" },
+        "focalPoint": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number", "minimum": 0, "maximum": 1 },
+            "y": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "required": ["label", "href"],
+      "properties": {
+        "label": { "type": "string", "maxLength": 40 },
+        "href": { "type": "string" },
+        "variant": { "enum": ["primary", "secondary", "tertiary"], "default": "primary" }
+      }
+    },
+    "seo": {
+      "type": "object",
+      "required": ["metaTitle", "metaDescription"],
+      "properties": {
+        "metaTitle": { "type": "string", "maxLength": 60 },
+        "metaDescription": { "type": "string", "maxLength": 155 },
+        "ogImage": { "$ref": "#/$defs/imageRef" },
+        "noIndex": { "type": "boolean", "default": false },
+        "canonicalUrl": { "type": "string", "format": "uri" }
+      }
+    },
+    "richText": {
+      "type": "array",
+      "description": "Portable Text / bloques enriquecidos.",
+      "items": { "type": "object" }
+    }
+  },
+  "properties": {
+    "siteSettings": {
+      "type": "object",
+      "description": "Singleton. Configuración global del sitio.",
+      "required": ["siteName", "contactEmail", "logoLight"],
+      "properties": {
+        "siteName": { "type": "string", "default": "Evoltia" },
+        "tagline": { "type": "string", "default": "Evolución con dirección." },
+        "descriptor": { "type": "string", "default": "Consultoría & Transformación Digital" },
+        "logoLight": { "$ref": "#/$defs/imageRef" },
+        "logoDark": { "$ref": "#/$defs/imageRef", "x-placeholder": "Falta la variante oscura del logo en SVG." },
+        "isotype": { "$ref": "#/$defs/imageRef", "x-placeholder": "Falta el isotipo suelto para favicon y avatares." },
+        "defaultOgImage": { "$ref": "#/$defs/imageRef" },
+        "contactEmail": { "type": "string", "format": "email", "default": "hola@evoltia.com" },
+        "phone": { "type": "string", "x-placeholder": true },
+        "whatsapp": { "type": "string", "x-placeholder": true },
+        "socialLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["platform", "href"],
+            "properties": {
+              "platform": { "enum": ["linkedin", "instagram", "x", "youtube", "github"] },
+              "href": { "type": "string", "format": "uri" }
+            }
+          },
+          "x-placeholder": true
+        },
+        "legalEntity": {
+          "type": "object",
+          "description": "Requerido por las páginas legales y por el JSON-LD Organization.",
+          "properties": {
+            "name": { "type": "string" },
+            "taxId": { "type": "string", "description": "CUIT" },
+            "address": { "type": "string" },
+            "country": { "type": "string", "default": "AR" }
+          },
+          "x-placeholder": true
+        },
+        "analytics": {
+          "type": "object",
+          "properties": {
+            "provider": { "enum": ["ga4", "plausible", "umami", "none"], "default": "plausible" },
+            "measurementId": { "type": "string" },
+            "gtmId": { "type": "string" }
+          }
+        },
+        "navigation": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "array",
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "required": ["label", "href"],
+                "properties": {
+                  "label": { "type": "string", "maxLength": 24 },
+                  "href": { "type": "string" },
+                  "children": { "type": "array", "items": { "type": "object" } }
+                }
+              }
+            },
+            "footer": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "links": { "type": "array", "items": { "type": "object" } }
+                }
+              }
+            }
+          }
+        },
+        "primaryCta": { "$ref": "#/$defs/cta" }
+      }
+    },
+
+    "page": {
+      "type": "object",
+      "description": "Página modular armada por secciones.",
+      "required": ["title", "slug", "seo"],
+      "properties": {
+        "title": { "type": "string" },
+        "slug": { "$ref": "#/$defs/slug" },
+        "seo": { "$ref": "#/$defs/seo" },
+        "hero": {
+          "type": "object",
+          "properties": {
+            "eyebrow": { "type": "string", "maxLength": 48 },
+            "title": { "type": "string", "maxLength": 90 },
+            "subtitle": { "type": "string", "maxLength": 180 },
+            "microcopy": { "type": "string", "maxLength": 100 },
+            "primaryCta": { "$ref": "#/$defs/cta" },
+            "secondaryCta": { "$ref": "#/$defs/cta" },
+            "variant": { "enum": ["gradient", "compact", "flat"], "default": "compact" }
+          }
+        },
+        "sections": {
+          "type": "array",
+          "description": "Array polimórfico. El campo _type determina el componente que se renderiza.",
+          "items": {
+            "type": "object",
+            "required": ["_type"],
+            "properties": {
+              "_type": {
+                "enum": [
+                  "featureGrid", "serviceGrid", "processTimeline", "caseHighlight",
+                  "testimonialBlock", "logoBar", "faqBlock", "ctaBlock",
+                  "richTextBlock", "teamGrid", "insightList"
+                ]
+              },
+              "eyebrow": { "type": "string" },
+              "heading": { "type": "string" },
+              "intro": { "type": "string" },
+              "surface": { "enum": ["light", "dark", "gradient"], "default": "light" },
+              "items": { "type": "array", "items": { "type": "object" } }
+            }
+          }
+        },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+
+    "service": {
+      "type": "object",
+      "required": ["title", "slug", "summary", "order"],
+      "properties": {
+        "title": { "type": "string", "maxLength": 60 },
+        "slug": { "$ref": "#/$defs/slug" },
+        "nodo": { "type": "integer", "minimum": 1, "maximum": 4, "description": "Tamano del nodo de la cadena que marca la tarjeta. El sistema no usa iconos (manual 05)." },
+        "summary": { "type": "string", "maxLength": 140, "description": "Copy de la tarjeta en la Home." },
+        "body": { "$ref": "#/$defs/richText" },
+        "deliverables": { "type": "array", "items": { "type": "string" } },
+        "idealFor": { "type": "array", "items": { "type": "string" } },
+        "duration": { "type": "string", "x-placeholder": "Duraciones típicas sin confirmar." },
+        "relatedServices": { "type": "array", "items": { "type": "string" } },
+        "order": { "type": "integer", "minimum": 1 },
+        "seo": { "$ref": "#/$defs/seo" }
+      }
+    },
+
+    "caseStudy": {
+      "type": "object",
+      "required": ["client", "slug", "challenge", "outcome", "consentApproved"],
+      "properties": {
+        "client": { "type": "string" },
+        "slug": { "$ref": "#/$defs/slug" },
+        "sector": { "type": "string" },
+        "logo": { "$ref": "#/$defs/imageRef" },
+        "challenge": { "type": "string", "maxLength": 300 },
+        "approach": { "$ref": "#/$defs/richText" },
+        "outcome": { "type": "string", "maxLength": 300 },
+        "metrics": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["value", "label"],
+            "properties": {
+              "value": { "type": "string" },
+              "label": { "type": "string", "maxLength": 60 },
+              "note": { "type": "string", "description": "Cómo se midió. Obligatorio si el valor es un porcentaje." }
+            }
+          }
+        },
+        "services": { "type": "array", "items": { "type": "string" } },
+        "quote": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string", "maxLength": 280 },
+            "author": { "type": "string" },
+            "role": { "type": "string" }
+          }
+        },
+        "coverImage": { "$ref": "#/$defs/imageRef" },
+        "consentApproved": {
+          "type": "boolean",
+          "default": false,
+          "description": "SALVAGUARDA. Si es false el caso no se renderiza en el sitio público. No modificar sin autorización escrita del cliente."
+        },
+        "consentDocument": { "type": "string", "format": "uri", "description": "Archivo de la autorización firmada." },
+        "publishedAt": { "type": "string", "format": "date" },
+        "seo": { "$ref": "#/$defs/seo" }
+      }
+    },
+
+    "post": {
+      "type": "object",
+      "required": ["title", "slug", "excerpt", "publishedAt"],
+      "properties": {
+        "title": { "type": "string", "maxLength": 90 },
+        "slug": { "$ref": "#/$defs/slug" },
+        "excerpt": { "type": "string", "maxLength": 200 },
+        "body": { "$ref": "#/$defs/richText" },
+        "author": { "type": "string", "description": "Referencia a teamMember." },
+        "category": { "enum": ["procesos", "datos", "inteligencia-artificial", "gestion-del-cambio", "casos"] },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "coverImage": { "$ref": "#/$defs/imageRef" },
+        "publishedAt": { "type": "string", "format": "date" },
+        "updatedAt": { "type": "string", "format": "date" },
+        "readingTime": { "type": "integer", "description": "Calculado, no editable." },
+        "seo": { "$ref": "#/$defs/seo" }
+      }
+    },
+
+    "teamMember": {
+      "type": "object",
+      "required": ["name", "role", "order"],
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "photo": { "$ref": "#/$defs/imageRef" },
+        "bio": { "type": "string", "maxLength": 400 },
+        "linkedin": { "type": "string", "format": "uri" },
+        "order": { "type": "integer" },
+        "active": { "type": "boolean", "default": true }
+      },
+      "x-placeholder": "Nombres, roles, fotos y bios pendientes de entrega por el cliente."
+    },
+
+    "testimonial": {
+      "type": "object",
+      "required": ["quote", "authorName", "consentApproved"],
+      "properties": {
+        "quote": { "type": "string", "maxLength": 280 },
+        "authorName": { "type": "string" },
+        "authorRole": { "type": "string" },
+        "company": { "type": "string" },
+        "avatar": { "$ref": "#/$defs/imageRef" },
+        "caseStudy": { "type": "string" },
+        "consentApproved": { "type": "boolean", "default": false }
+      }
+    },
+
+    "faq": {
+      "type": "object",
+      "required": ["question", "answer", "order"],
+      "properties": {
+        "question": { "type": "string", "maxLength": 120 },
+        "answer": { "$ref": "#/$defs/richText" },
+        "category": { "enum": ["general", "metodo", "servicios", "comercial"] },
+        "order": { "type": "integer" },
+        "showInSchema": {
+          "type": "boolean",
+          "default": false,
+          "description": "Sólo activar cuando la respuesta esté confirmada por el cliente. Marcar contenido no confirmado como FAQPage es riesgo de penalización."
+        }
+      }
+    },
+
+    "legalDocument": {
+      "type": "object",
+      "required": ["title", "slug", "body", "version", "effectiveDate"],
+      "properties": {
+        "title": { "type": "string" },
+        "slug": { "$ref": "#/$defs/slug" },
+        "body": { "$ref": "#/$defs/richText" },
+        "version": { "type": "string", "description": "Semver o fecha. Necesario para acreditar qué texto aceptó cada usuario." },
+        "effectiveDate": { "type": "string", "format": "date" },
+        "reviewedByCounsel": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}
