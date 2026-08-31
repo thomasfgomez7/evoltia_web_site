@@ -23,8 +23,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- GitHub Pages sirve los assets con Cache-Control: max-age=600 y no permite
+     cambiar cabeceras. Para que un cambio de CSS o JS se vea al instante en vez
+     de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las dos paginas
+     cada vez que se tocan styles.css o main.js. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -60,7 +64,7 @@
 <!-- ================= NAV ================= -->
 <header class="nav oscuro" id="nav" data-nav>
   <div class="wrap nav__inner">
-    <a class="nav__logo" href="/" aria-label="Evoltia — inicio">
+    <a class="nav__logo" href="./" aria-label="Evoltia — inicio">
       <img src="assets/img/evoltia-negativo-web.png" width="480" height="176" alt="Evoltia, consultoría y transformación digital">
     </a>
 
@@ -174,8 +178,7 @@
             </a>
           </h3>
 
-          <p class="caso__texto">
-            <span class="pend">Texto de ejemplo</span>
+          <p class="caso__texto">            
             Las órdenes de fabricación se imprimían en el local y se trasladaban a mano
             hasta la fábrica, y el stock se verificaba a ojo. Relevamos la operación
             completa, priorizamos por impacto y digitalizamos el circuito de producción
@@ -237,7 +240,7 @@
           Seis frentes de trabajo. Se contratan por separado o como programa completo,
           pero todos empiezan en el mismo lugar: el diagnóstico.
         </p>
-        <p style="margin-top:var(--sp-4)"><span class="pend" style="color:var(--senal)">Nombres y alcance a validar</span></p>
+        <p style="margin-top:var(--sp-4)"><span class="pend" style="color:var(--senal)">A completar</span></p>
       </div>
 
       <ul class="grid grid--3 reveal" style="margin-top:var(--sp-8)">
@@ -420,7 +423,7 @@
             </button>
           </h3>
           <div class="faq__panel" id="faq-p4" role="region" aria-labelledby="faq-b4" hidden>
-            <p><span class="pend">Pendiente cliente</span> Definir si Evoltia implementa con equipo propio, integra proveedores, o ambas cosas.</p>
+            <p><span class="pend">Completar</span> Definir si Evoltia implementa con equipo propio, integra proveedores, o ambas cosas.</p>
           </div>
         </div>
 
@@ -432,7 +435,7 @@
             </button>
           </h3>
           <div class="faq__panel" id="faq-p5" role="region" aria-labelledby="faq-b5" hidden>
-            <p><span class="pend">Pendiente cliente</span> Definir política de precios. Si no se publica, la respuesta remite al formulario de contacto.</p>
+            <p><span class="pend">Completar</span> Definir política de precios. Si no se publica, la respuesta remite al formulario de contacto.</p>
           </div>
         </div>
       </div>
@@ -612,6 +615,6 @@
   </p>
 </aside>
 
-<script src="assets/main.js" defer></script>
+<script src="assets/main.js?v=2" defer></script>
 </body>
 </html>
