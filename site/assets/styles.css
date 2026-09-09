@@ -41,16 +41,16 @@
      tamaño ajeno a ella. Cuerpo y etiqueta son fijos. */
   --fs-display: clamp(2rem,      1rem    + 5.2vw,  6rem);      /* 32 → 96 */
   --fs-h1:      clamp(2rem,      1.2rem  + 3.4vw,  4.5rem);    /* 32 → 72 */
-  --fs-h2:      clamp(2rem,      1.4rem  + 3.2vw,  4.5rem);    /* 32 → 72 */
-  --fs-h3:      clamp(2rem,      1.7rem  + 1.5vw,  3rem);      /* 32 → 48 */
-  --fs-sub:     clamp(1.3125rem, 1.2rem  + 0.9vw,  2rem);      /* 21 → 32 */
-  --fs-cuerpo:  1.3125rem;                                     /* 21, fijo */
-  --fs-cuerpo-s: 1.0625rem;                                    /* 17, fijo */
+  --fs-h2:      clamp(1.3125rem, 1rem    + 2.2vw,  3rem);      /* 21 → 48 */
+  --fs-h3:      clamp(1.3125rem, 1.15rem + 0.8vw,  2rem);      /* 21 → 32 */
+  --fs-sub:     clamp(1.0625rem, 1rem    + 0.35vw, 1.3125rem); /* 17 → 21 */
+  --fs-cuerpo:  1.0625rem;                                     /* 17, fijo */
   --fs-etiqueta: 0.75rem;                                      /* 12, fijo */
 
-  /* La etiqueta de apertura de sección sube al peldaño siguiente en pantallas
-     grandes; las etiquetas chicas (pies de tarjeta, migas, ficha) siguen en 12. */
-  --fs-etiqueta-seccion: clamp(0.75rem, 0.68rem + 0.3vw, 1.0625rem); /* 12 → 17 */
+  /* La ETIQUETA es la firma de la marca (§04) y a 12 px se perdía en pantalla.
+     Las de apertura de sección suben dos peldaños, de 17 a 21; las chicas
+     —pies de tarjeta, migas, ficha, pie de página— siguen en 12. */
+  --fs-etiqueta-seccion: clamp(1.0625rem, 1rem + 0.35vw, 1.3125rem); /* 17 → 21 */
 
   /* Espaciado */
   --sp-1: 4px;  --sp-2: 8px;   --sp-3: 12px; --sp-4: 16px;
@@ -134,7 +134,7 @@ button { font: inherit; }
 /* SUBTÍTULO — Medium, 0, 1,3 */
 .subtitulo { font-size: var(--fs-h3); font-weight: 500; line-height: 1.3; }
 
-.bajada { font-size: var(--fs-sub); line-height: 1.5; color: var(--gris); max-width: 46ch; }
+.bajada { font-size: var(--fs-sub); line-height: 1.5; color: var(--gris); max-width: 56ch; }
 .oscuro .bajada, .tinta .bajada { color: var(--lavanda); }
 
 .sr-only {
@@ -594,7 +594,7 @@ button { font: inherit; }
 .ficha__datos dd { margin: 0; color: var(--tinta); }
 
 /* Cuerpo del caso: una sola columna, medida de lectura cómoda. */
-.articulo { max-width: 62ch; } /* ~68 caracteres con el cuerpo a 21 px */
+.articulo { max-width: 68ch; }
 .articulo p { margin-bottom: var(--sp-5); color: var(--gris); }
 .articulo .subtitulo { color: var(--nucleo); margin-block: var(--sp-9) var(--sp-4); }
 .articulo .subtitulo:first-of-type { margin-top: 0; }
@@ -681,9 +681,7 @@ img.miembro__foto { object-fit: cover; }
 }
 .miembro__mail {
   margin-top: var(--sp-2);
-  /* Un peldaño por debajo del cuerpo: a 21 px la dirección se parte en dos
-     líneas dentro de una columna de 156 px. */
-  font-size: var(--fs-cuerpo-s); color: var(--gris);
+  font-size: var(--fs-cuerpo); color: var(--gris);
   text-decoration: none; text-underline-offset: 3px;
   word-break: break-word;
 }
