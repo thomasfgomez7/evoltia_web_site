@@ -25,10 +25,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- GitHub Pages sirve los assets con Cache-Control: max-age=600 y no permite
      cambiar cabeceras. Para que un cambio de CSS o JS se vea al instante en vez
-     de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las dos paginas
+     de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las tres paginas
      cada vez que se tocan styles.css o main.js. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=2">
+<link rel="stylesheet" href="assets/styles.css?v=4">
 
 <script type="application/ld+json">
 {
@@ -78,7 +78,7 @@
       </ul>
     </nav>
 
-    <a class="btn btn--primario nav__cta" href="#contacto" data-cta="nav">Agendá un diagnóstico</a>
+    <a class="btn btn--primario nav__cta" href="#contacto" data-cta="nav">Contactanos</a>
 
     <button class="nav__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-movil">
       <span class="sr-only">Abrir menú</span>
@@ -104,7 +104,7 @@
       <li><a href="#faq">Preguntas</a></li>
     </ul>
   </nav>
-  <a class="btn btn--primario btn--bloque" href="#contacto" data-cta="menu-movil">Agendá un diagnóstico</a>
+  <a class="btn btn--primario btn--bloque" href="#contacto" data-cta="menu-movil">Contactanos</a>
 </div>
 
 <main id="main">
@@ -139,7 +139,7 @@
       </p>
 
       <div class="hero__acciones">
-        <a class="btn btn--primario" href="#contacto" data-cta="hero-primario">Agendá un diagnóstico</a>
+        <a class="btn btn--primario" href="#contacto" data-cta="hero-primario">Contactanos</a>
         <a class="btn btn--secundario" href="#metodo" data-cta="hero-secundario">Cómo trabajamos</a>
       </div>
 
@@ -195,38 +195,68 @@
   </section>
 
   <!-- ================= EL PROBLEMA ================= -->
-  <section class="seccion" id="problema" aria-labelledby="problema-t">
+  <!-- ================= MISIÓN, VISIÓN Y VALORES =================
+       El titular sale de la glosa que el manual hace del claim (§07):
+       "Dirección tiene dos sentidos y los dos son ciertos: hacia dónde se va,
+       y quién conduce." Misión y visión son exactamente esos dos sentidos.
+       Los cuatro valores son la PERSONALIDAD del §01, casi literal. -->
+  <section class="seccion" id="mvv" aria-labelledby="mvv-t">
     <div class="wrap">
       <div class="reveal">
-        <p class="etiqueta">El punto de partida</p>
-        <h2 class="titular" id="problema-t">Toda empresa está en órbita.</h2>
+        <p class="etiqueta">Misión, visión y valores</p>
+        <h2 class="titular" id="mvv-t">Hacia dónde vamos, y cómo llegamos.</h2>
 
         <!-- Cadena reducida de tres nodos: separador entre bloques de texto (manual §05) -->
         <div class="cadena" aria-hidden="true"><i></i><b></b><i></i><b></b><i></i></div>
-
-        <p class="bajada">
-          Repite un movimiento que alguna vez funcionó y que hoy solo la mantiene
-          donde está. El software no rompe esa órbita: la hace más cara.
-        </p>
       </div>
 
-      <ul class="grid grid--3 reveal" style="margin-top:var(--sp-8)">
-        <li class="tarjeta">
-          <span class="tarjeta__nodo" aria-hidden="true"></span>
-          <h3>La información no coincide</h3>
-          <p>La información vive en seis planillas y nadie confía en ninguna. Cada reunión empieza discutiendo cuál número es el bueno.</p>
+      <ul class="mv reveal">
+        <li class="mv__item">
+          <span class="mv__nodo" aria-hidden="true"></span>
+          <h3 class="mv__rotulo">Misión</h3>
+          <p>
+            Ordenar y digitalizar la operación de empresas que crecieron más rápido
+            que sus procesos. Diagnosticamos con datos, priorizamos por impacto en el
+            negocio e implementamos con tu equipo adentro.
+          </p>
         </li>
-        <li class="tarjeta">
-          <span class="tarjeta__nodo" aria-hidden="true"></span>
-          <h3>Tu equipo carga los mismos datos tres veces</h3>
-          <p>Lo que entra por un lado se vuelve a tipear en otro. Eso se arregla, y no hace falta cambiar todos los sistemas para lograrlo.</p>
-        </li>
-        <li class="tarjeta">
-          <span class="tarjeta__nodo" aria-hidden="true"></span>
-          <h3>Crecieron más rápido que la operación</h3>
-          <p>La demanda subió y el proceso quedó donde estaba. Sin capacidad, una buena campaña no es una oportunidad: es un problema de plazos.</p>
+        <li class="mv__item">
+          <span class="mv__nodo" aria-hidden="true"></span>
+          <h3 class="mv__rotulo">Visión</h3>
+          <p>
+            Que transformar deje de significar comprar software. Que cada empresa con
+            la que trabajamos cambie de trayectoria y sostenga el cambio sin nosotros.
+          </p>
         </li>
       </ul>
+
+      <p class="etiqueta" style="margin-top:var(--sp-11)">Nuestros valores</p>
+      <ul class="grid grid--4 reveal">
+        <li class="tarjeta">
+          <span class="tarjeta__nodo" aria-hidden="true"></span>
+          <h3>Directos</h3>
+          <p>Decimos qué pasa y qué hay que hacer. Sin vueltas y sin solemnidad.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta__nodo" aria-hidden="true"></span>
+          <h3>Concretos</h3>
+          <p>Cifras, plazos y entregables antes que adjetivos.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta__nodo" aria-hidden="true"></span>
+          <h3>Cercanos</h3>
+          <p>Trato de par. Trabajamos al lado de tu equipo, nunca por encima.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta__nodo" aria-hidden="true"></span>
+          <h3>Expertos</h3>
+          <p>Sabemos más de tecnología. Nunca te lo hacemos sentir.</p>
+        </li>
+      </ul>
+
+      <p class="reveal" style="margin-top:var(--sp-9)">
+        <a class="btn btn--primario-claro" href="nosotros/" data-cta="mvv-equipo">Conocé al equipo</a>
+      </p>
     </div>
   </section>
 
@@ -238,7 +268,7 @@
         <h2 class="titular" id="servicios-t" style="color:var(--blanco)">Primero el negocio. Después el software.</h2>
         <p class="bajada" style="margin-top:var(--sp-5)">
           Seis frentes de trabajo. Se contratan por separado o como programa completo,
-          pero todos empiezan en el mismo lugar: el diagnóstico.
+          pero todos empiezan en el mismo lugar: el discovery.
         </p>
         <p style="margin-top:var(--sp-4)"><span class="pend" style="color:var(--senal)">A completar</span></p>
       </div>
@@ -246,8 +276,8 @@
       <ul class="grid grid--3 reveal" style="margin-top:var(--sp-8)">
         <li class="tarjeta tarjeta--oscura tarjeta--enlace">
           <span class="tarjeta__nodo" aria-hidden="true"></span>
-          <h3><a href="/servicios/diagnostico-y-hoja-de-ruta" data-service="diagnostico-y-hoja-de-ruta">Diagnóstico y hoja de ruta</a></h3>
-          <p>Cuatro semanas. Entrevistas, datos y una lista de iniciativas ordenada por impacto en el negocio, con plazo y responsable.</p>
+          <h3><a href="/servicios/diagnostico-y-hoja-de-ruta" data-service="diagnostico-y-hoja-de-ruta">Discovery y hoja de ruta</a></h3>
+          <p>Dependiendo el caso, puede durar entre cuatro y seis semanas. Entrevistas, datos y una lista de iniciativas ordenada por impacto en el negocio, con plazo y responsable.</p>
           <span class="tarjeta__pie">Ver servicio <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </li>
         <li class="tarjeta tarjeta--oscura tarjeta--enlace">
@@ -296,7 +326,7 @@
       <ol class="pasos reveal">
         <li class="paso">
           <p class="paso__num">01</p>
-          <h3>Diagnóstico</h3>
+          <h3>Discovery</h3>
           <p>4 semanas. Datos, no impresiones.</p>
           <span class="paso__entregable">Informe y mapa de procesos</span>
         </li>
@@ -321,7 +351,7 @@
       </ol>
 
       <p class="frase reveal" style="margin-top:var(--sp-10)">
-        Si no se mide, no lo llamamos transformación.
+        Cada mejora tiene un número y una fecha.
       </p>
     </div>
   </section>
@@ -331,7 +361,7 @@
     <div class="wrap">
       <div class="reveal">
         <p class="etiqueta">Por qué Evoltia</p>
-        <h2 class="titular" id="porque-t">No vendemos tecnología: diseñamos decisiones.</h2>
+        <h2 class="titular" id="porque-t">El problema no es el software. Es saber qué cambiar.</h2>
       </div>
 
       <ul class="valores reveal">
@@ -382,12 +412,12 @@
         <div class="faq__item">
           <h3>
             <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-p1" id="faq-b1">
-              <span>¿Cuánto dura el diagnóstico?</span>
+              <span>¿Cuánto dura el discovery?</span>
               <span class="faq__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
             </button>
           </h3>
           <div class="faq__panel" id="faq-p1" role="region" aria-labelledby="faq-b1" hidden>
-            <p>Cuatro semanas. Entrevistas con quienes ejecutan, revisión de datos y una hoja de ruta priorizada. Al final tenés un documento que se puede leer en una reunión de directorio.</p>
+            <p>Dependiendo el caso, puede durar entre cuatro y seis semanas. Entrevistas con quienes ejecutan, revisión de datos y una hoja de ruta priorizada. Al final tenés un documento que se puede leer en una reunión de directorio.</p>
           </div>
         </div>
 
@@ -456,7 +486,7 @@
         <ul class="despues">
           <li><i aria-hidden="true"></i><p>Leemos tu consulta y respondemos dentro de las 48 horas hábiles.</p></li>
           <li><i aria-hidden="true"></i><p>Coordinamos una llamada de 30 minutos para entender el contexto.</p></li>
-          <li><i aria-hidden="true"></i><p>Si tiene sentido avanzar, te mandamos una propuesta de diagnóstico.</p></li>
+          <li><i aria-hidden="true"></i><p>Si tiene sentido avanzar, te contamos los próximos pasos.</p></li>
         </ul>
 
         <p style="margin-top:var(--sp-8)">
@@ -558,13 +588,13 @@
     <div class="footer__top">
       <div class="footer__marca">
         <img src="assets/img/evoltia-negativo-web.png" width="480" height="176" alt="Evoltia">
-        <p>Consultoría y transformación digital para empresas medianas que ya crecieron más de lo que su operación aguanta.</p>
+        <p>Empresas que crecieron más rápido que sus procesos. Nosotros los ordenamos.</p>
       </div>
 
       <nav aria-label="Servicios">
         <h2>Servicios</h2>
         <ul>
-          <li><a href="/servicios/diagnostico-y-hoja-de-ruta">Diagnóstico y hoja de ruta</a></li>
+          <li><a href="/servicios/diagnostico-y-hoja-de-ruta">Discovery y hoja de ruta</a></li>
           <li><a href="/servicios/automatizacion-de-procesos">Automatización de procesos</a></li>
           <li><a href="/servicios/datos-e-indicadores">Datos e indicadores</a></li>
           <li><a href="/servicios/inteligencia-artificial-aplicada">Inteligencia artificial aplicada</a></li>
@@ -574,7 +604,7 @@
       <nav aria-label="Compañía">
         <h2>Compañía</h2>
         <ul>
-          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="nosotros/">Nosotros</a></li>
           <li><a href="/como-trabajamos">Cómo trabajamos</a></li>
           <li><a href="casos/aberturas-fisa/">Casos</a></li>
           <li><a href="/contacto">Contacto</a></li>
@@ -600,7 +630,7 @@
 </footer>
 
 <div class="cta-flotante" data-sticky-cta>
-  <a class="btn btn--primario btn--bloque" href="#contacto" data-cta="flotante-movil">Agendá un diagnóstico</a>
+  <a class="btn btn--primario btn--bloque" href="#contacto" data-cta="flotante-movil">Contactanos</a>
 </div>
 
 <aside class="cookies" id="cookies" role="dialog" aria-modal="false" aria-labelledby="cookies-t" hidden>
@@ -615,6 +645,6 @@
   </p>
 </aside>
 
-<script src="assets/main.js?v=2" defer></script>
+<script src="assets/main.js?v=4" defer></script>
 </body>
 </html>
