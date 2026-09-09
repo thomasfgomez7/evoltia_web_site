@@ -45,6 +45,7 @@
   --fs-h3:      clamp(2rem,      1.7rem  + 1.5vw,  3rem);      /* 32 → 48 */
   --fs-sub:     clamp(1.3125rem, 1.2rem  + 0.9vw,  2rem);      /* 21 → 32 */
   --fs-cuerpo:  1.3125rem;                                     /* 21, fijo */
+  --fs-cuerpo-s: 1.0625rem;                                    /* 17, fijo */
   --fs-etiqueta: 0.75rem;                                      /* 12, fijo */
 
   /* La etiqueta de apertura de sección sube al peldaño siguiente en pantallas
@@ -628,6 +629,65 @@ button { font: inherit; }
   font-size: var(--fs-etiqueta); letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gris);
 }
+
+/* ---------- Manifiesto (página Nosotros) ---------- */
+.manifiesto { max-width: 30ch; margin-top: var(--sp-8); }
+@media (min-width: 768px) { .manifiesto { max-width: 34ch; } }
+.manifiesto p {
+  font-size: var(--fs-h3); font-weight: 500; line-height: 1.3;
+  letter-spacing: -0.01em; color: var(--blanco);
+  margin-bottom: var(--sp-6);
+}
+/* El remate del manifiesto lleva el punto en Pulso, como el claim (§07). */
+.manifiesto__cierre { color: var(--senal); margin-bottom: 0; }
+
+/* ---------- Equipo ---------- */
+/* Dos columnas incluso en el ancho mínimo: con una sola, el hueco cuadrado de
+   la foto ocupa la pantalla entera y la sección se vuelve interminable. */
+.equipo {
+  display: grid; gap: var(--sp-7) var(--sp-4); margin-top: var(--sp-9);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 640px) { .equipo { gap: var(--sp-8) var(--sp-5); } }
+@media (min-width: 900px) { .equipo { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-9) var(--sp-6); } }
+
+.miembro { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+/* Hueco de foto: cuadrado, resiste el recorte circular de los perfiles.
+   Mientras no haya foto muestra las iniciales sobre Núcleo, que se lee como
+   una decisión y no como una imagen rota. */
+.miembro__foto {
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: var(--r-md);
+  background: var(--nucleo);
+  display: grid; place-items: center;
+  margin-bottom: var(--sp-4);
+  overflow: hidden;
+}
+.miembro__foto span {
+  font-size: var(--fs-h3); font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--senal);
+}
+/* Cuando se reemplace el div por un <img class="miembro__foto"> */
+img.miembro__foto { object-fit: cover; }
+
+.miembro__nombre { font-size: var(--fs-sub); font-weight: 500; line-height: 1.25; color: var(--nucleo); }
+.miembro__puesto {
+  font-size: var(--fs-etiqueta); font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita);
+}
+.miembro__mail {
+  margin-top: var(--sp-2);
+  /* Un peldaño por debajo del cuerpo: a 21 px la dirección se parte en dos
+     líneas dentro de una columna de 156 px. */
+  font-size: var(--fs-cuerpo-s); color: var(--gris);
+  text-decoration: none; text-underline-offset: 3px;
+  word-break: break-word;
+}
+.miembro__mail:hover { color: var(--orbita); text-decoration: underline; }
 
 /* ---------- FAQ ---------- */
 .faq { max-width: 760px; margin-inline: auto; margin-top: var(--sp-8); }
