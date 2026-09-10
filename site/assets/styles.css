@@ -710,8 +710,8 @@ button { font: inherit; }
   letter-spacing: 0.04em;
   color: var(--senal);
 }
-/* Cuando se reemplace el div por un <img class="miembro__foto"> */
-img.miembro__foto { object-fit: cover; }
+/* Cuando se reemplaza el hueco por un <img class="miembro__foto"> */
+img.miembro__foto { display: block; object-fit: cover; height: auto; }
 
 .miembro__nombre { font-size: var(--fs-sub); font-weight: 500; line-height: 1.25; color: var(--nucleo); }
 .miembro__puesto {
