@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aberturas FISA | Caso de éxito | Evoltia</title>
-<meta name="description" content="Cómo Aberturas FISA pasó de comunicar la producción con planillas impresas a un circuito digital, sin frenar la venta. Caso de éxito de Evoltia.">
+<meta name="description" content="Quién es Aberturas FISA, qué necesita y cómo Evoltia ordena su operación antes de escalar la venta. Caso de éxito con alcance, cronograma y stakeholders.">
 <link rel="icon" href="../../assets/img/isotipo-color.png">
 
 <meta property="og:type" content="article">
@@ -22,7 +22,7 @@
      de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las tres paginas
      cada vez que se tocan styles.css o main.js. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="../../assets/styles.css?v=7">
+<link rel="stylesheet" href="../../assets/styles.css?v=8">
 
 <script type="application/ld+json">
 {
@@ -100,7 +100,7 @@
 
       <p class="etiqueta">Caso de éxito</p>
       <h1 class="titular" id="caso-t" style="color:var(--blanco)">De la planilla impresa al proceso digital</h1>
-      <p class="bajada" style="margin-top:var(--sp-5)">        
+      <p class="bajada" style="margin-top:var(--sp-5)">
         Aberturas FISA fabrica y comercializa aberturas de aluminio a medida en Villa Bosch,
         provincia de Buenos Aires.
       </p>
@@ -121,58 +121,597 @@
     </div>
   </section>
 
-  <!-- ================= CUERPO ================= -->
-  <section class="seccion" aria-labelledby="cuerpo-t">
-    <div class="wrap articulo">
-      <h2 class="sr-only" id="cuerpo-t">Desarrollo del caso</h2>
-
-      <p class="pend" style="display:inline-block;margin-bottom:var(--sp-6)">A completar</p>
-
-      <h3 class="subtitulo">El punto de partida</h3>
-      <p>
-        El sistema de cálculo generaba la planilla de armado en el local comercial. Esa planilla
-        se imprimía y alguien la trasladaba hasta la fábrica, a dos cuadras. El stock de materia
-        prima se verificaba a ojo, y las compras se resolvían a medida que aparecía la necesidad.
-      </p>
-      <p>
-        El conocimiento de fabricación estaba concentrado en una sola persona, que además
-        coordinaba compras, proveedores y planificación.
-      </p>
-
-      <h3 class="subtitulo">Qué hicimos</h3>
-      <p>
-        Empezamos por el relevamiento: entrevistas con quienes ejecutan la tarea, mapa de la
-        cadena de valor y diagnóstico de madurez por área. Con eso sobre la mesa priorizamos
-        las iniciativas por impacto en el negocio, no por facilidad técnica.
-      </p>
-      <p>
-        La hoja de ruta ordenó primero lo operativo —comunicación digital de las órdenes de
-        fabricación, gestión de stock y documentación del conocimiento— y recién después el
-        canal comercial digital.
-      </p>
-
-      <h3 class="subtitulo">Resultados</h3>
-      <p>
-        <span class="pend">A completar</span>
-        Acá van las cifras medidas, con su línea base y el plazo en que se alcanzaron.
-        Sin medición previa no se publican números.
-      </p>
-
-      <ul class="metricas">
-        <li><span class="metricas__valor">—</span><span class="metricas__rotulo">Indicador a definir</span></li>
-        <li><span class="metricas__valor">—</span><span class="metricas__rotulo">Indicador a definir</span></li>
-        <li><span class="metricas__valor">—</span><span class="metricas__rotulo">Indicador a definir</span></li>
-      </ul>
-
-      <blockquote class="cita">
-        <p>
-          <span class="pend">A completar</span>
-          Acá va una cita del cliente, con nombre y cargo.
-        </p>
-        <cite>Nombre y cargo, Aberturas FISA</cite>
-      </blockquote>
+  <!-- ================= PESTAÑAS DEL CASO =================
+       Los botones filtran qué parte del caso se muestra. "Cliente" es la
+       vista por defecto. Cada pestaña se refleja en la URL (#cliente,
+       #alcance) para que se pueda compartir un enlace directo. -->
+  <div class="caso-pestanas" data-caso-pestanas>
+    <div class="pestanas">
+      <div class="wrap">
+        <div class="pestanas__lista" role="tablist" aria-label="Secciones del caso">
+          <button class="pestana" role="tab" type="button" id="tab-cliente" aria-controls="cliente" aria-selected="true">
+            <span class="pestana__num" aria-hidden="true">01</span>Cliente
+          </button>
+          <button class="pestana" role="tab" type="button" id="tab-alcance" aria-controls="alcance" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">02</span>Alcance del proyecto
+          </button>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- ================= 01 · CLIENTE ================= -->
+    <section class="panel-caso" id="cliente" role="tabpanel" aria-labelledby="tab-cliente" tabindex="0">
+
+      <div class="seccion">
+        <div class="wrap">
+          <div class="dos-columnas">
+            <div>
+              <p class="etiqueta">Quién es</p>
+              <h2 class="titular">Diez años haciendo aberturas a medida</h2>
+              <div class="articulo" style="margin-top:var(--sp-6)">
+                <p>
+                  Aberturas FISA fabrica, comercializa y distribuye aberturas de aluminio para el
+                  mercado local. Tiene una fábrica y un local tipo showroom en Villa Bosch, partido
+                  de Tres de Febrero, a dos cuadras uno del otro.
+                </p>
+                <p>
+                  Son seis personas: dos socios propietarios, un encargado general, una persona de
+                  atención comercial en el local y dos operarios de fábrica. El encargado concentra
+                  la coordinación, las compras, la relación con proveedores, la planificación de la
+                  producción y las instrucciones de fabricación.
+                </p>
+                <p>
+                  El local exhibe modelos y recibe consultas y pedidos; los productos se fabrican o se
+                  piden a demanda. La distribución se hace con una camioneta propia y con fletes
+                  tercerizados cuando el volumen es mayor. Entre los locales de aberturas de la zona,
+                  está en una posición intermedia: ni de los más grandes ni de los más chicos.
+                </p>
+              </div>
+            </div>
+
+            <ul class="datos" aria-label="Datos rápidos">
+              <li><span class="datos__valor">10</span><span class="datos__rotulo">años de actividad</span></li>
+              <li><span class="datos__valor">6</span><span class="datos__rotulo">personas en el equipo</span></li>
+              <li><span class="datos__valor">2</span><span class="datos__rotulo">cuadras entre local y fábrica</span></li>
+              <li><span class="datos__valor">1</span><span class="datos__rotulo">canal de venta: el showroom</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="objetivos">
+        <div class="wrap">
+          <p class="etiqueta">Objetivos estratégicos</p>
+          <h2 class="titular">Siete objetivos en tres horizontes</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Metas que el equipo reformuló a partir de lo que expresó el sponsor. Se validan con él
+            antes de convertirse en compromisos del proyecto.
+          </p>
+
+          <div class="horizontes">
+            <div class="horizonte">
+              <header class="horizonte__cabecera">
+                <span class="horizonte__plazo">6 meses</span>
+                <h3>Ordenar</h3>
+              </header>
+              <article class="objetivo">
+                <h4>Digitalizar la comunicación de las órdenes de fabricación</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Órdenes comunicadas digitalmente</dd></div>
+                  <div><dt>Meta</dt><dd>Al menos el 90 % sin traslado de planillas en papel</dd></div>
+                </dl>
+              </article>
+              <article class="objetivo">
+                <h4>Conocer la disponibilidad de materias primas antes de comprar</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Pedidos con stock verificado</dd></div>
+                  <div><dt>Meta</dt><dd>Al menos el 90 % consulta el stock registrado</dd></div>
+                </dl>
+              </article>
+            </div>
+
+            <div class="horizonte">
+              <header class="horizonte__cabecera">
+                <span class="horizonte__plazo">9 meses</span>
+                <h3>Consolidar</h3>
+              </header>
+              <article class="objetivo">
+                <h4>Reducir la dependencia operativa del encargado</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Procesos de fabricación documentados</dd></div>
+                  <div><dt>Meta</dt><dd>Al menos 10 procedimientos o modelos de uso frecuente</dd></div>
+                </dl>
+              </article>
+              <article class="objetivo">
+                <h4>Planificar el abastecimiento a partir del stock</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Compras urgentes o no planificadas</dd></div>
+                  <div><dt>Meta</dt><dd>Reducir un 30 % las compras hechas como respuesta a cada pedido</dd></div>
+                </dl>
+              </article>
+            </div>
+
+            <div class="horizonte">
+              <header class="horizonte__cabecera">
+                <span class="horizonte__plazo">12 meses</span>
+                <h3>Crecer</h3>
+              </header>
+              <article class="objetivo">
+                <h4>Sostener los plazos de entrega ante más demanda</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Plazo promedio de entrega</dd></div>
+                  <div><dt>Meta</dt><dd>Mantenerlo aun con un 30 % más de pedidos</dd></div>
+                </dl>
+              </article>
+              <article class="objetivo">
+                <h4>Abrir un canal comercial digital</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Ventas por canales digitales</dd></div>
+                  <div><dt>Meta</dt><dd>Al menos el 15 % de las ventas</dd></div>
+                </dl>
+              </article>
+              <article class="objetivo">
+                <h4>Generar oportunidades comerciales calificadas</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Consultas por canales digitales</dd></div>
+                  <div><dt>Meta</dt><dd>Un 30 % más que la línea base</dd></div>
+                </dl>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="servicios-fisa">
+        <div class="wrap">
+          <p class="etiqueta">Qué ofrecen</p>
+          <h2 class="titular">Del showroom a la obra</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Aberturas de aluminio a medida para interiores y exteriores, más un catálogo de
+            productos terminados y los servicios que completan la venta.
+          </p>
+
+          <div class="grid grid--3" style="margin-top:var(--sp-8)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Fabricación a medida</h3>
+              <p>Ventanas, puertas y cerramientos de aluminio calculados y armados para cada pedido, con asesoramiento en el local.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Productos terminados</h3>
+              <p>Puertas de exterior, puertas placa y puertas plegadizas que se revenden como complemento de la abertura a medida.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Entrega, instalación y garantía</h3>
+              <p>Distribución con vehículo propio o flete, instalación según el producto y atención de garantías después de la venta.</p>
+            </article>
+          </div>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">La cadena de valor, paso a paso</h3>
+          <ol class="cadena-valor" aria-label="Cadena de valor interna">
+            <li>Abastecimiento de materias primas</li>
+            <li>Recepción y almacenamiento</li>
+            <li>Presupuestación y venta</li>
+            <li>Planificación del armado</li>
+            <li>Fabricación</li>
+            <li>Preparación y entrega</li>
+            <li>Instalación</li>
+            <li>Garantías y reparaciones</li>
+          </ol>
+          <p class="nota">
+            Clientes: particulares que equipan su vivienda y compradores de mayor volumen. Los
+            arquitectos y las constructoras aparecen como segmento potencial. Proveedores habituales:
+            Blackmet y Metal Bosch para aluminio, Vidrios Oeste para vidrio.
+          </p>
+        </div>
+      </div>
+
+      <div class="seccion oscuro" id="problematicas">
+        <div class="wrap">
+          <p class="etiqueta">Problemáticas</p>
+          <h2 class="titular" style="color:var(--blanco)">Quieren vender más. La operación todavía no lo aguanta.</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            El sponsor ve la oportunidad del lado comercial: vender online y por más canales. El
+            relevamiento encontró que, si las ventas crecieran de golpe, la fábrica no podría
+            responder sin estirar los plazos o resentir la calidad.
+          </p>
+
+          <div class="grid grid--3" style="margin-top:var(--sp-8)">
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>La planilla viaja en papel</h3>
+              <p>El sistema calcula los materiales y genera la planilla de armado en el local. Se imprime y alguien la lleva hasta la fábrica.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>El stock se verifica a ojo</h3>
+              <p>El stock no está integrado con el sistema de cálculo. La disponibilidad se mira en el depósito y se compra cuando aparece la necesidad.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Compras reactivas</h3>
+              <p>Cada pedido dispara una compra y, muchas veces, un viaje al proveedor. No hay planificación del abastecimiento.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Todo el conocimiento en una persona</h3>
+              <p>El encargado sabe cómo se fabrica cada modelo y se lo indica a los operarios. Si falta, la fábrica se frena.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Fábrica sin computadora ni internet</h3>
+              <p>Cualquier solución digital tiene que resolver primero la infraestructura y una interfaz adecuada al taller.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Sin canal de venta digital</h3>
+              <p>El canal principal es el local, con Instagram y WhatsApp de apoyo. No hay tienda online ni presencia en marketplaces, y los competidores ya venden por esos canales.</p>
+            </article>
+          </div>
+
+          <div class="grid grid--2" style="margin-top:var(--sp-6)">
+            <div class="destacado">
+              <p class="destacado__rotulo">Madurez organizacional</p>
+              <p class="destacado__valor">Entre CMM 1 y CMM 2</p>
+              <p>La fábrica opera de manera informal y dependiente de una persona. Lo comercial y administrativo tiene prácticas repetibles —cuaderno, Excel, sistema de cálculo— que no están integradas entre sí.</p>
+            </div>
+            <div class="destacado">
+              <p class="destacado__rotulo">Por qué ahora</p>
+              <p class="destacado__valor">Cambia el liderazgo</p>
+              <p>Uno de los socios prevé retirarse progresivamente y delegar más en el encargado. Reducir la dependencia de una única persona pasa a ser urgente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 · ALCANCE DEL PROYECTO ================= -->
+    <section class="panel-caso" id="alcance" role="tabpanel" aria-labelledby="tab-alcance" tabindex="0" hidden>
+
+      <div class="seccion">
+        <div class="wrap">
+          <div class="dos-columnas">
+            <div>
+              <p class="etiqueta">Alcance del proyecto</p>
+              <h2 class="titular">Ordenar la operación antes de escalar la venta</h2>
+              <div class="articulo" style="margin-top:var(--sp-6)">
+                <p>
+                  El proyecto profesionaliza y digitaliza de manera gradual los procesos operativos de
+                  Aberturas FISA: la comunicación de las órdenes de fabricación, la gestión de stock y
+                  compras, y la documentación del conocimiento de fabricación.
+                </p>
+                <p>
+                  El canal comercial digital queda para una etapa posterior. Primero, una operación que
+                  pueda absorber más pedidos sin extender los plazos de entrega.
+                </p>
+              </div>
+            </div>
+
+            <ul class="datos" aria-label="Datos del alcance">
+              <li><span class="datos__valor">9</span><span class="datos__rotulo">meses de proyecto</span></li>
+              <li><span class="datos__valor">6</span><span class="datos__rotulo">paquetes de trabajo</span></li>
+              <li><span class="datos__valor">4</span><span class="datos__rotulo">historias de usuario <em>must have</em></span></li>
+              <li><span class="datos__valor">2</span><span class="datos__rotulo">sedes: local y fábrica</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="edt">
+        <div class="wrap">
+          <p class="etiqueta">Estructura de desglose del trabajo</p>
+          <h2 class="titular">Seis paquetes de trabajo</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            La EDT (o WBS) descompone el proyecto en entregables. Cada paquete tiene un
+            responsable y se cierra con un resultado verificable.
+          </p>
+
+          <div class="edt">
+            <div class="edt__raiz">
+              <span class="edt__num">0</span>
+              <span>Digitalización de la operación de Aberturas FISA</span>
+            </div>
+            <ol class="edt__ramas">
+              <li class="edt__paquete">
+                <span class="edt__num">1</span>
+                <h3>Gestión del proyecto</h3>
+                <ol>
+                  <li>1.1 Plan y cronograma</li>
+                  <li>1.2 Seguimiento y comunicación con el sponsor</li>
+                  <li>1.3 Gestión de riesgos</li>
+                  <li>1.4 Cierre y lecciones aprendidas</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">2</span>
+                <h3>Relevamiento y diagnóstico</h3>
+                <ol>
+                  <li>2.1 Entrevistas con el equipo</li>
+                  <li>2.2 Mapa de la cadena de valor</li>
+                  <li>2.3 Diagnóstico de madurez</li>
+                  <li>2.4 Priorización de iniciativas</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">3</span>
+                <h3>Infraestructura de fábrica</h3>
+                <ol>
+                  <li>3.1 Conectividad a internet</li>
+                  <li>3.2 Equipamiento apto para el taller</li>
+                  <li>3.3 Puesta en marcha y prueba</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">4</span>
+                <h3>Órdenes de fabricación digitales</h3>
+                <ol>
+                  <li>4.1 Diseño del circuito local–fábrica</li>
+                  <li>4.2 Herramienta de consulta de planillas</li>
+                  <li>4.3 Capacitación y adopción</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">5</span>
+                <h3>Stock y compras</h3>
+                <ol>
+                  <li>5.1 Catálogo de materias primas</li>
+                  <li>5.2 Registro y consulta de stock</li>
+                  <li>5.3 Cruce con las necesidades de cada pedido</li>
+                  <li>5.4 Planificación de compras</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">6</span>
+                <h3>Conocimiento de fabricación</h3>
+                <ol>
+                  <li>6.1 Relevamiento de procedimientos</li>
+                  <li>6.2 Fichas de fabricación por modelo</li>
+                  <li>6.3 Transferencia a los operarios</li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="beneficios">
+        <div class="wrap">
+          <p class="etiqueta">Beneficios esperados</p>
+          <h2 class="titular">Qué cambia cuando termina el proyecto</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Cuatro beneficios medibles, atados a los objetivos a seis y nueve meses, y dos que no
+            se miden pero se notan.
+          </p>
+
+          <ul class="datos datos--fila" style="margin-top:var(--sp-8)">
+            <li><span class="datos__valor">90 %</span><span class="datos__rotulo">de las órdenes llegan a la fábrica sin papel</span></li>
+            <li><span class="datos__valor">90 %</span><span class="datos__rotulo">de los pedidos consultan el stock antes de comprar</span></li>
+            <li><span class="datos__valor">10</span><span class="datos__rotulo">procedimientos de fabricación documentados</span></li>
+            <li><span class="datos__valor">−30 %</span><span class="datos__rotulo">de compras urgentes o no planificadas</span></li>
+          </ul>
+
+          <div class="grid grid--2" style="margin-top:var(--sp-6)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Continuidad del negocio</h3>
+              <p>El conocimiento de fabricación deja de vivir en una sola cabeza. La fábrica puede seguir produciendo aunque el encargado no esté.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Capacidad para crecer</h3>
+              <p>Con órdenes, stock y compras ordenados, un aumento de pedidos deja de ser una amenaza para los plazos. Recién ahí tiene sentido abrir el canal digital.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion oscuro" id="gantt">
+        <div class="wrap">
+          <p class="etiqueta">Diagrama de Gantt</p>
+          <h2 class="titular" style="color:var(--blanco)">Nueve meses en tres etapas</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Entender, conectar, sostener. Los paquetes se solapan a propósito: la fábrica recibe la
+            primera orden digital mientras todavía se releva el stock.
+          </p>
+
+          <div class="gantt-scroll">
+            <div class="gantt" role="table" aria-label="Cronograma del proyecto, marzo a noviembre de 2026">
+              <div class="gantt__etapas" role="presentation">
+                <span class="gantt__etapa" style="--ini:1;--fin:2">Entender</span>
+                <span class="gantt__etapa" style="--ini:3;--fin:6">Conectar</span>
+                <span class="gantt__etapa" style="--ini:7;--fin:9">Sostener</span>
+              </div>
+              <div class="gantt__cabecera" role="row">
+                <span class="gantt__rotulo" role="columnheader">Paquete</span>
+                <span role="columnheader">Mar</span><span role="columnheader">Abr</span><span role="columnheader">May</span>
+                <span role="columnheader">Jun</span><span role="columnheader">Jul</span><span role="columnheader">Ago</span>
+                <span role="columnheader">Sep</span><span role="columnheader">Oct</span><span role="columnheader">Nov</span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">1 · Gestión del proyecto</span>
+                <span class="gantt__barra gantt__barra--tenue" role="cell" style="--ini:1;--fin:9"><span class="sr-only">marzo a noviembre</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">2 · Relevamiento y diagnóstico</span>
+                <span class="gantt__barra" role="cell" style="--ini:1;--fin:2"><span class="sr-only">marzo y abril</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">3 · Infraestructura de fábrica</span>
+                <span class="gantt__barra" role="cell" style="--ini:3;--fin:4"><span class="sr-only">mayo y junio</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">4 · Órdenes de fabricación digitales</span>
+                <span class="gantt__barra" role="cell" style="--ini:4;--fin:6"><span class="sr-only">junio a agosto</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">5 · Stock y compras</span>
+                <span class="gantt__barra" role="cell" style="--ini:5;--fin:8"><span class="sr-only">julio a octubre</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">6 · Conocimiento de fabricación</span>
+                <span class="gantt__barra" role="cell" style="--ini:6;--fin:9"><span class="sr-only">agosto a noviembre</span></span>
+              </div>
+              <div class="gantt__fila gantt__fila--hitos" role="row">
+                <span class="gantt__rotulo" role="rowheader">Hitos</span>
+                <span class="gantt__hito" role="cell" style="--mes:2"><i aria-hidden="true"></i>Diagnóstico aprobado</span>
+                <span class="gantt__hito" role="cell" style="--mes:6"><i aria-hidden="true"></i>Primera orden digital</span>
+                <span class="gantt__hito" role="cell" style="--mes:9"><i aria-hidden="true"></i>Cierre</span>
+              </div>
+            </div>
+          </div>
+          <p class="nota nota--clara">Cronograma tentativo. Marzo a noviembre de 2026, con hitos al cierre de cada etapa.</p>
+        </div>
+      </div>
+
+      <div class="seccion" id="stakeholders">
+        <div class="wrap">
+          <p class="etiqueta">Matriz de stakeholders</p>
+          <h2 class="titular">Quién decide, quién ejecuta, quién acompaña</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Poder e interés de cada parte, y la estrategia de relación que le corresponde.
+          </p>
+
+          <div class="matriz" role="group" aria-label="Matriz de poder e interés">
+            <span class="matriz__eje matriz__eje--y" aria-hidden="true">Poder</span>
+            <div class="matriz__grilla">
+              <div class="matriz__cuadrante">
+                <h3>Mantener satisfechos</h3>
+                <p class="matriz__nota">Alto poder · bajo interés</p>
+                <ul>
+                  <li>Socios propietarios</li>
+                </ul>
+              </div>
+              <div class="matriz__cuadrante matriz__cuadrante--clave">
+                <h3>Gestionar de cerca</h3>
+                <p class="matriz__nota">Alto poder · alto interés</p>
+                <ul>
+                  <li>Gabriel Fisicaro, encargado general y sponsor</li>
+                </ul>
+              </div>
+              <div class="matriz__cuadrante">
+                <h3>Monitorear</h3>
+                <p class="matriz__nota">Bajo poder · bajo interés</p>
+                <ul>
+                  <li>Estudio contable externo</li>
+                  <li>Proveedores de aluminio y vidrio</li>
+                  <li>Clientes</li>
+                </ul>
+              </div>
+              <div class="matriz__cuadrante">
+                <h3>Mantener informados</h3>
+                <p class="matriz__nota">Bajo poder · alto interés</p>
+                <ul>
+                  <li>Operarios de fábrica</li>
+                  <li>Atención comercial del local</li>
+                </ul>
+              </div>
+            </div>
+            <span class="matriz__eje matriz__eje--x" aria-hidden="true">Interés</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="madurez">
+        <div class="wrap">
+          <p class="etiqueta">Gráfico araña</p>
+          <h2 class="titular">Madurez actual y madurez objetivo</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Seis dimensiones en una escala de 0 a 5. El canal digital no se mueve en este proyecto:
+            es la etapa siguiente.
+          </p>
+
+          <div class="dos-columnas dos-columnas--centrada">
+            <figure class="radar">
+              <svg viewBox="-70 -10 540 420" role="img" aria-labelledby="radar-t radar-d">
+                <title id="radar-t">Gráfico araña de madurez</title>
+                <desc id="radar-d">Comparación entre la madurez actual, entre 1 y 2 en todas las dimensiones, y la madurez objetivo, entre 3 y 4 en órdenes, stock, compras, conocimiento e infraestructura. El canal digital se mantiene en 2.</desc>
+                <g class="radar__malla" fill="none" stroke-width="1">
+                  <polygon points="200,50 329.9,125 329.9,275 200,350 70.1,275 70.1,125"/>
+                  <polygon points="200,80 303.9,140 303.9,260 200,320 96.1,260 96.1,140"/>
+                  <polygon points="200,110 277.9,155 277.9,245 200,290 122.1,245 122.1,155"/>
+                  <polygon points="200,140 252,170 252,230 200,260 148,230 148,170"/>
+                  <polygon points="200,170 226,185 226,215 200,230 174,215 174,185"/>
+                  <line x1="200" y1="200" x2="200" y2="50"/>
+                  <line x1="200" y1="200" x2="329.9" y2="125"/>
+                  <line x1="200" y1="200" x2="329.9" y2="275"/>
+                  <line x1="200" y1="200" x2="200" y2="350"/>
+                  <line x1="200" y1="200" x2="70.1" y2="275"/>
+                  <line x1="200" y1="200" x2="70.1" y2="125"/>
+                </g>
+                <polygon class="radar__objetivo" points="200,80 303.9,140 277.9,245 200,320 122.1,245 148,170"/>
+                <polygon class="radar__actual" points="200,170 226,185 226,215 200,230 174,215 148,170"/>
+                <g class="radar__puntos">
+                  <circle cx="200" cy="80" r="4"/><circle cx="303.9" cy="140" r="4"/><circle cx="277.9" cy="245" r="4"/>
+                  <circle cx="200" cy="320" r="4"/><circle cx="122.1" cy="245" r="4"/><circle cx="148" cy="170" r="4"/>
+                </g>
+                <g class="radar__rotulos">
+                  <text x="200" y="30" text-anchor="middle">Órdenes de fabricación</text>
+                  <text x="342" y="118" text-anchor="start">Stock</text>
+                  <text x="342" y="290" text-anchor="start">Compras</text>
+                  <text x="200" y="378" text-anchor="middle">Conocimiento</text>
+                  <text x="58" y="290" text-anchor="end">Infraestructura</text>
+                  <text x="58" y="118" text-anchor="end">Canal digital</text>
+                </g>
+              </svg>
+              <figcaption class="radar__leyenda">
+                <span><i class="radar__muestra radar__muestra--actual" aria-hidden="true"></i>Hoy</span>
+                <span><i class="radar__muestra radar__muestra--objetivo" aria-hidden="true"></i>Al cierre del proyecto</span>
+              </figcaption>
+            </figure>
+
+            <ol class="dimensiones" aria-label="Dimensiones evaluadas">
+              <li><span class="dimensiones__nombre">Órdenes de fabricación</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>4</b></span></li>
+              <li><span class="dimensiones__nombre">Gestión de stock</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>4</b></span></li>
+              <li><span class="dimensiones__nombre">Planificación de compras</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>3</b></span></li>
+              <li><span class="dimensiones__nombre">Documentación del conocimiento</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>4</b></span></li>
+              <li><span class="dimensiones__nombre">Infraestructura en fábrica</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>3</b></span></li>
+              <li><span class="dimensiones__nombre">Canal comercial digital</span><span class="dimensiones__salto"><b>2</b><i aria-hidden="true"></i><b>2</b></span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="exclusiones">
+        <div class="wrap">
+          <p class="etiqueta">Exclusiones</p>
+          <h2 class="titular">Qué queda fuera de este proyecto</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Decir qué no se hace evita expectativas cruzadas. Todo lo que sigue puede ser un
+            proyecto después, no una sorpresa durante.
+          </p>
+
+          <ul class="exclusiones">
+            <li>
+              <h3>Tienda online y venta en marketplaces</h3>
+              <p>Se evalúa cuando la operación pueda absorber más pedidos. Instagram y WhatsApp siguen como hasta hoy.</p>
+            </li>
+            <li>
+              <h3>Incorporación de aberturas de PVC</h3>
+              <p>Requiere maquinaria, capacitación y una evaluación de costos. Es una decisión de negocio, no de este proyecto.</p>
+            </li>
+            <li>
+              <h3>Reemplazo del sistema de cálculo de materiales</h3>
+              <p>El sistema actual se integra al circuito digital; no se sustituye ni se reescribe.</p>
+            </li>
+            <li>
+              <h3>Gestión contable e impositiva</h3>
+              <p>Sigue a cargo del estudio contable externo, con el registro de caja tal como se lleva hoy.</p>
+            </li>
+            <li>
+              <h3>Reformas edilicias en la fábrica</h3>
+              <p>El proyecto aporta conectividad y equipamiento informático, no obra civil ni maquinaria de producción.</p>
+            </li>
+            <li>
+              <h3>Ampliación del alcance geográfico</h3>
+              <p>La logística y la venta al interior del país no se abordan en esta etapa.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- ================= CTA ================= -->
   <section class="seccion tinta" aria-labelledby="cta-t">
@@ -234,6 +773,6 @@
   </div>
 </footer>
 
-<script src="../../assets/main.js?v=7" defer></script>
+<script src="../../assets/main.js?v=8" defer></script>
 </body>
 </html>

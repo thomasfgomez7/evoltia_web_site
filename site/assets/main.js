@@ -258,6 +258,83 @@
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("dentro"); });
   }
 
+  /* ---------- Pestañas del caso ----------
+     Patrón WAI-ARIA "tabs" con activación automática: flechas, Inicio y Fin
+     mueven el foco y cambian el panel. La pestaña activa se refleja en la URL
+     (#cliente, #alcance) y un ancla interna (#gantt) abre el panel que la
+     contiene. Sin JS, el primer panel queda visible y el resto oculto. */
+  var zonaPestanas = document.querySelector("[data-caso-pestanas]");
+  if (zonaPestanas) {
+    var pestanas = Array.prototype.slice.call(zonaPestanas.querySelectorAll('[role="tab"]'));
+    var paneles = pestanas.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
+    var navAlto = nav ? nav.offsetHeight : 76;
+
+    var activarPestana = function (i, opts) {
+      opts = opts || {};
+      pestanas.forEach(function (t, k) {
+        var on = k === i;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        paneles[k].hidden = !on;
+      });
+      if (opts.foco) pestanas[i].focus();
+      if (opts.url !== false) history.replaceState(null, "", "#" + paneles[i].id);
+      /* Si la barra ya está pegada bajo la nav, el panel nuevo arranca donde
+         está la barra, no donde había quedado el scroll del panel anterior. */
+      var tope = zonaPestanas.getBoundingClientRect().top + window.scrollY - navAlto;
+      if (opts.subir && window.scrollY > tope) {
+        window.scrollTo({ top: tope, behavior: reduceMotion ? "auto" : "smooth" });
+      }
+      var lista = pestanas[i].parentNode;
+      if (lista.scrollWidth > lista.clientWidth) {
+        pestanas[i].scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+      track("tab_view", { tab_id: paneles[i].id });
+    };
+
+    var indicePorId = function (id) {
+      for (var k = 0; k < paneles.length; k++) if (paneles[k].id === id) return k;
+      return -1;
+    };
+
+    var desdeHash = function () {
+      var id = location.hash.slice(1);
+      var i = indicePorId(id);
+      if (i >= 0) { activarPestana(i, { url: false }); return; }
+      var destino = id && document.getElementById(id);
+      var panel = destino && destino.closest('[role="tabpanel"]');
+      if (panel) {
+        activarPestana(indicePorId(panel.id), { url: false });
+        var irAlDestino = function () { destino.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" }); };
+        irAlDestino();
+        /* Al recargar, el navegador restaura el scroll anterior después de
+           `load` y pisa el desplazamiento; se repite una vez más ahí. */
+        if (document.readyState !== "complete") {
+          window.addEventListener("load", function () { setTimeout(irAlDestino, 0); }, { once: true });
+        }
+        return;
+      }
+      activarPestana(0, { url: false });
+    };
+
+    pestanas.forEach(function (t, k) {
+      t.addEventListener("click", function () { activarPestana(k, { subir: true }); });
+      t.addEventListener("keydown", function (e) {
+        var n = pestanas.length, j = k;
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") j = (k + 1) % n;
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") j = (k - 1 + n) % n;
+        else if (e.key === "Home") j = 0;
+        else if (e.key === "End") j = n - 1;
+        else return;
+        e.preventDefault();
+        activarPestana(j, { foco: true, subir: true });
+      });
+    });
+
+    window.addEventListener("hashchange", desdeHash);
+    desdeHash();
+  }
+
   /* ---------- Eventos de CTA ---------- */
   document.querySelectorAll("[data-cta]").forEach(function (el) {
     el.addEventListener("click", function () {
