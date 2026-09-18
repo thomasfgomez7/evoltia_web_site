@@ -630,6 +630,363 @@ button { font: inherit; }
   color: var(--gris);
 }
 
+/* ==========================================================================
+   Pestañas del caso (Cliente / Alcance del proyecto / …)
+   Un solo panel visible por vez. La barra queda pegada bajo la nav para que
+   cambiar de vista nunca exija volver arriba.
+   ========================================================================== */
+.pestanas {
+  position: sticky; top: var(--nav-h); z-index: 90;
+  background: rgba(240, 241, 236, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--borde-claro);
+}
+.pestanas__lista {
+  display: flex; gap: var(--sp-1);
+  width: max-content; max-width: 100%;
+  margin-block: var(--sp-3);
+  padding: 4px;
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--r-pill);
+  /* En móvil la barra desborda y se desplaza en horizontal, sin barra visible. */
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+.pestanas__lista::-webkit-scrollbar { display: none; }
+
+.pestana {
+  flex: none; scroll-snap-align: start;
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  min-height: 44px; padding: 8px 20px;
+  border: 0; border-radius: var(--r-pill);
+  background: transparent; color: var(--nucleo);
+  font-size: var(--fs-cuerpo); font-weight: 500; white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 150ms var(--ease), color 150ms var(--ease);
+}
+/* En pantallas angostas el contenedor pastilla recortaba la última pestaña.
+   Cada pestaña pasa a ser su propia pastilla y la fila sangra hasta los
+   bordes: la que asoma cortada a la derecha invita a desplazar. */
+@media (max-width: 639px) {
+  .pestanas .wrap { padding-inline: 0; }
+  .pestanas__lista {
+    width: 100%; max-width: none;
+    padding: 0 var(--sp-5); gap: var(--sp-2);
+    background: transparent; border: 0; border-radius: 0;
+  }
+  .pestana { padding-inline: 16px; background: var(--blanco); border: 1px solid var(--borde-claro); }
+  .pestana[aria-selected="true"] { border-color: var(--nucleo); }
+}
+.pestana:hover { background: rgba(126, 62, 208, 0.08); }
+.pestana[aria-selected="true"] { background: var(--nucleo); color: var(--blanco); }
+.pestana:focus-visible { outline-offset: -3px; border-radius: var(--r-pill); }
+
+/* El número es una ETIQUETA (§04): la firma de la marca, en chico. */
+.pestana__num {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em;
+  color: var(--orbita);
+}
+.pestana[aria-selected="true"] .pestana__num { color: var(--senal); }
+
+.panel-caso[hidden] { display: none; }
+.panel-caso { animation: panel-aparece 320ms var(--ease); }
+@keyframes panel-aparece {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+.panel-caso:focus-visible { outline: none; }
+.panel-caso > .seccion + .seccion:not(.oscuro) { border-top: 1px solid var(--borde-claro); }
+
+/* Con la barra pegada, el destino de un ancla dentro del panel necesita más aire. */
+.panel-caso [id] { scroll-margin-top: calc(var(--nav-h) + 68px + var(--sp-5)); }
+
+/* ---------- Bloques compartidos por las pestañas ---------- */
+.dos-columnas { display: grid; gap: var(--sp-8); }
+@media (min-width: 900px) {
+  .dos-columnas { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--sp-10); align-items: start; }
+  .dos-columnas--centrada { align-items: center; }
+}
+
+/* Datos rápidos: cifra grande en Órbita, rótulo en etiqueta. */
+.datos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-4); }
+.datos--fila { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .datos--fila { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.datos li {
+  padding: var(--sp-5);
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--r-md);
+}
+.datos__valor {
+  display: block; font-size: var(--fs-h2); font-weight: 700; line-height: 1.1;
+  letter-spacing: -0.02em; color: var(--orbita);
+}
+.datos__rotulo {
+  display: block; margin-top: var(--sp-2);
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  line-height: 1.4; color: var(--gris);
+}
+.datos__rotulo em { font-style: normal; text-transform: none; letter-spacing: 0.04em; }
+
+.nota { margin-top: var(--sp-6); max-width: 68ch; color: var(--gris); }
+.nota--clara { color: var(--lavanda); }
+
+/* Callout sobre oscuro */
+.destacado {
+  padding: var(--sp-6);
+  border-radius: var(--r-md);
+  background: var(--superficie-oscura);
+  border: 1px solid var(--borde-oscuro);
+}
+.destacado__rotulo {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--senal); margin-bottom: var(--sp-3);
+}
+.destacado__valor { font-size: var(--fs-h3); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--blanco); margin-bottom: var(--sp-3); }
+.destacado p:last-child { color: var(--lavanda); }
+
+/* ---------- Objetivos por horizonte ---------- */
+.horizontes { display: grid; gap: var(--sp-6); margin-top: var(--sp-8); }
+@media (min-width: 900px) { .horizontes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-5); } }
+.horizonte { display: flex; flex-direction: column; gap: var(--sp-4); }
+.horizonte__cabecera {
+  display: flex; align-items: baseline; gap: var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid var(--nucleo);
+}
+.horizonte__cabecera h3 { font-size: var(--fs-sub); font-weight: 500; color: var(--nucleo); }
+.horizonte__plazo {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita);
+}
+.objetivo {
+  padding: var(--sp-5);
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--r-md);
+}
+.objetivo h4 { font-size: var(--fs-cuerpo); font-weight: 500; line-height: 1.35; color: var(--nucleo); }
+.objetivo dl { display: grid; gap: var(--sp-3); margin: var(--sp-4) 0 0; }
+.objetivo dt {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gris); margin-bottom: 2px;
+}
+.objetivo dd { margin: 0; color: var(--tinta); }
+
+/* ---------- Cadena de valor: nodos unidos por conectores (§05) ---------- */
+.cadena-valor {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-5) var(--sp-4);
+  margin-top: var(--sp-6);
+  counter-reset: paso;
+}
+@media (min-width: 640px)  { .cadena-valor { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .cadena-valor { grid-template-columns: repeat(8, minmax(0, 1fr)); } }
+.cadena-valor li {
+  position: relative; padding-top: var(--sp-6);
+  font-size: var(--fs-cuerpo); line-height: 1.35; color: var(--tinta);
+  counter-increment: paso;
+}
+.cadena-valor li::before {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: var(--nodo-2); height: var(--nodo-2); border-radius: 50%;
+  background: var(--orbita);
+}
+/* Un solo Pulso por sección: el último eslabón. */
+.cadena-valor li:last-child::before { background: var(--pulso); }
+.cadena-valor li::after {
+  content: ""; position: absolute; top: calc(var(--nodo-2) / 2 - 1.5px);
+  left: calc(var(--nodo-2) + 4px); right: 0; height: 3px; border-radius: 2px;
+  background: var(--lavanda);
+}
+.cadena-valor li:last-child::after { display: none; }
+
+/* ---------- EDT / WBS ---------- */
+.edt { margin-top: var(--sp-8); }
+.edt__num {
+  display: inline-block; font-size: var(--fs-etiqueta); font-weight: 500;
+  letter-spacing: 0.22em; color: var(--orbita); margin-bottom: var(--sp-2);
+}
+.edt__raiz {
+  display: flex; flex-direction: column; align-items: center; gap: var(--sp-1);
+  width: max-content; max-width: 100%; margin-inline: auto;
+  padding: var(--sp-4) var(--sp-6);
+  background: var(--nucleo); color: var(--blanco);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sub); font-weight: 500; text-align: center;
+}
+.edt__raiz .edt__num { color: var(--senal); margin: 0; }
+.edt__ramas {
+  position: relative;
+  display: grid; gap: var(--sp-4);
+  margin-top: var(--sp-8); padding-top: var(--sp-6);
+}
+/* Tronco desde la raíz hasta el bus horizontal. */
+.edt__ramas::before {
+  content: ""; position: absolute; left: 50%; top: calc(-1 * var(--sp-8));
+  width: 2px; height: var(--sp-8); background: var(--orbita);
+  transform: translateX(-50%);
+}
+@media (min-width: 640px)  { .edt__ramas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px)  { .edt__ramas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1100px) {
+  .edt__ramas { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--sp-3); }
+  /* Con los seis paquetes en una fila, el bus une el primero con el último
+     y cada paquete cuelga de él con su propio conector. */
+  .edt__ramas::after {
+    content: ""; position: absolute; top: 0;
+    left: calc(100% / 12); right: calc(100% / 12);
+    height: 2px; background: var(--orbita);
+  }
+  .edt__paquete::before {
+    content: ""; position: absolute; left: 50%; top: calc(-1 * var(--sp-6));
+    width: 2px; height: var(--sp-6); background: var(--orbita);
+    transform: translateX(-50%);
+  }
+}
+.edt__paquete {
+  position: relative;
+  padding: var(--sp-5);
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-top: 3px solid var(--orbita);
+  border-radius: var(--r-md);
+}
+.edt__paquete h3 { font-size: var(--fs-cuerpo); font-weight: 500; line-height: 1.3; color: var(--nucleo); }
+.edt__paquete ol { margin-top: var(--sp-4); display: grid; gap: var(--sp-2); }
+.edt__paquete ol li { font-size: var(--fs-cuerpo); line-height: 1.4; color: var(--gris); padding-left: var(--sp-3); border-left: 2px solid var(--borde-claro); }
+
+/* ---------- Gantt ---------- */
+.gantt-scroll { margin-top: var(--sp-8); overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: var(--sp-2); }
+.gantt {
+  --col-rotulo: 200px;
+  display: grid;
+  grid-template-columns: var(--col-rotulo) repeat(9, minmax(64px, 1fr));
+  min-width: 780px;
+  /* Medio nodo de aire a la derecha: ahí cae el último hito. */
+  padding-inline-end: calc(var(--nodo-2) / 2);
+  row-gap: var(--sp-3);
+  align-items: center;
+}
+.gantt__etapas, .gantt__cabecera, .gantt__fila { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; align-items: center; }
+.gantt__etapa {
+  grid-column: calc(var(--ini) + 1) / calc(var(--fin) + 2);
+  margin-inline: 2px;
+  padding: var(--sp-1) 0;
+  text-align: center;
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--senal);
+  border-bottom: 1px solid var(--borde-oscuro-fuerte);
+}
+.gantt__cabecera span { text-align: center; font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavanda); padding-block: var(--sp-2); }
+.gantt__cabecera .gantt__rotulo { text-align: start; }
+.gantt__rotulo { grid-column: 1; padding-right: var(--sp-4); font-size: var(--fs-cuerpo); line-height: 1.3; color: var(--papel); }
+.gantt__fila { min-height: 40px; position: relative; }
+/* Rayado vertical de meses, detrás de las barras. */
+.gantt__fila::before {
+  content: ""; position: absolute; inset: 0 0 0 var(--col-rotulo); z-index: 0;
+  background-image: linear-gradient(to right, var(--borde-oscuro) 1px, transparent 1px);
+  background-size: calc(100% / 9) 100%;
+}
+.gantt__barra {
+  position: relative; z-index: 1;
+  grid-column: calc(var(--ini) + 1) / calc(var(--fin) + 2);
+  height: 22px; margin-inline: 6px;
+  border-radius: var(--r-pill);
+  background: var(--senal);
+}
+.gantt__barra--tenue { background: transparent; border: 1.5px solid var(--borde-oscuro-fuerte); }
+.gantt__fila--hitos { align-items: start; padding-top: var(--sp-2); }
+.gantt__hito {
+  position: relative; z-index: 1;
+  grid-column: calc(var(--mes) + 1);
+  justify-self: end; translate: 50% 0;
+  display: flex; flex-direction: column; align-items: center; gap: var(--sp-2);
+  width: 120px; text-align: center;
+  font-size: var(--fs-etiqueta); letter-spacing: 0.06em; line-height: 1.3; color: var(--lavanda);
+}
+.gantt__hito i { display: block; width: var(--nodo-2); height: var(--nodo-2); border-radius: 50%; background: var(--pulso); }
+/* El último hito cae sobre el borde derecho: su rótulo se alinea hacia adentro
+   para no abrir un scroll horizontal de 60 px por medio nodo. */
+.gantt__hito:last-child { translate: calc(var(--nodo-2) / 2) 0; align-items: flex-end; text-align: end; }
+
+/* ---------- Matriz de stakeholders ---------- */
+.matriz {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto;
+  gap: var(--sp-3) var(--sp-4);
+  margin-top: var(--sp-8);
+}
+.matriz__eje {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gris);
+}
+.matriz__eje--y { grid-row: 1; grid-column: 1; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; }
+.matriz__eje--y::after, .matriz__eje--x::after { content: " →"; }
+.matriz__eje--x { grid-row: 2; grid-column: 2; text-align: center; }
+.matriz__grilla {
+  grid-row: 1; grid-column: 2;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3);
+}
+.matriz__cuadrante {
+  padding: var(--sp-5);
+  background: var(--blanco);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--r-md);
+  min-height: 160px;
+}
+.matriz__cuadrante h3 { font-size: var(--fs-cuerpo); font-weight: 500; color: var(--nucleo); }
+.matriz__nota { font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); margin-top: 2px; }
+.matriz__cuadrante ul { margin-top: var(--sp-4); display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.matriz__cuadrante li {
+  padding: 6px 12px; border-radius: var(--r-pill);
+  background: var(--papel); border: 1px solid var(--borde-claro);
+  font-size: var(--fs-cuerpo); line-height: 1.3; color: var(--tinta);
+}
+.matriz__cuadrante--clave { background: var(--nucleo); border-color: var(--nucleo); }
+.matriz__cuadrante--clave h3 { color: var(--blanco); }
+.matriz__cuadrante--clave .matriz__nota { color: var(--senal); }
+.matriz__cuadrante--clave li { background: var(--superficie-oscura); border-color: var(--borde-oscuro-fuerte); color: var(--papel); }
+@media (max-width: 639px) {
+  .matriz__cuadrante { padding: var(--sp-4); min-height: 0; }
+  .matriz__cuadrante li { font-size: var(--fs-etiqueta); letter-spacing: 0.04em; }
+}
+
+/* ---------- Gráfico araña ---------- */
+.radar { margin: var(--sp-8) 0 0; }
+.radar svg { width: 100%; max-width: 520px; margin-inline: auto; }
+.radar__malla { stroke: var(--borde-claro); }
+.radar__objetivo { fill: rgba(126, 62, 208, 0.18); stroke: var(--orbita); stroke-width: 2; stroke-linejoin: round; }
+.radar__actual { fill: rgba(196, 84, 254, 0.22); stroke: var(--pulso); stroke-width: 2; stroke-linejoin: round; }
+.radar__puntos circle { fill: var(--orbita); }
+.radar__rotulos text { font-family: var(--fuente); font-size: 13px; font-weight: 500; fill: var(--nucleo); }
+.radar__leyenda { display: flex; flex-wrap: wrap; gap: var(--sp-5); justify-content: center; margin-top: var(--sp-4); font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); }
+.radar__leyenda span { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.radar__muestra { width: 12px; height: 12px; border-radius: 50%; }
+.radar__muestra--actual { background: var(--pulso); }
+.radar__muestra--objetivo { background: var(--orbita); }
+
+.dimensiones { display: grid; gap: var(--sp-2); margin-top: var(--sp-8); }
+.dimensiones li {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--blanco); border: 1px solid var(--borde-claro); border-radius: var(--r-sm);
+}
+.dimensiones__nombre { color: var(--tinta); }
+.dimensiones__salto { display: inline-flex; align-items: center; gap: var(--sp-2); flex: none; font-weight: 700; color: var(--orbita); }
+.dimensiones__salto b:first-child { color: var(--gris); font-weight: 500; }
+.dimensiones__salto i { display: block; width: 20px; height: 2px; background: var(--lavanda); border-radius: 2px; }
+
+/* ---------- Exclusiones ---------- */
+.exclusiones { display: grid; gap: var(--sp-4); margin-top: var(--sp-8); max-width: 820px; }
+.exclusiones li {
+  display: grid; gap: var(--sp-1);
+  padding: var(--sp-4) 0 var(--sp-4) var(--sp-6);
+  border-left: var(--conector) solid var(--borde-claro);
+}
+.exclusiones h3 { font-size: var(--fs-sub); font-weight: 500; line-height: 1.3; color: var(--nucleo); }
+.exclusiones p { color: var(--gris); max-width: 68ch; }
+
 /* ---------- Manifiesto (página Nosotros) ----------
    Pieza de marca, no sección de texto: degradé del hero, arcos de órbita con
    el centro fuera del cuadro sobre el borde izquierdo (§05) e isotipo. */
