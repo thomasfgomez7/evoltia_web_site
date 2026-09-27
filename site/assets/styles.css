@@ -236,7 +236,8 @@ button { font: inherit; }
 /* Tamaño mínimo del logo completo en pantalla: 140 px de ancho (§02) */
 .nav__logo img { width: 148px; }
 .nav__menu { display: none; }
-.nav__lista { display: flex; align-items: center; gap: var(--sp-5); }
+/* Con seis ítems la fila necesita más aire del que deja --sp-5. */
+.nav__lista { display: flex; align-items: center; gap: var(--sp-4); }
 .nav__link {
   display: inline-block; padding: var(--sp-2) var(--sp-1);
   /* Con cinco ítems, dejar que "Cómo trabajamos" se parta en dos líneas
@@ -256,7 +257,9 @@ button { font: inherit; }
   border-radius: var(--r-sm); color: var(--papel); cursor: pointer;
 }
 
-@media (min-width: 1100px) {
+/* El menú completo aparece recién cuando los seis ítems y el CTA entran en
+   una sola fila sin apretarse contra el logo. */
+@media (min-width: 1180px) {
   .nav__menu { display: flex; align-items: center; }
   .nav__cta { display: inline-flex; }
   .nav__toggle { display: none; }
