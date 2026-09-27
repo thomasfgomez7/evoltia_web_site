@@ -591,7 +591,9 @@ button { font: inherit; }
 .ficha__marca img { width: min(260px, 80%); height: auto; }
 
 .ficha__datos { display: grid; gap: var(--sp-5); }
-@media (min-width: 640px) { .ficha__datos { grid-template-columns: repeat(3, 1fr); } }
+/* Los datos de la ficha se reparten según cuántos haya, sin dejar una
+   columna vacía cuando alguno no corresponde. */
+@media (min-width: 640px) { .ficha__datos { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
 .ficha__datos dt {
   font-size: var(--fs-etiqueta); font-weight: 500;
   letter-spacing: 0.22em; text-transform: uppercase;
