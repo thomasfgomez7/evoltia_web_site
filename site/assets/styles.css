@@ -839,19 +839,9 @@ button { font: inherit; }
 @media (min-width: 640px)  { .edt__ramas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 900px)  { .edt__ramas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 1100px) {
-  .edt__ramas { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--sp-3); }
-  /* Con los seis paquetes en una fila, el bus une el primero con el último
-     y cada paquete cuelga de él con su propio conector. */
-  .edt__ramas::after {
-    content: ""; position: absolute; top: 0;
-    left: calc(100% / 12); right: calc(100% / 12);
-    height: 2px; background: var(--orbita);
-  }
-  .edt__paquete::before {
-    content: ""; position: absolute; left: 50%; top: calc(-1 * var(--sp-6));
-    width: 2px; height: var(--sp-6); background: var(--orbita);
-    transform: translateX(-50%);
-  }
+  /* Ocho paquetes entran en dos filas de cuatro. El bus horizontal que unía
+     una única fila se quitó: con dos filas dejaba de describir el árbol. */
+  .edt__ramas { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-4); }
 }
 .edt__paquete {
   position: relative;
@@ -1273,6 +1263,86 @@ button { font: inherit; }
 .puntaje b { font-weight: 700; color: var(--nucleo); text-align: right; font-size: var(--fs-cuerpo); letter-spacing: 0; }
 .proveedor__nota { color: var(--gris); }
 .proveedor__nota b { font-weight: 500; color: var(--nucleo); }
+
+/* ---------- Ajustes de los componentes del caso a los documentos ---------- */
+
+/* Sobre fondo oscuro las bandas y tablas usan la superficie oscura: el Blanco
+   queda reservado para tarjetas sobre Papel (§03). */
+.oscuro .mapa__banda { background: var(--superficie-oscura); border-color: var(--borde-oscuro); }
+.oscuro .mapa__banda .mapa__items li { background: transparent; border-color: var(--borde-oscuro-fuerte); color: var(--lavanda); }
+.mapa__item--nuevo { background: var(--senal) !important; border-color: var(--senal) !important; color: var(--nucleo) !important; font-weight: 500; }
+
+.tabla--oscura { background: var(--superficie-oscura); border-color: var(--borde-oscuro); }
+.tabla--oscura th, .tabla--oscura td { border-bottom-color: var(--borde-oscuro); }
+.tabla--oscura thead th { background: rgba(14, 0, 32, 0.35); color: var(--senal); }
+.tabla--oscura tbody th { color: var(--blanco); }
+.tabla--oscura td { color: var(--lavanda); }
+.tabla--oscura .chip { background: transparent; border-color: var(--borde-oscuro-fuerte); color: var(--lavanda); }
+.tabla--oscura .chip--alta { background: var(--senal); border-color: var(--senal); color: var(--nucleo); }
+.tabla--oscura .chip--media { background: transparent; border-color: var(--senal); color: var(--senal); }
+
+/* Matriz de cubrimiento: celdas angostas y marca centrada. */
+.cubrimiento { min-width: 720px; }
+.cubrimiento thead th:not(:first-child) { text-align: center; }
+.cubrimiento td { text-align: center; padding-inline: var(--sp-2); }
+.cubrimiento th[scope="row"] { white-space: nowrap; }
+.cubrimiento abbr { text-decoration: none; border-bottom: 1px dotted currentColor; cursor: help; }
+.marca {
+  display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--orbita); color: var(--blanco);
+  font-style: normal; font-size: var(--fs-etiqueta); font-weight: 500; line-height: 1;
+}
+.marca--parcial { background: transparent; border: 1.5px solid var(--orbita); color: var(--orbita); }
+
+/* Columna del escenario elegido dentro de la tabla comparativa. */
+.tabla .col--elegida { background: rgba(126, 62, 208, 0.08); color: var(--nucleo); font-weight: 500; }
+.tabla thead .col--elegida { background: rgba(126, 62, 208, 0.16); color: var(--nucleo); }
+
+.tarjeta__cifra { margin-top: auto; padding-top: var(--sp-3); color: var(--gris); font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; }
+.tarjeta__cifra b { font-size: var(--fs-h3); font-weight: 700; letter-spacing: -0.02em; color: var(--orbita); }
+
+@media (min-width: 900px) { .datos--tres { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* El paquete de la Fase 2 se distingue del núcleo operativo. */
+.edt__paquete--fase2 { border-top-color: var(--pulso); border-style: dashed; }
+.edt__paquete--fase2 .edt__num { color: var(--pulso); }
+.gantt--12 { grid-template-columns: var(--col-rotulo) repeat(12, minmax(56px, 1fr)); min-width: 940px; }
+.gantt--12 .gantt__fila::before { background-size: calc(100% / 12) 100%; }
+.gantt__barra--fase2 { background: transparent; border: 1.5px dashed var(--pulso); }
+
+/* ---------- Matriz 2×2 de escenarios ---------- */
+.escenarios-matriz {
+  display: grid; gap: var(--sp-3);
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto;
+  margin-top: var(--sp-8);
+  align-items: stretch;
+}
+.escenarios-matriz__eje {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gris); align-self: center; justify-self: center;
+}
+.escenarios-matriz__eje--x { grid-row: 1; grid-column: 2 / span 2; }
+.escenarios-matriz__eje--y { grid-row: 3 / span 2; grid-column: 1; writing-mode: vertical-rl; transform: rotate(180deg); }
+.escenarios-matriz__cab {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita); align-self: center;
+}
+.escenarios-matriz__cab--c1 { grid-row: 2; grid-column: 2; }
+.escenarios-matriz__cab--c2 { grid-row: 2; grid-column: 3; }
+.escenarios-matriz__cab--f1 { grid-row: 3; grid-column: 1; writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; }
+.escenarios-matriz__cab--f2 { grid-row: 4; grid-column: 1; writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; }
+.escenarios-matriz .escenario:nth-of-type(1) { grid-row: 3; grid-column: 2; }
+.escenarios-matriz .escenario:nth-of-type(2) { grid-row: 3; grid-column: 3; }
+.escenarios-matriz .escenario:nth-of-type(3) { grid-row: 4; grid-column: 2; }
+.escenarios-matriz .escenario:nth-of-type(4) { grid-row: 4; grid-column: 3; }
+/* En pantallas angostas la matriz se lee como una lista: los rótulos de los
+   ejes se ocultan porque cada tarjeta ya nombra su cuadrante. */
+@media (max-width: 899px) {
+  .escenarios-matriz { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+  .escenarios-matriz__eje, .escenarios-matriz__cab { display: none; }
+  .escenarios-matriz .escenario:nth-of-type(n) { grid-row: auto; grid-column: 1; }
+}
 
 /* ---------- Manifiesto (página Nosotros) ----------
    Pieza de marca, no sección de texto: degradé del hero, arcos de órbita con
