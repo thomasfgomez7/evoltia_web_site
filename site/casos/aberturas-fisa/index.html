@@ -22,7 +22,7 @@
      de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las tres paginas
      cada vez que se tocan styles.css o main.js. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="../../assets/styles.css?v=18">
+<link rel="stylesheet" href="../../assets/styles.css?v=24">
 
 <script type="application/ld+json">
 {
@@ -133,14 +133,20 @@
           <button class="pestana" role="tab" type="button" id="tab-cliente" aria-controls="cliente" aria-selected="true">
             <span class="pestana__num" aria-hidden="true">01</span>Cliente
           </button>
-          <button class="pestana" role="tab" type="button" id="tab-alcance" aria-controls="alcance" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">02</span>Alcance del proyecto
+          <button class="pestana" role="tab" type="button" id="tab-actual" aria-controls="actual" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">02</span>Arquitectura actual
           </button>
-          <button class="pestana" role="tab" type="button" id="tab-arquitectura" aria-controls="arquitectura" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">03</span>Arquitectura empresarial
+          <button class="pestana" role="tab" type="button" id="tab-destino" aria-controls="destino" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">03</span>Arquitectura destino
+          </button>
+          <button class="pestana" role="tab" type="button" id="tab-brechas" aria-controls="brechas" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">04</span>Brechas y escenarios
+          </button>
+          <button class="pestana" role="tab" type="button" id="tab-mercado" aria-controls="mercado" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">05</span>Alcance y mercado
           </button>
           <button class="pestana" role="tab" type="button" id="tab-software" aria-controls="software" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">04</span>Selección del software
+            <span class="pestana__num" aria-hidden="true">06</span>Selección de la solución
           </button>
         </div>
       </div>
@@ -149,7 +155,7 @@
     <!-- ================= 01 · CLIENTE ================= -->
     <section class="panel-caso" id="cliente" role="tabpanel" aria-labelledby="tab-cliente" tabindex="0">
 
-      <div class="seccion">
+      <div class="seccion" id="quien-es">
         <div class="wrap">
           <div class="dos-columnas">
             <div>
@@ -168,10 +174,10 @@
                   producción y las instrucciones de fabricación.
                 </p>
                 <p>
-                  El local exhibe modelos y recibe consultas y pedidos; los productos se fabrican o se
-                  piden a demanda. La distribución se hace con una camioneta propia y con fletes
-                  tercerizados cuando el volumen es mayor. Entre los locales de aberturas de la zona,
-                  está en una posición intermedia: ni de los más grandes ni de los más chicos.
+                  El local exhibe modelos y recibe consultas y pedidos; todo se fabrica o se pide
+                  bajo pedido. La distribución se hace con una camioneta propia y con fletes
+                  tercerizados cuando el volumen es mayor. Entre los locales de aberturas de la
+                  zona está en una posición intermedia: ni de los más grandes ni de los más chicos.
                 </p>
               </div>
             </div>
@@ -180,8 +186,184 @@
               <li><span class="datos__valor">10</span><span class="datos__rotulo">años de actividad</span></li>
               <li><span class="datos__valor">6</span><span class="datos__rotulo">personas en el equipo</span></li>
               <li><span class="datos__valor">2</span><span class="datos__rotulo">cuadras entre local y fábrica</span></li>
-              <li><span class="datos__valor">1</span><span class="datos__rotulo">canal de venta: el showroom</span></li>
+              <li><span class="datos__valor">15</span><span class="datos__rotulo">días de plazo promedio de entrega</span></li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion oscuro" id="identidad">
+        <div class="wrap">
+          <p class="etiqueta">Identidad organizacional</p>
+          <h2 class="titular" style="color:var(--blanco)">Lo que la empresa dice de sí misma</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            La misión y la visión las proveyó la organización y coinciden con lo relevado en la
+            entrevista.
+          </p>
+
+          <div class="grid grid--2" style="margin-top:var(--sp-8)">
+            <div class="destacado">
+              <p class="destacado__rotulo">Misión</p>
+              <p>Diseñar, fabricar y comercializar aberturas de aluminio a medida y soluciones complementarias para la construcción, brindando un asesoramiento integral, cumplimiento en los tiempos de entrega y un servicio de instalación de alta calidad que garantice el confort, la seguridad y la durabilidad en los espacios de sus clientes.</p>
+            </div>
+            <div class="destacado">
+              <p class="destacado__rotulo">Visión</p>
+              <p>Consolidar y hacer crecer el negocio, profesionalizando sus procesos y ampliando sus canales comerciales mediante herramientas digitales, ofreciendo asesoramiento personalizado para garantizar confort y seguridad en cada proyecto.</p>
+            </div>
+          </div>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--blanco)">Valores declarados</h3>
+          <div class="grid grid--4" style="margin-top:var(--sp-5)">
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Calidad y precisión técnica</h3>
+              <p>Materias primas de primera línea y rigurosidad en el corte, el ensamblado y el montaje para un producto sin fallas.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Orientación y cumplimiento al cliente</h3>
+              <p>Prioridad al cliente desde el asesoramiento en showroom hasta la postventa, respetando los plazos acordados.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Flexibilidad operativa</h3>
+              <p>Capacidad de responder a pedidos a medida, urgencias de obra y variaciones de demanda gestionando proveedores e insumos.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Responsabilidad y confiabilidad</h3>
+              <p>Transparencia en la presupuestación, garantía real sobre productos e instalaciones y profesionalismo en la gestión.</p>
+            </article>
+          </div>
+
+          <p class="nota nota--clara" style="margin-top:var(--sp-6)">
+            El relevamiento observó además valores reales, más allá de los declarados: informalidad
+            y confianza personal por sobre los procesos formales, con una fuerte orientación al
+            oficio y a resolver el día a día.
+          </p>
+        </div>
+      </div>
+
+      <div class="seccion" id="productos">
+        <div class="wrap">
+          <p class="etiqueta">Productos y servicios</p>
+          <h2 class="titular">Todo se comercializa bajo pedido</h2>
+
+          <div class="grid grid--3" style="margin-top:var(--sp-8)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Fabricación propia, a medida</h3>
+              <p>Carpintería de aluminio en las líneas Herrero y Módena. Tipologías: corredizas, paño fijo, rebatibles, oscilobatientes, banderolas y brazos de empuje. Vidrio simple, de seguridad, DVH o fantasía.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Productos revendidos</h3>
+              <p>Puertas de exterior inyectadas y de chapa, puertas placa e interiores, puertas plegadizas, cortinas de PVC, black-out y revestimientos de cielo raso.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Servicios incorporados</h3>
+              <p>En preventa, asesoramiento técnico en showroom y toma de medidas en obra. En entrega y postventa, logística, colocación en obra, garantías y servicio técnico.</p>
+            </article>
+          </div>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Dos segmentos de cliente</h3>
+          <div class="balance" style="margin-top:var(--sp-5)">
+            <article class="balance__opcion">
+              <h3>Consumidor final y profesionales · B2C</h3>
+              <ul class="balance__lista">
+                <li class="balance__pro">Propietarios y reformas particulares, más arquitectos, diseñadores de interiores y directores de obra.</li>
+                <li class="balance__pro">Buscan asesoramiento, atención en showroom y servicio llave en mano: medición, fabricación e instalación.</li>
+                <li class="balance__pro">Los profesionales exigen además precisión técnica, cumplimiento de plazos e integración con planos.</li>
+                <li class="balance__contra">Compran al contado o con anticipo y saldo contra entrega, con presupuestos por cómputo métrico.</li>
+              </ul>
+            </article>
+            <article class="balance__opcion">
+              <h3>Constructoras y desarrolladores · B2B</h3>
+              <ul class="balance__lista">
+                <li class="balance__pro">Obras de mayor escala: edificios y barrios cerrados.</li>
+                <li class="balance__pro">Buscan precio por volumen, estandarización y capacidad de entrega por etapas.</li>
+                <li class="balance__contra">Operan con contratos o licitaciones privadas.</li>
+                <li class="balance__contra">Pagan a plazo o mediante acopios de material.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="cadena-valor">
+        <div class="wrap">
+          <p class="etiqueta">Cadena de valor</p>
+          <h2 class="titular">Del abastecimiento a la postventa</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Cinco eslabones internos. El tercero concentra la principal problemática de la
+            organización.
+          </p>
+
+          <ol class="cadena-valor cadena-valor--cinco" aria-label="Cadena de valor interna">
+            <li><b>Logística de entrada</b>Abastecimiento y compras, recepción con control de calidad y almacenamiento</li>
+            <li><b>Operaciones</b>Planificación del armado con hoja de corte y optimización de perfiles y vidrios</li>
+            <li><b>Fabricación</b>Corte, mecanizado, punzonado, ensamblado, accesorios y montaje de vidrios</li>
+            <li><b>Logística de salida</b>Embalaje, almacenamiento de terminados y distribución a obra o domicilio</li>
+            <li><b>Comercial y postventa</b>Showroom, presupuestos, señas, turnos de instalación, garantías y reparaciones</li>
+          </ol>
+
+          <div class="conclusion-parcial">
+            <p class="conclusion-parcial__rotulo">La nota del relevamiento</p>
+            <p>
+              En la fabricación aparece la principal problemática actual de la organización: una
+              sola persona conoce en profundidad estos procesos y tiene que indicarles a los
+              operarios cómo realizarlos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="proveedores-fisa">
+        <div class="wrap">
+          <p class="etiqueta">Abastecimiento</p>
+          <h2 class="titular">Un proveedor habitual y uno de respaldo</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            La política de compras equilibra costo y flexibilidad. Aluminio: Blackmet, Metal Bosch
+            y Aluminio Ruta8. Vidrios: Oeste DVH y Vidriería Lourdes. Los accesorios también llegan
+            por los proveedores de aluminio.
+          </p>
+
+          <div class="comparativa" role="table" aria-label="Proveedor habitual frente a proveedor alternativo">
+            <div class="comparativa__cabecera" role="row">
+              <span role="columnheader">Variable</span>
+              <span role="columnheader">Proveedor habitual</span>
+              <span role="columnheader">Proveedor alternativo</span>
+            </div>
+            <div class="comparativa__fila" role="row">
+              <span class="comparativa__dim" role="rowheader">Disponibilidad de stock</span>
+              <span role="cell">Insumos de alta rotación, con catálogo predecible y faltantes eventuales de tipologías o colores específicos</span>
+              <span class="comparativa__destino" role="cell">Se activa ante quiebres de stock o insumos poco frecuentes: perfiles de alta prestación, anodizados especiales, accesorios importados</span>
+            </div>
+            <div class="comparativa__fila" role="row">
+              <span class="comparativa__dim" role="rowheader">Tiempos de entrega</span>
+              <span role="cell">Plazos estandarizados y despachos programados; es la opción por defecto cuando el taller coincide con el avance de obra</span>
+              <span class="comparativa__destino" role="cell">Se elige cuando la obra exige urgencias o adelantos: la velocidad prevalece sobre el precio del material</span>
+            </div>
+            <div class="comparativa__fila" role="row">
+              <span class="comparativa__dim" role="rowheader">Crédito y precio</span>
+              <span role="cell">Concentra el volumen: precios bonificados, descuentos por cantidad y cuenta corriente a 30 días</span>
+              <span class="comparativa__destino" role="cell">Precios de lista más altos y pago al contado o anticipado; se asume para no paralizar la producción</span>
+            </div>
+          </div>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Dos flujos de abastecimiento</h3>
+          <div class="grid grid--2" style="margin-top:var(--sp-5)">
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--media">Flujo A</span></div>
+              <h3>Retiro por medios propios</h3>
+              <p>Herrajes, accesorios, selladores, insumos menores de armado y compras de urgencia en volúmenes reducidos, con la flota propia. Resuelve imprevistos del taller sin depender de las rutas del proveedor y consolida cargas livianas.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--media">Flujo B</span></div>
+              <h3>Flete del proveedor</h3>
+              <p>Tiras de perfil de seis metros y planchas de vidrio flotado o DVH de gran formato, entregadas por vehículos acondicionados. Transfiere el riesgo de rotura, exige estiba especializada y diluye el costo del flete en el volumen.</p>
+            </article>
           </div>
         </div>
       </div>
@@ -189,31 +371,25 @@
       <div class="seccion" id="objetivos">
         <div class="wrap">
           <p class="etiqueta">Objetivos estratégicos</p>
-          <h2 class="titular">Seis objetivos en tres horizontes</h2>
+          <h2 class="titular">Seis objetivos en cuatro horizontes</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            Metas que el equipo reformuló a partir de lo que expresó el sponsor. Se identifican
-            como OE-01 a OE-06 en todos los documentos del caso y se validan con él antes de
-            convertirse en compromisos del proyecto.
+            Los pensó el equipo a partir de lo relevado —es lo único del documento que no surge
+            directamente de las reuniones con el encargado— y llevan el identificador OE con el que
+            los referencian todos los demás documentos del caso.
           </p>
 
-          <div class="horizontes">
+          <div class="horizontes horizontes--cuatro">
             <div class="horizonte">
               <header class="horizonte__cabecera">
                 <span class="horizonte__plazo">6 meses</span>
-                <h3>Ordenar</h3>
+                <h3>Conectar</h3>
               </header>
               <article class="objetivo">
-                <h4>OE-01 · Digitalizar la comunicación de las órdenes de fabricación</h4>
+                <h4>OE-01 · Digitalizar el flujo de órdenes de fabricación</h4>
                 <dl>
                   <div><dt>Indicador</dt><dd>Órdenes comunicadas digitalmente</dd></div>
                   <div><dt>Meta</dt><dd>Al menos el 90 % sin traslado de planillas en papel</dd></div>
-                </dl>
-              </article>
-              <article class="objetivo">
-                <h4>OE-02 · Conocer la disponibilidad de materias primas antes de comprar</h4>
-                <dl>
-                  <div><dt>Indicador</dt><dd>Pedidos con stock verificado</dd></div>
-                  <div><dt>Meta</dt><dd>Al menos el 90 % consulta el stock registrado</dd></div>
+                  <div><dt>Hoy</dt><dd>No hay planillas digitales</dd></div>
                 </dl>
               </article>
             </div>
@@ -221,20 +397,22 @@
             <div class="horizonte">
               <header class="horizonte__cabecera">
                 <span class="horizonte__plazo">9 meses</span>
-                <h3>Consolidar</h3>
+                <h3>Ordenar</h3>
               </header>
               <article class="objetivo">
-                <h4>OE-03 · Planificar el abastecimiento a partir del stock</h4>
+                <h4>OE-02 · Conocer la disponibilidad de materias primas antes de comprar</h4>
                 <dl>
-                  <div><dt>Indicador</dt><dd>Compras urgentes o no planificadas</dd></div>
-                  <div><dt>Meta</dt><dd>Reducir un 30 % las compras hechas como respuesta a cada pedido</dd></div>
+                  <div><dt>Indicador</dt><dd>Pedidos con stock verificado</dd></div>
+                  <div><dt>Meta</dt><dd>Al menos el 90 % consulta el stock registrado</dd></div>
+                  <div><dt>Hoy</dt><dd>No hay verificación de stock digital</dd></div>
                 </dl>
               </article>
               <article class="objetivo">
-                <h4>OE-04 · Documentar y capacitar en los procedimientos técnicos</h4>
+                <h4>OE-04 · Planificar el abastecimiento a partir del stock</h4>
                 <dl>
-                  <div><dt>Indicador</dt><dd>Procesos de fabricación documentados</dd></div>
-                  <div><dt>Meta</dt><dd>Al menos 10 procedimientos o modelos de uso frecuente</dd></div>
+                  <div><dt>Indicador</dt><dd>Compras urgentes o no planificadas</dd></div>
+                  <div><dt>Meta</dt><dd>Reducir al 15 % las compras hechas como respuesta a cada pedido</dd></div>
+                  <div><dt>Hoy</dt><dd>30 % de las compras son reactivas</dd></div>
                 </dl>
               </article>
             </div>
@@ -242,20 +420,37 @@
             <div class="horizonte">
               <header class="horizonte__cabecera">
                 <span class="horizonte__plazo">12 meses</span>
-                <h3>Crecer</h3>
+                <h3>Sostener</h3>
               </header>
               <article class="objetivo">
-                <h4>OE-05 · Sostener los plazos de entrega ante más demanda</h4>
+                <h4>OE-05 · Soportar un crecimiento de la demanda sin deteriorar los plazos</h4>
                 <dl>
                   <div><dt>Indicador</dt><dd>Plazo promedio de entrega</dd></div>
                   <div><dt>Meta</dt><dd>Mantenerlo aun con un 30 % más de pedidos</dd></div>
+                  <div><dt>Hoy</dt><dd>15 días de plazo promedio</dd></div>
+                </dl>
+              </article>
+            </div>
+
+            <div class="horizonte">
+              <header class="horizonte__cabecera">
+                <span class="horizonte__plazo">18 meses</span>
+                <h3>Crecer</h3>
+              </header>
+              <article class="objetivo">
+                <h4>OE-03 · Documentar y capacitar en los procedimientos técnicos</h4>
+                <dl>
+                  <div><dt>Indicador</dt><dd>Procesos de fabricación documentados</dd></div>
+                  <div><dt>Meta</dt><dd>Al menos 10 procedimientos o modelos de uso frecuente</dd></div>
+                  <div><dt>Hoy</dt><dd>Sin documentación de los procesos</dd></div>
                 </dl>
               </article>
               <article class="objetivo">
-                <h4>OE-06 · Abrir un canal comercial digital</h4>
+                <h4>OE-06 · Desarrollar un canal comercial digital</h4>
                 <dl>
-                  <div><dt>Indicador</dt><dd>Ventas por canales digitales</dd></div>
+                  <div><dt>Indicador</dt><dd>Ventas provenientes de canales digitales</dd></div>
                   <div><dt>Meta</dt><dd>Al menos el 15 % de las ventas</dd></div>
+                  <div><dt>Hoy</dt><dd>5 % de las ventas son digitales</dd></div>
                 </dl>
               </article>
             </div>
@@ -263,55 +458,87 @@
         </div>
       </div>
 
-      <div class="seccion" id="servicios-fisa">
+      <div class="seccion" id="sector">
         <div class="wrap">
-          <p class="etiqueta">Qué ofrecen</p>
-          <h2 class="titular">Del showroom a la obra</h2>
+          <p class="etiqueta">Contexto competitivo</p>
+          <h2 class="titular">Un sector atomizado, con tres modelos de negocio</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            Aberturas de aluminio a medida para interiores y exteriores, más un catálogo de
-            productos terminados y los servicios que completan la venta.
+            La industria opera con una dinámica mixta: fabricación a medida bajo pedido y
+            comercialización de stock estandarizado para gamas medias y bajas.
           </p>
 
           <div class="grid grid--3" style="margin-top:var(--sp-8)">
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Fabricación a medida</h3>
-              <p>Ventanas, puertas y cerramientos de aluminio calculados y armados para cada pedido, con asesoramiento en el local.</p>
+              <h3>Taller artesanal</h3>
+              <p>Precio bajo y atención de cercanía para el minorista. Estructura mínima, sin showroom formal y con baja estandarización de procesos técnicos o de control de calidad.</p>
+            </article>
+            <article class="tarjeta tarjeta--enlace" style="border-color:var(--orbita);box-shadow:inset 0 0 0 1px var(--orbita)">
+              <div class="chips"><span class="chip chip--alta">Modelo de Aberturas FISA</span></div>
+              <h3>Pyme fabricante integral</h3>
+              <p>Integra showroom, asesoramiento técnico, fabricación propia a medida, reventa de complementos y colocación. Captura valor tanto del cliente final y los profesionales como de las constructoras.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Productos terminados</h3>
-              <p>Puertas de exterior, puertas placa y puertas plegadizas que se revenden como complemento de la abertura a medida.</p>
-            </article>
-            <article class="tarjeta">
-              <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Entrega, instalación y garantía</h3>
-              <p>Distribución con vehículo propio o flete, instalación según el producto y atención de garantías después de la venta.</p>
+              <h3>Distribuidor industrial</h3>
+              <p>Producción masiva para desarrolladores y obra pública. Monetiza por volumen y eficiencia de escala, sacrificando flexibilidad de personalización.</p>
             </article>
           </div>
 
-          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">La cadena de valor, paso a paso</h3>
-          <ol class="cadena-valor" aria-label="Cadena de valor interna">
-            <li>Abastecimiento de materias primas</li>
-            <li>Recepción y almacenamiento</li>
-            <li>Presupuesto y comercialización</li>
-            <li>Planificación del armado</li>
-            <li>Fabricación</li>
-            <li>Preparación y entrega</li>
-            <li>Instalación</li>
-            <li>Garantías y reparaciones</li>
-          </ol>
-          <p class="nota">
-            Clientes: particulares que equipan su vivienda y compradores de mayor volumen. Los
-            arquitectos y las constructoras aparecen como segmento potencial. Proveedores habituales:
-            Blackmet y Metal Bosch para aluminio, Vidrios Oeste para vidrio.
-          </p>
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Qué están haciendo los referentes</h3>
+          <ul class="exclusiones" style="margin-top:var(--sp-5)">
+            <li>
+              <h3>Presupuestación digital instantánea</h3>
+              <p>Softwares de cálculo y configuradores web que permiten al cliente o al arquitecto cargar medidas y obtener un presupuesto estimativo en minutos.</p>
+            </li>
+            <li>
+              <h3>Servicio llave en mano certificado</h3>
+              <p>Cuadrillas de colocación formalizadas, con garantías escritas de hermeticidad y aislamiento acústico, alejándose de la informalidad del gremio de instaladores.</p>
+            </li>
+            <li>
+              <h3>Presencia digital y showroom virtual</h3>
+              <p>Catálogos digitales interactivos, renders de integración arquitectónica y gestión de reputación en redes y en Google Business.</p>
+            </li>
+          </ul>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Tendencias que afectan al sector</h3>
+          <div class="grid grid--3" style="margin-top:var(--sp-5)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Eficiencia energética</h3>
+              <p>Demanda creciente de doble vidriado hermético y perfiles con ruptura de puente térmico, impulsada por el costo de la climatización y el etiquetado energético de viviendas.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>El PVC como sustituto</h3>
+              <p>Crece en la gama media-alta compitiendo con el aluminio por aislamiento térmico y acústico, lo que empuja a los carpinteros de aluminio hacia líneas de mayor prestación.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Volatilidad de insumos</h3>
+              <p>Disponibilidad y precios cambiantes del aluminio refinado y los accesorios importados: exige compras ágiles y alianzas con proveedores clave para no perder margen.</p>
+            </article>
+          </div>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Brechas frente al sector</h3>
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <thead>
+                <tr><th scope="col">Aspecto</th><th scope="col">Tendencia del sector</th><th scope="col">Situación de Aberturas FISA</th><th scope="col">Oportunidad de mejora</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Tecnología comercial</th><td>Presupuestación automática y optimización de corte</td><td>Presupuestación manual o semiartesanal, según la disponibilidad del encargado</td><td>Digitalizar la cotización para acortar tiempos y reducir errores</td></tr>
+                <tr><th scope="row">Garantía y postventa</th><td>Garantías formales de hermeticidad y mantenimiento programado</td><td>Postventa y garantía informales, bajo reclamo puntual</td><td>Formalizar protocolos para fidelizar arquitectos y constructoras</td></tr>
+                <tr><th scope="row">Oferta energética</th><td>Foco comercial en ruptura de puente térmico y soluciones sustentables</td><td>Foco en líneas tradicionales de aluminio y DVH estándar</td><td>Capacitar al equipo comercial para promover líneas eficientes</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
       <div class="seccion oscuro" id="problematicas">
         <div class="wrap">
-          <p class="etiqueta">Problemáticas</p>
+          <p class="etiqueta">Diagnóstico</p>
           <h2 class="titular" style="color:var(--blanco)">Quieren vender más. La operación todavía no lo aguanta.</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
             El sponsor ve la oportunidad del lado comercial: vender online y por más canales. El
@@ -323,49 +550,121 @@
             <article class="tarjeta tarjeta--oscura">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>La planilla viaja en papel</h3>
-              <p>El Soft Alcemar OP 2.1 calcula los materiales y organiza los cortes en el local. La planilla se imprime y alguien la lleva caminando hasta la fábrica.</p>
+              <p>El sistema calcula los materiales y genera la planilla de armado en el local. Se imprime y alguien la lleva caminando hasta la fábrica.</p>
             </article>
             <article class="tarjeta tarjeta--oscura">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>El stock se verifica a ojo</h3>
-              <p>El stock no está integrado con el sistema de cálculo. La disponibilidad se mira en el depósito y se compra cuando aparece la necesidad.</p>
+              <p>El control de existencias es visual y manual, y opera aislado del sistema de cálculo de materiales.</p>
             </article>
             <article class="tarjeta tarjeta--oscura">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Compras reactivas</h3>
-              <p>Cada pedido dispara una compra y, muchas veces, un viaje al proveedor. No hay planificación del abastecimiento.</p>
+              <p>Las compras se hacen a medida que aparecen las necesidades, no por una planificación de reposición.</p>
             </article>
             <article class="tarjeta tarjeta--oscura">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Todo el conocimiento en una persona</h3>
-              <p>El encargado sabe cómo se fabrica cada modelo y se lo indica a los operarios. Si falta, la fábrica se frena.</p>
+              <h3>El factor Gabriel</h3>
+              <p>El conocimiento técnico y operativo está centralizado en una persona: un riesgo crítico de continuidad ante una ausencia.</p>
             </article>
             <article class="tarjeta tarjeta--oscura">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Fábrica sin computadora ni internet</h3>
-              <p>Cualquier solución digital tiene que resolver primero la infraestructura y una interfaz adecuada al taller.</p>
+              <p>Condiciona técnicamente los dispositivos y la arquitectura de red de cualquier herramienta digital que se quiera implementar.</p>
             </article>
             <article class="tarjeta tarjeta--oscura">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Sin canal de venta digital</h3>
-              <p>El canal principal es el local, con Instagram y WhatsApp de apoyo. El sitio web institucional está inactivo y nunca tuvo capacidad transaccional, y los competidores ya venden por esos canales.</p>
+              <h3>Software de cálculo sin soporte</h3>
+              <p>Depende de un proveedor anterior, sin soporte ni mantenimiento contratado. Su discontinuidad imprevista paralizaría la estimación de materiales.</p>
             </article>
           </div>
 
-          <div class="grid grid--2" style="margin-top:var(--sp-6)">
+          <div class="grid grid--3" style="margin-top:var(--sp-6)">
             <div class="destacado">
               <p class="destacado__rotulo">Madurez organizacional</p>
               <p class="destacado__valor">Entre CMM 1 y CMM 2</p>
-              <p>La fábrica opera de manera informal y dependiente de una persona. Lo comercial y administrativo tiene prácticas repetibles —cuaderno, Excel, sistema de cálculo— que no están integradas entre sí. De los doce procesos relevados, sólo cuatro reciben algún soporte aplicativo.</p>
+              <p>La fábrica es Nivel 1: procesos informales y dependientes de una persona. Lo comercial y administrativo tiene prácticas repetibles que no están integradas entre sí. El sponsor coincide con la evaluación del equipo.</p>
+            </div>
+            <div class="destacado">
+              <p class="destacado__rotulo">Capacidades</p>
+              <p class="destacado__valor">Oficio sí, gestión media no</p>
+              <p>Fortalezas: experiencia práctica, conocimiento técnico, capacidad de adaptar pedidos y una estructura chica que decide rápido. Falta el nivel de gestión intermedio: todo el conocimiento crítico recae en el encargado.</p>
             </div>
             <div class="destacado">
               <p class="destacado__rotulo">Por qué ahora</p>
               <p class="destacado__valor">Cambia el liderazgo</p>
-              <p>Uno de los socios prevé retirarse progresivamente y delegar más en el encargado. Reducir la dependencia de una única persona pasa a ser urgente.</p>
+              <p>Se asume como premisa el retiro progresivo de los socios y el traspaso de la conducción integral a Gabriel. Eso vuelve urgente formalizar y despersonalizar los procesos.</p>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="seccion" id="historias">
+        <div class="wrap">
+          <p class="etiqueta">Requerimientos iniciales</p>
+          <h2 class="titular">Diez historias de usuario, priorizadas</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Sintetizan las necesidades relevadas desde la perspectiva de cada actor. La priorización
+            MoSCoW es una propuesta del equipo: cuatro son excluyentes.
+          </p>
+
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <thead>
+                <tr><th scope="col">ID</th><th scope="col">Historia</th><th scope="col">Condición de cumplimiento</th><th scope="col">MoSCoW</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">US-04</th><td>Como encargado, documentar las instrucciones y criterios de fabricación de cada línea o modelo</td><td>Los pasos del armado de cada modelo quedan registrados y disponibles para consulta estandarizada</td><td><span class="chip chip--alta">Must</span></td></tr>
+                <tr><th scope="row">US-01</th><td>Como encargado, consultar y recibir digitalmente las órdenes de armado en la fábrica</td><td>La orden completa se consulta en la fábrica sin impresión ni traslado físico</td><td><span class="chip chip--alta">Must</span></td></tr>
+                <tr><th scope="row">US-02</th><td>Como encargado, registrar y consultar el stock de materias primas</td><td>Las existencias reflejan sus movimientos y se consultan actualizadas en cualquier momento</td><td><span class="chip chip--alta">Must</span></td></tr>
+                <tr><th scope="row">US-03</th><td>Como encargado, relacionar las necesidades de cada pedido con el stock disponible</td><td>Se contrastan los materiales requeridos contra el stock actual, identificando faltantes</td><td><span class="chip chip--alta">Must</span></td></tr>
+                <tr><th scope="row">US-05</th><td>Como operario, acceder a las especificaciones de fabricación desde la fábrica</td><td>El operario consulta medidas y criterios de armado en su puesto, sin depender del encargado</td><td><span class="chip chip--media">Should</span></td></tr>
+                <tr><th scope="row">US-06</th><td>Como encargado, planificar las compras a partir del stock y los pedidos pendientes</td><td>Se determina el consolidado de materiales a comprar según demanda y existencias</td><td><span class="chip chip--media">Should</span></td></tr>
+                <tr><th scope="row">US-07</th><td>Como cliente, consultar productos y opciones por un canal digital</td><td>La oferta de líneas y tipologías está disponible para consulta remota</td><td><span class="chip chip--media">Should</span></td></tr>
+                <tr><th scope="row">US-08</th><td>Como cliente, solicitar un presupuesto por un canal digital</td><td>El cliente envía los datos de su abertura y formaliza la solicitud sin asistir al local</td><td><span class="chip chip--media">Should</span></td></tr>
+                <tr><th scope="row">US-09</th><td>Como responsable comercial, gestionar las oportunidades de los canales digitales</td><td>Las oportunidades quedan registradas con su canal de procedencia y se les da seguimiento</td><td><span class="chip">Could</span></td></tr>
+                <tr><th scope="row">US-10</th><td>Como encargado, consultar el estado de cada pedido desde una única herramienta</td><td>Se verifica de forma centralizada en qué etapa está cualquier pedido, del ingreso a la entrega</td><td><span class="chip">Could</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="observaciones">
+        <div class="wrap">
+          <p class="etiqueta">Observaciones del equipo</p>
+          <h2 class="titular">Lo que el relevamiento deja anotado</h2>
+
+          <div class="grid grid--2" style="margin-top:var(--sp-8)">
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">Riesgo</span></div>
+              <h3>Colapso operativo por descalce comercial</h3>
+              <p>Escalar las ventas digitales sin robustecer antes la capacidad de planta, la gestión de inventario y la delegación generaría cuellos de botella y demoras en los plazos.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--media">Restricción</span></div>
+              <h3>Equipamiento y conectividad en planta</h3>
+              <p>La fábrica no tiene computadoras ni internet. El sponsor deberá acordar la disposición de recursos para cualquier implementación digital.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--media">Restricción</span></div>
+              <h3>Desconexión entre cálculo e inventario</h3>
+              <p>El control de existencias opera de forma aislada, sin comunicarse con el sistema de cálculo de materiales. Es una mejora potencial identificada.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip">Límite del relevamiento</span></div>
+              <h3>Falta información cuantitativa del mercado</h3>
+              <p>Se reconocen competidores de la zona y el auge del PVC, pero no se obtuvieron datos concluyentes sobre precios de referencia, participación de mercado ni canales de la competencia.</p>
+            </article>
+          </div>
+
+          <p class="nota">
+            Salvo los objetivos estratégicos, que los elaboró el equipo a partir de lo relevado,
+            todo el contenido del documento proviene de lo que el encargado expuso en las reuniones.
+          </p>
+        </div>
+      </div>
+
       <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
       <div class="seccion--corta docs-caso">
         <div class="wrap docs-caso__inner">
@@ -385,411 +684,8 @@
       </div>
     </section>
 
-        <!-- ================= 02 · ALCANCE DEL PROYECTO ================= -->
-    <section class="panel-caso" id="alcance" role="tabpanel" aria-labelledby="tab-alcance" tabindex="0" hidden>
-
-      <div class="seccion">
-        <div class="wrap">
-          <div class="dos-columnas">
-            <div>
-              <p class="etiqueta">Alcance del proyecto</p>
-              <h2 class="titular">Ordenar la operación antes de escalar la venta</h2>
-              <div class="articulo" style="margin-top:var(--sp-6)">
-                <p>
-                  El proyecto cubre los ocho bloques de arquitectura que el análisis de brechas
-                  marcó como candidatos: stock, pedidos y presupuestos, integración del cálculo de
-                  materiales, instructivos de fabricación, conectividad en la fábrica,
-                  planificación de compras, tablero de indicadores y canal digital.
-                </p>
-                <p>
-                  Se ejecuta en dos fases. La Fase 1 ordena el núcleo operativo; la Fase 2 abre el
-                  canal comercial digital, condicionada a que el control de stock y la
-                  planificación de compras ya estén funcionando. La secuencia no es una preferencia
-                  de método: es la mitigación del riesgo de que la venta crezca antes que la
-                  capacidad de fabricar.
-                </p>
-              </div>
-            </div>
-
-            <ul class="datos" aria-label="Datos del alcance">
-              <li><span class="datos__valor">8</span><span class="datos__rotulo">bloques de arquitectura</span></li>
-              <li><span class="datos__valor">2</span><span class="datos__rotulo">fases de implementación</span></li>
-              <li><span class="datos__valor">6</span><span class="datos__rotulo">objetivos estratégicos cubiertos</span></li>
-              <li><span class="datos__valor">2</span><span class="datos__rotulo">sedes: local y fábrica</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="edt">
-        <div class="wrap">
-          <p class="etiqueta">Estructura de desglose del trabajo</p>
-          <h2 class="titular">Ocho paquetes en dos fases</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            La EDT descompone el proyecto en entregables. Cada paquete corresponde a un bloque
-            candidato del análisis de brechas y se cierra con un resultado verificable.
-          </p>
-
-          <div class="edt">
-            <div class="edt__raiz">
-              <span class="edt__num">0</span>
-              <span>Digitalización de la operación de Aberturas FISA</span>
-            </div>
-            <ol class="edt__ramas">
-              <li class="edt__paquete">
-                <span class="edt__num">1</span>
-                <h3>Gestión del proyecto</h3>
-                <ol>
-                  <li>1.1 Plan y cronograma</li>
-                  <li>1.2 Seguimiento con el sponsor</li>
-                  <li>1.3 Gestión de riesgos</li>
-                  <li>1.4 Cierre y lecciones aprendidas</li>
-                </ol>
-              </li>
-              <li class="edt__paquete">
-                <span class="edt__num">2</span>
-                <h3>Conectividad e infraestructura en fábrica</h3>
-                <ol>
-                  <li>2.1 Enlace principal en el taller</li>
-                  <li>2.2 Enlace redundante 4G o 5G</li>
-                  <li>2.3 Dispositivo de consulta apto para taller</li>
-                  <li>2.4 Puesta en marcha y prueba</li>
-                </ol>
-              </li>
-              <li class="edt__paquete">
-                <span class="edt__num">3</span>
-                <h3>Control de stock e inventario</h3>
-                <ol>
-                  <li>3.1 Catálogo de materias primas</li>
-                  <li>3.2 Inventario inicial y criterios de unidad</li>
-                  <li>3.3 Registro de movimientos</li>
-                  <li>3.4 Recuento periódico de validación</li>
-                </ol>
-              </li>
-              <li class="edt__paquete">
-                <span class="edt__num">4</span>
-                <h3>Pedidos y presupuestos omnicanal</h3>
-                <ol>
-                  <li>4.1 Registro único del pedido</li>
-                  <li>4.2 Canal de origen de cada consulta</li>
-                  <li>4.3 Orden de fabricación digital</li>
-                  <li>4.4 Capacitación y adopción</li>
-                </ol>
-              </li>
-              <li class="edt__paquete">
-                <span class="edt__num">5</span>
-                <h3>Integración del cálculo con el stock</h3>
-                <ol>
-                  <li>5.1 Verificación técnica con el proveedor</li>
-                  <li>5.2 Importación de la lógica de cálculo</li>
-                  <li>5.3 Descuento automático de materiales</li>
-                </ol>
-              </li>
-              <li class="edt__paquete">
-                <span class="edt__num">6</span>
-                <h3>Instructivos de fabricación</h3>
-                <ol>
-                  <li>6.1 Relevamiento con el encargado</li>
-                  <li>6.2 Instructivos por línea de producto</li>
-                  <li>6.3 Consulta desde la fábrica</li>
-                  <li>6.4 Transferencia a los operarios</li>
-                </ol>
-              </li>
-              <li class="edt__paquete">
-                <span class="edt__num">7</span>
-                <h3>Planificación de compras e indicadores</h3>
-                <ol>
-                  <li>7.1 Mínimos de stock por material</li>
-                  <li>7.2 Ciclo de compra periódico</li>
-                  <li>7.3 Indicadores acordados con el sponsor</li>
-                  <li>7.4 Tablero configurado</li>
-                </ol>
-              </li>
-              <li class="edt__paquete edt__paquete--fase2">
-                <span class="edt__num">8</span>
-                <h3>Canal comercial digital · Fase 2</h3>
-                <ol>
-                  <li>8.1 Catálogo con medidas y precios de referencia</li>
-                  <li>8.2 Presupuesto autogestionado</li>
-                  <li>8.3 Integración con el núcleo de gestión</li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="beneficios">
-        <div class="wrap">
-          <p class="etiqueta">Beneficios esperados</p>
-          <h2 class="titular">Las metas de los seis objetivos</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            Cada beneficio es la meta comprometida de un objetivo estratégico, con su plazo. Se
-            validan con el sponsor antes de convertirse en compromisos del proyecto.
-          </p>
-
-          <ul class="datos datos--tres" style="margin-top:var(--sp-8)">
-            <li><span class="datos__valor">90 %</span><span class="datos__rotulo">de las órdenes llegan a la fábrica sin papel <em>· OE-01, 6 meses</em></span></li>
-            <li><span class="datos__valor">90 %</span><span class="datos__rotulo">de los pedidos consultan el stock antes de comprar <em>· OE-02, 6 meses</em></span></li>
-            <li><span class="datos__valor">−30 %</span><span class="datos__rotulo">de compras reactivas de materia prima <em>· OE-03, 9 meses</em></span></li>
-            <li><span class="datos__valor">10</span><span class="datos__rotulo">procedimientos de fabricación documentados <em>· OE-04, 9 meses</em></span></li>
-            <li><span class="datos__valor">+30 %</span><span class="datos__rotulo">de pedidos sin estirar el plazo de entrega <em>· OE-05, 12 meses</em></span></li>
-            <li><span class="datos__valor">15 %</span><span class="datos__rotulo">de las ventas por canales digitales <em>· OE-06, 12 meses</em></span></li>
-          </ul>
-
-          <div class="grid grid--2" style="margin-top:var(--sp-6)">
-            <article class="tarjeta">
-              <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Continuidad del negocio</h3>
-              <p>El conocimiento de fabricación deja de vivir en una sola cabeza. La fábrica sigue produciendo aunque el encargado no esté, justo cuando uno de los socios prevé retirarse.</p>
-            </article>
-            <article class="tarjeta">
-              <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Decisiones con datos</h3>
-              <p>La dirección pasa de decidir por experiencia a apoyarse en pedidos por mes, plazo promedio de entrega, compras reactivas sobre el total y participación del canal digital.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion oscuro" id="gantt">
-        <div class="wrap">
-          <p class="etiqueta">Diagrama de Gantt</p>
-          <h2 class="titular" style="color:var(--blanco)">Doce meses, dos fases</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            La conectividad en la fábrica va primero porque habilita todo lo demás. El canal
-            digital va último, cuando la fábrica ya puede absorber la demanda que genere.
-          </p>
-
-          <div class="gantt-scroll">
-            <div class="gantt gantt--12" role="table" aria-label="Cronograma del proyecto, doce meses">
-              <div class="gantt__etapas" role="presentation">
-                <span class="gantt__etapa" style="--ini:1;--fin:9">Fase 1 · Núcleo operativo</span>
-                <span class="gantt__etapa" style="--ini:10;--fin:12">Fase 2 · Canal digital</span>
-              </div>
-              <div class="gantt__cabecera" role="row">
-                <span class="gantt__rotulo" role="columnheader">Paquete</span>
-                <span role="columnheader">M1</span><span role="columnheader">M2</span><span role="columnheader">M3</span>
-                <span role="columnheader">M4</span><span role="columnheader">M5</span><span role="columnheader">M6</span>
-                <span role="columnheader">M7</span><span role="columnheader">M8</span><span role="columnheader">M9</span>
-                <span role="columnheader">M10</span><span role="columnheader">M11</span><span role="columnheader">M12</span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">1 · Gestión del proyecto</span>
-                <span class="gantt__barra gantt__barra--tenue" role="cell" style="--ini:1;--fin:12"><span class="sr-only">mes 1 a mes 12</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">2 · Conectividad en fábrica</span>
-                <span class="gantt__barra" role="cell" style="--ini:1;--fin:2"><span class="sr-only">meses 1 y 2</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">3 · Control de stock</span>
-                <span class="gantt__barra" role="cell" style="--ini:2;--fin:5"><span class="sr-only">meses 2 a 5</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">4 · Pedidos y presupuestos</span>
-                <span class="gantt__barra" role="cell" style="--ini:3;--fin:6"><span class="sr-only">meses 3 a 6</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">5 · Integración del cálculo</span>
-                <span class="gantt__barra" role="cell" style="--ini:5;--fin:7"><span class="sr-only">meses 5 a 7</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">6 · Instructivos de fabricación</span>
-                <span class="gantt__barra" role="cell" style="--ini:4;--fin:9"><span class="sr-only">meses 4 a 9</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">7 · Compras e indicadores</span>
-                <span class="gantt__barra" role="cell" style="--ini:6;--fin:9"><span class="sr-only">meses 6 a 9</span></span>
-              </div>
-              <div class="gantt__fila" role="row">
-                <span class="gantt__rotulo" role="rowheader">8 · Canal comercial digital</span>
-                <span class="gantt__barra gantt__barra--fase2" role="cell" style="--ini:10;--fin:12"><span class="sr-only">meses 10 a 12</span></span>
-              </div>
-              <div class="gantt__fila gantt__fila--hitos" role="row">
-                <span class="gantt__rotulo" role="rowheader">Hitos</span>
-                <span class="gantt__hito" role="cell" style="--mes:2"><i aria-hidden="true"></i>Fábrica conectada</span>
-                <span class="gantt__hito" role="cell" style="--mes:6"><i aria-hidden="true"></i>OE-01 y OE-02</span>
-                <span class="gantt__hito" role="cell" style="--mes:9"><i aria-hidden="true"></i>OE-03 y OE-04</span>
-                <span class="gantt__hito" role="cell" style="--mes:12"><i aria-hidden="true"></i>OE-06</span>
-              </div>
-            </div>
-          </div>
-          <p class="nota nota--clara">
-            Cronograma tentativo. Los meses se cuentan desde el inicio del proyecto y los hitos
-            coinciden con los plazos comprometidos en los objetivos estratégicos.
-          </p>
-        </div>
-      </div>
-
-      <div class="seccion" id="stakeholders">
-        <div class="wrap">
-          <p class="etiqueta">Matriz de stakeholders</p>
-          <h2 class="titular">Quién decide, quién ejecuta, quién acompaña</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            Poder e interés de cada parte, y la estrategia de relación que le corresponde.
-          </p>
-
-          <div class="matriz" role="group" aria-label="Matriz de poder e interés">
-            <span class="matriz__eje matriz__eje--y" aria-hidden="true">Poder</span>
-            <div class="matriz__grilla">
-              <div class="matriz__cuadrante">
-                <h3>Mantener satisfechos</h3>
-                <p class="matriz__nota">Alto poder · bajo interés</p>
-                <ul>
-                  <li>Socios propietarios</li>
-                </ul>
-              </div>
-              <div class="matriz__cuadrante matriz__cuadrante--clave">
-                <h3>Gestionar de cerca</h3>
-                <p class="matriz__nota">Alto poder · alto interés</p>
-                <ul>
-                  <li>Gabriel Fisicaro, encargado general y sponsor</li>
-                </ul>
-              </div>
-              <div class="matriz__cuadrante">
-                <h3>Monitorear</h3>
-                <p class="matriz__nota">Bajo poder · bajo interés</p>
-                <ul>
-                  <li>Estudio contable externo</li>
-                  <li>Proveedores de aluminio y vidrio</li>
-                  <li>Clientes</li>
-                </ul>
-              </div>
-              <div class="matriz__cuadrante">
-                <h3>Mantener informados</h3>
-                <p class="matriz__nota">Bajo poder · alto interés</p>
-                <ul>
-                  <li>Operarios de fábrica</li>
-                  <li>Atención comercial del local</li>
-                  <li>Proveedor de la plataforma</li>
-                </ul>
-              </div>
-            </div>
-            <span class="matriz__eje matriz__eje--x" aria-hidden="true">Interés</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="madurez">
-        <div class="wrap">
-          <p class="etiqueta">Gráfico araña</p>
-          <h2 class="titular">Las seis capacidades, hoy y al cierre</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            Las capacidades aplicativas de la arquitectura destino, en una escala de madurez de 1 a
-            5 donde 1 es inexistente o íntegramente manual. El canal digital llega a 3 porque en
-            este proyecto alcanza la Fase 2.
-          </p>
-
-          <div class="dos-columnas dos-columnas--centrada">
-            <figure class="radar">
-              <svg viewBox="-70 -10 540 420" role="img" aria-labelledby="radar-t radar-d">
-                <title id="radar-t">Gráfico araña de madurez por capacidad</title>
-                <desc id="radar-d">Madurez actual: pedidos y presupuestos 2, stock 1, cálculo integrado 3, canal digital 1, instructivos 1, indicadores 1. Madurez al cierre del proyecto: pedidos 4, stock 4, cálculo 4, canal digital 3, instructivos 4, indicadores 3.</desc>
-                <g class="radar__malla" fill="none" stroke-width="1">
-                  <polygon points="200,50 329.9,125 329.9,275 200,350 70.1,275 70.1,125"/>
-                  <polygon points="200,80 303.9,140 303.9,260 200,320 96.1,260 96.1,140"/>
-                  <polygon points="200,110 277.9,155 277.9,245 200,290 122.1,245 122.1,155"/>
-                  <polygon points="200,140 252,170 252,230 200,260 148,230 148,170"/>
-                  <polygon points="200,170 226,185 226,215 200,230 174,215 174,185"/>
-                  <line x1="200" y1="200" x2="200" y2="50"/>
-                  <line x1="200" y1="200" x2="329.9" y2="125"/>
-                  <line x1="200" y1="200" x2="329.9" y2="275"/>
-                  <line x1="200" y1="200" x2="200" y2="350"/>
-                  <line x1="200" y1="200" x2="70.1" y2="275"/>
-                  <line x1="200" y1="200" x2="70.1" y2="125"/>
-                </g>
-                <polygon class="radar__objetivo" points="200,80 303.9,140 303.9,260 200,290 96.1,260 122.1,155"/>
-                <polygon class="radar__actual" points="200,140 226,185 277.9,245 200,230 174,215 174,185"/>
-                <g class="radar__puntos">
-                  <circle cx="200" cy="80" r="4"/><circle cx="303.9" cy="140" r="4"/><circle cx="303.9" cy="260" r="4"/>
-                  <circle cx="200" cy="290" r="4"/><circle cx="96.1" cy="260" r="4"/><circle cx="122.1" cy="155" r="4"/>
-                </g>
-                <g class="radar__rotulos">
-                  <text x="200" y="30" text-anchor="middle">S1 · Pedidos y presupuestos</text>
-                  <text x="342" y="118" text-anchor="start">S2 · Stock</text>
-                  <text x="342" y="290" text-anchor="start">S3 · Cálculo integrado</text>
-                  <text x="200" y="378" text-anchor="middle">S4 · Canal digital</text>
-                  <text x="58" y="290" text-anchor="end">S5 · Instructivos</text>
-                  <text x="58" y="118" text-anchor="end">S6 · Indicadores</text>
-                </g>
-              </svg>
-              <figcaption class="radar__leyenda">
-                <span><i class="radar__muestra radar__muestra--actual" aria-hidden="true"></i>Hoy</span>
-                <span><i class="radar__muestra radar__muestra--objetivo" aria-hidden="true"></i>Al cierre del proyecto</span>
-              </figcaption>
-            </figure>
-
-            <ol class="dimensiones" aria-label="Capacidades evaluadas">
-              <li><span class="dimensiones__nombre">S1 · Pedidos y presupuestos</span><span class="dimensiones__salto"><b>2</b><i aria-hidden="true"></i><b>4</b></span></li>
-              <li><span class="dimensiones__nombre">S2 · Stock e inventario</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>4</b></span></li>
-              <li><span class="dimensiones__nombre">S3 · Cálculo integrado al stock</span><span class="dimensiones__salto"><b>3</b><i aria-hidden="true"></i><b>4</b></span></li>
-              <li><span class="dimensiones__nombre">S4 · Canal comercial digital</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>3</b></span></li>
-              <li><span class="dimensiones__nombre">S5 · Instructivos de fabricación</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>4</b></span></li>
-              <li><span class="dimensiones__nombre">S6 · Indicadores de gestión</span><span class="dimensiones__salto"><b>1</b><i aria-hidden="true"></i><b>3</b></span></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="exclusiones">
-        <div class="wrap">
-          <p class="etiqueta">Exclusiones y diferidos</p>
-          <h2 class="titular">Qué queda fuera de este proyecto</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            Decir qué no se hace evita expectativas cruzadas. Algunos puntos quedan afuera y otros
-            esperan a una fase posterior.
-          </p>
-
-          <ul class="exclusiones">
-            <li>
-              <h3>Logística de salida y postventa</h3>
-              <p>Ambos procesos se conservan sin cambios sustanciales respecto del funcionamiento actual. Quedan fuera del alcance.</p>
-            </li>
-            <li>
-              <h3>Sistema del estudio contable externo</h3>
-              <p>Está fuera del límite organizacional: se mantiene sin cambios y sigue recibiendo la información como hasta hoy.</p>
-            </li>
-            <li>
-              <h3>Registro de caja en cuaderno y Excel</h3>
-              <p>Ningún bloque del destino lo cubre en esta etapa, así que continúa en uso. Su integración al sistema de gestión queda como candidato diferido a Fase 2.</p>
-            </li>
-            <li>
-              <h3>Reemplazo del sistema de cálculo de materiales</h3>
-              <p>El Soft Alcemar OP 2.1 se integra al circuito digital; no se sustituye ni se reescribe. Su capacidad de integración es un supuesto a verificar antes de contratar.</p>
-            </li>
-            <li>
-              <h3>Incorporación de una línea de PVC</h3>
-              <p>Se identifica como oportunidad de negocio a evaluar en una etapa posterior. Requiere maquinaria, capacitación y una evaluación de costos.</p>
-            </li>
-            <li>
-              <h3>Inteligencia artificial generativa para atención</h3>
-              <p>Los chatbots se descartan por ahora: la operación no está lo suficientemente madura como para priorizar esa inversión.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
-      <div class="seccion--corta docs-caso">
-        <div class="wrap docs-caso__inner">
-          <div>
-            <p class="etiqueta">Documentación asociada</p>
-            <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
-            </p>
-          </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-alcance">
-            Abrir la documentación
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            <span class="sr-only">(se abre en una pestaña nueva)</span>
-          </a>
-        </div>
-      </div>
-    </section>
-        <!-- ================= 03 · ARQUITECTURA EMPRESARIAL ================= -->
-    <section class="panel-caso" id="arquitectura" role="tabpanel" aria-labelledby="tab-arquitectura" tabindex="0" hidden>
+        <!-- ================= 02 · ARQUITECTURA EMPRESARIAL ACTUAL ================= -->
+    <section class="panel-caso" id="actual" role="tabpanel" aria-labelledby="tab-actual" tabindex="0" hidden>
 
       <div class="seccion" id="arquitectura-actual">
         <div class="wrap">
@@ -1066,6 +962,28 @@
         </div>
       </div>
 
+            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+      <div class="seccion--corta docs-caso">
+        <div class="wrap docs-caso__inner">
+          <div>
+            <p class="etiqueta">Documentación asociada</p>
+            <p class="docs-caso__texto">
+              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
+              del software— están en una carpeta compartida de Google Drive.
+            </p>
+          </div>
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-actual">
+            Abrir la documentación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <span class="sr-only">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 · ARQUITECTURA EMPRESARIAL DESTINO ================= -->
+    <section class="panel-caso" id="destino" role="tabpanel" aria-labelledby="tab-destino" tabindex="0" hidden>
+
       <div class="seccion oscuro" id="arquitectura-destino">
         <div class="wrap">
           <p class="etiqueta">Arquitectura empresarial destino</p>
@@ -1190,13 +1108,36 @@
         </div>
       </div>
 
-      <div class="seccion" id="brechas">
+            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+      <div class="seccion--corta docs-caso">
+        <div class="wrap docs-caso__inner">
+          <div>
+            <p class="etiqueta">Documentación asociada</p>
+            <p class="docs-caso__texto">
+              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
+              del software— están en una carpeta compartida de Google Drive.
+            </p>
+          </div>
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-destino">
+            Abrir la documentación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <span class="sr-only">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 · MATRIZ DE BRECHAS Y ESCENARIOS ================= -->
+    <section class="panel-caso" id="brechas" role="tabpanel" aria-labelledby="tab-brechas" tabindex="0" hidden>
+
+      <div class="seccion" id="matrices">
         <div class="wrap">
           <p class="etiqueta">Matriz de brechas</p>
           <h2 class="titular">Ningún proceso se elimina; faltan nueve bloques</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
             Se cruzaron los bloques de arquitectura (ABB) de la situación actual contra los del
-            destino, en tres matrices. Lo que aparece sólo en el destino es una brecha a cubrir.
+            destino, en tres matrices. Lo que aparece sólo en el destino es una brecha a cubrir, y
+            de ahí salen los ocho bloques candidatos que forman el alcance del proyecto.
           </p>
 
           <div class="grid grid--3" style="margin-top:var(--sp-8)">
@@ -1220,8 +1161,19 @@
             </article>
           </div>
 
-          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Bloques candidatos del alcance</h3>
-          <div class="grid grid--2" style="margin-top:var(--sp-5)">
+        </div>
+      </div>
+
+      <div class="seccion" id="candidatos">
+        <div class="wrap">
+          <p class="etiqueta">Brechas a cubrir</p>
+          <h2 class="titular">Los ocho bloques candidatos</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Salen del cruce de las tres matrices. Cada uno entra al alcance del proyecto con su
+            prioridad; el canal digital queda condicionado a la Fase 2.
+          </p>
+
+          <div class="grid grid--2">
             <article class="tarjeta brecha">
               <div class="chips"><span class="chip chip--alta">Prioridad máxima</span><span class="chip">S2</span></div>
               <h3>Control de stock e inventario en tiempo real</h3>
@@ -1374,7 +1326,7 @@
         </div>
       </div>
 
-      <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
       <div class="seccion--corta docs-caso">
         <div class="wrap docs-caso__inner">
           <div>
@@ -1384,7 +1336,7 @@
               del software— están en una carpeta compartida de Google Drive.
             </p>
           </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-arquitectura">
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-brechas">
             Abrir la documentación
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <span class="sr-only">(se abre en una pestaña nueva)</span>
@@ -1393,7 +1345,8 @@
       </div>
     </section>
 
-    <!-- ================= 04 · SELECCIÓN DEL SOFTWARE ================= -->
+    <!-- ================= 06 · SELECCIÓN DE LA SOLUCIÓN =================
+         Marcador de posición: se reemplaza cuando esté el documento T-06. -->
     <section class="panel-caso" id="software" role="tabpanel" aria-labelledby="tab-software" tabindex="0" hidden>
 
       <div class="seccion" id="criterios">
@@ -1758,6 +1711,776 @@
         </div>
       </div>
     </section>
+    <!-- ================= 05 · ALCANCE Y ANÁLISIS DE MERCADO ================= -->
+    <section class="panel-caso" id="mercado" role="tabpanel" aria-labelledby="tab-mercado" tabindex="0" hidden>
+
+      <div class="seccion" id="introduccion">
+        <div class="wrap">
+          <div class="dos-columnas">
+            <div>
+              <p class="etiqueta">Alcance del proyecto de consultoría</p>
+              <h2 class="titular">El pedido fue vender más; el diagnóstico dijo ordenar primero</h2>
+              <div class="articulo" style="margin-top:var(--sp-6)">
+                <p>
+                  El proyecto nace del pedido del sponsor: vender más y abrir un canal digital que
+                  complemente al showroom. El relevamiento mostró que la operación no está en
+                  condiciones de absorber ese crecimiento, y el análisis de brechas y escenarios
+                  definió el camino: una solución en la nube implementada por módulos.
+                </p>
+                <p>
+                  <b>Objetivo general.</b> Estructurar y digitalizar de forma gradual el circuito
+                  operativo —pedido, verificación de stock, orden de fabricación y compras—
+                  mediante la selección de una solución de gestión SaaS modular y una hoja de ruta
+                  que primero ordene la producción y el stock y después habilite el canal
+                  comercial digital, sin deteriorar el plazo promedio de entrega de 15 días.
+                </p>
+                <p>
+                  El objetivo es coherente con la identidad de la organización: responde a la
+                  misión —cumplimiento de plazos y calidad— y a la visión declarada de
+                  profesionalizar los procesos ampliando los canales comerciales. Además acompaña
+                  la transición de liderazgo: reducir la dependencia de una sola persona es
+                  condición para que el encargado pueda asumir la conducción integral del negocio.
+                </p>
+              </div>
+            </div>
+
+            <ul class="datos" aria-label="Datos del alcance y el mercado">
+              <li><span class="datos__valor">9</span><span class="datos__rotulo">objetivos específicos</span></li>
+              <li><span class="datos__valor">8</span><span class="datos__rotulo">exclusiones acordadas</span></li>
+              <li><span class="datos__valor">5</span><span class="datos__rotulo">soluciones relevadas</span></li>
+              <li><span class="datos__valor">3</span><span class="datos__rotulo">preseleccionadas</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="objetivos-especificos">
+        <div class="wrap">
+          <p class="etiqueta">Objetivos específicos</p>
+          <h2 class="titular">Nueve objetivos, cada uno con su entregable</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Se formularon a partir de los bloques candidatos del análisis de brechas y se validaron
+            con el sponsor. Cada uno se vincula con un objetivo estratégico y con un entregable
+            concreto.
+          </p>
+
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <thead>
+                <tr><th scope="col">ID</th><th scope="col">Objetivo específico</th><th scope="col">Vínculo</th><th scope="col">Entregable</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">OBJ-01</th><td>Seleccionar, mediante evaluación ponderada, la solución SaaS de gestión que soportará la Fase 1</td><td>OE-01 a OE-05 · Escenario 4</td><td>Fichas, preselección y recomendación final</td></tr>
+                <tr><th scope="row">OBJ-02</th><td>Diseñar el circuito pedido → verificación de stock → orden de fabricación digital, eliminando la planilla impresa</td><td>OE-01 · US-01, US-03, US-10</td><td>Diagrama del proceso destino y reglas de negocio</td></tr>
+                <tr><th scope="row">OBJ-03</th><td>Definir el maestro de materias primas, el inventario inicial y el recuento periódico de validación</td><td>OE-02 · US-02</td><td>Maestro de materiales y procedimiento de inventario</td></tr>
+                <tr><th scope="row">OBJ-04</th><td>Verificar técnicamente la continuidad del cálculo de materiales de OP 2.1 y definir la estrategia de integración o réplica</td><td>Restricción de continuidad y riesgo asociado</td><td>Informe de verificación técnica</td></tr>
+                <tr><th scope="row">OBJ-05</th><td>Definir el estándar de instructivos y documentar, junto al encargado, un piloto de los modelos de mayor uso</td><td>OE-03 · US-04, US-05</td><td>Plantilla de instructivo e instructivos piloto</td></tr>
+                <tr><th scope="row">OBJ-06</th><td>Diseñar la política de compras planificadas: frecuencia semanal y stock mínimo por insumo crítico</td><td>OE-04 · US-06</td><td>Política de abastecimiento</td></tr>
+                <tr><th scope="row">OBJ-07</th><td>Especificar la infraestructura habilitante de la fábrica: conectividad, enlace de respaldo, dispositivo y resguardo</td><td>OE-01 · Matriz C</td><td>Especificación de infraestructura y presupuesto estimado</td></tr>
+                <tr><th scope="row">OBJ-08</th><td>Definir con el sponsor el tablero de cuatro indicadores</td><td>OE-04, OE-05, OE-06</td><td>Ficha de indicadores</td></tr>
+                <tr><th scope="row">OBJ-09</th><td>Elaborar la hoja de ruta por fases, con capacitación, gestión del cambio, segundo perfil de coordinación y plan de salida</td><td>OE-05, OE-06</td><td>Plan de implementación</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="exclusiones-supuestos">
+        <div class="wrap">
+          <p class="etiqueta">Exclusiones y supuestos</p>
+          <h2 class="titular">Qué no hace la consultoría</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            El equipo entrega el diseño, la selección y el plan, y acompaña como contraparte del
+            cliente. La ejecución técnica y las erogaciones son del cliente y del proveedor que
+            contrate.
+          </p>
+
+          <ul class="exclusiones">
+            <li>
+              <h3>Ejecución técnica de la implementación</h3>
+              <p>La parametrización definitiva, la carga masiva de datos y la puesta en producción las realiza el proveedor o partner contratado.</p>
+            </li>
+            <li>
+              <h3>Compra de equipamiento y contratación de servicios</h3>
+              <p>El dispositivo de fábrica, el enlace de internet, el respaldo 4G/5G y los contratos con proveedores son decisiones y gastos del cliente. El equipo especifica requisitos y estima costos.</p>
+            </li>
+            <li>
+              <h3>Desarrollo de software a medida</h3>
+              <p>No se desarrollan sistemas propios ni integraciones programadas. Si la exportación de OP 2.1 no fuera posible, la réplica de su lógica se hace con las herramientas estándar de la plataforma elegida.</p>
+            </li>
+            <li>
+              <h3>Construcción y operación del canal digital</h3>
+              <p>Sólo se define la hoja de ruta y el criterio de habilitación. No incluye armar la tienda, publicar en Mercado Libre, producir fotos o catálogos, ni campañas o gestión de redes.</p>
+            </li>
+            <li>
+              <h3>Procesos que se conservan sin cambios</h3>
+              <p>Logística de salida, instalación en obra y servicio postventa quedan fuera de alcance.</p>
+            </li>
+            <li>
+              <h3>Administración, finanzas y contabilidad</h3>
+              <p>La integración del registro de caja queda diferida a una fase posterior y no se modifica el sistema del estudio contable externo.</p>
+            </li>
+            <li>
+              <h3>Decisiones de estructura y de personal</h3>
+              <p>No incluye contratar operarios, definir salarios ni reestructurar roles. El equipo sólo recomienda cómo formar el segundo perfil de coordinación.</p>
+            </li>
+            <li>
+              <h3>Nuevas líneas de producto y maquinaria</h3>
+              <p>La evaluación de una línea de PVC y la compra de maquinaria CNC quedan fuera.</p>
+            </li>
+          </ul>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Supuestos del proyecto</h3>
+          <div class="grid grid--3" style="margin-top:var(--sp-5)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Disponibilidad del sponsor</h3>
+              <p>Dedica una revisión por sprint para validar entregables y participa en el co-diseño de procesos e instructivos.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Acceso a los registros existentes</h3>
+              <p>El cliente facilita el Excel de caja, las planillas de armado que conserve y el historial de consultas de WhatsApp e Instagram.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Registro de la línea base</h3>
+              <p>Durante cuatro semanas el local y la fábrica anotan cada pedido, su fecha de entrega y cada compra de urgencia, para tener valores medidos antes de comprometer metas.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Financiamiento del equipamiento</h3>
+              <p>El dispositivo de fábrica, el enlace principal y el respaldo 4G/5G los adquiere el cliente según la especificación del OBJ-07.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Colaboración de los proveedores</h3>
+              <p>Un partner de Odoo, Contabilium y Megevand facilitan demos y cotizaciones formales a tiempo para el análisis profundo.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="riesgos-consultoria">
+        <div class="wrap">
+          <p class="etiqueta">Riesgos del proyecto de consultoría</p>
+          <h2 class="titular">Cuatro riesgos propios del encargo</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Distintos de los riesgos de la transformación: estos amenazan al trabajo del equipo,
+            no a la operación del cliente.
+          </p>
+
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <thead>
+                <tr><th scope="col">Riesgo</th><th scope="col">Prob.</th><th scope="col">Impacto</th><th scope="col">Respuesta</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Baja disponibilidad del sponsor, que hoy concentra ventas, compras y producción</th><td><span class="chip chip--alta">Alta</span></td><td><span class="chip chip--alta">Alto</span></td><td>Revisiones cortas con agenda fija al cierre de cada sprint y validación por mensaje de los entregables menores</td></tr>
+                <tr><th scope="row">La verificación de OP 2.1 se demora o resulta desfavorable</th><td><span class="chip chip--media">Media</span></td><td><span class="chip chip--alta">Alto</span></td><td>Iniciarla en paralelo al análisis profundo; si falla, activar el plan B: réplica de la lógica en la plataforma o WinMaker 10</td></tr>
+                <tr><th scope="row">Los registros existentes no alcanzan para establecer la línea base</th><td><span class="chip chip--media">Media</span></td><td><span class="chip chip--media">Medio</span></td><td>Registro manual de cuatro semanas antes de comprometer las metas</td></tr>
+                <tr><th scope="row">Las cotizaciones formales no llegan a tiempo</th><td><span class="chip chip--media">Media</span></td><td><span class="chip chip--media">Medio</span></td><td>Solicitarlas al cierre de esta etapa y trabajar con rangos de mercado hasta recibirlas</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="edt-consultoria">
+        <div class="wrap">
+          <p class="etiqueta">Estructura de descomposición del trabajo</p>
+          <h2 class="titular">Siete paquetes de consultoría</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            La EDT del encargo, con el entregable principal de cada paquete del primer nivel.
+          </p>
+
+          <div class="edt">
+            <div class="edt__raiz">
+              <span class="edt__num">0</span>
+              <span>Proyecto de consultoría · Aberturas FISA</span>
+            </div>
+            <ol class="edt__ramas edt__ramas--siete">
+              <li class="edt__paquete">
+                <span class="edt__num">1</span>
+                <h3>Gestión del proyecto</h3>
+                <ol>
+                  <li>Plan de proyecto</li>
+                  <li>Minutas con el sponsor</li>
+                  <li>Registro de riesgos</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">2</span>
+                <h3>Relevamiento y diagnóstico</h3>
+                <ol>
+                  <li>Caso de negocio</li>
+                  <li>Arquitectura actual</li>
+                  <li>Datos de producción y visita a fábrica</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">3</span>
+                <h3>Diseño de la arquitectura destino</h3>
+                <ol>
+                  <li>Visión destino</li>
+                  <li>Brechas y escenarios</li>
+                  <li>Alcance y mercado</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">4</span>
+                <h3>Selección de la solución</h3>
+                <ol>
+                  <li>Análisis profundo de preseleccionados</li>
+                  <li>Demos</li>
+                  <li>Verificación de OP 2.1</li>
+                  <li>Recomendación</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">5</span>
+                <h3>Diseño de procesos y datos</h3>
+                <ol>
+                  <li>Circuito pedido-stock-orden</li>
+                  <li>Política de compras</li>
+                  <li>Procedimiento de inventario</li>
+                  <li>Estándar de instructivos y piloto</li>
+                  <li>Ficha de indicadores</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">6</span>
+                <h3>Plan de implementación</h3>
+                <ol>
+                  <li>Especificación de infraestructura</li>
+                  <li>Hoja de ruta Fase 1 y Fase 2</li>
+                  <li>Capacitación y gestión del cambio</li>
+                  <li>Plan de salida del proveedor</li>
+                </ol>
+              </li>
+              <li class="edt__paquete">
+                <span class="edt__num">7</span>
+                <h3>Cierre</h3>
+                <ol>
+                  <li>Presentación final</li>
+                  <li>Acta de aceptación</li>
+                  <li>Lecciones aprendidas</li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="beneficios-mercado">
+        <div class="wrap">
+          <p class="etiqueta">Beneficios esperados</p>
+          <h2 class="titular">Nueve beneficios, atados a los objetivos</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Su cumplimiento depende de la implementación que se lleve a cabo con el proveedor que
+            se contrate.
+          </p>
+
+          <div class="grid grid--3" style="margin-top:var(--sp-8)">
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">OE-01</span></div>
+              <h3>Fin del traslado de papel</h3>
+              <p>Al menos el 90 % de las órdenes se comunica digitalmente. Se eliminan la dependencia de la impresora y los errores de transcripción, y nadie camina dos cuadras con la planilla.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">OE-02</span></div>
+              <h3>Saber qué hay antes de comprar</h3>
+              <p>El stock queda registrado y se descuenta con cada pedido: al menos el 90 % verifica stock antes de generar una compra. Se termina el control a simple vista del depósito.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">OE-04</span></div>
+              <h3>Menos compras de urgencia</h3>
+              <p>Como máximo un 15 % de compras reactivas, concentrando volumen en el proveedor habitual con precios bonificados y cuenta corriente a 30 días, en lugar del alternativo al contado.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">OE-03</span></div>
+              <h3>Menor dependencia del encargado</h3>
+              <p>Con al menos 10 procedimientos documentados, un operario capacitado arma sin indicaciones verbales. Baja el riesgo de continuidad y libera al encargado para la gestión.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">OE-05</span></div>
+              <h3>Capacidad para crecer sin incumplir</h3>
+              <p>La empresa absorbe un 30 % más de pedidos manteniendo el plazo promedio de 15 días, requisito para que una campaña comercial no termine en demoras.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">OE-06</span></div>
+              <h3>Base preparada para el canal digital</h3>
+              <p>Registrar el canal de origen permite medir el avance del 5 % al 15 % de ventas digitales, y la Fase 2 se apoya sobre el mismo stock y los mismos pedidos del local.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Continuidad del cálculo de materiales</h3>
+              <p>Se elimina el riesgo de depender de un software sin soporte: la lógica queda licenciada, respaldada o replicada, y documentada fuera de la plataforma.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Información resguardada</h3>
+              <p>Los datos dejan la notebook, el cuaderno de caja y la agenda del celular, y pasan a la nube con copias gestionadas y exportación periódica en poder del cliente.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Decisiones basadas en datos</h3>
+              <p>Los socios y el encargado cuentan por primera vez con indicadores de pedidos, plazos, compras reactivas y canales, en lugar de reconstruir la información de memoria.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion oscuro" id="cronograma">
+        <div class="wrap">
+          <p class="etiqueta">Cronograma de la consultoría</p>
+          <h2 class="titular" style="color:var(--blanco)">Dieciséis semanas, en sprints de dos</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Las semanas se cuentan desde el inicio de la cursada. Las entregas T-01 a T-05 ya
+            tienen fecha; las siguientes se proyectan con el ritmo actual.
+          </p>
+
+          <ol class="linea-hitos" aria-label="Hitos del proyecto de consultoría">
+            <li><span class="linea-hitos__semana">Semana 3</span><span class="linea-hitos__mes">Agosto</span>T-01 · Caso de negocio y relevamiento</li>
+            <li><span class="linea-hitos__semana">Semana 5</span><span class="linea-hitos__mes">Septiembre</span>T-02 · Arquitectura empresarial actual</li>
+            <li><span class="linea-hitos__semana">Semana 6</span><span class="linea-hitos__mes">Septiembre</span>Presentación de avance y T-03 · Visión destino</li>
+            <li><span class="linea-hitos__semana">Semana 7</span><span class="linea-hitos__mes">Septiembre</span>T-04 · Matriz de brechas y escenarios</li>
+            <li><span class="linea-hitos__semana">Semana 8</span><span class="linea-hitos__mes">Septiembre</span>T-05 · Alcance y mercado de soluciones</li>
+            <li><span class="linea-hitos__semana">Semana 10</span><span class="linea-hitos__mes">Octubre</span>T-06 · Selección de la solución</li>
+            <li><span class="linea-hitos__semana">Semana 12</span><span class="linea-hitos__mes">Octubre</span>Diseño de procesos y datos</li>
+            <li><span class="linea-hitos__semana">Semana 14</span><span class="linea-hitos__mes">Noviembre</span>Plan de implementación</li>
+            <li><span class="linea-hitos__semana">Semana 16</span><span class="linea-hitos__mes">Noviembre</span>Cierre: presentación final y aceptación</li>
+          </ol>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-10);color:var(--blanco)">Hoja de ruta de la implementación</h3>
+          <p class="bajada" style="margin-top:var(--sp-4)">
+            Dieciocho meses por trimestre. La Fase 2 empieza recién cuando el control de stock y la
+            planificación de compras están funcionando.
+          </p>
+
+          <div class="gantt-scroll">
+            <div class="gantt gantt--6" role="table" aria-label="Hoja de ruta de la implementación por trimestres">
+              <div class="gantt__etapas" role="presentation">
+                <span class="gantt__etapa" style="--ini:1;--fin:3">Fase 1 · Core operativo · meses 1 a 9</span>
+                <span class="gantt__etapa" style="--ini:4;--fin:6">Consolidación y Fase 2 · meses 10 a 18</span>
+              </div>
+              <div class="gantt__cabecera" role="row">
+                <span class="gantt__rotulo" role="columnheader">Frente de trabajo</span>
+                <span role="columnheader">T1</span><span role="columnheader">T2</span><span role="columnheader">T3</span>
+                <span role="columnheader">T4</span><span role="columnheader">T5</span><span role="columnheader">T6</span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Infraestructura en fábrica</span>
+                <span class="gantt__barra" role="cell" style="--ini:1;--fin:1"><span class="sr-only">trimestre 1</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Inventario inicial y maestro de materiales</span>
+                <span class="gantt__barra" role="cell" style="--ini:1;--fin:2"><span class="sr-only">trimestres 1 y 2</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Stock, pedidos y orden de fabricación digital</span>
+                <span class="gantt__barra" role="cell" style="--ini:1;--fin:3"><span class="sr-only">trimestres 1 a 3</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Integración o réplica del cálculo de OP 2.1</span>
+                <span class="gantt__barra" role="cell" style="--ini:2;--fin:3"><span class="sr-only">trimestres 2 y 3</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Compras planificadas con stock mínimo</span>
+                <span class="gantt__barra" role="cell" style="--ini:2;--fin:3"><span class="sr-only">trimestres 2 y 3</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Tablero de indicadores</span>
+                <span class="gantt__barra" role="cell" style="--ini:3;--fin:4"><span class="sr-only">trimestres 3 y 4</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Capacidad para un 30 % más de pedidos</span>
+                <span class="gantt__barra" role="cell" style="--ini:3;--fin:4"><span class="sr-only">trimestres 3 y 4</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Instructivos de fabricación, hasta 10 modelos</span>
+                <span class="gantt__barra" role="cell" style="--ini:2;--fin:6"><span class="sr-only">trimestres 2 a 6</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Fase 2 · catálogo, presupuesto online y marketplace</span>
+                <span class="gantt__barra gantt__barra--fase2" role="cell" style="--ini:4;--fin:6"><span class="sr-only">trimestres 4 a 6</span></span>
+              </div>
+              <div class="gantt__fila" role="row">
+                <span class="gantt__rotulo" role="rowheader">Capacitación y gestión del cambio</span>
+                <span class="gantt__barra gantt__barra--tenue" role="cell" style="--ini:1;--fin:6"><span class="sr-only">trimestres 1 a 6</span></span>
+              </div>
+              <div class="gantt__fila gantt__fila--hitos" role="row">
+                <span class="gantt__rotulo" role="rowheader">Hitos</span>
+                <span class="gantt__hito" role="cell" style="--mes:2"><i aria-hidden="true"></i>OE-01 · mes 6</span>
+                <span class="gantt__hito" role="cell" style="--mes:3"><i aria-hidden="true"></i>OE-02 y OE-04 · mes 9</span>
+                <span class="gantt__hito" role="cell" style="--mes:4"><i aria-hidden="true"></i>OE-05 · mes 12</span>
+                <span class="gantt__hito" role="cell" style="--mes:6"><i aria-hidden="true"></i>OE-03 y OE-06 · mes 18</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="stakeholders-mercado">
+        <div class="wrap">
+          <p class="etiqueta">Stakeholders</p>
+          <h2 class="titular">Nueve partes interesadas y el compromiso del equipo</h2>
+
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <thead>
+                <tr><th scope="col">Stakeholder</th><th scope="col">Poder</th><th scope="col">Interés</th><th scope="col">Estrategia</th><th scope="col">Compromiso del equipo</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Socios propietarios</th><td><span class="chip chip--alta">Alto</span></td><td><span class="chip chip--media">Medio</span></td><td>Mantener satisfechos</td><td>Presentar en cada hito el costo total junto con los beneficios medidos, y validar toda decisión de gasto antes de avanzar</td></tr>
+                <tr><th scope="row">Gabriel Fisicaro · sponsor y encargado</th><td><span class="chip chip--alta">Alto</span></td><td><span class="chip chip--alta">Alto</span></td><td>Gestionar de cerca</td><td>Co-diseñar procesos e instructivos, revisar al cierre de cada sprint, cuidar su carga horaria y acordar una delegación gradual</td></tr>
+                <tr><th scope="row">Atención comercial del local</th><td><span class="chip">Bajo</span></td><td><span class="chip chip--alta">Alto</span></td><td>Involucrar e informar</td><td>Participación en las demos y en las pruebas de carga de pedidos, con capacitación práctica antes de la puesta en marcha</td></tr>
+                <tr><th scope="row">Operarios de fábrica</th><td><span class="chip">Bajo</span></td><td><span class="chip chip--alta">Alto</span></td><td>Acompañar e informar</td><td>Instructivos en lenguaje simple y con fotos, empezando por consultar la orden, capacitación en el propio taller y relevamiento de su opinión en cada fase</td></tr>
+                <tr><th scope="row">Clientes finales y profesionales</th><td><span class="chip">Bajo</span></td><td><span class="chip chip--media">Medio</span></td><td>Monitorear</td><td>Asegurar que la transición no afecte los plazos y pedir opinión sobre el catálogo digital antes de lanzarlo</td></tr>
+                <tr><th scope="row">Constructoras y desarrolladores</th><td><span class="chip chip--media">Medio</span></td><td><span class="chip chip--media">Medio</span></td><td>Mantener informados</td><td>Priorizar sus pedidos en el piloto de la orden digital y comunicar las mejoras de trazabilidad</td></tr>
+                <tr><th scope="row">Proveedores de materia prima</th><td><span class="chip chip--media">Medio</span></td><td><span class="chip chip--media">Medio</span></td><td>Mantener informados</td><td>Comunicar el esquema de compras periódicas, pedir listas de precios y códigos, y negociar condiciones con el volumen planificado</td></tr>
+                <tr><th scope="row">Estudio contable externo</th><td><span class="chip chip--media">Medio</span></td><td><span class="chip">Bajo</span></td><td>Mantener informado</td><td>Garantizar que el envío de información no se interrumpa y consultarlo cuando se planifique la integración administrativa</td></tr>
+                <tr><th scope="row">Proveedores preseleccionados y partner</th><td><span class="chip chip--media">Medio</span></td><td><span class="chip chip--alta">Alto</span></td><td>Gestionar con reglas claras</td><td>Evaluar a todos con los mismos criterios y exigir por escrito la exportación periódica de datos y las condiciones de salida</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="grafico-resumen">
+        <div class="wrap">
+          <p class="etiqueta">Gráfico resumen</p>
+          <h2 class="titular">Tres estados de la arquitectura</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Actual, de transición y destino, en una escala de 1 a 5 equivalente a los niveles CMM:
+            1 inicial o informal, 3 definido y soportado por sistemas, 5 optimizado. La transición
+            es la situación esperada al cierre de la Fase 1, alrededor del mes 9.
+          </p>
+
+          <div class="dos-columnas dos-columnas--centrada">
+            <figure class="radar radar--tres">
+              <svg viewBox="-30 0 460 400" role="img" aria-labelledby="radar3-t radar3-d">
+                <title id="radar3-t">Gráfico araña de los tres estados de la arquitectura empresarial</title>
+                <desc id="radar3-d">Siete dimensiones comparadas en tres estados. Procesos de negocio pasa de 1,5 a 3 y a 4. Gestión del conocimiento, datos e infraestructura parten de 1. Aplicaciones de 1,5. El canal comercial digital se mantiene bajo en la transición, en 2, y llega a 4 en el destino. La gestión por indicadores pasa de 1 a 2,5 y a 3,5.</desc>
+                <g class="radar__malla" fill="none" stroke-width="1">
+                  <polygon points="200.0,50.0 317.3,106.5 346.2,233.4 265.1,335.1 134.9,335.1 53.8,233.4 82.7,106.5"/>
+                  <polygon points="200.0,80.0 293.8,125.2 317.0,226.7 252.1,308.1 147.9,308.1 83.0,226.7 106.2,125.2"/>
+                  <polygon points="200.0,110.0 270.4,143.9 287.7,220.0 239.0,281.1 161.0,281.1 112.3,220.0 129.6,143.9"/>
+                  <polygon points="200.0,140.0 246.9,162.6 258.5,213.4 226.0,254.1 174.0,254.1 141.5,213.4 153.1,162.6"/>
+                  <polygon points="200.0,170.0 223.5,181.3 229.2,206.7 213.0,227.0 187.0,227.0 170.8,206.7 176.5,181.3"/>
+                  <line x1="200" y1="200" x2="200.0" y2="50.0"/>
+                  <line x1="200" y1="200" x2="317.3" y2="106.5"/>
+                  <line x1="200" y1="200" x2="346.2" y2="233.4"/>
+                  <line x1="200" y1="200" x2="265.1" y2="335.1"/>
+                  <line x1="200" y1="200" x2="134.9" y2="335.1"/>
+                  <line x1="200" y1="200" x2="53.8" y2="233.4"/>
+                  <line x1="200" y1="200" x2="82.7" y2="106.5"/>
+                </g>
+                <polygon class="radar__destino" points="200.0,80.0 293.8,125.2 317.0,226.7 252.1,308.1 147.9,308.1 83.0,226.7 117.9,134.5"/>
+                <polygon class="radar__transicion" points="200.0,110.0 270.4,143.9 287.7,220.0 239.0,281.1 154.4,294.6 141.5,213.4 141.4,153.2"/>
+                <polygon class="radar__actual" points="200.0,155.0 223.5,181.3 229.2,206.7 219.5,240.5 187.0,227.0 156.1,210.0 176.5,181.3"/>
+                <g class="radar__rotulos">
+                  <text x="200.0" y="36.0" text-anchor="middle">Procesos</text>
+                  <text x="326.9" y="96.4" text-anchor="start">Conocimiento</text>
+                  <text x="358.2" y="238.4" text-anchor="start">Datos</text>
+                  <text x="270.8" y="355.4" text-anchor="start">Aplicaciones</text>
+                  <text x="129.2" y="355.4" text-anchor="end">Infraestructura</text>
+                  <text x="41.8" y="238.4" text-anchor="end">Canal digital</text>
+                  <text x="73.1" y="96.4" text-anchor="end">Indicadores</text>
+                </g>
+              </svg>
+              <figcaption class="radar__leyenda">
+                <span><i class="radar__muestra radar__muestra--actual" aria-hidden="true"></i>Actual</span>
+                <span><i class="radar__muestra radar__muestra--transicion" aria-hidden="true"></i>Transición · mes 9</span>
+                <span><i class="radar__muestra radar__muestra--objetivo" aria-hidden="true"></i>Destino</span>
+              </figcaption>
+            </figure>
+
+            <div class="tabla-scroll">
+              <table class="tabla tabla--compacta">
+                <thead>
+                  <tr><th scope="col">Dimensión</th><th scope="col">Actual</th><th scope="col">Transición</th><th scope="col">Destino</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Procesos de negocio</th><td>1,5</td><td>3,0</td><td>4,0</td></tr>
+                  <tr><th scope="row">Gestión del conocimiento</th><td>1,0</td><td>3,0</td><td>4,0</td></tr>
+                  <tr><th scope="row">Datos</th><td>1,0</td><td>3,0</td><td>4,0</td></tr>
+                  <tr><th scope="row">Aplicaciones</th><td>1,5</td><td>3,0</td><td>4,0</td></tr>
+                  <tr><th scope="row">Infraestructura tecnológica</th><td>1,0</td><td>3,5</td><td>4,0</td></tr>
+                  <tr><th scope="row">Canal comercial digital</th><td>1,5</td><td>2,0</td><td>4,0</td></tr>
+                  <tr><th scope="row">Gestión por indicadores</th><td>1,0</td><td>2,5</td><td>3,5</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="conclusion-parcial">
+            <p class="conclusion-parcial__rotulo">Reflexión</p>
+            <p>
+              La consultoría no apunta a llegar de una sola vez a la arquitectura destino, sino a
+              mover primero las dimensiones que hoy limitan el crecimiento. El canal digital, que
+              fue lo primero que pidió el sponsor, avanza muy poco en esta etapa, y es una decisión
+              deliberada: abrir la venta online antes de ordenar la operación generaría demanda que
+              la fábrica no puede absorber. La transición se propone en dos saltos, y el segundo se
+              habilita cuando los indicadores muestren stock confiable, compras reactivas cerca del
+              15 % y el plazo de 15 días sostenido.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="criterios-mercado">
+        <div class="wrap">
+          <p class="etiqueta">Prioridades del cliente</p>
+          <h2 class="titular">Cuatro aspectos, con el funcional al frente</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            La ponderación no es genérica: se justifica desde los objetivos y las restricciones de
+            esta organización.
+          </p>
+
+          <ol class="ponderacion" aria-label="Aspectos y pesos">
+            <li class="ponderacion__item" style="--peso:35">
+              <div class="ponderacion__cabecera"><h3>Funcional</h3><span class="ponderacion__peso">35 %</span></div>
+              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
+              <p>Stock en tiempo real, pedidos y presupuestos integrados al cálculo de materiales, orden e instructivos accesibles desde la fábrica, compras con stock mínimo, indicadores y capacidad de crecer hacia el canal digital. Es el de mayor peso porque el problema del cliente es operativo.</p>
+            </li>
+            <li class="ponderacion__item" style="--peso:30">
+              <div class="ponderacion__cabecera"><h3>Proveedor</h3><span class="ponderacion__peso">30 %</span></div>
+              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
+              <p>Solidez y continuidad, soporte local en español, red de implementadores cercana, capacitación y condiciones contractuales de exportación y salida. Pesa alto porque la empresa no tiene personal de sistemas y ya sufrió la dependencia de un software sin soporte vigente.</p>
+            </li>
+            <li class="ponderacion__item" style="--peso:20">
+              <div class="ponderacion__cabecera"><h3>Económico</h3><span class="ponderacion__peso">20 %</span></div>
+              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
+              <p>Inversión inicial, suscripción, implementación y capacitación, previsibilidad del costo en moneda y posibilidad de sumar módulos de a poco. Es una pyme familiar con recursos limitados que además debe financiar la conectividad y el equipamiento de la fábrica.</p>
+            </li>
+            <li class="ponderacion__item" style="--peso:15">
+              <div class="ponderacion__cabecera"><h3>Técnico</h3><span class="ponderacion__peso">15 %</span></div>
+              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
+              <p>Acceso web desde el local y la fábrica, uso en tablet o celular, facilidad de uso, importación y exportación estándar o API, seguridad y copias gestionadas. Pesa menos porque el escenario elegido ya fijó la modalidad SaaS modular y deja afuera de antemano las soluciones incompatibles.</p>
+            </li>
+          </ol>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Subcriterios para el análisis profundo</h3>
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <thead>
+                <tr><th scope="col">Aspecto</th><th scope="col">Subcriterio</th><th scope="col">Peso</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row" rowspan="4">Proveedor · 30 %</th><td>Soporte local en español y red de implementación en el AMBA</td><td>10 %</td></tr>
+                <tr><td>Solidez y trayectoria del proveedor</td><td>8 %</td></tr>
+                <tr><td>Exportación de datos y condiciones de salida</td><td>7 %</td></tr>
+                <tr><td>Capacitación y documentación disponible</td><td>5 %</td></tr>
+                <tr><th scope="row" rowspan="4">Funcional · 35 %</th><td>Stock en tiempo real y compras con stock mínimo</td><td>12 %</td></tr>
+                <tr><td>Pedidos y presupuestos integrados al cálculo de materiales</td><td>10 %</td></tr>
+                <tr><td>Orden e instructivos accesibles desde la fábrica</td><td>8 %</td></tr>
+                <tr><td>Indicadores y escalabilidad al canal digital</td><td>5 %</td></tr>
+                <tr><th scope="row" rowspan="3">Económico · 20 %</th><td>Inversión inicial e implementación</td><td>8 %</td></tr>
+                <tr><td>Costo recurrente y previsibilidad</td><td>8 %</td></tr>
+                <tr><td>Escalabilidad del costo por módulos</td><td>4 %</td></tr>
+                <tr><th scope="row" rowspan="3">Técnico · 15 %</th><td>Acceso web y uso desde tablet</td><td>6 %</td></tr>
+                <tr><td>Facilidad de uso para operarios</td><td>5 %</td></tr>
+                <tr><td>Integración: importación, exportación y API</td><td>4 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota">
+            Los siete criterios con que se eligió el escenario quedan cubiertos por estos aspectos,
+            de modo que la selección del proveedor mantiene la misma lógica que la del escenario.
+          </p>
+        </div>
+      </div>
+
+      <div class="seccion" id="fichas">
+        <div class="wrap">
+          <p class="etiqueta">Fichas de proveedores</p>
+          <h2 class="titular">Cinco soluciones relevadas</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            En el mercado aparecen dos tipos: suites de gestión pyme —stock, pedidos y compras— y
+            software especializado en carpintería de aluminio —cálculo de materiales y optimización
+            de cortes—. Datos tomados de sitios oficiales y fuentes del sector en septiembre de
+            2026, a confirmar con cada proveedor antes del análisis profundo.
+          </p>
+
+          <div class="fichas">
+            <article class="ficha-prov ficha-prov--destacada">
+              <header class="ficha-prov__cabecera">
+                <div>
+                  <h3>Odoo</h3>
+                  <p class="ficha-prov__tipo">Odoo S.A. · Bélgica · suite SaaS modular</p>
+                </div>
+                <span class="chip chip--ok">Núcleo</span>
+              </header>
+              <dl class="ficha-prov__datos">
+                <div><dt>Antecedentes</dt><dd>Sociedad anónima de capital privado con modelo <i>open core</i>. Fundada en 2005 como TinyERP, más de 2.200 empleados y 5 millones de usuarios. En Argentina opera mediante una red de más de 180 partners certificados, con Silver y Gold en el AMBA.</dd></div>
+                <div><dt>Producto</dt><dd>Odoo Enterprise en modalidad SaaS, con las aplicaciones Inventario, Fabricación, Compras, Ventas, Sitio web, Conocimiento y tableros.</dd></div>
+                <div><dt>Funcionalidades</dt><dd>Inventario en tiempo real con reglas de reabastecimiento por mínimo y máximo; listas de materiales y órdenes de fabricación con hoja de trabajo consultable desde una tablet en planta; presupuestos y pedidos; base de conocimiento para instructivos; tienda online sobre el mismo stock; tableros configurables. La localización argentina la configura el partner: no viene de fábrica.</dd></div>
+                <div><dt>Técnico</dt><dd>Sólo requiere navegador o app móvil. Servidores, copias y actualizaciones quedan a cargo de Odoo. Importa y exporta en CSV y Excel; la API externa está en el plan Custom.</dd></div>
+                <div><dt>Licenciamiento</dt><dd>Suscripción por usuario y por mes con tarifa regional. La implementación y la capacitación las cotiza aparte el partner local.</dd></div>
+              </dl>
+              <p class="ficha-prov__nota"><b>Alineación.</b> Es la de mayor cobertura funcional: la única que resuelve en una sola plataforma stock, compras con mínimos, órdenes con instrucciones en planta, pedidos, indicadores y el futuro canal digital. El riesgo es que la calidad del servicio depende del partner elegido, así que esa elección forma parte de la evaluación.</p>
+            </article>
+
+            <article class="ficha-prov ficha-prov--destacada">
+              <header class="ficha-prov__cabecera">
+                <div>
+                  <h3>Contabilium</h3>
+                  <p class="ficha-prov__tipo">Argentina · ERP SaaS para pymes</p>
+                </div>
+                <span class="chip chip--ok">Núcleo alternativo</span>
+              </header>
+              <dl class="ficha-prov__datos">
+                <div><dt>Antecedentes</dt><dd>Empresa argentina de capital privado con sede en la Ciudad de Buenos Aires; opera además en Uruguay, Chile y Paraguay. Fundada en 2015, superó los 5.000 clientes en 2022 y hoy informa más de 7.000 empresas usuarias.</dd></div>
+                <div><dt>Producto</dt><dd>Contabilium ERP, sistema de gestión en la nube.</dd></div>
+                <div><dt>Funcionalidades</dt><dd>Clientes, presupuestos, pedidos, remitos y facturación electrónica; proveedores, órdenes de compra y pagos; stock con ajustes e importación masiva; tesorería; más de 40 informes; integración nativa con Mercado Libre, Mercado Shops y Tiendanube. No se relevó módulo de producción, listas de materiales para fabricación a medida ni gestión de instructivos.</dd></div>
+                <div><dt>Técnico</dt><dd>Cien por ciento SaaS, sin instalación, desde PC, tablet o celular. Importación masiva desde planillas; la API sólo está en el plan Full.</dd></div>
+                <div><dt>Licenciamiento</dt><dd>Abono mensual en pesos con tres planes según usuarios y cantidad de artículos, descuento por pago anual, capacitación opcional y prueba gratuita de 10 días.</dd></div>
+              </dl>
+              <p class="ficha-prov__nota"><b>Alineación.</b> Fuerte en proveedor y en económico: empresa local, soporte en español, curva de aprendizaje baja, costo previsible en pesos y canal digital nativo. Su límite es funcional: resuelve stock, compras y presupuestos, pero no la orden de fabricación ni los instructivos.</p>
+            </article>
+
+            <article class="ficha-prov ficha-prov--destacada">
+              <header class="ficha-prov__cabecera">
+                <div>
+                  <h3>OP 2.1</h3>
+                  <p class="ficha-prov__tipo">Megevand Soft · Córdoba · cálculo especializado</p>
+                </div>
+                <span class="chip chip--ok">Complemento</span>
+              </header>
+              <dl class="ficha-prov__datos">
+                <div><dt>Antecedentes</dt><dd>Sociedad de responsabilidad limitada argentina especializada en software para carpinterías de aluminio y PVC. Mantiene actualizados los catálogos de más de 12 extrusoras y 8 fabricantes de PVC, con novedades en 2024 y 2025.</dd></div>
+                <div><dt>Producto</dt><dd>OP 2.1, con licencias Home y Profesional y módulos adicionales de 3D, control de inventario y conexión con maquinaria. <b>Es el mismo software que Aberturas FISA usa hoy</b>, entregado por un distribuidor de aluminio.</dd></div>
+                <div><dt>Funcionalidades</dt><dd>Cálculo de costos y presupuestos, optimización de cortes de perfiles y vidrios, órdenes de producción, informes de mecanizado, conexión con CNC, etiquetado y diseño 2D y 3D. En compras: control de inventario, órdenes y gestión de proveedores.</dd></div>
+                <div><dt>Técnico</dt><dd>Aplicación de escritorio para Windows. El trabajo multiusuario es en red local, sin acceso web nativo desde otra ubicación. La exportación de datos no está documentada públicamente: es el punto central de la verificación técnica.</dd></div>
+                <div><dt>Licenciamiento</dt><dd>Licencias Home y Profesional con un usuario adicional sin costo, soporte y actualizaciones incluidos. El control de inventario es un módulo opcional.</dd></div>
+              </dl>
+              <p class="ficha-prov__nota"><b>Hallazgo del relevamiento.</b> El "proveedor discontinuado" de la arquitectura actual era el distribuidor que entregó la licencia, no el desarrollador. Megevand sigue activo, da soporte y ofrece un módulo de inventario. Eso cambia el riesgo más concreto del parque aplicativo y cubre la restricción de continuidad del cálculo, que ninguna suite genérica resuelve por medidas y tipologías.</p>
+            </article>
+
+            <article class="ficha-prov">
+              <header class="ficha-prov__cabecera">
+                <div>
+                  <h3>Tango Gestión</h3>
+                  <p class="ficha-prov__tipo">Axoft Argentina S.A. · suite instalable</p>
+                </div>
+                <span class="chip">Excluido</span>
+              </header>
+              <dl class="ficha-prov__datos">
+                <div><dt>Antecedentes</dt><dd>Sociedad anónima argentina con casa central en la Ciudad de Buenos Aires y una red nacional de Centros de Ventas y Servicios. Desarrolla software de gestión desde fines de los años ochenta; es uno de los sistemas pyme más difundidos del país.</dd></div>
+                <div><dt>Funcionalidades</dt><dd>Stock multidepósito con saldos en tiempo real y stock comprometido por pedidos, fórmulas de armado para productos fabricados, gestión de mermas, toma de inventario con dispositivos Android y circuito completo de ventas y compras.</dd></div>
+                <div><dt>Técnico</dt><dd>Aplicación instalable sobre Windows en arquitectura cliente-servidor. Para dar acceso simultáneo al local y a la fábrica necesita un servidor propio con red o un alojamiento en la nube.</dd></div>
+                <div><dt>Licenciamiento</dt><dd>Licencia por versión y por módulo más abono de mantenimiento; la implementación la realiza un Centro autorizado. Sin precios públicos.</dd></div>
+              </dl>
+              <p class="ficha-prov__nota"><b>Alineación.</b> El mejor posicionado en proveedor por trayectoria y red de soporte, y cumple en stock, compras y ventas. Su punto débil es técnico: la arquitectura instalable no coincide con el escenario elegido y obliga a sumar servidor o alojamiento, lo que además lo encarece.</p>
+            </article>
+
+            <article class="ficha-prov">
+              <header class="ficha-prov__cabecera">
+                <div>
+                  <h3>WinMaker 10</h3>
+                  <p class="ficha-prov__tipo">Lepton Sistemas · Buenos Aires · cálculo especializado</p>
+                </div>
+                <span class="chip">Excluido · plan B</span>
+              </header>
+              <dl class="ficha-prov__datos">
+                <div><dt>Antecedentes</dt><dd>Empresa argentina de capital privado especializada en carpintería de aluminio, PVC y muebles, con sede en Núñez, a distancia accesible de Villa Bosch, y presencia comercial en España.</dd></div>
+                <div><dt>Funcionalidades</dt><dd>Cálculo rápido de obras, diseño de frentes y tipologías, optimización de cortes, órdenes de producción, presupuestos, stock de perfiles, vidrios y accesorios, exportación a CNC, multiusuario y multimoneda.</dd></div>
+                <div><dt>Técnico</dt><dd>Escritorio para Windows, con requisitos de hardware exigentes: procesador de octava generación, 8 GB de RAM y placa de video dedicada.</dd></div>
+                <div><dt>Licenciamiento</dt><dd>Licencia de escritorio con actualizaciones de versión pagas aproximadamente cada dos años. No publica precios.</dd></div>
+              </dl>
+              <p class="ficha-prov__nota"><b>Alineación.</b> Cumple en cálculo y stock de fábrica y es un especialista local y cercano, pero es de escritorio, pide hardware que la notebook actual probablemente no cumple, no resuelve el acceso concurrente y obligaría a migrar la lógica de cálculo desde OP 2.1, que es justamente el riesgo a evitar.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="preseleccion-mercado">
+        <div class="wrap">
+          <p class="etiqueta">Preselección</p>
+          <h2 class="titular">Un núcleo en la nube más el cálculo especializado</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            El tipo de solución que mejor se adapta es un sistema de gestión pyme en la nube
+            implementado por módulos —stock, pedidos, compras e indicadores— con la continuidad del
+            motor de cálculo de materiales como componente complementario.
+          </p>
+
+          <div class="tabla-scroll">
+            <table class="tabla tabla--numerica">
+              <thead>
+                <tr><th scope="col">Solución</th><th scope="col">Prov. 30 %</th><th scope="col">Func. 35 %</th><th scope="col">Téc. 15 %</th><th scope="col">Econ. 20 %</th><th scope="col">Total</th><th scope="col">Resultado</th></tr>
+              </thead>
+              <tbody>
+                <tr class="fila--elegida"><th scope="row">Odoo</th><td>4</td><td>5</td><td>4</td><td>3</td><td><b>4,15</b></td><td class="celda-texto"><span class="chip chip--ok">Preseleccionado · núcleo</span></td></tr>
+                <tr class="fila--elegida"><th scope="row">Contabilium</th><td>4</td><td>3</td><td>4</td><td>4</td><td><b>3,65</b></td><td class="celda-texto"><span class="chip chip--ok">Preseleccionado · núcleo alternativo</span></td></tr>
+                <tr><th scope="row">Tango Gestión</th><td>5</td><td>3</td><td>2</td><td>2</td><td><b>3,25</b></td><td class="celda-texto"><span class="chip">Excluido</span></td></tr>
+                <tr class="fila--elegida"><th scope="row">OP 2.1 · Megevand</th><td>3</td><td>3</td><td>2</td><td>4</td><td><b>3,05</b></td><td class="celda-texto"><span class="chip chip--ok">Preseleccionado · complemento</span></td></tr>
+                <tr><th scope="row">WinMaker 10 · Lepton</th><td>3</td><td>3</td><td>1</td><td>2</td><td><b>2,50</b></td><td class="celda-texto"><span class="chip">Excluido · plan B</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota">
+            Los puntajes de núcleo y de complemento no se comparan entre sí. Odoo, Contabilium y
+            Tango compiten como núcleo de gestión; OP 2.1 y WinMaker 10, como motor de cálculo. Por
+            eso OP 2.1 queda preseleccionado con 3,05 aunque Tango, con 3,25, se excluye.
+          </p>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Por qué se excluyen los demás</h3>
+          <ul class="exclusiones" style="margin-top:var(--sp-5)">
+            <li>
+              <h3>Tango Gestión</h3>
+              <p>Tiene el mejor puntaje en proveedor, pero su arquitectura instalable contradice el escenario elegido: para dar acceso simultáneo al local y a la fábrica exige servidor propio o alojamiento, lo que reintroduce la necesidad de TI que el cliente no tiene. Además la licencia por módulo más abono e implementación eleva la inversión inicial.</p>
+            </li>
+            <li>
+              <h3>WinMaker 10</h3>
+              <p>Es de escritorio y pide hardware que obligaría a comprar un equipo nuevo, sin resolver la conexión con la fábrica. Reemplazaría a OP 2.1 en lugar de complementarlo y obligaría a migrar la lógica de cálculo. Queda documentado como plan B si la verificación técnica de OP 2.1 resultara desfavorable.</p>
+            </li>
+            <li>
+              <h3>Zoho Inventory, sin ficha</h3>
+              <p>Se descartó antes de armar la ficha porque no cumple el aspecto proveedor, uno de los de mayor peso: no ofrece integración nativa con Mercado Libre, su soporte es principalmente remoto y en inglés, y se paga en dólares.</p>
+            </li>
+          </ul>
+
+          <h3 class="subtitulo" style="margin-top:var(--sp-9);color:var(--nucleo)">Qué se verificará en el análisis profundo</h3>
+          <div class="grid grid--3" style="margin-top:var(--sp-5)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Odoo</h3>
+              <p>Demo con un partner del AMBA sobre el circuito real pedido, stock y orden; cotización formal con la Fase 1 acotada; referencias de clientes con fabricación a medida; y confirmación de las condiciones de exportación y del costo total en moneda local.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Contabilium</h3>
+              <p>Prueba gratuita de 10 días cargando pedidos reales; verificación de si el núcleo alcanza sin módulo de producción apoyándose en OP 2.1 para el cálculo; y costo del plan según la cantidad de usuarios.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Megevand OP 2.1</h3>
+              <p>Versión y licencia instaladas, condiciones de soporte, módulo de inventario y posibilidad de exportar datos. El resultado define si el cálculo se integra, se replica o se mantiene como herramienta del local.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+      <div class="seccion--corta docs-caso">
+        <div class="wrap docs-caso__inner">
+          <div>
+            <p class="etiqueta">Documentación asociada</p>
+            <p class="docs-caso__texto">
+              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
+              del software— están en una carpeta compartida de Google Drive.
+            </p>
+          </div>
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-mercado">
+            Abrir la documentación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <span class="sr-only">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- ================= CTA ================= -->
@@ -1820,6 +2543,6 @@
   </div>
 </footer>
 
-<script src="../../assets/main.js?v=18" defer></script>
+<script src="../../assets/main.js?v=24" defer></script>
 </body>
 </html>

@@ -706,8 +706,14 @@ button { font: inherit; }
 .panel-caso:focus-visible { outline: none; }
 .panel-caso > .seccion + .seccion:not(.oscuro) { border-top: 1px solid var(--borde-claro); }
 
-/* Con la barra pegada, el destino de un ancla dentro del panel necesita más aire. */
-.panel-caso [id] { scroll-margin-top: calc(var(--nav-h) + 68px + var(--sp-5)); }
+/* Con cinco pestañas la fila ya no entra a lo ancho. En vez de desplazarse,
+   la tira envuelve a dos filas y el contenedor pastilla las abraza. */
+@media (min-width: 640px) {
+  .pestanas__lista { flex-wrap: wrap; width: auto; overflow: visible; justify-content: flex-start; }
+}
+/* Con la barra pegada, y pudiendo ocupar dos filas, el destino de un ancla
+   dentro del panel necesita holgura de sobra. */
+.panel-caso [id] { scroll-margin-top: calc(var(--nav-h) + 140px); }
 
 /* ---------- Bloques compartidos por las pestañas ---------- */
 .dos-columnas { display: grid; gap: var(--sp-8); }
@@ -757,6 +763,9 @@ button { font: inherit; }
 /* ---------- Objetivos por horizonte ---------- */
 .horizontes { display: grid; gap: var(--sp-6); margin-top: var(--sp-8); }
 @media (min-width: 900px) { .horizontes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-5); } }
+/* Cuatro horizontes: dos y dos antes de los 1100 px, cuatro en una fila arriba. */
+@media (min-width: 640px)  { .horizontes--cuatro { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .horizontes--cuatro { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .horizonte { display: flex; flex-direction: column; gap: var(--sp-4); }
 .horizonte__cabecera {
   display: flex; align-items: baseline; gap: var(--sp-3);
@@ -817,6 +826,20 @@ button { font: inherit; }
 @media (min-width: 900px) {
   .cadena-valor li:nth-child(2n)::after { display: block; }
   .cadena-valor li:nth-child(4n)::after { display: none; }
+}
+
+/* La cadena de valor en cinco eslabones lleva rótulo y descripción. */
+@media (min-width: 900px) { .cadena-valor--cinco { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.cadena-valor--cinco li { color: var(--gris); font-size: var(--fs-cuerpo); line-height: 1.4; }
+.cadena-valor--cinco li b {
+  display: block; margin-bottom: var(--sp-2);
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--nucleo);
+}
+@media (min-width: 900px) {
+  .cadena-valor--cinco li:nth-child(2n)::after { display: block; }
+  .cadena-valor--cinco li:nth-child(4n)::after { display: block; }
+  .cadena-valor--cinco li:last-child::after { display: none; }
 }
 
 /* ---------- EDT / WBS ---------- */
@@ -1310,13 +1333,10 @@ button { font: inherit; }
 .tarjeta__cifra { margin-top: auto; padding-top: var(--sp-3); color: var(--gris); font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; }
 .tarjeta__cifra b { font-size: var(--fs-h3); font-weight: 700; letter-spacing: -0.02em; color: var(--orbita); }
 
-@media (min-width: 900px) { .datos--tres { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* El paquete de la Fase 2 se distingue del núcleo operativo. */
 .edt__paquete--fase2 { border-top-color: var(--pulso); border-style: dashed; }
 .edt__paquete--fase2 .edt__num { color: var(--pulso); }
-.gantt--12 { grid-template-columns: var(--col-rotulo) repeat(12, minmax(56px, 1fr)); min-width: 940px; }
-.gantt--12 .gantt__fila::before { background-size: calc(100% / 12) 100%; }
 .gantt__barra--fase2 { background: transparent; border: 1.5px dashed var(--pulso); }
 
 /* ---------- Matriz 2×2 de escenarios ---------- */
@@ -1352,6 +1372,89 @@ button { font: inherit; }
   .escenarios-matriz__eje, .escenarios-matriz__cab { display: none; }
   .escenarios-matriz .escenario:nth-of-type(n) { grid-row: auto; grid-column: 1; }
 }
+
+/* ---------- Pestaña de alcance y mercado ---------- */
+.gantt--6 { grid-template-columns: var(--col-rotulo) repeat(6, minmax(92px, 1fr)); min-width: 760px; }
+.gantt--6 .gantt__fila::before { background-size: calc(100% / 6) 100%; }
+.gantt--6 { --col-rotulo: 280px; }
+
+/* Siete paquetes: cuatro arriba, tres abajo. */
+@media (min-width: 1100px) { .edt__ramas--siete { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Línea de hitos del cronograma de consultoría. */
+.linea-hitos { display: grid; gap: 0; margin-top: var(--sp-8); }
+.linea-hitos li {
+  position: relative; display: grid; gap: 2px;
+  padding: 0 0 var(--sp-5) 34px;
+  color: var(--lavanda);
+}
+.linea-hitos li::before {
+  content: ""; position: absolute; left: 0; top: 4px;
+  width: var(--nodo-2); height: var(--nodo-2); border-radius: 50%;
+  background: var(--senal);
+}
+.linea-hitos li:last-child::before { background: var(--pulso); }
+.linea-hitos li::after {
+  content: ""; position: absolute; left: calc(var(--nodo-2) / 2 - 1.5px);
+  top: calc(var(--nodo-2) + 6px); bottom: 2px; width: 3px; border-radius: 2px;
+  background: var(--borde-oscuro-fuerte);
+}
+.linea-hitos li:last-child { padding-bottom: 0; }
+.linea-hitos li:last-child::after { display: none; }
+.linea-hitos__semana { font-weight: 500; color: var(--blanco); }
+.linea-hitos__mes {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--senal);
+}
+@media (min-width: 768px) {
+  .linea-hitos li { grid-template-columns: 110px 130px minmax(0, 1fr); align-items: baseline; gap: var(--sp-4); }
+}
+
+/* Gráfico araña de tres estados. */
+.radar--tres svg { max-width: 460px; }
+.radar__destino { fill: rgba(126, 62, 208, 0.14); stroke: var(--orbita); stroke-width: 2; stroke-linejoin: round; }
+.radar__transicion { fill: rgba(169, 110, 252, 0.18); stroke: var(--senal); stroke-width: 2; stroke-linejoin: round; }
+.radar--tres .radar__actual { fill: rgba(196, 84, 254, 0.24); stroke: var(--pulso); stroke-width: 2; stroke-linejoin: round; }
+.radar__muestra--transicion { background: var(--senal); }
+.radar__rotulos text { font-size: 12px; }
+
+/* Tabla compacta al lado de un gráfico. */
+.tabla--compacta { min-width: 0; }
+.tabla--compacta th, .tabla--compacta td { padding: var(--sp-3) var(--sp-4); }
+.tabla--compacta td { text-align: right; font-variant-numeric: tabular-nums; color: var(--tinta); }
+.tabla--compacta thead th:not(:first-child) { text-align: right; }
+
+.tabla .fila--elegida th[scope="row"] { color: var(--orbita); }
+.tabla .celda-texto { text-align: left; }
+
+/* ---------- Fichas de proveedor ---------- */
+.fichas { display: grid; gap: var(--sp-5); margin-top: var(--sp-8); }
+@media (min-width: 1024px) { .fichas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ficha-prov {
+  padding: var(--sp-6);
+  background: var(--blanco); border: 1px solid var(--borde-claro); border-radius: var(--r-md);
+  display: flex; flex-direction: column; gap: var(--sp-4);
+}
+.ficha-prov--destacada { border-color: var(--orbita); box-shadow: inset 0 0 0 1px var(--orbita); }
+.ficha-prov__cabecera { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-4); }
+.ficha-prov__cabecera h3 { font-size: var(--fs-h3); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--nucleo); }
+.ficha-prov__tipo {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orbita);
+}
+.ficha-prov__datos { display: grid; gap: var(--sp-4); margin: 0; }
+.ficha-prov__datos dt {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gris); margin-bottom: var(--sp-2);
+}
+.ficha-prov__datos dd { margin: 0; color: var(--gris); }
+.ficha-prov__datos dd b { font-weight: 500; color: var(--nucleo); }
+.ficha-prov__nota {
+  margin-top: auto; padding-top: var(--sp-4); border-top: 1px solid var(--borde-claro);
+  color: var(--tinta);
+}
+.ficha-prov__nota b { font-weight: 500; color: var(--nucleo); }
 
 /* ---------- Manifiesto (página Nosotros) ----------
    Pieza de marca, no sección de texto: degradé del hero, arcos de órbita con
