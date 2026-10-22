@@ -18,11 +18,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- GitHub Pages sirve los assets con Cache-Control: max-age=600 y no permite
-     cambiar cabeceras. Para que un cambio de CSS o JS se vea al instante en vez
-     de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las tres paginas
-     cada vez que se tocan styles.css o main.js. -->
+     cambiar cabeceras, por eso styles.css y main.js llevan ?v=. El numero no se
+     mantiene a mano: el workflow de despliegue lo reemplaza por el hash del
+     contenido de ambos archivos, de modo que cambia solo cuando cambian ellos y
+     queda igual en las tres paginas. En local el valor da lo mismo. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="../../assets/styles.css?v=24">
+<link rel="stylesheet" href="../../assets/styles.css?v=28">
 
 <script type="application/ld+json">
 {
@@ -140,13 +141,10 @@
             <span class="pestana__num" aria-hidden="true">03</span>Arquitectura destino
           </button>
           <button class="pestana" role="tab" type="button" id="tab-brechas" aria-controls="brechas" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">04</span>Brechas y escenarios
+            <span class="pestana__num" aria-hidden="true">04</span>Brechas
           </button>
           <button class="pestana" role="tab" type="button" id="tab-mercado" aria-controls="mercado" aria-selected="false" tabindex="-1">
             <span class="pestana__num" aria-hidden="true">05</span>Alcance y mercado
-          </button>
-          <button class="pestana" role="tab" type="button" id="tab-software" aria-controls="software" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">06</span>Selección de la solución
           </button>
         </div>
       </div>
@@ -671,8 +669,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-cliente">
@@ -968,8 +967,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-actual">
@@ -1114,8 +1114,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-destino">
@@ -1332,8 +1333,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-brechas">
@@ -1345,372 +1347,6 @@
       </div>
     </section>
 
-    <!-- ================= 06 · SELECCIÓN DE LA SOLUCIÓN =================
-         Marcador de posición: se reemplaza cuando esté el documento T-06. -->
-    <section class="panel-caso" id="software" role="tabpanel" aria-labelledby="tab-software" tabindex="0" hidden>
-
-      <div class="seccion" id="criterios">
-        <div class="wrap">
-          <p class="etiqueta">Criterios de evaluación y ponderación</p>
-          <h2 class="titular">Cuatro aspectos, con el funcional al frente</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            El análisis de escenarios ya definió el qué: una plataforma SaaS implementada por
-            módulos. Acá se elige el quién. Cada proveedor se puntúa de 1 a 10 por aspecto, y el
-            peso refleja lo que más le importa a una fábrica chica: que la herramienta resuelva el
-            problema y que el taller la use.
-          </p>
-
-          <ol class="ponderacion" aria-label="Criterios y pesos">
-            <li class="ponderacion__item" style="--peso:30">
-              <div class="ponderacion__cabecera"><h3>Aspecto funcional</h3><span class="ponderacion__peso">30 %</span></div>
-              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Cubre las seis capacidades del destino: pedidos omnicanal, stock en tiempo real, cálculo integrado, catálogo digital, instructivos de fabricación e indicadores. Las cuatro primeras son excluyentes.</p>
-            </li>
-            <li class="ponderacion__item" style="--peso:25">
-              <div class="ponderacion__cabecera"><h3>Aspecto técnico</h3><span class="ponderacion__peso">25 %</span></div>
-              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Integración con el Soft Alcemar OP 2.1 · acceso concurrente desde el local y la fábrica · tolerancia a una conexión inestable · uso desde tablet o celular · resguardo gestionado · exportación en formato estándar.</p>
-            </li>
-            <li class="ponderacion__item" style="--peso:25">
-              <div class="ponderacion__cabecera"><h3>Aspecto económico</h3><span class="ponderacion__peso">25 %</span></div>
-              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Costo total a tres años: suscripción, implementación, capacitación, infraestructura y soporte · moneda de facturación · que el precio crezca sólo al habilitar módulos nuevos.</p>
-            </li>
-            <li class="ponderacion__item" style="--peso:20">
-              <div class="ponderacion__cabecera"><h3>Proveedores</h3><span class="ponderacion__peso">20 %</span></div>
-              <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Trayectoria y clientes comparables · soporte en español y en horario de taller · continuidad del producto · condiciones de salida y propiedad de los datos, que en una empresa sin personal de sistemas son la única protección real.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="seccion" id="balance">
-        <div class="wrap">
-          <p class="etiqueta">Balance estratégico</p>
-          <h2 class="titular">Desarrollar a medida o adoptar una plataforma</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            La modalidad ya quedó decidida en el análisis de escenarios —nube, por módulos—, pero
-            faltaba confirmar que adoptar le gana a construir para una empresa de seis personas.
-          </p>
-
-          <div class="balance">
-            <article class="balance__opcion">
-              <h3>Desarrollar a medida</h3>
-              <ul class="balance__lista">
-                <li class="balance__pro">Se ajusta exacto al circuito local–fábrica.</li>
-                <li class="balance__pro">Integración total con el sistema de cálculo.</li>
-                <li class="balance__contra">Plazo largo: la primera orden digital llegaría fuera del plazo comprometido en OE-01.</li>
-                <li class="balance__contra">Quedaría un segundo sistema sin soporte, igual que el Soft Alcemar.</li>
-                <li class="balance__contra">Costo inicial alto para seis personas.</li>
-              </ul>
-            </article>
-            <article class="balance__opcion balance__opcion--elegida">
-              <h3>Adoptar una solución de mercado</h3>
-              <ul class="balance__lista">
-                <li class="balance__pro">Puesta en marcha en semanas, dentro del cronograma.</li>
-                <li class="balance__pro">Soporte, actualizaciones y resguardo a cargo del proveedor: cero TI interno.</li>
-                <li class="balance__pro">Costo mensual acotado y previsible.</li>
-                <li class="balance__contra">Hay que adaptar el proceso a la herramienta en algunos puntos.</li>
-                <li class="balance__contra">La integración con el cálculo depende de que exporte datos.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="conclusion-parcial">
-            <p class="conclusion-parcial__rotulo">Decisión</p>
-            <p>Adoptar y adaptar, en línea con el Escenario 4: una plataforma SaaS de gestión de producción y stock para pymes, habilitada por módulos, con el cálculo de materiales integrado por exportación. El desarrollo a medida queda como alternativa si ningún proveedor cubre lo funcional.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="proveedores">
-        <div class="wrap">
-          <p class="etiqueta">Proveedores analizados</p>
-          <h2 class="titular">Seis alternativas en la primera vuelta</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            Relevamiento de mercado sobre el aspecto funcional y el técnico. Tres pasan a la
-            instancia de RFP.
-          </p>
-
-          <div class="tabla-scroll">
-            <table class="tabla">
-              <thead>
-                <tr><th scope="col">Proveedor</th><th scope="col">Tipo</th><th scope="col">Foco</th><th scope="col">Resultado</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">Taller360</th><td>SaaS · Argentina</td><td>Órdenes de trabajo y stock para talleres y carpinterías</td><td><span class="chip chip--ok">Preseleccionado</span></td></tr>
-                <tr><th scope="row">Fabrik Pyme</th><td>SaaS · regional</td><td>ERP liviano con módulo de producción</td><td><span class="chip chip--ok">Preseleccionado</span></td></tr>
-                <tr><th scope="row">OrdenAr</th><td>SaaS · Argentina</td><td>Órdenes de fabricación y stock simple</td><td><span class="chip chip--ok">Preseleccionado</span></td></tr>
-                <tr><th scope="row">PlanoStock</th><td>On-premise</td><td>Gestión de depósito</td><td><span class="chip">Descartado</span> Modalidad on-premise: queda fuera por el escenario elegido</td></tr>
-                <tr><th scope="row">Manufacto Cloud</th><td>SaaS · internacional</td><td>MES para plantas medianas</td><td><span class="chip">Descartado</span> Sobredimensionado y facturado en dólares</td></tr>
-                <tr><th scope="row">Planillas compartidas</th><td>Herramienta genérica</td><td>Hojas de cálculo en la nube</td><td><span class="chip">Descartado</span> No cruza stock con pedidos ni soporta fichas por modelo</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="nota">Los nombres de proveedores son ilustrativos: el análisis muestra el método, no una recomendación comercial.</p>
-        </div>
-      </div>
-
-      <div class="seccion" id="preseleccionados">
-        <div class="wrap">
-          <p class="etiqueta">Proveedores preseleccionados</p>
-          <h2 class="titular">Tres candidatos, tres perfiles distintos</h2>
-
-          <div class="grid grid--3" style="margin-top:var(--sp-8)">
-            <article class="tarjeta">
-              <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Taller360</h3>
-              <p>Nació para talleres chicos. Pantalla de taller pensada para tablet, fichas por modelo y stock por materia prima. Importa planillas del sistema de cálculo.</p>
-            </article>
-            <article class="tarjeta">
-              <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Fabrik Pyme</h3>
-              <p>ERP liviano: producción, compras y ventas en un solo lugar. Más completo de lo que hace falta hoy, con margen para crecer hacia el canal digital.</p>
-            </article>
-            <article class="tarjeta">
-              <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>OrdenAr</h3>
-              <p>El más económico y el más simple. Resuelve órdenes y stock básico; no tiene fichas de fabricación ni planificación de compras.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="rfp">
-        <div class="wrap">
-          <p class="etiqueta">RFP</p>
-          <h2 class="titular">Pedido de propuesta: mismas preguntas para los tres</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            El RFP fija el alcance y hace comparables las respuestas. Siete semanas entre el
-            envío y la decisión.
-          </p>
-
-          <div class="dos-columnas" style="margin-top:var(--sp-8)">
-            <div>
-              <h3 class="subtitulo" style="color:var(--nucleo)">Qué pide el documento</h3>
-              <ol class="lista-numerada">
-                <li><b>Contexto</b> — quién es Aberturas FISA, cómo trabaja hoy y qué objetivos persigue.</li>
-                <li><b>Alcance funcional</b> — las seis capacidades del destino y las diez historias de usuario priorizadas, con las cuatro <em>must have</em> como excluyentes.</li>
-                <li><b>Requisitos técnicos</b> — integración con el Soft Alcemar, uso en taller, tolerancia a conexión inestable, exportación de datos.</li>
-                <li><b>Requisitos del proveedor</b> — clientes comparables, soporte, continuidad, propiedad de los datos.</li>
-                <li><b>Propuesta económica</b> — desglose a tres años en una plantilla común.</li>
-                <li><b>Plan de implementación</b> — plazos, capacitación y criterios de aceptación.</li>
-              </ol>
-            </div>
-            <div>
-              <h3 class="subtitulo" style="color:var(--nucleo)">Calendario</h3>
-              <ol class="cadena-pasos cadena-pasos--vertical" aria-label="Calendario del RFP">
-                <li><b>Semana 1</b> Envío del RFP a los tres preseleccionados</li>
-                <li><b>Semana 2</b> Ronda de consultas y aclaraciones</li>
-                <li><b>Semana 4</b> Recepción de propuestas</li>
-                <li><b>Semanas 5 y 6</b> Demos con el encargado y un operario</li>
-                <li><b>Semana 7</b> Evaluación ponderada y decisión</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="evaluacion-economica">
-        <div class="wrap">
-          <p class="etiqueta">Evaluación económica</p>
-          <h2 class="titular">Costo total a tres años</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            En millones de pesos, según las propuestas recibidas. La infraestructura de fábrica es
-            la misma para los tres.
-          </p>
-
-          <div class="tabla-scroll">
-            <table class="tabla tabla--numerica">
-              <thead>
-                <tr><th scope="col">Concepto</th><th scope="col">Taller360</th><th scope="col">Fabrik Pyme</th><th scope="col">OrdenAr</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">Suscripción, 36 meses</th><td>2,4</td><td>3,6</td><td>1,5</td></tr>
-                <tr><th scope="row">Implementación e integración</th><td>1,0</td><td>1,8</td><td>0,7</td></tr>
-                <tr><th scope="row">Capacitación</th><td>0,3</td><td>0,4</td><td>0,2</td></tr>
-                <tr><th scope="row">Infraestructura de fábrica</th><td>0,5</td><td>0,5</td><td>0,5</td></tr>
-                <tr><th scope="row">Soporte adicional</th><td>Incluido</td><td>0,2</td><td>0,2</td></tr>
-              </tbody>
-              <tfoot>
-                <tr><th scope="row">Total a 3 años</th><td>4,2</td><td>6,5</td><td>3,1</td></tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="cashflows">
-        <div class="wrap">
-          <p class="etiqueta">Cashflows</p>
-          <h2 class="titular">Cuándo se recupera la inversión</h2>
-          <p class="bajada" style="margin-top:var(--sp-5)">
-            Flujo neto por año: inversión en el año 0 y ahorros después —menos compras urgentes,
-            menos desperdicio de aluminio y horas del encargado liberadas—. En millones de pesos.
-          </p>
-
-          <div class="dos-columnas dos-columnas--centrada">
-            <figure class="cashflow">
-              <svg viewBox="0 0 560 320" role="img" aria-labelledby="cf-t cf-d">
-                <title id="cf-t">Flujo de caja neto por año y por proveedor</title>
-                <desc id="cf-d">Taller360 invierte 4,2 en el año 0 y recupera 1,8; 3,1 y 3,4 en los años siguientes. Fabrik Pyme invierte 6,5 y recupera 1,5; 3,0 y 3,3. OrdenAr invierte 3,1 y recupera 0,9; 2,0 y 2,2.</desc>
-                <g class="cashflow__malla">
-                  <line x1="56" y1="106" x2="540" y2="106"/><text x="48" y="110">+4</text>
-                  <line x1="56" y1="138" x2="540" y2="138"/><text x="48" y="142">+2</text>
-                  <line class="cashflow__cero" x1="56" y1="170" x2="540" y2="170"/><text x="48" y="174">0</text>
-                  <line x1="56" y1="202" x2="540" y2="202"/><text x="48" y="206">−2</text>
-                  <line x1="56" y1="234" x2="540" y2="234"/><text x="48" y="238">−4</text>
-                  <line x1="56" y1="266" x2="540" y2="266"/><text x="48" y="270">−6</text>
-                </g>
-                <g class="cashflow__serie cashflow__serie--a">
-                  <rect x="60" y="170" width="24" height="67.2"/>
-                  <rect x="180" y="141.2" width="24" height="28.8"/>
-                  <rect x="300" y="120.4" width="24" height="49.6"/>
-                  <rect x="420" y="115.6" width="24" height="54.4"/>
-                </g>
-                <g class="cashflow__serie cashflow__serie--b">
-                  <rect x="88" y="170" width="24" height="104"/>
-                  <rect x="208" y="146" width="24" height="24"/>
-                  <rect x="328" y="122" width="24" height="48"/>
-                  <rect x="448" y="117.2" width="24" height="52.8"/>
-                </g>
-                <g class="cashflow__serie cashflow__serie--c">
-                  <rect x="116" y="170" width="24" height="49.6"/>
-                  <rect x="236" y="155.6" width="24" height="14.4"/>
-                  <rect x="356" y="138" width="24" height="32"/>
-                  <rect x="476" y="134.8" width="24" height="35.2"/>
-                </g>
-                <g class="cashflow__ejes">
-                  <text x="100" y="300" text-anchor="middle">Año 0</text>
-                  <text x="220" y="300" text-anchor="middle">Año 1</text>
-                  <text x="340" y="300" text-anchor="middle">Año 2</text>
-                  <text x="460" y="300" text-anchor="middle">Año 3</text>
-                </g>
-              </svg>
-              <figcaption class="radar__leyenda">
-                <span><i class="radar__muestra cashflow__muestra--a" aria-hidden="true"></i>Taller360</span>
-                <span><i class="radar__muestra cashflow__muestra--b" aria-hidden="true"></i>Fabrik Pyme</span>
-                <span><i class="radar__muestra cashflow__muestra--c" aria-hidden="true"></i>OrdenAr</span>
-              </figcaption>
-            </figure>
-
-            <ol class="dimensiones" aria-label="Acumulado a tres años y recupero">
-              <li><span class="dimensiones__nombre">Taller360 · acumulado a 3 años</span><span class="dimensiones__salto"><b>+4,1</b></span></li>
-              <li><span class="dimensiones__nombre">Taller360 · recupero</span><span class="dimensiones__salto"><b>mes 20</b></span></li>
-              <li><span class="dimensiones__nombre">Fabrik Pyme · acumulado a 3 años</span><span class="dimensiones__salto"><b>+1,3</b></span></li>
-              <li><span class="dimensiones__nombre">Fabrik Pyme · recupero</span><span class="dimensiones__salto"><b>mes 31</b></span></li>
-              <li><span class="dimensiones__nombre">OrdenAr · acumulado a 3 años</span><span class="dimensiones__salto"><b>+2,0</b></span></li>
-              <li><span class="dimensiones__nombre">OrdenAr · recupero</span><span class="dimensiones__salto"><b>mes 26</b></span></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion" id="analisis-proveedores">
-        <div class="wrap">
-          <p class="etiqueta">Análisis individual de proveedores</p>
-          <h2 class="titular">Puntaje ponderado, aspecto por aspecto</h2>
-
-          <div class="grid grid--3" style="margin-top:var(--sp-8)">
-            <article class="proveedor proveedor--elegido">
-              <header class="proveedor__cabecera">
-                <h3>Taller360</h3>
-                <p class="proveedor__total"><b>8,1</b><span>/ 10</span></p>
-              </header>
-              <ul class="puntaje">
-                <li style="--valor:9"><span>Funcional</span><i aria-hidden="true"></i><b>9</b></li>
-                <li style="--valor:8"><span>Técnico</span><i aria-hidden="true"></i><b>8</b></li>
-                <li style="--valor:7"><span>Económico</span><i aria-hidden="true"></i><b>7</b></li>
-                <li style="--valor:8"><span>Proveedor</span><i aria-hidden="true"></i><b>8</b></li>
-              </ul>
-              <p class="proveedor__nota"><b>Fortaleza:</b> pantalla de taller y fichas por modelo, justo lo que pide el paquete 6. <b>Riesgo:</b> empresa chica; se negocia cláusula de exportación de datos.</p>
-            </article>
-            <article class="proveedor">
-              <header class="proveedor__cabecera">
-                <h3>Fabrik Pyme</h3>
-                <p class="proveedor__total"><b>7,5</b><span>/ 10</span></p>
-              </header>
-              <ul class="puntaje">
-                <li style="--valor:8"><span>Funcional</span><i aria-hidden="true"></i><b>8</b></li>
-                <li style="--valor:8"><span>Técnico</span><i aria-hidden="true"></i><b>8</b></li>
-                <li style="--valor:5"><span>Económico</span><i aria-hidden="true"></i><b>5</b></li>
-                <li style="--valor:9"><span>Proveedor</span><i aria-hidden="true"></i><b>9</b></li>
-              </ul>
-              <p class="proveedor__nota"><b>Fortaleza:</b> el proveedor más sólido y con más camino para crecer. <b>Riesgo:</b> costo alto y una interfaz de oficina que el taller no va a usar con guantes.</p>
-            </article>
-            <article class="proveedor">
-              <header class="proveedor__cabecera">
-                <h3>OrdenAr</h3>
-                <p class="proveedor__total"><b>6,6</b><span>/ 10</span></p>
-              </header>
-              <ul class="puntaje">
-                <li style="--valor:6"><span>Funcional</span><i aria-hidden="true"></i><b>6</b></li>
-                <li style="--valor:6"><span>Técnico</span><i aria-hidden="true"></i><b>6</b></li>
-                <li style="--valor:9"><span>Económico</span><i aria-hidden="true"></i><b>9</b></li>
-                <li style="--valor:5"><span>Proveedor</span><i aria-hidden="true"></i><b>5</b></li>
-              </ul>
-              <p class="proveedor__nota"><b>Fortaleza:</b> el más barato y el más fácil de adoptar. <b>Riesgo:</b> no cubre fichas ni planificación de compras: dos objetivos quedarían sin herramienta.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccion oscuro" id="conclusion">
-        <div class="wrap">
-          <p class="etiqueta">Conclusión</p>
-          <h2 class="titular" style="color:var(--blanco)">Taller360, con dos condiciones</h2>
-          <div class="articulo" style="margin-top:var(--sp-6)">
-            <p style="color:var(--lavanda)">
-              Es la única opción que cubre las cuatro capacidades excluyentes con una pantalla que
-              los operarios pueden usar en el taller. Cuesta un tercio menos que Fabrik Pyme y
-              recupera la inversión antes de los dos años.
-            </p>
-            <p style="color:var(--lavanda)">
-              El escenario elegido no exige TI interno, pero traslada al proveedor una dependencia
-              que hay que gestionar por contrato: exportación periódica de los datos en formato
-              estándar y en poder del cliente, revisión del costo una vez al año, y la lógica de
-              cálculo y los instructivos documentados fuera de la plataforma. Con eso, una suba de
-              precio o una discontinuación obligan a migrar, no a reconstruir el negocio.
-            </p>
-          </div>
-
-          <div class="grid grid--3" style="margin-top:var(--sp-8)">
-            <div class="destacado">
-              <p class="destacado__rotulo">Próximo paso 1</p>
-              <p class="destacado__valor">Piloto de un mes</p>
-              <p>Ventana corrediza estándar, de la planilla a la fábrica sin papel.</p>
-            </div>
-            <div class="destacado">
-              <p class="destacado__rotulo">Próximo paso 2</p>
-              <p class="destacado__valor">Conectar la fábrica</p>
-              <p>Internet y una tablet resistente en el puesto de armado, antes del piloto.</p>
-            </div>
-            <div class="destacado">
-              <p class="destacado__rotulo">Próximo paso 3</p>
-              <p class="destacado__valor">Firmar por tres años</p>
-              <p>Solo si el piloto cumple los criterios acordados y el contrato incluye la cláusula de exportación de datos.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
-      <div class="seccion--corta docs-caso">
-        <div class="wrap docs-caso__inner">
-          <div>
-            <p class="etiqueta">Documentación asociada</p>
-            <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
-            </p>
-          </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-software">
-            Abrir la documentación
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            <span class="sr-only">(se abre en una pestaña nueva)</span>
-          </a>
-        </div>
-      </div>
-    </section>
     <!-- ================= 05 · ALCANCE Y ANÁLISIS DE MERCADO ================= -->
     <section class="panel-caso" id="mercado" role="tabpanel" aria-labelledby="tab-mercado" tabindex="0" hidden>
 
@@ -2157,9 +1793,9 @@
             es la situación esperada al cierre de la Fase 1, alrededor del mes 9.
           </p>
 
-          <div class="dos-columnas dos-columnas--centrada">
+          <div class="dos-columnas dos-columnas--centrada dos-columnas--pareja">
             <figure class="radar radar--tres">
-              <svg viewBox="-30 0 460 400" role="img" aria-labelledby="radar3-t radar3-d">
+              <svg viewBox="-50 0 490 400" role="img" aria-labelledby="radar3-t radar3-d">
                 <title id="radar3-t">Gráfico araña de los tres estados de la arquitectura empresarial</title>
                 <desc id="radar3-d">Siete dimensiones comparadas en tres estados. Procesos de negocio pasa de 1,5 a 3 y a 4. Gestión del conocimiento, datos e infraestructura parten de 1. Aplicaciones de 1,5. El canal comercial digital se mantiene bajo en la transición, en 2, y llega a 4 en el destino. La gestión por indicadores pasa de 1 a 2,5 y a 3,5.</desc>
                 <g class="radar__malla" fill="none" stroke-width="1">
@@ -2468,8 +2104,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-mercado">
@@ -2492,7 +2129,7 @@
         Si algo de esto te suena parecido, la conversación empieza por un diagnóstico.
       </p>
       <p style="margin-top:var(--sp-8)">
-        <a class="btn btn--primario" href="../../#contacto" data-cta="caso-final">Agendá un diagnóstico</a>
+        <a class="btn btn--primario" href="../../#contacto" data-cta="caso-final">Contactanos</a>
       </p>
     </div>
   </section>
@@ -2522,6 +2159,7 @@
         <ul>
           <li><a href="../../nosotros/">Nosotros</a></li>
           <li><a href="../../#metodo">Cómo trabajamos</a></li>
+          <li><a href="../../#por-que">Por qué Evoltia</a></li>
           <li><a href="../../#casos">Casos</a></li>
           <li><a href="../../#contacto">Contacto</a></li>
         </ul>
@@ -2543,6 +2181,6 @@
   </div>
 </footer>
 
-<script src="../../assets/main.js?v=24" defer></script>
+<script src="../../assets/main.js?v=28" defer></script>
 </body>
 </html>

@@ -27,6 +27,20 @@ jobs:
 
       - uses: actions/configure-pages@v5
 
+      # GitHub Pages sirve los assets con Cache-Control: max-age=600 y no deja
+      # cambiar cabeceras, asi que styles.css y main.js van con ?v= para que un
+      # cambio se vea al instante. Mantener ese numero a mano es fragil: ya paso
+      # que dos paginas quedaran en una version y una tercera en otra. Aca se
+      # reemplaza por el hash del contenido de los dos archivos, igual en las
+      # tres paginas y distinto solo cuando alguno cambia de verdad.
+      - name: Sellar los assets con el hash de su contenido
+        run: |
+          set -euo pipefail
+          hash=$(cat site/assets/styles.css site/assets/main.js | sha256sum | cut -c1-8)
+          echo "Version de assets: $hash"
+          find site -name '*.html' -print0 | xargs -0 sed -i -E "s/\?v=[A-Za-z0-9]+/?v=$hash/g"
+          grep -ro '?v=[A-Za-z0-9]*' site --include='*.html' | sort -u || true
+
       # Solo se publica site/. El resto del repo (docs, marca, inventario)
       # queda versionado pero no servido.
       - uses: actions/upload-pages-artifact@v3
