@@ -732,6 +732,8 @@ button { font: inherit; }
 @media (min-width: 900px) {
   .dos-columnas { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--sp-10); align-items: start; }
   .dos-columnas--centrada { align-items: center; }
+  /* Dos mitades iguales: para un gráfico acompañado de su tabla de valores. */
+  .dos-columnas--pareja { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Datos rápidos: cifra grande en Órbita, rótulo en etiqueta. */

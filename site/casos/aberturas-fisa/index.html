@@ -18,11 +18,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- GitHub Pages sirve los assets con Cache-Control: max-age=600 y no permite
-     cambiar cabeceras. Para que un cambio de CSS o JS se vea al instante en vez
-     de esperar 10 minutos, hay que SUBIR EL NUMERO DE ?v= en las tres paginas
-     cada vez que se tocan styles.css o main.js. -->
+     cambiar cabeceras, por eso styles.css y main.js llevan ?v=. El numero no se
+     mantiene a mano: el workflow de despliegue lo reemplaza por el hash del
+     contenido de ambos archivos, de modo que cambia solo cuando cambian ellos y
+     queda igual en las tres paginas. En local el valor da lo mismo. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-<link rel="stylesheet" href="../../assets/styles.css?v=27">
+<link rel="stylesheet" href="../../assets/styles.css?v=28">
 
 <script type="application/ld+json">
 {
@@ -668,8 +669,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-cliente">
@@ -965,8 +967,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-actual">
@@ -1111,8 +1114,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-destino">
@@ -1329,8 +1333,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-brechas">
@@ -1788,9 +1793,9 @@
             es la situación esperada al cierre de la Fase 1, alrededor del mes 9.
           </p>
 
-          <div class="dos-columnas dos-columnas--centrada">
+          <div class="dos-columnas dos-columnas--centrada dos-columnas--pareja">
             <figure class="radar radar--tres">
-              <svg viewBox="-30 0 460 400" role="img" aria-labelledby="radar3-t radar3-d">
+              <svg viewBox="-50 0 490 400" role="img" aria-labelledby="radar3-t radar3-d">
                 <title id="radar3-t">Gráfico araña de los tres estados de la arquitectura empresarial</title>
                 <desc id="radar3-d">Siete dimensiones comparadas en tres estados. Procesos de negocio pasa de 1,5 a 3 y a 4. Gestión del conocimiento, datos e infraestructura parten de 1. Aplicaciones de 1,5. El canal comercial digital se mantiene bajo en la transición, en 2, y llega a 4 en el destino. La gestión por indicadores pasa de 1 a 2,5 y a 3,5.</desc>
                 <g class="radar__malla" fill="none" stroke-width="1">
@@ -2099,8 +2104,9 @@
           <div>
             <p class="etiqueta">Documentación asociada</p>
             <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, alcance, arquitectura y selección
-              del software— están en una carpeta compartida de Google Drive.
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
             </p>
           </div>
           <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-mercado">
@@ -2123,7 +2129,7 @@
         Si algo de esto te suena parecido, la conversación empieza por un diagnóstico.
       </p>
       <p style="margin-top:var(--sp-8)">
-        <a class="btn btn--primario" href="../../#contacto" data-cta="caso-final">Agendá un diagnóstico</a>
+        <a class="btn btn--primario" href="../../#contacto" data-cta="caso-final">Contactanos</a>
       </p>
     </div>
   </section>
@@ -2153,6 +2159,7 @@
         <ul>
           <li><a href="../../nosotros/">Nosotros</a></li>
           <li><a href="../../#metodo">Cómo trabajamos</a></li>
+          <li><a href="../../#por-que">Por qué Evoltia</a></li>
           <li><a href="../../#casos">Casos</a></li>
           <li><a href="../../#contacto">Contacto</a></li>
         </ul>
@@ -2174,6 +2181,6 @@
   </div>
 </footer>
 
-<script src="../../assets/main.js?v=27" defer></script>
+<script src="../../assets/main.js?v=28" defer></script>
 </body>
 </html>
