@@ -736,8 +736,6 @@ button { font: inherit; }
 
 /* Datos rápidos: cifra grande en Órbita, rótulo en etiqueta. */
 .datos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-4); }
-.datos--fila { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 900px) { .datos--fila { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .datos li {
   padding: var(--sp-5);
   background: var(--blanco);
@@ -953,71 +951,17 @@ button { font: inherit; }
    para no abrir un scroll horizontal de 60 px por medio nodo. */
 .gantt__hito:last-child { translate: calc(var(--nodo-2) / 2) 0; align-items: flex-end; text-align: end; }
 
-/* ---------- Matriz de stakeholders ---------- */
-.matriz {
-  display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto;
-  gap: var(--sp-3) var(--sp-4);
-  margin-top: var(--sp-8);
-}
-.matriz__eje {
-  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gris);
-}
-.matriz__eje--y { grid-row: 1; grid-column: 1; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; }
-.matriz__eje--y::after, .matriz__eje--x::after { content: " →"; }
-.matriz__eje--x { grid-row: 2; grid-column: 2; text-align: center; }
-.matriz__grilla {
-  grid-row: 1; grid-column: 2;
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3);
-}
-.matriz__cuadrante {
-  padding: var(--sp-5);
-  background: var(--blanco);
-  border: 1px solid var(--borde-claro);
-  border-radius: var(--r-md);
-  min-height: 160px;
-}
-.matriz__cuadrante h3 { font-size: var(--fs-cuerpo); font-weight: 500; color: var(--nucleo); }
-.matriz__nota { font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); margin-top: 2px; }
-.matriz__cuadrante ul { margin-top: var(--sp-4); display: flex; flex-wrap: wrap; gap: var(--sp-2); }
-.matriz__cuadrante li {
-  padding: 6px 12px; border-radius: var(--r-pill);
-  background: var(--papel); border: 1px solid var(--borde-claro);
-  font-size: var(--fs-cuerpo); line-height: 1.3; color: var(--tinta);
-}
-.matriz__cuadrante--clave { background: var(--nucleo); border-color: var(--nucleo); }
-.matriz__cuadrante--clave h3 { color: var(--blanco); }
-.matriz__cuadrante--clave .matriz__nota { color: var(--senal); }
-.matriz__cuadrante--clave li { background: var(--superficie-oscura); border-color: var(--borde-oscuro-fuerte); color: var(--papel); }
-@media (max-width: 639px) {
-  .matriz__cuadrante { padding: var(--sp-4); min-height: 0; }
-  .matriz__cuadrante li { font-size: var(--fs-etiqueta); letter-spacing: 0.04em; }
-}
-
 /* ---------- Gráfico araña ---------- */
 .radar { margin: var(--sp-8) 0 0; }
 .radar svg { width: 100%; max-width: 520px; margin-inline: auto; }
 .radar__malla { stroke: var(--borde-claro); }
-.radar__objetivo { fill: rgba(126, 62, 208, 0.18); stroke: var(--orbita); stroke-width: 2; stroke-linejoin: round; }
 .radar__actual { fill: rgba(196, 84, 254, 0.22); stroke: var(--pulso); stroke-width: 2; stroke-linejoin: round; }
-.radar__puntos circle { fill: var(--orbita); }
 .radar__rotulos text { font-family: var(--fuente); font-size: 13px; font-weight: 500; fill: var(--nucleo); }
 .radar__leyenda { display: flex; flex-wrap: wrap; gap: var(--sp-5); justify-content: center; margin-top: var(--sp-4); font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); }
 .radar__leyenda span { display: inline-flex; align-items: center; gap: var(--sp-2); }
 .radar__muestra { width: 12px; height: 12px; border-radius: 50%; }
 .radar__muestra--actual { background: var(--pulso); }
 .radar__muestra--objetivo { background: var(--orbita); }
-
-.dimensiones { display: grid; gap: var(--sp-2); margin-top: var(--sp-8); }
-.dimensiones li {
-  display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4);
-  padding: var(--sp-3) var(--sp-4);
-  background: var(--blanco); border: 1px solid var(--borde-claro); border-radius: var(--r-sm);
-}
-.dimensiones__nombre { color: var(--tinta); }
-.dimensiones__salto { display: inline-flex; align-items: center; gap: var(--sp-2); flex: none; font-weight: 700; color: var(--orbita); }
-.dimensiones__salto b:first-child { color: var(--gris); font-weight: 500; }
-.dimensiones__salto i { display: block; width: 20px; height: 2px; background: var(--lavanda); border-radius: 2px; }
 
 /* ---------- Exclusiones ---------- */
 .exclusiones { display: grid; gap: var(--sp-4); margin-top: var(--sp-8); max-width: 820px; }
@@ -1120,30 +1064,12 @@ button { font: inherit; }
   .carriles__paso { grid-column: var(--col); font-size: 0.9375rem; }
 }
 
-/* ---------- Capas: arquitectura destino ---------- */
-.capas { display: grid; gap: var(--sp-2); margin-top: var(--sp-8); }
-.capas__capa {
-  display: grid; gap: var(--sp-3);
-  padding: var(--sp-4) var(--sp-5);
-  background: var(--superficie-oscura); border: 1px solid var(--borde-oscuro); border-radius: var(--r-md);
-}
-@media (min-width: 768px) { .capas__capa { grid-template-columns: 150px minmax(0, 1fr); align-items: center; } }
-.capas__rotulo {
-  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--senal);
-}
-.capas__items { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
-.capas__items li {
-  padding: 6px 12px; border-radius: var(--r-pill);
-  border: 1px solid var(--borde-oscuro-fuerte); color: var(--lavanda);
-  font-size: var(--fs-cuerpo); line-height: 1.3;
-}
-.capas__item--nuevo { background: var(--senal); border-color: var(--senal) !important; color: var(--nucleo) !important; font-weight: 500; }
+/* Leyenda de lo nuevo en el mapa de procesos destino. */
 .capas__leyenda {
   display: inline-flex; align-items: center; gap: var(--sp-2); margin-top: var(--sp-5);
   font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavanda);
 }
-.capas__leyenda i { width: 12px; height: 12px; border-radius: 50%; background: var(--senal); }
+.capas__leyenda i { flex: none; width: 12px; height: 12px; border-radius: 50%; background: var(--senal); }
 
 /* ---------- Comparativa hoy → destino ---------- */
 .comparativa { margin-top: var(--sp-8); border-top: 1px solid var(--borde-claro); }
@@ -1173,9 +1099,6 @@ button { font: inherit; }
   width: 8px; height: 8px; border-radius: 50%; background: var(--orbita);
 }
 
-/* ---------- Escenarios ---------- */
-.escenarios { display: grid; gap: var(--sp-4); margin-top: var(--sp-8); }
-@media (min-width: 900px) { .escenarios { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; } }
 .escenario {
   padding: var(--sp-6);
   background: var(--blanco); border: 1px solid var(--borde-claro); border-radius: var(--r-md);
@@ -1215,7 +1138,6 @@ button { font: inherit; }
   background: var(--blanco); border: 1px solid var(--borde-claro); border-radius: var(--r-md);
 }
 .balance__opcion h3 { font-size: var(--fs-sub); font-weight: 500; color: var(--nucleo); margin-bottom: var(--sp-4); }
-.balance__opcion--elegida { border-color: var(--orbita); box-shadow: inset 0 0 0 1px var(--orbita); }
 .balance__lista { display: grid; gap: var(--sp-2); }
 .balance__lista li { position: relative; padding-left: 22px; color: var(--gris); }
 .balance__lista li::before {
@@ -1286,9 +1208,6 @@ button { font: inherit; }
 .tarjeta__cifra b { font-size: var(--fs-h3); font-weight: 700; letter-spacing: -0.02em; color: var(--orbita); }
 
 
-/* El paquete de la Fase 2 se distingue del núcleo operativo. */
-.edt__paquete--fase2 { border-top-color: var(--pulso); border-style: dashed; }
-.edt__paquete--fase2 .edt__num { color: var(--pulso); }
 .gantt__barra--fase2 { background: transparent; border: 1.5px dashed var(--pulso); }
 
 /* ---------- Matriz 2×2 de escenarios ---------- */
