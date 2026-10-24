@@ -100,7 +100,7 @@ Después, abrir `http://localhost:4321`.
 
 ## Lo que bloquea la producción
 
-1. **Validación de los nombres y el alcance de los seis servicios.** El manual no define un catálogo; los del sitio se derivaron del método y del banco de frases. La bajada de la sección ya está confirmada.
+1. **Validación de los nombres y el alcance de los seis servicios.** El manual no define un catálogo. Propuesta actual: rediseño de procesos, automatización, datos e indicadores, IA aplicada, selección e integración de sistemas, y gestión del cambio y capacitación — frentes de trabajo que no repiten las etapas del método. La bajada de la sección ya está confirmada.
 2. **HEX oficial de Lavanda.** Se nombra en el §03 pero no está tabulado. Se usa `#CEC4E8`, muestreado del hero oficial.
 3. **Bios, fotos y roles del equipo**, y la historia de origen para `/nosotros`.
 4. **Definir** política de precios y si Evoltia implementa con equipo propio o integra proveedores. Son las dos respuestas del FAQ que siguen abiertas.
