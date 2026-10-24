@@ -17,7 +17,7 @@ site/
 └── assets/
     ├── styles.css                 Tokens del manual y componentes
     ├── main.js                    Nav, acordeón, validación, consentimiento, analítica
-    └── img/                       Logos e isotipos del kit + versiones optimizadas
+    └── img/                       Logos e isotipos en SVG, PNG del kit y logo del cliente
 
 marca/                             Copia íntegra del kit de piezas del manual
 .github/workflows/pages.yml        Despliegue automático a GitHub Pages desde site/
@@ -100,12 +100,11 @@ Después, abrir `http://localhost:4321`.
 
 ## Lo que bloquea la producción
 
-1. **Logo de Evoltia en SVG**, cuatro versiones y cuatro isotipos. El kit entrega PNG; el isotipo se muestra a 300 px y el archivo mide 297 px, o sea 1×.
-2. **Validación de los nombres y el alcance de los seis servicios.** El manual no define un catálogo; los del sitio se derivaron del método y del banco de frases. La bajada de la sección ya está confirmada.
-3. **HEX oficial de Lavanda.** Se nombra en el §03 pero no está tabulado. Se usa `#CEC4E8`, muestreado del hero oficial.
-4. **Bios, fotos y roles del equipo**, y la historia de origen para `/nosotros`.
-5. **Definir** política de precios y si Evoltia implementa con equipo propio o integra proveedores. Son las dos respuestas del FAQ que siguen abiertas.
-6. **Autorización del caso de cliente**, si en algún momento se publica. La salvaguarda `consentApproved` está en el modelo de contenido.
+1. **Validación de los nombres y el alcance de los seis servicios.** El manual no define un catálogo. Propuesta actual: rediseño de procesos, automatización, datos e indicadores, IA aplicada, selección e integración de sistemas, y gestión del cambio y capacitación — frentes de trabajo que no repiten las etapas del método. La bajada de la sección ya está confirmada.
+2. **HEX oficial de Lavanda.** Se nombra en el §03 pero no está tabulado. Se usa `#CEC4E8`, muestreado del hero oficial.
+3. **Bios, fotos y roles del equipo**, y la historia de origen para `/nosotros`.
+4. **Definir** política de precios y si Evoltia implementa con equipo propio o integra proveedores. Son las dos respuestas del FAQ que siguen abiertas.
+5. **Autorización del caso de cliente**, si en algún momento se publica. La salvaguarda `consentApproved` está en el modelo de contenido.
 
 > **Alcance:** proyecto universitario, no productivo. El formulario simula el envío y no hay backend; los datos societarios y las páginas legales quedan fuera de alcance por el mismo motivo.
 
@@ -113,4 +112,5 @@ Después, abrir `http://localhost:4321`.
 
 - Microcopy del hero: *«Primera conversación sin costo. Respondemos en 48 horas hábiles.»*
 - Rótulo de la barra de confianza: *«Empresas que ya cambiaron de trayectoria»*, con Aberturas FISA como único logo — **archivo instalado** en `site/assets/img/clientes/aberturas-fisa.png`.
+- Logo de Evoltia en SVG, cuatro versiones y cuatro isotipos — **instalados** en `site/assets/img/` y, sin tocar, en `marca/`.
 - Bajada de servicios: *«Seis frentes de trabajo. Se contratan por separado o como programa completo, pero todos empiezan en el mismo lugar: el diagnóstico.»*

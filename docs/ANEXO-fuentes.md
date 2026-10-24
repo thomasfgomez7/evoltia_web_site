@@ -59,7 +59,7 @@ Es un **caso de cliente**, no una fuente de marca. Se leyó como contexto y **no
 | # | Laguna | Impacto |
 |---|---|---|
 | 1 | **Lavanda** se nombra en las reglas rápidas del §03 pero no está en la tabla de paleta | Se usa `#CEC4E8`, muestreado del hero oficial. Confirmar |
-| 2 | **No hay activos vectoriales** | El isotipo se muestra a 300 px y el PNG mide 297 px (1×). Hace falta SVG |
+| 2 | ~~**No hay activos vectoriales**~~ | Resuelta: el cliente entregó el logo y el isotipo en SVG, en sus cuatro versiones |
 | 3 | Dos ratios de contraste del §03 difieren levemente del cálculo WCAG 2.1 | Sin impacto en decisiones; corregir en la próxima versión del manual |
 | 4 | El manual **no define un catálogo de servicios** | Los seis servicios del sitio se derivaron del banco de frases y del método. Requieren validación |
 | 5 | Sin escala de espaciado ni guía de movimiento | Derivados y marcados como tales en el design system |

@@ -88,7 +88,7 @@ Todo lo que está a la izquierda de la primera flecha depende del cliente. **El 
 - [ ] Estados especificados: vacío, cargando, error, éxito
 - [ ] Anotaciones de accesibilidad: orden de tabulación, textos alternativos, etiquetas ARIA
 - [ ] Especificación de movimiento: qué anima, cuánto dura, con qué curva
-- [ ] Logo en SVG optimizado, 5 variantes
+- [x] Logo en SVG: cuatro versiones y cuatro isotipos
 - [ ] Set de iconos en SVG, caja de 24, trazo 1,5
 - [ ] Imágenes exportadas a 1× y 2×, con punto focal indicado
 - [ ] Plantilla de imagen OG

@@ -147,12 +147,12 @@ Los extremos del `clamp` son valores de la escala; los intermedios son interpola
 
 | Versión | Archivo | Cuándo |
 |---|---|---|
-| **Principal** | `evoltia-principal.png` | Sobre Papel y Blanco |
-| **Negativo** | `evoltia-negativo.png` | Fondos oscuros y degradés |
-| **Blanco** | `evoltia-blanco.png` | Una tinta sobre color pleno |
-| **Tinta** | `evoltia-tinta.png` | Una tinta, impresión monocromo |
+| **Principal** | `evoltia-principal.svg` | Sobre Papel y Blanco |
+| **Negativo** | `evoltia-negativo.svg` | Fondos oscuros y degradés |
+| **Blanco** | `evoltia-blanco.svg` | Una tinta sobre color pleno |
+| **Tinta** | `evoltia-tinta.svg` | Una tinta, impresión monocromo |
 
-**Isotipo suelto** (`isotipo-color` · `-blanco` · `-negativo` · `-tinta`): avatares, favicon, sellos, íconos de app y marca de agua. **Nunca reemplaza al logo completo en una portada ni en la primera aparición de la marca.**
+**Isotipo suelto** (`isotipo-principal` · `-blanco` · `-negativo` · `-tinta`): avatares, favicon, sellos, íconos de app y marca de agua. **Nunca reemplaza al logo completo en una portada ni en la primera aparición de la marca.**
 
 ### Construcción
 
@@ -175,11 +175,11 @@ Por debajo de esos valores la bajada deja de leerse: en ese caso se usa el **iso
 
 Deformar o cambiar la proporción · rotar o inclinar · cambiar los colores de marca · aplicar sombras, brillos o biselados · fondo sin contraste suficiente · encerrarlo en una caja de color.
 
-### Deuda de activos
+### Activos vectoriales
 
-`[PENDIENTE CLIENTE]` El kit entrega **PNG**. Para producción web hace falta **SVG** de las cuatro versiones y de los cuatro isotipos: el isotipo se muestra a 300 px y el PNG disponible mide 297 px, o sea 1× — se ve blando en pantallas de alta densidad. Es la única deuda técnica de marca que queda abierta.
+El cliente entregó las cuatro versiones y los cuatro isotipos en **SVG**. El sitio los usa en la nav, el menú móvil, el pie, el hero, el manifiesto de `/nosotros` y el favicon, así que se ven nítidos en pantallas de alta densidad a cualquier tamaño.
 
-La implementación usa versiones optimizadas (`-web.png`, cuantizadas): el logo pasó de 171 KB a 38 KB y el isotipo de 77 KB a 21 KB, sin pérdida visible.
+Los originales están en `marca/` tal como llegaron. Las copias de `site/assets/img/` son las mismas, sin el bloque de metadatos de procedencia (C2PA), que no afecta el dibujo y pesaba unos 7,7 KB por archivo: el logo queda en 40 KB y el isotipo en 8 KB. El favicon mantiene `isotipo-color.png` como respaldo para navegadores que no aceptan SVG.
 
 ---
 
