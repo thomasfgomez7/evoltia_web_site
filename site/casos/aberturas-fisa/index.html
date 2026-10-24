@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aberturas FISA | Caso de éxito | Evoltia</title>
-<meta name="description" content="Quién es Aberturas FISA, qué necesita y cómo Evoltia ordena su operación antes de escalar la venta. Caso de éxito con alcance, cronograma y stakeholders.">
+<title>Propuesta para Aberturas FISA | Evoltia</title>
+<meta name="description" content="Propuesta de consultoría de Evoltia para Aberturas FISA: lo que entendimos del negocio, la arquitectura destino, el alcance por fases y las soluciones preseleccionadas.">
 <link rel="icon" href="../../assets/img/isotipo-color.png">
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Evoltia">
-<meta property="og:title" content="Aberturas FISA | Caso de éxito | Evoltia">
-<meta property="og:description" content="De la planilla impresa al proceso digital, sin frenar la venta.">
+<meta property="og:title" content="Propuesta para Aberturas FISA | Evoltia">
+<meta property="og:description" content="Ordenar la operación antes de escalar la venta.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#230054">
 
@@ -101,11 +101,12 @@
         </ol>
       </nav>
 
-      <p class="etiqueta">Caso de éxito</p>
-      <h1 class="titular" id="caso-t" style="color:var(--blanco)">De la planilla impresa al proceso digital</h1>
+      <p class="etiqueta">Propuesta de consultoría</p>
+      <h1 class="titular" id="caso-t" style="color:var(--blanco)">Ordenar la operación antes de escalar la venta</h1>
       <p class="bajada" style="margin-top:var(--sp-5)">
-        Aberturas FISA fabrica y comercializa aberturas de aluminio a medida en Villa Bosch,
-        provincia de Buenos Aires.
+        Nos pidieron vender más. Lo que encontramos en el relevamiento fue que la operación
+        todavía no puede acompañar ese crecimiento. Acá está lo que entendimos de ustedes, a
+        dónde proponemos llegar y qué necesitamos decidir juntos.
       </p>
     </div>
   </section>
@@ -117,41 +118,46 @@
         <img src="../../assets/img/clientes/aberturas-fisa.png" width="420" height="133" alt="Aberturas FISA">
       </div>
       <dl class="ficha__datos">
-        <div><dt>Sector</dt><dd>Fabricación y comercialización de aberturas</dd></div>
+        <div><dt>Preparada para</dt><dd>Gabriel Fisicaro y los socios de Aberturas FISA</dd></div>
         <div><dt>Alcance</dt><dd>Relevamiento, diagnóstico y digitalización de procesos</dd></div>
+        <div><dt>Estado</dt><dd><span class="estado">En evaluación del cliente</span></dd></div>
       </dl>
     </div>
   </section>
 
   <!-- ================= PESTAÑAS DEL CASO =================
-       Los botones filtran qué parte del caso se muestra. "Cliente" es la
-       vista por defecto. Cada pestaña se refleja en la URL (#cliente,
-       #alcance) para que se pueda compartir un enlace directo. -->
+       Los botones filtran qué parte del caso se muestra. "Punto de partida"
+       es la vista por defecto. Cada pestaña se refleja en la URL (#partida,
+       #propuesta) para que se pueda compartir un enlace directo. -->
   <div class="caso-pestanas" data-caso-pestanas>
     <div class="pestanas">
       <div class="wrap">
-        <div class="pestanas__lista" role="tablist" aria-label="Secciones del caso">
-          <button class="pestana" role="tab" type="button" id="tab-cliente" aria-controls="cliente" aria-selected="true">
-            <span class="pestana__num" aria-hidden="true">01</span>Cliente
+        <div class="pestanas__lista" role="tablist" aria-label="Secciones de la propuesta">
+          <button class="pestana" role="tab" type="button" id="tab-partida" aria-controls="partida" aria-selected="true">
+            <span class="pestana__num" aria-hidden="true">01</span>Punto de partida
           </button>
-          <button class="pestana" role="tab" type="button" id="tab-actual" aria-controls="actual" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">02</span>Arquitectura actual
+          <button class="pestana" role="tab" type="button" id="tab-operacion" aria-controls="operacion" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">02</span>Su operación hoy
           </button>
           <button class="pestana" role="tab" type="button" id="tab-destino" aria-controls="destino" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">03</span>Arquitectura destino
+            <span class="pestana__num" aria-hidden="true">03</span>A dónde vamos
           </button>
-          <button class="pestana" role="tab" type="button" id="tab-brechas" aria-controls="brechas" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">04</span>Brechas
+          <button class="pestana" role="tab" type="button" id="tab-propuesta" aria-controls="propuesta" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">04</span>La propuesta
           </button>
-          <button class="pestana" role="tab" type="button" id="tab-mercado" aria-controls="mercado" aria-selected="false" tabindex="-1">
-            <span class="pestana__num" aria-hidden="true">05</span>Alcance y mercado
+          <button class="pestana" role="tab" type="button" id="tab-herramienta" aria-controls="herramienta" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">05</span>La herramienta
           </button>
         </div>
       </div>
     </div>
 
-    <!-- ================= 01 · CLIENTE ================= -->
-    <section class="panel-caso" id="cliente" role="tabpanel" aria-labelledby="tab-cliente" tabindex="0">
+    <!-- ================= 01 · PUNTO DE PARTIDA =================
+         Documentos del trabajo práctico que alimentan esta pestaña: T-01 Caso de negocio y relevamiento organizacional.
+         La referencia es interna: el rótulo visible usa lenguaje de propuesta. -->
+    <section class="panel-caso" id="partida" role="tabpanel" aria-labelledby="tab-partida" tabindex="0">
+
+      <p class="hilo"><span class="hilo__paso">01 de 05</span>Lo que entendimos de ustedes: a qué se dedican, qué quieren lograr y qué encontramos en el relevamiento.</p>
 
       <div class="seccion" id="quien-es">
         <div class="wrap">
@@ -161,9 +167,9 @@
               <h2 class="titular">Diez años haciendo aberturas a medida</h2>
               <div class="articulo" style="margin-top:var(--sp-6)">
                 <p>
-                  Aberturas FISA fabrica, comercializa y distribuye aberturas de aluminio para el
-                  mercado local. Tiene una fábrica y un local tipo showroom en Villa Bosch, partido
-                  de Tres de Febrero, a dos cuadras uno del otro.
+                  Fabrican, comercializan y distribuyen aberturas de aluminio para el mercado
+                  local. Tienen una fábrica y un local tipo showroom en Villa Bosch, partido de
+                  Tres de Febrero, a dos cuadras uno del otro.
                 </p>
                 <p>
                   Son seis personas: dos socios propietarios, un encargado general, una persona de
@@ -175,7 +181,7 @@
                   El local exhibe modelos y recibe consultas y pedidos; todo se fabrica o se pide
                   bajo pedido. La distribución se hace con una camioneta propia y con fletes
                   tercerizados cuando el volumen es mayor. Entre los locales de aberturas de la
-                  zona está en una posición intermedia: ni de los más grandes ni de los más chicos.
+                  zona están en una posición intermedia: ni de los más grandes ni de los más chicos.
                 </p>
               </div>
             </div>
@@ -195,8 +201,8 @@
           <p class="etiqueta">Identidad organizacional</p>
           <h2 class="titular" style="color:var(--blanco)">Lo que la empresa dice de sí misma</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            La misión y la visión las proveyó la organización y coinciden con lo relevado en la
-            entrevista.
+            La misión y la visión nos las compartieron ustedes, y coinciden con lo que relevamos
+            en la entrevista.
           </p>
 
           <div class="grid grid--2" style="margin-top:var(--sp-8)">
@@ -235,7 +241,7 @@
           </div>
 
           <p class="nota nota--clara" style="margin-top:var(--sp-6)">
-            El relevamiento observó además valores reales, más allá de los declarados: informalidad
+            En el relevamiento observamos además valores reales, más allá de los declarados: informalidad
             y confianza personal por sobre los procesos formales, con una fuerte orientación al
             oficio y a resolver el día a día.
           </p>
@@ -371,9 +377,9 @@
           <p class="etiqueta">Objetivos estratégicos</p>
           <h2 class="titular">Seis objetivos en cuatro horizontes</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            Los pensó el equipo a partir de lo relevado —es lo único del documento que no surge
-            directamente de las reuniones con el encargado— y llevan el identificador OE con el que
-            los referencian todos los demás documentos del caso.
+            Los formulamos nosotros a partir de lo relevado —es lo único de esta sección que no
+            surge directamente de las reuniones con Gabriel— y llevan el identificador OE con el
+            que los referencia el resto de la propuesta.
           </p>
 
           <div class="horizontes horizontes--cuatro">
@@ -539,8 +545,8 @@
           <p class="etiqueta">Diagnóstico</p>
           <h2 class="titular" style="color:var(--blanco)">Quieren vender más. La operación todavía no lo aguanta.</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            El sponsor ve la oportunidad del lado comercial: vender online y por más canales. El
-            relevamiento encontró que, si las ventas crecieran de golpe, la fábrica no podría
+            Ustedes ven la oportunidad del lado comercial: vender online y por más canales. En el
+            relevamiento encontramos que, si las ventas crecieran de golpe, la fábrica no podría
             responder sin estirar los plazos o resentir la calidad.
           </p>
 
@@ -581,7 +587,7 @@
             <div class="destacado">
               <p class="destacado__rotulo">Madurez organizacional</p>
               <p class="destacado__valor">Entre CMM 1 y CMM 2</p>
-              <p>La fábrica es Nivel 1: procesos informales y dependientes de una persona. Lo comercial y administrativo tiene prácticas repetibles que no están integradas entre sí. El sponsor coincide con la evaluación del equipo.</p>
+              <p>La fábrica es Nivel 1: procesos informales y dependientes de una persona. Lo comercial y administrativo tiene prácticas repetibles que no están integradas entre sí. Gabriel coincide con nuestra evaluación.</p>
             </div>
             <div class="destacado">
               <p class="destacado__rotulo">Capacidades</p>
@@ -591,7 +597,7 @@
             <div class="destacado">
               <p class="destacado__rotulo">Por qué ahora</p>
               <p class="destacado__valor">Cambia el liderazgo</p>
-              <p>Se asume como premisa el retiro progresivo de los socios y el traspaso de la conducción integral a Gabriel. Eso vuelve urgente formalizar y despersonalizar los procesos.</p>
+              <p>Partimos de la premisa del retiro progresivo de los socios y el traspaso de la conducción integral a Gabriel. Eso vuelve urgente formalizar y despersonalizar los procesos.</p>
             </div>
           </div>
         </div>
@@ -603,7 +609,7 @@
           <h2 class="titular">Diez historias de usuario, priorizadas</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
             Sintetizan las necesidades relevadas desde la perspectiva de cada actor. La priorización
-            MoSCoW es una propuesta del equipo: cuatro son excluyentes.
+            MoSCoW es una propuesta nuestra: cuatro son excluyentes.
           </p>
 
           <div class="tabla-scroll">
@@ -630,7 +636,7 @@
 
       <div class="seccion" id="observaciones">
         <div class="wrap">
-          <p class="etiqueta">Observaciones del equipo</p>
+          <p class="etiqueta">Nuestras observaciones</p>
           <h2 class="titular">Lo que el relevamiento deja anotado</h2>
 
           <div class="grid grid--2" style="margin-top:var(--sp-8)">
@@ -642,7 +648,7 @@
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--media">Restricción</span></div>
               <h3>Equipamiento y conectividad en planta</h3>
-              <p>La fábrica no tiene computadoras ni internet. El sponsor deberá acordar la disposición de recursos para cualquier implementación digital.</p>
+              <p>La fábrica no tiene computadoras ni internet. Cualquier implementación digital requiere que ustedes definan con qué recursos equiparla.</p>
             </article>
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--media">Restricción</span></div>
@@ -652,18 +658,18 @@
             <article class="tarjeta">
               <div class="chips"><span class="chip">Límite del relevamiento</span></div>
               <h3>Falta información cuantitativa del mercado</h3>
-              <p>Se reconocen competidores de la zona y el auge del PVC, pero no se obtuvieron datos concluyentes sobre precios de referencia, participación de mercado ni canales de la competencia.</p>
+              <p>Se reconocen competidores de la zona y el auge del PVC, pero no conseguimos datos concluyentes sobre precios de referencia, participación de mercado ni canales de la competencia.</p>
             </article>
           </div>
 
           <p class="nota">
-            Salvo los objetivos estratégicos, que los elaboró el equipo a partir de lo relevado,
-            todo el contenido del documento proviene de lo que el encargado expuso en las reuniones.
+            Salvo los objetivos estratégicos, que formulamos nosotros a partir de lo relevado,
+            todo lo de esta sección surge de lo que Gabriel nos contó en las reuniones.
           </p>
         </div>
       </div>
 
-      <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
       <div class="seccion--corta docs-caso">
         <div class="wrap docs-caso__inner">
           <div>
@@ -674,7 +680,7 @@
               Google Drive.
             </p>
           </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-cliente">
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-partida">
             Abrir la documentación
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <span class="sr-only">(se abre en una pestaña nueva)</span>
@@ -683,8 +689,12 @@
       </div>
     </section>
 
-        <!-- ================= 02 · ARQUITECTURA EMPRESARIAL ACTUAL ================= -->
-    <section class="panel-caso" id="actual" role="tabpanel" aria-labelledby="tab-actual" tabindex="0" hidden>
+    <!-- ================= 02 · SU OPERACIÓN HOY =================
+         Documentos del trabajo práctico que alimentan esta pestaña: T-02 Arquitectura empresarial actual.
+         La referencia es interna: el rótulo visible usa lenguaje de propuesta. -->
+    <section class="panel-caso" id="operacion" role="tabpanel" aria-labelledby="tab-operacion" tabindex="0" hidden>
+
+      <p class="hilo"><span class="hilo__paso">02 de 05</span>Cómo circula hoy la información entre el local y la fábrica, en las cuatro capas de la arquitectura.</p>
 
       <div class="seccion" id="arquitectura-actual">
         <div class="wrap">
@@ -694,7 +704,7 @@
               <h2 class="titular">Doce procesos que funcionan sin estar escritos</h2>
               <div class="articulo" style="margin-top:var(--sp-6)">
                 <p>
-                  El relevamiento identificó doce procesos: dos estratégicos, seis operativos y
+                  En el relevamiento identificamos doce procesos: dos estratégicos, seis operativos y
                   cuatro de apoyo. Ninguno está documentado y ninguno responde a un diseño de
                   arquitectura: se fueron armando por conveniencia operativa.
                 </p>
@@ -972,7 +982,7 @@
               Google Drive.
             </p>
           </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-actual">
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-operacion">
             Abrir la documentación
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <span class="sr-only">(se abre en una pestaña nueva)</span>
@@ -981,18 +991,22 @@
       </div>
     </section>
 
-    <!-- ================= 03 · ARQUITECTURA EMPRESARIAL DESTINO ================= -->
+    <!-- ================= 03 · A DÓNDE VAMOS =================
+         Documentos del trabajo práctico que alimentan esta pestaña: T-03 Visión de arquitectura destino · T-04 Matriz de brechas y análisis de escenarios.
+         La referencia es interna: el rótulo visible usa lenguaje de propuesta. -->
     <section class="panel-caso" id="destino" role="tabpanel" aria-labelledby="tab-destino" tabindex="0" hidden>
+
+      <p class="hilo"><span class="hilo__paso">03 de 05</span>La arquitectura destino, lo que falta para alcanzarla y el camino que recomendamos tomar.</p>
 
       <div class="seccion oscuro" id="arquitectura-destino">
         <div class="wrap">
           <p class="etiqueta">Arquitectura empresarial destino</p>
           <h2 class="titular" style="color:var(--blanco)">La misma empresa, con la información en un solo lugar</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            En dos a tres años, Aberturas FISA deja de depender del conocimiento y la presencia
-            física del encargado para sostenerse en procesos documentados, un stock confiable y un
-            canal digital que complementa al local. Ningún proceso se elimina: los doce evolucionan
-            y aparecen dos nuevos.
+            Proponemos que, en dos a tres años, la empresa deje de depender del conocimiento y la
+            presencia física de Gabriel y se sostenga en procesos documentados, un stock confiable
+            y un canal digital que complemente al local. Ningún proceso se elimina: los doce
+            evolucionan y se suman dos nuevos.
           </p>
 
           <div class="mapa" role="group" aria-label="Mapa de procesos destino">
@@ -1108,29 +1122,6 @@
         </div>
       </div>
 
-            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
-      <div class="seccion--corta docs-caso">
-        <div class="wrap docs-caso__inner">
-          <div>
-            <p class="etiqueta">Documentación asociada</p>
-            <p class="docs-caso__texto">
-              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
-              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
-              Google Drive.
-            </p>
-          </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-destino">
-            Abrir la documentación
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            <span class="sr-only">(se abre en una pestaña nueva)</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 04 · MATRIZ DE BRECHAS Y ESCENARIOS ================= -->
-    <section class="panel-caso" id="brechas" role="tabpanel" aria-labelledby="tab-brechas" tabindex="0" hidden>
-
       <div class="seccion" id="matrices">
         <div class="wrap">
           <p class="etiqueta">Matriz de brechas</p>
@@ -1151,7 +1142,7 @@
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Matriz B · Sistemas</h3>
-              <p>Se eliminan el pedido en papel, la planilla impresa y Facebook. El cuaderno de caja y el sistema del estudio contable se restablecen: siguen en uso y el destino no los cubre en esta etapa.</p>
+              <p>Se eliminan el pedido en papel, la planilla impresa y Facebook. El cuaderno de caja y el sistema del estudio contable se mantienen: siguen en uso y el destino no los cubre en esta etapa.</p>
               <p class="tarjeta__cifra"><b>4</b> brechas · 3 eliminados</p>
             </article>
             <article class="tarjeta">
@@ -1296,7 +1287,7 @@
           </div>
 
           <div class="conclusion-parcial">
-            <p class="conclusion-parcial__rotulo">Escenario elegido</p>
+            <p class="conclusion-parcial__rotulo">Escenario recomendado</p>
             <p>
               El Escenario 4 es el único que cumple a la vez con los requerimientos del destino y
               con las restricciones relevadas: no exige TI interno, resuelve la distancia entre
@@ -1311,7 +1302,7 @@
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Plan de salida</h3>
-              <p>Sin personal de sistemas, la protección es contractual: exportación periódica de los datos en formato estándar, en poder del cliente.</p>
+              <p>Sin personal de sistemas, la protección es contractual: exportación periódica de los datos en formato estándar, en poder de ustedes.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
@@ -1338,7 +1329,7 @@
               Google Drive.
             </p>
           </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-brechas">
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-destino">
             Abrir la documentación
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <span class="sr-only">(se abre en una pestaña nueva)</span>
@@ -1347,8 +1338,12 @@
       </div>
     </section>
 
-    <!-- ================= 05 · ALCANCE Y ANÁLISIS DE MERCADO ================= -->
-    <section class="panel-caso" id="mercado" role="tabpanel" aria-labelledby="tab-mercado" tabindex="0" hidden>
+    <!-- ================= 04 · LA PROPUESTA =================
+         Documentos del trabajo práctico que alimentan esta pestaña: T-05 Alcance del proyecto y análisis del mercado de soluciones, primera parte.
+         La referencia es interna: el rótulo visible usa lenguaje de propuesta. -->
+    <section class="panel-caso" id="propuesta" role="tabpanel" aria-labelledby="tab-propuesta" tabindex="0" hidden>
+
+      <p class="hilo"><span class="hilo__paso">04 de 05</span>Qué haríamos, en qué orden, con qué plazos y qué necesitamos de cada parte involucrada.</p>
 
       <div class="seccion" id="introduccion">
         <div class="wrap">
@@ -1358,10 +1353,10 @@
               <h2 class="titular">El pedido fue vender más; el diagnóstico dijo ordenar primero</h2>
               <div class="articulo" style="margin-top:var(--sp-6)">
                 <p>
-                  El proyecto nace del pedido del sponsor: vender más y abrir un canal digital que
+                  El proyecto nace de lo que nos pidieron: vender más y abrir un canal digital que
                   complemente al showroom. El relevamiento mostró que la operación no está en
                   condiciones de absorber ese crecimiento, y el análisis de brechas y escenarios
-                  definió el camino: una solución en la nube implementada por módulos.
+                  nos lleva a recomendar una solución en la nube implementada por módulos.
                 </p>
                 <p>
                   <b>Objetivo general.</b> Estructurar y digitalizar de forma gradual el circuito
@@ -1371,18 +1366,18 @@
                   comercial digital, sin deteriorar el plazo promedio de entrega de 15 días.
                 </p>
                 <p>
-                  El objetivo es coherente con la identidad de la organización: responde a la
+                  El objetivo es coherente con la identidad de la empresa: responde a la
                   misión —cumplimiento de plazos y calidad— y a la visión declarada de
                   profesionalizar los procesos ampliando los canales comerciales. Además acompaña
                   la transición de liderazgo: reducir la dependencia de una sola persona es
-                  condición para que el encargado pueda asumir la conducción integral del negocio.
+                  condición para que Gabriel pueda asumir la conducción integral del negocio.
                 </p>
               </div>
             </div>
 
             <ul class="datos" aria-label="Datos del alcance y el mercado">
               <li><span class="datos__valor">9</span><span class="datos__rotulo">objetivos específicos</span></li>
-              <li><span class="datos__valor">8</span><span class="datos__rotulo">exclusiones acordadas</span></li>
+              <li><span class="datos__valor">8</span><span class="datos__rotulo">exclusiones de alcance</span></li>
               <li><span class="datos__valor">5</span><span class="datos__rotulo">soluciones relevadas</span></li>
               <li><span class="datos__valor">3</span><span class="datos__rotulo">preseleccionadas</span></li>
             </ul>
@@ -1395,9 +1390,9 @@
           <p class="etiqueta">Objetivos específicos</p>
           <h2 class="titular">Nueve objetivos, cada uno con su entregable</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            Se formularon a partir de los bloques candidatos del análisis de brechas y se validaron
-            con el sponsor. Cada uno se vincula con un objetivo estratégico y con un entregable
-            concreto.
+            Los formulamos a partir de los bloques candidatos del análisis de brechas y los
+            validamos con Gabriel. Cada uno se vincula con un objetivo estratégico y con un
+            entregable concreto.
           </p>
 
           <div class="tabla-scroll">
@@ -1413,7 +1408,7 @@
                 <tr><th scope="row">OBJ-05</th><td>Definir el estándar de instructivos y documentar, junto al encargado, un piloto de los modelos de mayor uso</td><td>OE-03 · US-04, US-05</td><td>Plantilla de instructivo e instructivos piloto</td></tr>
                 <tr><th scope="row">OBJ-06</th><td>Diseñar la política de compras planificadas: frecuencia semanal y stock mínimo por insumo crítico</td><td>OE-04 · US-06</td><td>Política de abastecimiento</td></tr>
                 <tr><th scope="row">OBJ-07</th><td>Especificar la infraestructura habilitante de la fábrica: conectividad, enlace de respaldo, dispositivo y resguardo</td><td>OE-01 · Matriz C</td><td>Especificación de infraestructura y presupuesto estimado</td></tr>
-                <tr><th scope="row">OBJ-08</th><td>Definir con el sponsor el tablero de cuatro indicadores</td><td>OE-04, OE-05, OE-06</td><td>Ficha de indicadores</td></tr>
+                <tr><th scope="row">OBJ-08</th><td>Definir con Gabriel el tablero de cuatro indicadores</td><td>OE-04, OE-05, OE-06</td><td>Ficha de indicadores</td></tr>
                 <tr><th scope="row">OBJ-09</th><td>Elaborar la hoja de ruta por fases, con capacitación, gestión del cambio, segundo perfil de coordinación y plan de salida</td><td>OE-05, OE-06</td><td>Plan de implementación</td></tr>
               </tbody>
             </table>
@@ -1426,19 +1421,19 @@
           <p class="etiqueta">Exclusiones y supuestos</p>
           <h2 class="titular">Qué no hace la consultoría</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            El equipo entrega el diseño, la selección y el plan, y acompaña como contraparte del
-            cliente. La ejecución técnica y las erogaciones son del cliente y del proveedor que
-            contrate.
+            Nosotros entregamos el diseño, la selección y el plan, y los acompañamos como
+            contraparte. La ejecución técnica y las erogaciones quedan a cargo de ustedes y del
+            proveedor que contraten.
           </p>
 
           <ul class="exclusiones">
             <li>
               <h3>Ejecución técnica de la implementación</h3>
-              <p>La parametrización definitiva, la carga masiva de datos y la puesta en producción las realiza el proveedor o partner contratado.</p>
+              <p>La parametrización definitiva, la carga masiva de datos y la puesta en producción las realiza el proveedor o partner que contraten.</p>
             </li>
             <li>
               <h3>Compra de equipamiento y contratación de servicios</h3>
-              <p>El dispositivo de fábrica, el enlace de internet, el respaldo 4G/5G y los contratos con proveedores son decisiones y gastos del cliente. El equipo especifica requisitos y estima costos.</p>
+              <p>El dispositivo de fábrica, el enlace de internet, el respaldo 4G/5G y los contratos con proveedores son decisiones y gastos de ustedes. Nosotros especificamos los requisitos y estimamos los costos.</p>
             </li>
             <li>
               <h3>Desarrollo de software a medida</h3>
@@ -1458,7 +1453,7 @@
             </li>
             <li>
               <h3>Decisiones de estructura y de personal</h3>
-              <p>No incluye contratar operarios, definir salarios ni reestructurar roles. El equipo sólo recomienda cómo formar el segundo perfil de coordinación.</p>
+              <p>No incluye contratar operarios, definir salarios ni reestructurar roles. Solo recomendamos cómo formar el segundo perfil de coordinación.</p>
             </li>
             <li>
               <h3>Nuevas líneas de producto y maquinaria</h3>
@@ -1470,13 +1465,13 @@
           <div class="grid grid--3" style="margin-top:var(--sp-5)">
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
-              <h3>Disponibilidad del sponsor</h3>
+              <h3>Disponibilidad de Gabriel</h3>
               <p>Dedica una revisión por sprint para validar entregables y participa en el co-diseño de procesos e instructivos.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Acceso a los registros existentes</h3>
-              <p>El cliente facilita el Excel de caja, las planillas de armado que conserve y el historial de consultas de WhatsApp e Instagram.</p>
+              <p>Ustedes nos facilitan el Excel de caja, las planillas de armado que conserve y el historial de consultas de WhatsApp e Instagram.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
@@ -1486,7 +1481,7 @@
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Financiamiento del equipamiento</h3>
-              <p>El dispositivo de fábrica, el enlace principal y el respaldo 4G/5G los adquiere el cliente según la especificación del OBJ-07.</p>
+              <p>El dispositivo de fábrica, el enlace principal y el respaldo 4G/5G los adquieren ustedes según la especificación del OBJ-07.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
@@ -1502,8 +1497,8 @@
           <p class="etiqueta">Riesgos del proyecto de consultoría</p>
           <h2 class="titular">Cuatro riesgos propios del encargo</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            Distintos de los riesgos de la transformación: estos amenazan al trabajo del equipo,
-            no a la operación del cliente.
+            Distintos de los riesgos de la transformación: estos amenazan nuestro trabajo, no su
+            operación.
           </p>
 
           <div class="tabla-scroll">
@@ -1512,7 +1507,7 @@
                 <tr><th scope="col">Riesgo</th><th scope="col">Prob.</th><th scope="col">Impacto</th><th scope="col">Respuesta</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Baja disponibilidad del sponsor, que hoy concentra ventas, compras y producción</th><td><span class="chip chip--alta">Alta</span></td><td><span class="chip chip--alta">Alto</span></td><td>Revisiones cortas con agenda fija al cierre de cada sprint y validación por mensaje de los entregables menores</td></tr>
+                <tr><th scope="row">Baja disponibilidad de Gabriel, que hoy concentra ventas, compras y producción</th><td><span class="chip chip--alta">Alta</span></td><td><span class="chip chip--alta">Alto</span></td><td>Revisiones cortas con agenda fija al cierre de cada sprint y validación por mensaje de los entregables menores</td></tr>
                 <tr><th scope="row">La verificación de OP 2.1 se demora o resulta desfavorable</th><td><span class="chip chip--media">Media</span></td><td><span class="chip chip--alta">Alto</span></td><td>Iniciarla en paralelo al análisis profundo; si falla, activar el plan B: réplica de la lógica en la plataforma o WinMaker 10</td></tr>
                 <tr><th scope="row">Los registros existentes no alcanzan para establecer la línea base</th><td><span class="chip chip--media">Media</span></td><td><span class="chip chip--media">Medio</span></td><td>Registro manual de cuatro semanas antes de comprometer las metas</td></tr>
                 <tr><th scope="row">Las cotizaciones formales no llegan a tiempo</th><td><span class="chip chip--media">Media</span></td><td><span class="chip chip--media">Medio</span></td><td>Solicitarlas al cierre de esta etapa y trabajar con rangos de mercado hasta recibirlas</td></tr>
@@ -1541,7 +1536,7 @@
                 <h3>Gestión del proyecto</h3>
                 <ol>
                   <li>Plan de proyecto</li>
-                  <li>Minutas con el sponsor</li>
+                  <li>Minutas con Gabriel</li>
                   <li>Registro de riesgos</li>
                 </ol>
               </li>
@@ -1613,20 +1608,20 @@
           <p class="etiqueta">Beneficios esperados</p>
           <h2 class="titular">Nueve beneficios, atados a los objetivos</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            Su cumplimiento depende de la implementación que se lleve a cabo con el proveedor que
-            se contrate.
+            Su cumplimiento depende de la implementación que hagan con el proveedor que
+            contraten.
           </p>
 
           <div class="grid grid--3" style="margin-top:var(--sp-8)">
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--alta">OE-01</span></div>
               <h3>Fin del traslado de papel</h3>
-              <p>Al menos el 90 % de las órdenes se comunica digitalmente. Se eliminan la dependencia de la impresora y los errores de transcripción, y nadie camina dos cuadras con la planilla.</p>
+              <p>Al menos el 90 % de las órdenes se comunicará digitalmente. Desaparecerán la dependencia de la impresora y los errores de transcripción, y nadie tendrá que caminar dos cuadras con la planilla.</p>
             </article>
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--alta">OE-02</span></div>
               <h3>Saber qué hay antes de comprar</h3>
-              <p>El stock queda registrado y se descuenta con cada pedido: al menos el 90 % verifica stock antes de generar una compra. Se termina el control a simple vista del depósito.</p>
+              <p>El stock quedará registrado y se descontará con cada pedido: al menos el 90 % de los pedidos verificará el stock antes de generar una compra. Se terminará el control a simple vista del depósito.</p>
             </article>
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--alta">OE-04</span></div>
@@ -1635,33 +1630,33 @@
             </article>
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--alta">OE-03</span></div>
-              <h3>Menor dependencia del encargado</h3>
-              <p>Con al menos 10 procedimientos documentados, un operario capacitado arma sin indicaciones verbales. Baja el riesgo de continuidad y libera al encargado para la gestión.</p>
+              <h3>Menor dependencia de una sola persona</h3>
+              <p>Con al menos 10 procedimientos documentados, un operario capacitado podrá armar sin indicaciones verbales. Bajará el riesgo de continuidad y Gabriel quedará libre para la gestión.</p>
             </article>
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--alta">OE-05</span></div>
               <h3>Capacidad para crecer sin incumplir</h3>
-              <p>La empresa absorbe un 30 % más de pedidos manteniendo el plazo promedio de 15 días, requisito para que una campaña comercial no termine en demoras.</p>
+              <p>Podrán absorber un 30 % más de pedidos manteniendo el plazo promedio de 15 días, requisito para que una campaña comercial no termine en demoras.</p>
             </article>
             <article class="tarjeta">
               <div class="chips"><span class="chip chip--alta">OE-06</span></div>
               <h3>Base preparada para el canal digital</h3>
-              <p>Registrar el canal de origen permite medir el avance del 5 % al 15 % de ventas digitales, y la Fase 2 se apoya sobre el mismo stock y los mismos pedidos del local.</p>
+              <p>Registrar el canal de origen permitirá medir el avance del 5 % al 15 % de ventas digitales, y la Fase 2 se apoyará sobre el mismo stock y los mismos pedidos del local.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Continuidad del cálculo de materiales</h3>
-              <p>Se elimina el riesgo de depender de un software sin soporte: la lógica queda licenciada, respaldada o replicada, y documentada fuera de la plataforma.</p>
+              <p>Desaparecerá el riesgo de depender de un software sin soporte: la lógica quedará licenciada, respaldada o replicada, y documentada fuera de la plataforma.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Información resguardada</h3>
-              <p>Los datos dejan la notebook, el cuaderno de caja y la agenda del celular, y pasan a la nube con copias gestionadas y exportación periódica en poder del cliente.</p>
+              <p>Los datos dejarán la notebook, el cuaderno de caja y la agenda del celular, y pasarán a la nube con copias gestionadas y exportación periódica en poder de ustedes.</p>
             </article>
             <article class="tarjeta">
               <span class="tarjeta__nodo" aria-hidden="true"></span>
               <h3>Decisiones basadas en datos</h3>
-              <p>Los socios y el encargado cuentan por primera vez con indicadores de pedidos, plazos, compras reactivas y canales, en lugar de reconstruir la información de memoria.</p>
+              <p>Por primera vez van a contar con indicadores de pedidos, plazos, compras reactivas y canales, en lugar de reconstruir la información de memoria.</p>
             </article>
           </div>
         </div>
@@ -1691,7 +1686,7 @@
           <h3 class="subtitulo" style="margin-top:var(--sp-10);color:var(--blanco)">Hoja de ruta de la implementación</h3>
           <p class="bajada" style="margin-top:var(--sp-4)">
             Dieciocho meses por trimestre. La Fase 2 empieza recién cuando el control de stock y la
-            planificación de compras están funcionando.
+            planificación de compras estén funcionando.
           </p>
 
           <div class="gantt-scroll">
@@ -1760,12 +1755,12 @@
       <div class="seccion" id="stakeholders-mercado">
         <div class="wrap">
           <p class="etiqueta">Stakeholders</p>
-          <h2 class="titular">Nueve partes interesadas y el compromiso del equipo</h2>
+          <h2 class="titular">Nueve partes interesadas y nuestro compromiso con cada una</h2>
 
           <div class="tabla-scroll">
             <table class="tabla">
               <thead>
-                <tr><th scope="col">Stakeholder</th><th scope="col">Poder</th><th scope="col">Interés</th><th scope="col">Estrategia</th><th scope="col">Compromiso del equipo</th></tr>
+                <tr><th scope="col">Stakeholder</th><th scope="col">Poder</th><th scope="col">Interés</th><th scope="col">Estrategia</th><th scope="col">Nuestro compromiso</th></tr>
               </thead>
               <tbody>
                 <tr><th scope="row">Socios propietarios</th><td><span class="chip chip--alta">Alto</span></td><td><span class="chip chip--media">Medio</span></td><td>Mantener satisfechos</td><td>Presentar en cada hito el costo total junto con los beneficios medidos, y validar toda decisión de gasto antes de avanzar</td></tr>
@@ -1855,9 +1850,9 @@
             <p>
               La consultoría no apunta a llegar de una sola vez a la arquitectura destino, sino a
               mover primero las dimensiones que hoy limitan el crecimiento. El canal digital, que
-              fue lo primero que pidió el sponsor, avanza muy poco en esta etapa, y es una decisión
+              fue lo primero que nos pidieron, avanza muy poco en esta etapa, y es una decisión
               deliberada: abrir la venta online antes de ordenar la operación generaría demanda que
-              la fábrica no puede absorber. La transición se propone en dos saltos, y el segundo se
+              la fábrica no podría absorber. La transición se propone en dos saltos, y el segundo se
               habilita cuando los indicadores muestren stock confiable, compras reactivas cerca del
               15 % y el plazo de 15 días sostenido.
             </p>
@@ -1865,35 +1860,62 @@
         </div>
       </div>
 
+            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+      <div class="seccion--corta docs-caso">
+        <div class="wrap docs-caso__inner">
+          <div>
+            <p class="etiqueta">Documentación asociada</p>
+            <p class="docs-caso__texto">
+              Los documentos completos del caso —relevamiento, arquitectura actual y destino,
+              brechas y escenarios, alcance y mercado— están en una carpeta compartida de
+              Google Drive.
+            </p>
+          </div>
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-propuesta">
+            Abrir la documentación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <span class="sr-only">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 · CON QUÉ HERRAMIENTA =================
+         Documentos del trabajo práctico que alimentan esta pestaña: T-05 Alcance del proyecto y análisis del mercado de soluciones, segunda parte.
+         La referencia es interna: el rótulo visible usa lenguaje de propuesta. -->
+    <section class="panel-caso" id="herramienta" role="tabpanel" aria-labelledby="tab-herramienta" tabindex="0" hidden>
+
+      <p class="hilo"><span class="hilo__paso">05 de 05</span>Cómo evaluamos el mercado y cuáles son las tres soluciones que proponemos analizar a fondo.</p>
+
       <div class="seccion" id="criterios-mercado">
         <div class="wrap">
-          <p class="etiqueta">Prioridades del cliente</p>
+          <p class="etiqueta">Sus prioridades</p>
           <h2 class="titular">Cuatro aspectos, con el funcional al frente</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
-            La ponderación no es genérica: se justifica desde los objetivos y las restricciones de
-            esta organización.
+            La ponderación no es genérica: se justifica desde sus objetivos y sus
+            restricciones.
           </p>
 
           <ol class="ponderacion" aria-label="Aspectos y pesos">
             <li class="ponderacion__item" style="--peso:35">
               <div class="ponderacion__cabecera"><h3>Funcional</h3><span class="ponderacion__peso">35 %</span></div>
               <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Stock en tiempo real, pedidos y presupuestos integrados al cálculo de materiales, orden e instructivos accesibles desde la fábrica, compras con stock mínimo, indicadores y capacidad de crecer hacia el canal digital. Es el de mayor peso porque el problema del cliente es operativo.</p>
+              <p>Stock en tiempo real, pedidos y presupuestos integrados al cálculo de materiales, orden e instructivos accesibles desde la fábrica, compras con stock mínimo, indicadores y capacidad de crecer hacia el canal digital. Es el de mayor peso porque su problema es operativo.</p>
             </li>
             <li class="ponderacion__item" style="--peso:30">
               <div class="ponderacion__cabecera"><h3>Proveedor</h3><span class="ponderacion__peso">30 %</span></div>
               <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Solidez y continuidad, soporte local en español, red de implementadores cercana, capacitación y condiciones contractuales de exportación y salida. Pesa alto porque la empresa no tiene personal de sistemas y ya sufrió la dependencia de un software sin soporte vigente.</p>
+              <p>Solidez y continuidad, soporte local en español, red de implementadores cercana, capacitación y condiciones contractuales de exportación y salida. Pesa alto porque no tienen personal de sistemas y ya sufrieron la dependencia de un software sin soporte vigente.</p>
             </li>
             <li class="ponderacion__item" style="--peso:20">
               <div class="ponderacion__cabecera"><h3>Económico</h3><span class="ponderacion__peso">20 %</span></div>
               <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Inversión inicial, suscripción, implementación y capacitación, previsibilidad del costo en moneda y posibilidad de sumar módulos de a poco. Es una pyme familiar con recursos limitados que además debe financiar la conectividad y el equipamiento de la fábrica.</p>
+              <p>Inversión inicial, suscripción, implementación y capacitación, previsibilidad del costo en moneda y posibilidad de sumar módulos de a poco. Son una pyme familiar con recursos limitados que además tiene que financiar la conectividad y el equipamiento de la fábrica.</p>
             </li>
             <li class="ponderacion__item" style="--peso:15">
               <div class="ponderacion__cabecera"><h3>Técnico</h3><span class="ponderacion__peso">15 %</span></div>
               <div class="ponderacion__barra" aria-hidden="true"><i></i></div>
-              <p>Acceso web desde el local y la fábrica, uso en tablet o celular, facilidad de uso, importación y exportación estándar o API, seguridad y copias gestionadas. Pesa menos porque el escenario elegido ya fijó la modalidad SaaS modular y deja afuera de antemano las soluciones incompatibles.</p>
+              <p>Acceso web desde el local y la fábrica, uso en tablet o celular, facilidad de uso, importación y exportación estándar o API, seguridad y copias gestionadas. Pesa menos porque el escenario recomendado ya fija la modalidad SaaS modular y deja afuera de antemano las soluciones incompatibles.</p>
             </li>
           </ol>
 
@@ -1922,8 +1944,9 @@
             </table>
           </div>
           <p class="nota">
-            Los siete criterios con que se eligió el escenario quedan cubiertos por estos aspectos,
-            de modo que la selección del proveedor mantiene la misma lógica que la del escenario.
+            Los siete criterios con que comparamos los escenarios quedan cubiertos por estos
+            aspectos, de modo que la selección del proveedor mantiene la misma lógica que la del
+            escenario.
           </p>
         </div>
       </div>
@@ -1986,7 +2009,7 @@
               </header>
               <dl class="ficha-prov__datos">
                 <div><dt>Antecedentes</dt><dd>Sociedad de responsabilidad limitada argentina especializada en software para carpinterías de aluminio y PVC. Mantiene actualizados los catálogos de más de 12 extrusoras y 8 fabricantes de PVC, con novedades en 2024 y 2025.</dd></div>
-                <div><dt>Producto</dt><dd>OP 2.1, con licencias Home y Profesional y módulos adicionales de 3D, control de inventario y conexión con maquinaria. <b>Es el mismo software que Aberturas FISA usa hoy</b>, entregado por un distribuidor de aluminio.</dd></div>
+                <div><dt>Producto</dt><dd>OP 2.1, con licencias Home y Profesional y módulos adicionales de 3D, control de inventario y conexión con maquinaria. <b>Es el mismo software que ustedes usan hoy</b>, entregado por un distribuidor de aluminio.</dd></div>
                 <div><dt>Funcionalidades</dt><dd>Cálculo de costos y presupuestos, optimización de cortes de perfiles y vidrios, órdenes de producción, informes de mecanizado, conexión con CNC, etiquetado y diseño 2D y 3D. En compras: control de inventario, órdenes y gestión de proveedores.</dd></div>
                 <div><dt>Técnico</dt><dd>Aplicación de escritorio para Windows. El trabajo multiusuario es en red local, sin acceso web nativo desde otra ubicación. La exportación de datos no está documentada públicamente: es el punto central de la verificación técnica.</dd></div>
                 <div><dt>Licenciamiento</dt><dd>Licencias Home y Profesional con un usuario adicional sin costo, soporte y actualizaciones incluidos. El control de inventario es un módulo opcional.</dd></div>
@@ -2008,7 +2031,7 @@
                 <div><dt>Técnico</dt><dd>Aplicación instalable sobre Windows en arquitectura cliente-servidor. Para dar acceso simultáneo al local y a la fábrica necesita un servidor propio con red o un alojamiento en la nube.</dd></div>
                 <div><dt>Licenciamiento</dt><dd>Licencia por versión y por módulo más abono de mantenimiento; la implementación la realiza un Centro autorizado. Sin precios públicos.</dd></div>
               </dl>
-              <p class="ficha-prov__nota"><b>Alineación.</b> El mejor posicionado en proveedor por trayectoria y red de soporte, y cumple en stock, compras y ventas. Su punto débil es técnico: la arquitectura instalable no coincide con el escenario elegido y obliga a sumar servidor o alojamiento, lo que además lo encarece.</p>
+              <p class="ficha-prov__nota"><b>Alineación.</b> El mejor posicionado en proveedor por trayectoria y red de soporte, y cumple en stock, compras y ventas. Su punto débil es técnico: la arquitectura instalable no coincide con el escenario recomendado y obliga a sumar servidor o alojamiento, lo que además lo encarece.</p>
             </article>
 
             <article class="ficha-prov">
@@ -2065,7 +2088,7 @@
           <ul class="exclusiones" style="margin-top:var(--sp-5)">
             <li>
               <h3>Tango Gestión</h3>
-              <p>Tiene el mejor puntaje en proveedor, pero su arquitectura instalable contradice el escenario elegido: para dar acceso simultáneo al local y a la fábrica exige servidor propio o alojamiento, lo que reintroduce la necesidad de TI que el cliente no tiene. Además la licencia por módulo más abono e implementación eleva la inversión inicial.</p>
+              <p>Tiene el mejor puntaje en proveedor, pero su arquitectura instalable contradice el escenario recomendado: para dar acceso simultáneo al local y a la fábrica exige servidor propio o alojamiento, lo que reintroduce la necesidad de TI que ustedes no tienen. Además la licencia por módulo más abono e implementación eleva la inversión inicial.</p>
             </li>
             <li>
               <h3>WinMaker 10</h3>
@@ -2098,7 +2121,7 @@
         </div>
       </div>
 
-      <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
+            <!-- Cierre común de cada pestaña: acceso a la carpeta compartida del caso. -->
       <div class="seccion--corta docs-caso">
         <div class="wrap docs-caso__inner">
           <div>
@@ -2109,7 +2132,7 @@
               Google Drive.
             </p>
           </div>
-          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-mercado">
+          <a class="btn btn--primario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-herramienta">
             Abrir la documentación
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             <span class="sr-only">(se abre en una pestaña nueva)</span>
@@ -2117,20 +2140,55 @@
         </div>
       </div>
     </section>
-
   </div>
 
-  <!-- ================= CTA ================= -->
-  <section class="seccion tinta" aria-labelledby="cta-t">
-    <div class="wrap" style="text-align:center">
-      <p class="etiqueta">Siguiente paso</p>
-      <h2 class="titular" id="cta-t" style="color:var(--blanco)">Tu operación, sin fricción.</h2>
-      <p class="bajada" style="margin:var(--sp-5) auto 0">
-        Si algo de esto te suena parecido, la conversación empieza por un diagnóstico.
+  <!-- ================= PRÓXIMOS PASOS =================
+       La propuesta no cierra con un llamado comercial sino con lo que hace
+       falta decidir para arrancar, y quién decide cada cosa. -->
+  <section class="seccion tinta" aria-labelledby="pasos-t">
+    <div class="wrap">
+      <p class="etiqueta">Próximos pasos</p>
+      <h2 class="titular" id="pasos-t" style="color:var(--blanco)">Lo que necesitamos de ustedes</h2>
+      <p class="bajada" style="margin-top:var(--sp-5)">
+        Cuatro decisiones destraban el arranque. Ninguna compromete todavía la contratación
+        de la plataforma.
       </p>
-      <p style="margin-top:var(--sp-8)">
-        <a class="btn btn--primario" href="../../#contacto" data-cta="caso-final">Contactanos</a>
-      </p>
+
+      <ol class="pasos-decision">
+        <li>
+          <span class="pasos-decision__num" aria-hidden="true">1</span>
+          <h3>Validar los objetivos y sus metas</h3>
+          <p>Los seis objetivos y sus números salieron de lo que nos contaron, pero los formulamos nosotros. Necesitamos que los confirmen antes de convertirlos en compromisos.</p>
+          <p class="pasos-decision__quien">Decide: Gabriel, con los socios</p>
+        </li>
+        <li>
+          <span class="pasos-decision__num" aria-hidden="true">2</span>
+          <h3>Autorizar la conectividad y el equipo de la fábrica</h3>
+          <p>Sin internet y un dispositivo en el taller no se puede sacar el papel del circuito. Es la primera erogación y la que habilita todo lo demás.</p>
+          <p class="pasos-decision__quien">Deciden: los socios</p>
+        </li>
+        <li>
+          <span class="pasos-decision__num" aria-hidden="true">3</span>
+          <h3>Habilitar las demos con los tres preseleccionados</h3>
+          <p>Necesitamos una reunión con un partner de Odoo, la prueba de Contabilium y la verificación técnica del cálculo con Megevand. Participan ustedes, no solo nosotros.</p>
+          <p class="pasos-decision__quien">Decide: Gabriel</p>
+        </li>
+        <li>
+          <span class="pasos-decision__num" aria-hidden="true">4</span>
+          <h3>Acordar los cuatro indicadores</h3>
+          <p>Pedidos por mes, plazo promedio de entrega, compras reactivas sobre el total y participación del canal digital. Son los que van a decir cuándo pasar a la Fase 2.</p>
+          <p class="pasos-decision__quien">Decide: Gabriel, con los socios</p>
+        </li>
+      </ol>
+
+      <div class="pasos-decision__pie">
+        <p>
+          Antes de comprometer las metas hace falta medir cuatro semanas de línea base: cada
+          pedido, su fecha de entrega y cada compra de urgencia, anotados en el local y en la
+          fábrica. Podemos empezar la misma semana en que nos den el visto bueno.
+        </p>
+        <a class="btn btn--primario" href="../../#contacto" data-cta="propuesta-final">Coordinar la reunión</a>
+      </div>
     </div>
   </section>
 </main>
