@@ -261,8 +261,10 @@
   /* ---------- Pestañas del caso ----------
      Patrón WAI-ARIA "tabs" con activación automática: flechas, Inicio y Fin
      mueven el foco y cambian el panel. La pestaña activa se refleja en la URL
-     (#cliente, #alcance) y un ancla interna (#gantt) abre el panel que la
-     contiene. Sin JS, el primer panel queda visible y el resto oculto. */
+     (#partida, #propuesta) y un ancla interna (#brechas) abre el panel que la
+     contiene. Los botones del pie de cada panel ([data-ir-pestana]) pasan al
+     anterior o al siguiente. Sin JS, el primer panel queda visible y el resto
+     oculto. */
   var zonaPestanas = document.querySelector("[data-caso-pestanas]");
   if (zonaPestanas) {
     var pestanas = Array.prototype.slice.call(zonaPestanas.querySelectorAll('[role="tab"]'));
@@ -277,13 +279,13 @@
         t.tabIndex = on ? 0 : -1;
         paneles[k].hidden = !on;
       });
-      if (opts.foco) pestanas[i].focus();
+      if (opts.foco) pestanas[i].focus({ preventScroll: true });
       if (opts.url !== false) history.replaceState(null, "", "#" + paneles[i].id);
       /* Si la barra ya está pegada bajo la nav, el panel nuevo arranca donde
          está la barra, no donde había quedado el scroll del panel anterior. */
       var tope = zonaPestanas.getBoundingClientRect().top + window.scrollY - navAlto;
       if (opts.subir && window.scrollY > tope) {
-        window.scrollTo({ top: tope, behavior: reduceMotion ? "auto" : "smooth" });
+        window.scrollTo({ top: tope, behavior: reduceMotion || opts.salto ? "auto" : "smooth" });
       }
       var lista = pestanas[i].parentNode;
       if (lista.scrollWidth > lista.clientWidth) {
@@ -328,6 +330,20 @@
         else return;
         e.preventDefault();
         activarPestana(j, { foco: true, subir: true });
+      });
+    });
+
+    /* El panel siguiente arranca arriba, no a la altura del botón: si se
+       dejara actuar al ancla, el navegador no tendría a dónde desplazarse
+       porque el panel destino todavía está oculto. El salto es instantáneo:
+       el cambio de panel altera el alto de la página en el mismo cuadro y
+       Chromium cancela un desplazamiento suave iniciado ahí. */
+    zonaPestanas.querySelectorAll("[data-ir-pestana]").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        var i = indicePorId(a.getAttribute("data-ir-pestana"));
+        if (i < 0) return;
+        e.preventDefault();
+        activarPestana(i, { foco: true, subir: true, salto: true });
       });
     });
 
