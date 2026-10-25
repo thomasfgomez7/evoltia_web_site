@@ -5,7 +5,7 @@ Todo el copy respeta el §06 (voz y tono) y el §07 (banco de frases) del manual
 
 **Slug:** `/`
 **Meta title (44):** `Evoltia | Consultoría y transformación digital`
-**Meta description (149):** `Diagnosticamos con datos, priorizamos por impacto en el negocio y nos quedamos hasta que el proceso camina solo. Consultoría y transformación digital.`
+**Meta description (149):** `Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camine solo. Consultoría y transformación digital.`
 
 **Keyword primaria:** consultoría de transformación digital
 **Secundarias:** automatización de procesos · diagnóstico digital para empresas · datos e indicadores de gestión
@@ -27,7 +27,7 @@ Estructura calcada de `web-hero-1920x720.png`.
 Dos líneas. Punto final en Magenta Pulso. Sin ninguna otra frase en la sección.
 
 **Bajada** (literal de la pieza oficial):
-> Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camina solo.
+> Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camine solo.
 
 **CTA primario:** Agendá un diagnóstico → `/contacto`
 **CTA secundario:** Cómo trabajamos → `/como-trabajamos`
@@ -46,7 +46,7 @@ Confirmado por el cliente.
 **Posición:** inmediatamente después del hero. Es el bloque al que se le da más peso en la página, por pedido del cliente.
 
 **Etiqueta:** CASOS DE ÉXITO
-**H2 (frase §07-B):** Nos quedamos hasta que funciona solo.
+**H2 (frase §07-B):** Nos quedamos hasta que funcione solo. — El cliente pidió el subjuntivo; el manual lo escribe en indicativo.
 
 **Un solo caso: Aberturas FISA.** Tarjeta a dos columnas —logo a la izquierda, contenido a la derecha— que se linealiza en móvil.
 
@@ -92,20 +92,20 @@ Confirmado por el cliente.
 **Etiqueta:** QUÉ HACEMOS
 **H2 (frase §07-A):** Primero el negocio. Después el software.
 
-**Bajada:** Seis frentes de trabajo. Se contratan por separado o como programa completo, pero todos empiezan en el mismo lugar: el diagnóstico. — Confirmada por el cliente.
+**Bajada:** Contamos con seis frentes de trabajo que se contratan por separado o como programa completo, pero todos empiezan en el mismo lugar: el discovery. — Texto del cliente.
 
 `[A VALIDAR: nombres y alcance de los seis]` El manual **no define un catálogo de servicios**. Estos seis se derivaron del banco de frases (§07-B, C y D) y del territorio que el manual nombra —consultoría, transformación digital, analítica, automatización e IA—. Cada bajada incorpora una frase del banco.
 
 **Los servicios nombran frentes de trabajo, no etapas del método.** La bajada confirmada por el cliente dice que los seis «empiezan en el mismo lugar: el discovery»; por eso el discovery, la implementación y la adopción no son servicios sino etapas que recorre cualquiera de ellos. Hasta octubre de 2026 tres tarjetas se llamaban como esas etapas (Discovery y hoja de ruta, Implementación, Adopción y gestión del cambio) y se pisaban con «Cómo trabajamos».
 
-| Servicio | Copy | Frase que incorpora | Slug |
+| Servicio | Copy (una sola frase) | Frase del banco | Slug |
 |---|---|---|---|
-| **Rediseño de procesos** | Tu operación, sin fricción. Escribimos cómo se trabaja hoy, sacamos los pasos que sobran y dejamos un circuito que no depende de una sola persona. | §07-B literal | `/servicios/rediseno-de-procesos` |
-| **Automatización de procesos** | Automatizá lo repetitivo, decidí lo importante. Sacamos de encima la carga manual que hoy consume las horas de tu mejor gente. | §07-B literal | `/servicios/automatizacion-de-procesos` |
-| **Datos e indicadores** | Del dato al indicador. Del indicador a la decisión. Un tablero corto que se mira todas las semanas, no un informe que nadie abre. | §07-C literal | `/servicios/datos-e-indicadores` |
-| **Inteligencia artificial aplicada** | La IA no reemplaza criterio: lo escala. La usamos donde mueve un número del negocio, no donde queda bien en una demo. | §07-C literal | `/servicios/inteligencia-artificial-aplicada` |
-| **Selección e integración de sistemas** | El mejor sistema es el que tu equipo quiere usar. Comparamos opciones con los criterios de tu negocio y dejamos la elegida integrada y funcionando. | §07-D literal | `/servicios/seleccion-e-integracion-de-sistemas` |
-| **Gestión del cambio y capacitación** | Cambiar duele menos cuando hay método. Acompañamos hasta que el equipo usa el proceso porque le sirve, no porque se lo pidieron. | §07-D literal | `/servicios/gestion-del-cambio-y-capacitacion` |
+| **Rediseño de procesos** | Documentamos cómo se trabaja hoy y dejamos un circuito que no depende de una sola persona. | — | `/servicios/rediseno-de-procesos` |
+| **Automatización de procesos** | Eliminamos las tareas manuales que hoy se llevan las horas de tu mejor gente. | — | `/servicios/automatizacion-de-procesos` |
+| **Datos e indicadores** | Un tablero simple que se mira todas las semanas, no un informe que nadie abre. | — | `/servicios/datos-e-indicadores` |
+| **Inteligencia artificial aplicada** | La usamos donde mejora un número del negocio, no donde solo luce en una demo. | — | `/servicios/inteligencia-artificial-aplicada` |
+| **Selección e integración de sistemas** | Comparamos opciones según lo que necesita tu negocio y dejamos la elegida funcionando. | — | `/servicios/seleccion-e-integracion-de-sistemas` |
+| **Gestión del cambio y capacitación** | Acompañamos al equipo hasta que use el proceso porque le sirve, no porque se lo pidieron. | — | `/servicios/gestion-del-cambio-y-capacitacion` |
 
 **Fondo:** Violeta Núcleo. Tarjetas con borde, no con sombra.
 
@@ -123,7 +123,7 @@ Las cuatro etapas y sus bajadas son **literales de la pieza `post-03-metodo`**. 
 | 01 | **Diagnóstico** | 4 semanas. Datos, no impresiones. | Informe y mapa de procesos |
 | 02 | **Priorización** | Por impacto en el negocio. | Hoja de ruta con plazos e indicadores |
 | 03 | **Implementación** | Con tu equipo adentro. | Procesos funcionando y documentados |
-| 04 | **Adopción** | Hasta que funciona solo. | Equipo capacitado y capacidad instalada |
+| 04 | **Adopción** | Hasta que funcione solo. | Equipo capacitado y capacidad instalada |
 
 **Frase de cierre (§07-B):** Si no se mide, no lo llamamos transformación.
 
@@ -145,6 +145,8 @@ El componente no se renderiza sin `consentApproved`. Estructura cuando se libere
 
 ## 7 · Por qué Evoltia
 
+> **Integrada a «Cómo trabajamos» en octubre de 2026** para acortar la home: tres de los cuatro diferenciales repetían el valor «Concretos», el valor «Cercanos» y la etapa de adopción. El primero, «Empezamos por la decisión, no por la herramienta», quedó como bajada del método. Se conserva abajo como referencia.
+
 **Etiqueta:** POR QUÉ EVOLTIA
 **H2 (frase §07-A):** No vendemos tecnología: diseñamos decisiones.
 
@@ -155,7 +157,7 @@ Los cuatro diferenciales desarrollan la personalidad del §01 — directos, conc
 | **Empezamos por la decisión, no por la herramienta** | Antes de elegir un sistema definimos qué decisión tiene que mejorar. Sin eso, cualquier compra es una apuesta cara. |
 | **Cifras, plazos y entregables antes que adjetivos** | Cada recomendación viene con un número y una fecha. Se puede auditar si funcionó, y lo hacemos. |
 | **Trabajamos con tu equipo adentro** | El proceso lo van a operar ellos. Si lo diseñamos sin ellos, vuelve al día siguiente de que nos vamos. |
-| **Nos quedamos hasta que funciona solo** | Te dejamos el proceso funcionando y documentado. El objetivo del proyecto es que no nos necesites. |
+| **Nos quedamos hasta que funcione solo** | Te dejamos el proceso funcionando y documentado. El objetivo del proyecto es que no nos necesites. |
 
 ---
 
@@ -168,7 +170,7 @@ Los cuatro diferenciales desarrollan la personalidad del §01 — directos, conc
 | ¿Cuánto dura el diagnóstico? | Cuatro semanas. Entrevistas con quienes ejecutan, revisión de datos y una hoja de ruta priorizada. Al final tenés un documento que se puede leer en una reunión de directorio. | Confirmado por el manual |
 | ¿Con qué tamaño de empresa trabajan? | Empresas medianas que ya crecieron más de lo que su operación aguanta. Hablamos con dirección general, operaciones y finanzas: gente que decide y firma. | Literal del §01 |
 | ¿Hace falta tener sistemas antes de empezar? | No. En muchos casos el punto de partida son planillas y mensajería. Eso no es un obstáculo: es información sobre cómo funciona hoy tu operación. | Derivado |
-| ¿Desarrollan el software o traen proveedores? | — | `[PENDIENTE CLIENTE]` |
+| ¿Desarrollan software propio? | No. Trabajamos con proveedores: elegimos con vos la herramienta del mercado que mejor resuelve el problema, la integramos y la dejamos funcionando con tu equipo. | Confirmado por el cliente |
 | ¿Cuánto cuesta? | — | `[PENDIENTE CLIENTE]` |
 
 JSON-LD `FAQPage` solo con las tres primeras, hasta que las otras estén confirmadas.
@@ -205,7 +207,7 @@ Una por sección. Ninguna se repite.
 | Sección | Frase | Grupo |
 |---|---|---|
 | Hero | Evolución con dirección. | Claim |
-| Casos de éxito | Nos quedamos hasta que funciona solo. | B |
+| Casos de éxito | Nos quedamos hasta que funcione solo. | B |
 | El problema | Toda empresa está en órbita. | A |
 | Servicios | Primero el negocio. Después el software. | A |
 | Método | Si no se mide, no lo llamamos transformación. | B |
