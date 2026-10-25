@@ -98,14 +98,14 @@ Confirmado por el cliente.
 
 **Los servicios nombran frentes de trabajo, no etapas del método.** La bajada confirmada por el cliente dice que los seis «empiezan en el mismo lugar: el discovery»; por eso el discovery, la implementación y la adopción no son servicios sino etapas que recorre cualquiera de ellos. Hasta octubre de 2026 tres tarjetas se llamaban como esas etapas (Discovery y hoja de ruta, Implementación, Adopción y gestión del cambio) y se pisaban con «Cómo trabajamos».
 
-| Servicio | Copy | Frase que incorpora | Slug |
+| Servicio | Copy (una sola frase) | Frase del banco | Slug |
 |---|---|---|---|
-| **Rediseño de procesos** | Tu operación, sin fricción. Escribimos cómo se trabaja hoy, sacamos los pasos que sobran y dejamos un circuito que no depende de una sola persona. | §07-B literal | `/servicios/rediseno-de-procesos` |
-| **Automatización de procesos** | Automatizá lo repetitivo, decidí lo importante. Sacamos de encima la carga manual que hoy consume las horas de tu mejor gente. | §07-B literal | `/servicios/automatizacion-de-procesos` |
-| **Datos e indicadores** | Del dato al indicador. Del indicador a la decisión. Un tablero corto que se mira todas las semanas, no un informe que nadie abre. | §07-C literal | `/servicios/datos-e-indicadores` |
-| **Inteligencia artificial aplicada** | La IA no reemplaza criterio: lo escala. La usamos donde mueve un número del negocio, no donde queda bien en una demo. | §07-C literal | `/servicios/inteligencia-artificial-aplicada` |
-| **Selección e integración de sistemas** | El mejor sistema es el que tu equipo quiere usar. Comparamos opciones con los criterios de tu negocio y dejamos la elegida integrada y funcionando. | §07-D literal | `/servicios/seleccion-e-integracion-de-sistemas` |
-| **Gestión del cambio y capacitación** | Cambiar duele menos cuando hay método. Acompañamos al equipo hasta que use el proceso porque le sirve, no porque se lo pidieron. | §07-D literal | `/servicios/gestion-del-cambio-y-capacitacion` |
+| **Rediseño de procesos** | Documentamos cómo se trabaja hoy y dejamos un circuito que no depende de una sola persona. | — | `/servicios/rediseno-de-procesos` |
+| **Automatización de procesos** | Eliminamos las tareas manuales que hoy se llevan las horas de tu mejor gente. | — | `/servicios/automatizacion-de-procesos` |
+| **Datos e indicadores** | Un tablero simple que se mira todas las semanas, no un informe que nadie abre. | — | `/servicios/datos-e-indicadores` |
+| **Inteligencia artificial aplicada** | La usamos donde mejora un número del negocio, no donde solo luce en una demo. | — | `/servicios/inteligencia-artificial-aplicada` |
+| **Selección e integración de sistemas** | Comparamos opciones según lo que necesita tu negocio y dejamos la elegida funcionando. | — | `/servicios/seleccion-e-integracion-de-sistemas` |
+| **Gestión del cambio y capacitación** | Acompañamos al equipo hasta que use el proceso porque le sirve, no porque se lo pidieron. | — | `/servicios/gestion-del-cambio-y-capacitacion` |
 
 **Fondo:** Violeta Núcleo. Tarjetas con borde, no con sombra.
 
@@ -144,6 +144,8 @@ El componente no se renderiza sin `consentApproved`. Estructura cuando se libere
 ---
 
 ## 7 · Por qué Evoltia
+
+> **Integrada a «Cómo trabajamos» en octubre de 2026** para acortar la home: tres de los cuatro diferenciales repetían el valor «Concretos», el valor «Cercanos» y la etapa de adopción. El primero, «Empezamos por la decisión, no por la herramienta», quedó como bajada del método. Se conserva abajo como referencia.
 
 **Etiqueta:** POR QUÉ EVOLTIA
 **H2 (frase §07-A):** No vendemos tecnología: diseñamos decisiones.

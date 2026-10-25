@@ -538,17 +538,6 @@ button { font: inherit; }
   padding-top: var(--sp-3); border-top: 1px solid var(--borde-oscuro);
 }
 
-/* ---------- Valores ---------- */
-.valores { display: grid; gap: var(--sp-7); margin-top: var(--sp-8); }
-@media (min-width: 768px) { .valores { grid-template-columns: repeat(2, 1fr); gap: var(--sp-8); } }
-.valor { display: flex; gap: var(--sp-4); }
-.valor__nodo {
-  flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
-  background: var(--orbita); margin-top: 9px;
-}
-.valor h3 { font-size: var(--fs-sub); font-weight: 500; line-height: 1.25; color: var(--nucleo); margin-bottom: var(--sp-3); }
-.valor p { color: var(--gris); font-size: var(--fs-cuerpo); }
-
 /* ---------- Frase de cierre de sección ---------- */
 .frase {
   font-size: var(--fs-h3); font-weight: 500; line-height: 1.3;
@@ -1861,13 +1850,8 @@ img.miembro__foto { display: block; object-fit: cover; height: auto; }
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
-.despues { margin-top: var(--sp-8); display: grid; gap: var(--sp-5); }
-.despues li { display: flex; gap: var(--sp-4); align-items: flex-start; }
-.despues i {
-  flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%;
-  background: var(--senal); margin-top: 9px;
-}
-.despues p { font-size: var(--fs-cuerpo); color: var(--lavanda); }
+/* Qué pasa después de escribir: una línea, no una lista. */
+.despues { margin-top: var(--sp-6); max-width: 46ch; font-size: var(--fs-cuerpo); color: var(--lavanda); }
 
 /* ---------- Footer ---------- */
 .footer { padding-block: var(--sp-10) var(--sp-8); border-top: 1px solid var(--borde-oscuro); }
