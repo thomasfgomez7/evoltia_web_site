@@ -24,7 +24,7 @@ HOME-22,Home,/,Servicios,ServiceCard,servicio_6,a_validar,derivado,Cliente,P0,"G
 HOME-23,Home,/,Metodo,ProcessStep,etapa_01,listo,pieza post-03-metodo,Evoltia,P0,"Diagnostico. 4 semanas. Datos, no impresiones."
 HOME-24,Home,/,Metodo,ProcessStep,etapa_02,listo,pieza post-03-metodo,Evoltia,P0,"Priorizacion. Por impacto en el negocio."
 HOME-25,Home,/,Metodo,ProcessStep,etapa_03,listo,pieza post-03-metodo,Evoltia,P0,"Implementacion. Con tu equipo adentro."
-HOME-26,Home,/,Metodo,ProcessStep,etapa_04,listo,pieza post-03-metodo,Evoltia,P0,"Adopcion. Hasta que funciona solo."
+HOME-26,Home,/,Metodo,ProcessStep,etapa_04,listo,pieza post-03-metodo,Evoltia,P0,"Adopcion. Hasta que funcione solo."
 HOME-27,Home,/,Metodo,ProcessStep,entregables,a_validar,derivado,Cliente,P1,"Un entregable por etapa. Confirmar con el cliente"
 HOME-28,Home,/,Metodo,SectionHeader,frase_cierre,listo,manual §07-B,Evoltia,P0,"Si no se mide, no lo llamamos transformacion."
 HOME-29,Home,/,Caso,CaseHighlight,caso_destacado,bloqueado,pendiente,Cliente,P2,"Requiere autorizacion del sponsor. Sin consentApproved no se renderiza"
@@ -32,7 +32,7 @@ HOME-30,Home,/,PorQue,SectionHeader,h2_frase,listo,manual §07-A,Evoltia,P0,"No 
 HOME-31,Home,/,PorQue,FeatureList,diferencial_1,listo,manual §01,Evoltia,P0,"Empezamos por la decision, no por la herramienta"
 HOME-32,Home,/,PorQue,FeatureList,diferencial_2,listo,manual §01,Evoltia,P0,"Cifras, plazos y entregables antes que adjetivos. Personalidad Concretos"
 HOME-33,Home,/,PorQue,FeatureList,diferencial_3,listo,manual §01,Evoltia,P0,"Trabajamos con tu equipo adentro"
-HOME-34,Home,/,PorQue,FeatureList,diferencial_4,listo,manual §01,Evoltia,P0,"Nos quedamos hasta que funciona solo"
+HOME-34,Home,/,PorQue,FeatureList,diferencial_4,listo,manual §01,Evoltia,P0,"Nos quedamos hasta que funcione solo"
 HOME-35,Home,/,FAQ,Accordion,faq_duracion,listo,manual §07-B,Evoltia,P1,"Cuatro semanas. Confirmado por el banco de frases"
 HOME-36,Home,/,FAQ,Accordion,faq_tamano,listo,manual §01,Evoltia,P1,"Empresas medianas. Direccion general, operaciones y finanzas"
 HOME-37,Home,/,FAQ,Accordion,faq_sistemas,listo,derivado,Evoltia,P1,
