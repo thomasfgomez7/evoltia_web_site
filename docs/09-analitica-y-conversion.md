@@ -30,7 +30,7 @@ Las micro-conversiones no son decorado: con 8 leads al mes, el volumen de la mac
 | `section_view` | `section_id` | IntersectionObserver, 50 % visible, una vez por sesión |
 | `scroll_depth` | `percent` (25/50/75/90) | |
 | `faq_open` | `question` | |
-| `service_card_click` | `service_slug`, `position` | |
+| `service_card_click` | `service_id`, `service_slug`, `position` | `service_id` es fijo (`servicio-01` a `servicio-06`) y no cambia si el servicio se renombra; es el campo para comparar períodos. `service_slug` sigue al nombre visible |
 | `service_finder_complete` | `recommended_service` | Árbol de decisión |
 | `outbound_click` | `link_url` | |
 | `email_click` / `whatsapp_click` | `location` | |

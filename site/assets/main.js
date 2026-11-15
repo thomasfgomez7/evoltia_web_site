@@ -358,9 +358,16 @@
     });
   });
 
-  document.querySelectorAll("[data-service]").forEach(function (el) {
+  /* service_id es fijo (servicio-01…06) y no cambia aunque el servicio se
+     renombre; service_slug sigue al nombre visible. Así un cambio de nombre no
+     parte en dos la serie de clics de una misma tarjeta. */
+  document.querySelectorAll("[data-service]").forEach(function (el, i) {
     el.addEventListener("click", function () {
-      track("service_card_click", { service_slug: el.getAttribute("data-service") });
+      track("service_card_click", {
+        service_id: el.getAttribute("data-service-id"),
+        service_slug: el.getAttribute("data-service"),
+        position: i + 1
+      });
     });
   });
 
