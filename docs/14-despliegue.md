@@ -1,5 +1,7 @@
 # 14 · Despliegue
 
+> **Estado: noviembre de 2026.** El sitio está desplegado en GitHub Pages (`https://thomasfgomez7.github.io/evoltia_web_site/`) desde la rama `main`, con el repositorio público. `main` está protegida y exige una aprobación por pull request; se trabaja en `develop`. El dominio previsto es `evoltia.com`, todavía sin configurar en Pages.
+
 **Contexto:** proyecto universitario, no productivo. Sin datos reales, sin necesidad de backend para el formulario y sin requisitos de seguridad. Eso cambia por completo qué plataforma conviene.
 
 ## Recomendación: GitHub Pages
@@ -25,7 +27,7 @@
 **GitHub Pages en el plan gratuito solo funciona con repositorios públicos.** Con un repo privado hace falta GitHub Pro o Team.
 
 - ¿El repo puede ser **público**? → **GitHub Pages.** Para un trabajo universitario suele ser preferible: es material de portafolio.
-- ¿Tiene que ser **privado**? → **Vercel.** El plan Hobby permite repos privados y, al no ser uso comercial, es gratuito y legítimo. `vercel.json` ya está configurado.
+- ¿Tiene que ser **privado**? → **Vercel.** El plan Hobby permite repos privados y, al no ser uso comercial, es gratuito y legítimo. Haría falta crear un `vercel.json` con `outputDirectory: site`; el repo hoy no lo incluye.
 
 Cloudflare Pages queda como tercera opción: es perfectamente válida, pero no aporta nada que las otras dos no resuelvan y suma una cuenta más.
 
@@ -33,14 +35,14 @@ Cloudflare Pages queda como tercera opción: es perfectamente válida, pero no a
 
 ## Sobre el formulario
 
-Sigue simulando el envío: espera 700 ms y muestra el mensaje de éxito, sin backend. Para una demo académica está bien, y el código lo dice explícitamente:
+Simula el envío: valida los campos, espera 700 ms y muestra el mensaje de éxito, sin backend. **Está decidido que no tendrá backend.** El código lo dice explícitamente:
 
 ```js
 /* Prototipo: sin backend. En producción, POST al route handler
    y redirección a /gracias, donde se dispara generate_lead. */
 ```
 
-Si en algún momento el sitio se muestra a alguien que podría intentar contactar de verdad, conviene reemplazar el botón por un `mailto:hola@evoltia.com`. Es un cambio de una línea.
+El sitio es público, así que un visitante puede completar el formulario y creer que su consulta llegó. El canal que sí funciona es el enlace a `hola@evoltia.com` de la misma sección. Si se quiere evitar la confusión, se puede reemplazar el botón por un `mailto:hola@evoltia.com`: es un cambio de una línea.
 
 ---
 
@@ -90,9 +92,8 @@ Los enlaces internos de la Home son anclas (`#servicios`, `#metodo`) y funcionan
 
 1. `git init`, commit, y `gh repo create evoltia-web-site --private --source=. --push`.
 2. Importar el repositorio en [vercel.com/new](https://vercel.com/new).
-3. Framework Preset **Other**. El resto lo toma de [`vercel.json`](../vercel.json): `outputDirectory: site`, sin build command.
+3. Framework Preset **Other**, con `outputDirectory: site` y sin build command. El repo hoy no incluye un `vercel.json`: hay que crearlo o configurar esos valores en el panel.
 
-El `vercel.json` incluye además cabeceras de seguridad y reglas de caché. No hacen falta en este contexto, pero tampoco molestan y quedan listas si el proyecto alguna vez sale del ámbito académico.
 
 ---
 

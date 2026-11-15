@@ -1,5 +1,7 @@
 # 12 · Snippets de referencia
 
+> **Estado: noviembre de 2026.** Snippets de referencia para la versión en React del plan original. El sitio publicado no usa React. **El endpoint del formulario no se va a implementar:** está decidido que el formulario no tendrá backend.
+
 ## `ServiceCard` — React / TypeScript
 
 Dos cosas lo hacen específico de Evoltia:

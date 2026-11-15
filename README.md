@@ -1,6 +1,8 @@
 # Evoltia — sitio web
 
-Estrategia, contenido, design system y landing page de **Evoltia · Consultoría & Transformación Digital**.
+Sitio de **Evoltia · Consultoría & Transformación Digital**, con su estrategia, contenido y design system.
+
+**Publicado en** https://thomasfgomez7.github.io/evoltia_web_site/ · dominio previsto: `evoltia.com`.
 
 **Fuente autoritativa:** `Manual-de-Identidad-Evoltia.pdf` v1.0 (Agosto 2026) y su kit de piezas. Detalle en [`docs/ANEXO-fuentes.md`](docs/ANEXO-fuentes.md).
 
@@ -8,25 +10,34 @@ Estrategia, contenido, design system y landing page de **Evoltia · Consultoría
 
 ---
 
-## La landing page
+## El sitio
+
+Tres páginas estáticas, en HTML, CSS y JS sin framework ni paso de build.
 
 ```
 site/
-├── index.html                     Home completa, semántica y accesible
-├── evoltia-landing.artifact.html  Versión autocontenida (generada)
+├── index.html                     Home: hero, caso, misión y valores, servicios, método, preguntas, contacto
+├── nosotros/index.html            Historia y propósito, manifiesto, equipo
+├── casos/aberturas-fisa/          Propuesta para Aberturas FISA, en cinco pestañas
 └── assets/
     ├── styles.css                 Tokens del manual y componentes
-    ├── main.js                    Nav, acordeón, validación, consentimiento, analítica
-    └── img/                       Logos e isotipos en SVG, PNG del kit y logo del cliente
+    ├── main.js                    Nav, acordeón, pestañas, validación, consentimiento, analítica
+    └── img/                       Logos e isotipos en SVG, PNG del kit, logo del cliente y fotos del equipo
 
-marca/                             Copia íntegra del kit de piezas del manual
+marca/                             Kit de piezas del manual y los SVG originales
+docs/                              Estrategia, contenido y design system
+content-models/  inventario/       Modelos de contenido e inventario
 .github/workflows/pages.yml        Despliegue automático a GitHub Pages desde site/
-vercel.json                        Config alternativa para Vercel
 ```
+
+### Cómo se trabaja
+
+- Los cambios van a `develop` y llegan a `main` por pull request. `main` está protegida y exige una aprobación.
+- Al mergear a `main`, el workflow publica `site/` y sella `styles.css` y `main.js` con el hash de su contenido (el `?v=` del HTML), para que el navegador no mezcle versiones.
 
 ### Desplegar
 
-Proyecto universitario, no productivo: la recomendación es **GitHub Pages**. Con el repositorio público, alcanza con activar **Settings → Pages → Source: GitHub Actions**; el workflow ya está incluido. Si el repositorio tiene que ser privado, la opción es **Vercel** y `vercel.json` ya está configurado. Detalle en [`docs/14-despliegue.md`](docs/14-despliegue.md).
+Proyecto universitario, no productivo: la recomendación es **GitHub Pages**. Con el repositorio público, alcanza con activar **Settings → Pages → Source: GitHub Actions**; el workflow ya está incluido. Si el repositorio tuviera que ser privado, la alternativa es **Vercel**. Detalle en [`docs/14-despliegue.md`](docs/14-despliegue.md).
 
 ### Verla en local
 
@@ -60,7 +71,9 @@ Después, abrir `http://localhost:4321`.
 
 ### Estado verificado
 
-- Sin desbordes horizontales a ningún ancho; probado a 320, 375 y 1280 px.
+- Sin desbordes horizontales en las tres páginas ni en las cinco pestañas de la propuesta; probado a 320, 375, 768 y 1280 px (noviembre de 2026, en Chromium).
+- Auditoría de accesibilidad automática en las tres páginas: un `h1` por página, sin saltos de nivel de título, sin imágenes sin texto alternativo, sin controles ni campos sin nombre, sin referencias ARIA rotas. Pestañas de la propuesta operables con flechas, Inicio y Fin.
+- **Sin probar:** Safari, Firefox y lectores de pantalla reales. Se agregó `-webkit-backdrop-filter` para Safari anterior a la versión 18.
 - Métricas tipográficas medidas en el DOM: display 86,4 px / −0,03em / 1,05 · titular 47,2 px / −0,02em / 1,15 · etiqueta 12 px / +0,22em · cuerpo Light 300 / 1,65.
 - Nodos del método verificados en 14 / 18 / 23 / 29 px con conector de 9 px y colores Órbita → Pulso.
 - Nav fija con estado sólido al hacer scroll; menú móvil con foco atrapado y cierre con `Esc`.
@@ -98,20 +111,30 @@ Después, abrir `http://localhost:4321`.
 
 ---
 
-## Lo que bloquea la producción
+## Pendientes
 
-1. **Validación de los nombres y el alcance de los seis servicios.** El manual no define un catálogo. Propuesta actual: rediseño de procesos, automatización, datos e indicadores, IA aplicada, selección e integración de sistemas, y gestión del cambio y capacitación — frentes de trabajo que no repiten las etapas del método. La bajada de la sección ya está confirmada.
-2. **HEX oficial de Lavanda.** Se nombra en el §03 pero no está tabulado. Se usa `#CEC4E8`, muestreado del hero oficial.
-3. **Bios, fotos y roles del equipo**, y la historia de origen para `/nosotros`.
-4. **Definir** la política de precios. Es la respuesta del FAQ que sigue abierta.
-5. **Autorización del caso de cliente**, si en algún momento se publica. La salvaguarda `consentApproved` está en el modelo de contenido.
+1. **«¿Cuánto cuesta?»** es la única pregunta frecuente sin publicar. Falta definir cómo cobra Evoltia (por proyecto, por etapa o por hora) y si se publica un precio o un rango. Si se decide no publicar precios, se cierra.
+2. **HEX oficial de Lavanda.** El manual la nombra en el §03 pero no la tabula. Se usa `#CEC4E8`, muestreado del hero oficial.
+3. **Imagen para compartir en redes.** La home declara `og:image` en `https://evoltia.com/og/default.png`, que todavía no existe; `/nosotros` y la propuesta no declaran ninguna.
+4. **Largo de la propuesta.** Las pestañas miden entre 4.800 y 12.200 px a 768 de ancho; conviene revisar si se puede recortar.
 
-> **Alcance:** proyecto universitario, no productivo. El formulario simula el envío y no hay backend; los datos societarios y las páginas legales quedan fuera de alcance por el mismo motivo.
+### Decisiones cerradas
+
+- **El formulario no tiene backend ni lo tendrá.** Valida y muestra el mensaje de éxito, pero no envía la consulta. El contacto real es `hola@evoltia.com`.
+- **Aberturas FISA autorizó la publicación** y es el único caso: no habrá carrusel ni índice de casos.
+- **Los seis servicios están confirmados.**
+- **Misión, visión y valores se quedan en la home.**
+- **`main` sigue protegida**: cada cambio entra por pull request con aprobación.
+- No hay proveedor de analítica conectado: `main.js` emite los eventos, pero ninguna página crea `dataLayer`.
+- Datos societarios, páginas legales, LinkedIn y el resto de las páginas del plan original quedan fuera de alcance.
+
+> **Alcance:** proyecto universitario, no productivo.
 
 ### Confirmado por el cliente
 
 - Microcopy del hero: *«Primera conversación sin costo. Respondemos en 48 horas hábiles.»*
-- Rótulo de la barra de confianza: *«Empresas que ya cambiaron de trayectoria»*, con Aberturas FISA como único logo — **archivo instalado** en `site/assets/img/clientes/aberturas-fisa.png`.
+- Logo de Aberturas FISA — **instalado** en `site/assets/img/clientes/aberturas-fisa.png`.
+- Texto de la tarjeta del caso y frases de los cuatro valores de la home.
 - Logo de Evoltia en SVG, cuatro versiones y cuatro isotipos — **instalados** en `site/assets/img/` y, sin tocar, en `marca/`.
 - Bajada de servicios: *«Contamos con seis frentes de trabajo que se contratan por separado o como programa completo, pero todos empiezan en el mismo lugar: el discovery.»*
 - Evoltia no desarrolla software: trabaja con proveedores, elige la herramienta con el cliente, la integra y la deja funcionando. Respondido en el FAQ.

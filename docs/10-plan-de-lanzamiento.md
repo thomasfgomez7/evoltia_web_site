@@ -1,5 +1,7 @@
 # 10 · Plan de lanzamiento y checklist de handoff
 
+> **Estado: noviembre de 2026.** Este plan de siete semanas era para el sitio completo en Next.js y **no se ejecutó así**. Lo que se hizo: el sitio publicado son tres páginas estáticas en HTML, CSS y JS sin framework, desplegadas en GitHub Pages: la home, `/nosotros` y la propuesta para Aberturas FISA en `/casos/aberturas-fisa/`. De la Fase 0 quedaron resueltos el logo en SVG, la validación de los seis servicios y la decisión sobre Aberturas FISA (autorizado, único caso). Los datos societarios y las páginas legales quedaron fuera de alcance. Las listas de abajo se conservan como referencia.
+
 Duración total estimada del MVP: **7 semanas** desde el desbloqueo de los activos de marca.
 La estimación asume una persona de diseño y una de desarrollo a dedicación parcial, más disponibilidad del cliente para validaciones.
 
@@ -10,11 +12,11 @@ La estimación asume una persona de diseño y una de desarrollo a dedicación pa
 | Entregable | Responsable |
 |---|---|
 | Manual de marca reexportado y completo (páginas 2–26) | Cliente |
-| Logo en SVG, 5 variantes | Cliente |
-| Validación de los 6 servicios | Cliente |
+| Logo en SVG, 5 variantes — **resuelto** (cuatro versiones y cuatro isotipos) | Cliente |
+| Validación de los 6 servicios — **resuelto** | Cliente |
 | Respuestas a las 10 preguntas del brief | Cliente |
 | Datos societarios para las páginas legales | Cliente |
-| Decisión sobre el caso Aberturas Fisa | Cliente + sponsor |
+| Decisión sobre el caso Aberturas Fisa — **resuelto**: autorizado, único caso | Cliente + sponsor |
 
 > **Esta fase bloquea todo lo demás.** Sin el manual completo, el design system sigue siendo una reconstrucción y cualquier trabajo de diseño corre riesgo de rehacerse. Es el mismo argumento que Evoltia le hace a sus clientes: no se construye antes de relevar.
 

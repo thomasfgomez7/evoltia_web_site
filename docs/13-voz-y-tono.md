@@ -34,6 +34,8 @@ Todo este documento sale de las secciones §01, §06 y §07 del manual. Es la gu
 | **Cercanos** | Trato de par. Cercano no es informal ni gracioso. |
 | **Expertos** | Sabemos más de tecnología. Nunca lo hacemos sentir. |
 
+Esta tabla es la del manual. En la home, los cuatro valores conservan los nombres y llevan frases más simples, pedidas por el cliente para transmitir confianza: *Te decimos con claridad lo que vemos y lo que conviene hacer.* · *Cada propuesta llega con números, plazos y resultados que se pueden medir.* · *Trabajamos junto a tu equipo, de principio a fin.* · *Conocemos los procesos y la tecnología, y los ponemos al servicio de tu negocio.*
+
 ### Manifiesto
 
 > Toda empresa está en órbita: repite un movimiento que alguna vez funcionó y que hoy solo la mantiene donde está.
@@ -69,7 +71,7 @@ Todo este documento sale de las secciones §01, §06 y §07 del manual. Es la gu
 
 ### Cómo se resolvió el registro del sitio
 
-La regla 2 admite dos lecturas para una web. La pieza oficial `web-hero-1920x720.png` la resuelve: su llamada a la acción es **«Agendá un diagnóstico»** — voseo.
+La regla 2 admite dos lecturas para una web. La pieza oficial `web-hero-1920x720.png` la resuelve: su llamada a la acción es **«Agendá un diagnóstico»** — voseo. (En el sitio el botón dice hoy **«Contactanos»**, también en voseo.)
 
 **Decisión: el sitio va en voseo**, de forma consistente en todas las páginas. Los textos que no interpelan al lector («Diagnosticamos con datos…») quedan en primera persona del plural, que no es un segundo registro sino ausencia de interpelación. Las **propuestas y one-pagers** que salgan del sitio mantienen el registro neutro que pide el manual.
 
@@ -152,10 +154,17 @@ Una landing no es una pieza única. La norma aplicada:
 
 > **Cada sección es una pieza y lleva a lo sumo una frase del banco.** El hero lleva el claim y nada más.
 
-Reparto en la Home:
+Reparto en la Home (noviembre de 2026):
 
 | Sección | Frase | Grupo |
 |---|---|---|
+| Hero | Evolución con dirección. | Claim |
+| Caso | Nos quedamos hasta que funcione solo. | B |
+| Qué hacemos | Primero el negocio. Después el software. | A |
+
+El cliente pidió «funcione» y «camine» en subjuntivo, aunque el manual los escribe en indicativo. Las tarjetas de servicio ya no incorporan frases del banco: llevan una sola frase descriptiva. La propuesta para Aberturas FISA sí sigue la regla 2 del manifiesto para propuestas: se dirige a «ustedes», sin voseo singular.
+
+---|---|---|
 | Hero | Evolución con dirección. | Claim |
 | El problema | Toda empresa está en órbita. | A |
 | Servicios | Primero el negocio. Después el software. | A |

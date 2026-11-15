@@ -1,5 +1,7 @@
 # 03 · Wireframes a nivel de secciones
 
+> **Estado: noviembre de 2026.** La grilla y los criterios siguen vigentes, pero la lista de secciones de la home cambió. Orden real: nav → hero → caso (tarjeta de Aberturas FISA) → misión, visión y valores → servicios → método → preguntas frecuentes → contacto → footer. No existen la barra de confianza, «El problema», «Por qué Evoltia» ni Insights. El botón flotante de móvil dice «Contactanos». La propuesta de FISA no tiene wireframe en este documento.
+
 Layouts descritos como listas ordenadas de secciones. Grilla base: **12 columnas, gutter 24 px, ancho máximo de contenido 1200 px, márgenes laterales 24 px (mobile) / 48 px (≥1024 px)**.
 
 Breakpoints: `sm 480` · `md 768` · `lg 1024` · `xl 1280`.

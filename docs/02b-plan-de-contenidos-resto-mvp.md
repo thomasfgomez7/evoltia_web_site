@@ -1,5 +1,7 @@
 # 02b · Plan de contenidos — resto del MVP
 
+> **Estado: noviembre de 2026.** De las páginas de este documento solo se construyó **Nosotros**, y con otro contenido que el planificado acá: titular «Primero el negocio. Después el software.», la historia de origen y el propósito, el manifiesto literal del manual, el equipo de seis personas con foto, rol y correo, y un cierre con «Tu operación, sin fricción.». El texto vigente es el de `site/nosotros/index.html`. Servicios, Cómo trabajamos, Contacto, Gracias, Legales y 404 no se construyeron: sus contenidos viven como secciones de la home (ver [`02`](02-plan-de-contenidos-home.md)).
+
 Mismo formato que la Home. Copy en voz de marca; los huecos del cliente van marcados.
 
 ---

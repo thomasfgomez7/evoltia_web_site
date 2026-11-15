@@ -1,5 +1,7 @@
 # 00 · Resumen ejecutivo
 
+> **Estado: noviembre de 2026.** Propósito, posicionamiento y audiencias siguen vigentes. El alcance y los pendientes de abajo se actualizaron; los KPIs son del plan original y hoy no se miden, porque no hay proveedor de analítica conectado y el formulario no tiene backend.
+
 Fuente autoritativa: `Manual-de-Identidad-Evoltia.pdf` v1.0 (Agosto 2026) y su kit de piezas. Ver [`ANEXO-fuentes.md`](ANEXO-fuentes.md).
 
 ## Propósito del sitio
@@ -48,14 +50,18 @@ La palabra que hace el trabajo es **dirección**, y tiene dos sentidos ciertos a
 
 > Las metas marcadas `[PLACEHOLDER]` necesitan línea base. Medir 60 días antes de fijarlas — es el mismo criterio que la marca le aplica a sus clientes: *si no se mide, no lo llamamos transformación*.
 
-## Alcance del MVP
+## Alcance
 
-**Fase 1:** Home, Servicios, Cómo trabajamos, Nosotros, Contacto, Gracias, tres legales, 404.
-**Fase 2:** Casos, detalle de servicio, Insights.
-**Fase 3:** Trabajá con nosotros, versión EN.
+**Publicado:** El sitio publicado son tres páginas estáticas en HTML, CSS y JS sin framework, desplegadas en GitHub Pages: la home, `/nosotros` y la propuesta para Aberturas FISA en `/casos/aberturas-fisa/`. La home incluye servicios, método, preguntas frecuentes y contacto como secciones, no como páginas aparte.
 
-La **Home** está implementada en [`site/index.html`](../site/index.html).
+**Del plan original no se construyó:** las páginas de servicios, cómo trabajamos, contacto, gracias, legales, 404, casos (índice), insights y la versión en inglés. Tampoco el sitio en Next.js con CMS ni el backend del formulario.
+
+**Decisiones cerradas por el cliente:** los seis servicios están confirmados · Aberturas FISA autorizó la publicación y será el único caso · el formulario no tendrá backend · el dominio previsto es `evoltia.com`.
 
 ## Qué queda abierto
 
-Cinco lagunas del manual y seis entregas del cliente. Listadas en [`ANEXO-fuentes.md`](ANEXO-fuentes.md) y en [`10-plan-de-lanzamiento.md`](10-plan-de-lanzamiento.md). La más urgente es el **SVG del logo**: es lo único que hoy bloquea calidad de producción.
+1. **«¿Cuánto cuesta?»**, la única pregunta frecuente sin publicar: falta definir cómo cobra Evoltia y si se publica un precio o un rango.
+2. **Lavanda** no tiene HEX oficial: el manual la nombra pero no la tabula. Se usa `#CEC4E8`, muestreado del hero.
+3. **Imagen para compartir en redes** (`og:image`): la home apunta a un archivo que todavía no existe.
+
+Detalle en el [README](../README.md).

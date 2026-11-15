@@ -1,5 +1,7 @@
 # 09 · Analítica, medición y plan de conversión
 
+> **Estado: noviembre de 2026.** **No hay proveedor de analítica conectado.** `main.js` emite todos los eventos de abajo a través de `track()`, pero solo los envía si existe `window.dataLayer`, y ninguna página lo crea. Tampoco hay CRM ni backend: lo referido a leads, UTM y tableros es el plan original. Para ver los eventos en la consola: `window.__EVOLTIA_DEBUG__ = true`.
+
 ## Jerarquía de conversiones
 
 | Nivel | Acción | Peso | Dónde |

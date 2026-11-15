@@ -24,7 +24,7 @@ La paleta se leyó del logo original. Va del violeta más profundo, que sostiene
 
 Las reglas rápidas del §03 dicen: *"Sobre fondo oscuro, el texto de cuerpo va en Blanco o **Lavanda**"*. **Lavanda no está en la tabla de paleta.** Muestreamos la bajada del hero oficial (`web-hero-1920x720.png`) y da `#CEC4E8`, que es el valor que usa la implementación como `--lavanda`.
 
-`[PENDIENTE CLIENTE]` — confirmar el HEX oficial de Lavanda e incorporarlo a la tabla del manual.
+**Sigue sin valor oficial.** En noviembre de 2026 se volvió a revisar el texto completo del manual: la tabla del §03 trae ocho HEX y Lavanda no está entre ellos. `#CEC4E8` es el valor adoptado por el sitio hasta que el manual lo tabule.
 
 ### Proporción de uso (§03)
 

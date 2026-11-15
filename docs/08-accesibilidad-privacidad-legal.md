@@ -1,5 +1,7 @@
 # 08 · Accesibilidad, privacidad y requisitos legales
 
+> **Estado: noviembre de 2026.** Los criterios de accesibilidad siguen vigentes y se verificaron en noviembre de 2026 (ver el README). Las páginas legales no se construyeron. El formulario no envía ni guarda datos, así que hoy el sitio no capta datos personales; si alguna vez se conecta a un backend, los requisitos de privacidad de abajo pasan a ser obligatorios.
+
 ## Accesibilidad
 
 **Objetivo: WCAG 2.2 nivel AA en todo el sitio**, con AAA en contraste de texto donde la paleta lo permite (la mayoría de los pares oscuros de la marca superan 15:1, así que AAA sale casi gratis).
@@ -68,6 +70,6 @@ Responsable del tratamiento (razón social, CUIT, domicilio) `[PLACEHOLDER]` · 
 
 ### Minimización de datos en el formulario
 
-Sólo se piden nombre, email, organización y consulta como obligatorios. Teléfono, rol y origen son opcionales. Cada campo obligatorio adicional reduce la conversión y aumenta la superficie de datos personales a custodiar; ambos motivos apuntan en la misma dirección.
+Sólo se piden nombre, email, organización y consulta como obligatorios. El único campo opcional es el rol: teléfono y origen se quitaron en noviembre de 2026. Como el formulario no tiene backend, hoy no se almacena ningún dato personal. Cada campo obligatorio adicional reduce la conversión y aumenta la superficie de datos personales a custodiar; ambos motivos apuntan en la misma dirección.
 
 **Descargo:** este documento enumera requisitos y campos. **No es asesoramiento legal.** Los textos definitivos deben ser redactados o revisados por un profesional habilitado antes de publicar.

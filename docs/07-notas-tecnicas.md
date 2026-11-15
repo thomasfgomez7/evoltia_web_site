@@ -1,5 +1,7 @@
 # 07 · Notas técnicas e implementación
 
+> **Estado: noviembre de 2026.** El stack de abajo (Next.js, CRM, backend del formulario) es el plan original y **no se implementó**. El sitio publicado son tres páginas estáticas en HTML, CSS y JS sin framework, desplegadas en GitHub Pages: la home, `/nosotros` y la propuesta para Aberturas FISA en `/casos/aberturas-fisa/`. No hay build: el workflow de GitHub Actions publica la carpeta `site/` y sella `styles.css` y `main.js` con el hash de su contenido. El formulario no tiene backend y está decidido que no lo tendrá. Los metadatos apuntan a `evoltia.com`, que es el dominio previsto.
+
 ## Stack
 
 | Capa | Recomendado | Alternativa |

@@ -1,6 +1,21 @@
 # 01 · Sitemap y prioridades
 
-## Árbol
+> **Estado: noviembre de 2026.** El árbol y las prioridades de abajo son el **plan original**. Lo publicado es esto:
+
+## Sitio publicado
+
+```
+/                          Home: hero, caso, misión y valores, servicios, método, preguntas, contacto
+├── /nosotros/             Historia y propósito, manifiesto, equipo
+└── /casos/aberturas-fisa/ Propuesta para Aberturas FISA, en cinco pestañas
+                           (#partida · #operacion · #destino · #propuesta · #herramienta)
+```
+
+**Navegación:** `Servicios` · `Cómo trabajamos` · `Casos` · `Equipo` · `Preguntas` — botón **Contactanos**. Los cuatro primeros y «Preguntas» son anclas de la home; «Casos» lleva a la tarjeta del caso.
+
+No hay más páginas. Servicios, método, preguntas y contacto son secciones de la home. No habrá índice de casos: Aberturas FISA es el único.
+
+## Árbol del plan original
 
 ```
 /                                   Home                          [MVP]
@@ -31,7 +46,7 @@
 
 ## Navegación principal (máx. 5 ítems + CTA)
 
-`Servicios` · `Cómo trabajamos` · `Casos` · `Nosotros` · `Insights` — botón **Agendá un diagnóstico**
+Plan original: `Servicios` · `Cómo trabajamos` · `Casos` · `Nosotros` · `Insights` — botón **Agendá un diagnóstico**. La navegación real está arriba, en «Sitio publicado».
 
 En MVP, `Casos` e `Insights` se ocultan del menú hasta tener contenido real. Publicar secciones vacías daña la credibilidad de una consultoría cuyo argumento central es el rigor.
 

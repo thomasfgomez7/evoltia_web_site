@@ -1,5 +1,7 @@
 # 05 · Inventario de componentes
 
+> **Estado: noviembre de 2026.** Los componentes están descritos como si el sitio fuera React, que era el plan. El sitio real los implementa en HTML y CSS a mano, con los mismos nombres de clase en español (`.tarjeta`, `.paso`, `.pestana`…). Tres diferencias con lo de abajo: el CTA dice «Contactanos»; el caso de Aberturas FISA está publicado con autorización del cliente y es una propuesta con pestañas, no el componente de caso con métricas y cita; y el formulario no tiene `endpoint` ni lo tendrá. Los componentes propios de la propuesta (escala de madurez, brechas por capa, cuadrantes, barras hoy → meta, etc.) están en `site/assets/styles.css`, cada uno con su comentario.
+
 > Derivado del manual v1.0. Nota transversal: **el sistema no lleva set de iconos.** El §05 es explícito —«con esto alcanza: no hace falta agregar íconos, texturas ni ilustraciones de stock»— así que donde normalmente iría un ícono va un nodo de la cadena.
 
 Convención de props en TypeScript. Todos los componentes son server components salvo los marcados **`client`**.
