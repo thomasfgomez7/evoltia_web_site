@@ -1,5 +1,7 @@
 # 06 · CMS y modelos de contenido
 
+> **Estado: noviembre de 2026.** No se implementó ningún CMS: el contenido está escrito directamente en el HTML. Este documento queda como referencia por si el sitio se migra. El campo `consentApproved` ya no bloquea nada: Aberturas FISA autorizó la publicación y será el único caso.
+
 ## Recomendación
 
 ### Opción recomendada — **Next.js 15 (App Router) + Sanity**

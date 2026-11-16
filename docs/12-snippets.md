@@ -1,5 +1,7 @@
 # 12 · Snippets de referencia
 
+> **Estado: noviembre de 2026.** Snippets de referencia para la versión en React del plan original. El sitio publicado no usa React. **El endpoint del formulario no se va a implementar:** está decidido que el formulario no tendrá backend.
+
 ## `ServiceCard` — React / TypeScript
 
 Dos cosas lo hacen específico de Evoltia:
@@ -93,7 +95,7 @@ export function ServiceCard({
 .dark        { background: var(--superficie-oscura); border-color: var(--borde-oscuro); }
 .dark .nodo  { background: var(--senal); }
 .dark .title { color: var(--blanco); }
-.dark .body  { color: var(--lavanda); }
+.dark .body  { color: var(--blanco-suave); }
 
 .link { transition: border-color 150ms var(--ease); }
 .link:hover { border-color: var(--senal); }

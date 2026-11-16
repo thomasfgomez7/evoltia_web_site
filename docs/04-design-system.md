@@ -20,48 +20,25 @@ La paleta se leyó del logo original. Va del violeta más profundo, que sostiene
 | **Blanco** | `--blanco` | `#FFFFFF` | 255 · 255 · 255 | 0 · 0 · 0 · 0 | Tarjetas sobre Papel |
 | **Gris Nodo** | `--gris` | `#6B6480` | 107 · 100 · 128 | 16 · 22 · 0 · 50 | Texto secundario y epígrafes |
 
-### La única laguna: Lavanda
+### Solo los colores del manual
 
-Las reglas rápidas del §03 dicen: *"Sobre fondo oscuro, el texto de cuerpo va en Blanco o **Lavanda**"*. **Lavanda no está en la tabla de paleta.** Muestreamos la bajada del hero oficial (`web-hero-1920x720.png`) y da `#CEC4E8`, que es el valor que usa la implementación como `--lavanda`.
+**Regla del sitio, pedida por el cliente: todo color sale de los ocho de la tabla.** Lo que el manual no tabula se obtiene con transparencia sobre uno de ellos o mezclando dos, nunca con un valor nuevo. `styles.css` no contiene ningún otro HEX.
 
-`[PENDIENTE CLIENTE]` — confirmar el HEX oficial de Lavanda e incorporarlo a la tabla del manual.
+| Necesidad | Token | Cómo se obtiene |
+|---|---|---|
+| Texto secundario sobre oscuro | `--blanco-suave` | Blanco al 80 % |
+| Rellenos y trazos suaves sobre claro | `--orbita-suave` | Órbita al 22 % |
+| Bordes sobre claro | `--borde-claro` | Gris Nodo al 24 % |
+| Bordes sobre oscuro | `--borde-oscuro` / `--borde-oscuro-fuerte` | Blanco al 14 % y al 45 % |
+| Tarjetas sobre fondo oscuro | `--superficie-oscura` | Núcleo con 16 % de Órbita |
+| Degradé | `--degrade` | Tinta → Núcleo → Órbita |
+| Pasos intermedios de la cadena y de las prioridades | — | Mezcla de dos colores vecinos (`color-mix`) |
+| Error del formulario | `--error` | Núcleo, con borde de 2 px |
+| Éxito del formulario | `--ok` | Órbita |
 
-### Proporción de uso (§03)
+**Lavanda.** Las reglas rápidas del §03 dicen: *"Sobre fondo oscuro, el texto de cuerpo va en Blanco o **Lavanda**"*, pero Lavanda no está en la tabla de paleta ni en ninguna otra página del manual. Hasta noviembre de 2026 el sitio usó `#CEC4E8`, muestreado de la imagen del hero. Se reemplazó por la otra opción que da la misma regla, el Blanco, atenuado al 80 % para conservar la jerarquía entre titulares y bajadas.
 
-**60 · Papel — 25 · Núcleo — 10 · Órbita — 5 · Pulso**
-
-> *"Si una pieza se ve «demasiado violeta», casi siempre es porque el acento invadió el lugar del fondo."*
-
-### Reglas rápidas (§03, literales)
-
-1. Los fondos grandes en claro van en **Papel**, no en Blanco puro. El Blanco queda para tarjetas y superficies apoyadas sobre Papel.
-2. Sobre fondo oscuro, el texto de cuerpo va en **Blanco o Lavanda**; el Violeta Señal se reserva para etiquetas y detalles.
-3. El **Magenta Pulso nunca se usa para texto de cuerpo**, en ningún fondo.
-
-### Cómo se cumple "un solo Pulso por pieza" en una página larga
-
-El manual piensa en piezas gráficas cerradas (un post, un banner). Una landing tiene varias. La interpretación aplicada, y que conviene fijar como norma web:
-
-> **Cada sección de la página es una pieza.** El Pulso aparece como máximo una vez por sección.
-
-En la implementación aparece exactamente en tres lugares: el **punto final del claim** en el hero, el **nodo terminal de la cadena** en el método —que el §05 exige que sea el más brillante— y el degradé del conector de esa misma cadena. Ninguna otra sección lo usa.
-
----
-
-## 2 · Contraste
-
-### Tabla del manual (§03) · WCAG 2.1 AA
-
-| Combinación | Manual | Verificado | Nivel |
-|---|---|---|---|
-| Blanco sobre Núcleo | 17,5:1 | 17,51 | AAA |
-| Núcleo sobre Papel | 15,4:1 | 15,42 | AAA |
-| Órbita sobre Blanco | 6,0:1 | 6,02 | AA |
-| Señal sobre Núcleo | 5,5:1 | **5,27** | AA |
-| Pulso sobre Núcleo | 5,0:1 | 5,04 | AA |
-| Señal sobre Blanco | 3,2:1 | **3,32** | Solo texto grande |
-
-> Dos valores del manual difieren levemente del cálculo por luminancia relativa de WCAG 2.1 (Señal/Núcleo y Señal/Blanco). Las diferencias no cambian ninguna decisión —los niveles AA y "solo texto grande" se mantienen— pero conviene corregirlas en la próxima versión del manual.
+**Estados del formulario.** El manual no define rojo de error ni verde de éxito, así que no se usan. El error se distingue por el ícono, el texto del mensaje y un borde más grueso en Núcleo; no depende del color.
 
 ### Combinaciones que el manual no tabula y que la web necesita
 
@@ -70,8 +47,9 @@ En la implementación aparece exactamente en tres lugares: el **punto final del 
 | Blanco sobre Tinta | 20,20 | AAA | Titulares del método y del contacto |
 | Papel sobre Tinta | 17,79 | AAA | Cuerpo sobre Tinta |
 | Tinta sobre Papel | 17,79 | AAA | Cuerpo del sitio |
-| Lavanda sobre Tinta | 12,20 | AAA | Bajadas sobre Tinta |
-| Lavanda sobre Núcleo | 10,58 | AAA | Bajadas sobre Núcleo |
+| Blanco al 80 % sobre Tinta | 12,72 | AAA | Bajadas sobre Tinta |
+| Blanco al 80 % sobre Núcleo | 11,21 | AAA | Bajadas sobre Núcleo |
+| Blanco al 80 % sobre superficie oscura | 10,01 | AAA | Texto de tarjetas sobre oscuro |
 | **Órbita sobre Papel** | **5,30** | **AA** | **Enlaces y etiquetas sobre claro** |
 | Gris Nodo sobre Papel | 4,92 | AA | Texto secundario |
 | Gris Nodo sobre Blanco | 5,59 | AA | Texto secundario en tarjetas |

@@ -1,5 +1,7 @@
 # 11 · Especificación del archivo Figma
 
+> **Estado: noviembre de 2026.** Especificación para un archivo Figma que no se llegó a armar: el sitio se diseñó directamente en código. Los nombres de tokens siguen coincidiendo con `site/assets/styles.css`.
+
 Estructura de páginas, frames y componentes a crear. Los nombres de variables coinciden exactamente con los tokens CSS de `site/assets/styles.css`, para que el traspaso a código sea mecánico.
 
 ## Página `01 · Fundaciones`

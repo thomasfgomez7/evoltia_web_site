@@ -1,16 +1,17 @@
-# 02 · Plan de contenidos y copy — HOME
+# 02 · Contenidos y copy — HOME
+
+> **Estado: noviembre de 2026.** Este documento describe la home **tal como está publicada**. Cada sección indica de dónde sale su texto. Los cambios respecto del plan original están al final, en «Historial de decisiones».
 
 Todo el copy respeta el §06 (voz y tono) y el §07 (banco de frases) del manual. Ver [`13-voz-y-tono.md`](13-voz-y-tono.md).
 **Registro: voseo**, fijado por la pieza oficial `web-hero-1920x720`.
 
 **Slug:** `/`
-**Meta title (44):** `Evoltia | Consultoría y transformación digital`
-**Meta description (149):** `Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camine solo. Consultoría y transformación digital.`
+**Meta title:** `Evoltia | Consultoría y transformación digital`
+**Meta description:** `Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camine solo. Consultoría y transformación digital.`
 
-**Keyword primaria:** consultoría de transformación digital
-**Secundarias:** automatización de procesos · diagnóstico digital para empresas · datos e indicadores de gestión
+**Orden de secciones:** Hero → Caso → Misión, visión y valores → Qué hacemos → Cómo trabajamos → Preguntas frecuentes → Contacto → Footer.
 
-**Frase de sección (§07):** una por sección, nunca dos. Reparto al final de este documento.
+**Navegación:** Servicios · Cómo trabajamos · Casos · Equipo · Preguntas, más el botón **Contactanos**. El menú de escritorio se muestra a partir de 1100 px.
 
 ---
 
@@ -26,86 +27,92 @@ Estructura calcada de `web-hero-1920x720.png`.
 
 Dos líneas. Punto final en Magenta Pulso. Sin ninguna otra frase en la sección.
 
-**Bajada** (literal de la pieza oficial):
+**Bajada:**
 > Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camine solo.
 
-**CTA primario:** Agendá un diagnóstico → `/contacto`
-**CTA secundario:** Cómo trabajamos → `/como-trabajamos`
+El cliente pidió «camine», en subjuntivo; la pieza oficial dice «camina».
 
-**Microcopy:** Primera conversación sin costo. Respondemos en 48 horas hábiles.
-Confirmado por el cliente.
+**CTA primario:** Contactanos → `#contacto`
+**CTA secundario:** Cómo trabajamos → `#metodo`
 
-**Visual:** degradé de marca, arcos de órbita abiertos a la derecha con el centro fuera del cuadro, isotipo en negativo. Sin fotografía ni ilustración.
+**Microcopy:** Primera conversación sin costo. Respondemos en 48 horas hábiles. — Confirmado por el cliente.
+
+**Visual:** degradé de marca, arcos de órbita abiertos a la derecha con el centro fuera del cuadro, isotipo en negativo (SVG, visible desde 1100 px). Sin fotografía ni ilustración.
 
 > **Desvío documentado:** la pieza oficial incluye el logo dentro del hero porque es un banner suelto. En el sitio el logo ya está en la barra de navegación, así que en el hero se omite para no duplicarlo.
 
 ---
 
-## 2 · Casos de éxito
+## 2 · Caso
 
 **Posición:** inmediatamente después del hero. Es el bloque al que se le da más peso en la página, por pedido del cliente.
 
-**Etiqueta:** CASOS DE ÉXITO
+**Etiqueta:** EN QUÉ ESTAMOS
 **H2 (frase §07-B):** Nos quedamos hasta que funcione solo. — El cliente pidió el subjuntivo; el manual lo escribe en indicativo.
 
-**Un solo caso: Aberturas FISA.** Tarjeta a dos columnas —logo a la izquierda, contenido a la derecha— que se linealiza en móvil.
+**Un solo caso: Aberturas FISA.** Está decidido que no habrá otros, así que no hay carrusel. Tarjeta a dos columnas —logo a la izquierda, contenido a la derecha— que se linealiza en móvil.
 
 | Campo | Contenido |
 |---|---|
 | Sector | Fabricación de aberturas de aluminio · Villa Bosch, Buenos Aires |
-| Título | De la planilla impresa al proceso digital |
-| Texto | `[EJEMPLO]` A reemplazar por el cliente |
-| Enlace | `casos/aberturas-fisa/` |
+| Distintivo | Propuesta en evaluación |
+| Título | Ordenar la operación antes de escalar la venta |
+| Texto | La necesidad era vender más, pero el análisis demostró otra prioridad: ordenar primero. Actualmente las órdenes de fabricación impresas se trasladan del local a la fábrica, el stock se controla a ojo y el conocimiento se concentra en una sola persona. Proponemos: un sistema en la nube, ordenar la operación y, cuando la fábrica pueda acompañarla, abrir la venta online. — Texto del cliente |
+| Enlace | Ver la propuesta → `casos/aberturas-fisa/` |
 
-**Tratamiento del logo:** 340 px de ancho sobre la tarjeta Blanca, que es el uso que el §03 le da al Blanco sobre Papel. El panel del logo **no** lleva fondo Papel: el archivo del cliente trae fondo blanco y sobre cualquier otro color se recortaría como un rectángulo. Los dos paneles se separan con un filete.
+**Autorización:** el cliente autorizó la publicación con su nombre.
+
+**Tratamiento del logo:** sobre la tarjeta Blanca, que es el uso que el §03 le da al Blanco sobre Papel. El panel del logo **no** lleva fondo Papel: el archivo del cliente trae fondo blanco y sobre cualquier otro color se recortaría como un rectángulo.
 
 **Interacción:** toda la tarjeta es clicable a través del enlace del título, expandido con `::after`. El lector de pantalla anuncia **un solo enlace** con texto significativo.
 
-**Navegación:** se sumó «Casos» al menú principal, que queda en cinco ítems. Los enlaces se fijaron con `white-space: nowrap` y el menú de escritorio pasa a mostrarse recién a partir de 1100 px; por debajo, cinco ítems más el CTA no entran en una línea.
-
 ---
 
-## 3 · El problema
+## 3 · Misión, visión y valores
 
-**Etiqueta:** EL PUNTO DE PARTIDA
-**H2 (frase §07-A):** Toda empresa está en órbita.
+Se queda en la home por decisión del cliente (se evaluó moverla a `/nosotros` para acortar la página).
 
-**Separador:** cadena reducida de tres nodos, a −46°. Es el uso que el §05 le da explícitamente.
+**Etiqueta:** MISIÓN, VISIÓN Y VALORES
+**H2:** Hacia dónde vamos y cómo llegamos.
 
-**Bajada** (del manifiesto):
-> Repite un movimiento que alguna vez funcionó y que hoy solo la mantiene donde está. El software no rompe esa órbita: la hace más cara.
+El titular sale de la glosa que el manual hace del claim (§07): «Dirección tiene dos sentidos: hacia dónde se va, y quién conduce».
 
-**Tres tarjetas.** Las dos primeras son casi literales de los ejemplos de "así sí" del §06 — el manual mismo eligió esos ejemplos porque son la forma correcta de nombrar el problema.
+**Misión:** Ordenar y digitalizar la operación de empresas que crecieron más rápido que sus procesos. Diagnosticamos con datos, priorizamos por impacto en el negocio e implementamos junto al equipo de cada empresa.
 
-| Título | Copy |
+**Visión:** Que transformar deje de significar comprar software. Que cada empresa con la que trabajamos cambie de trayectoria y sostenga el cambio sin nosotros.
+
+**Nuestros valores.** Los cuatro nombres son la personalidad del §01. Las frases se reescribieron para que sean simples y hablen de lo que recibe el cliente:
+
+| Valor | Frase |
 |---|---|
-| **La información no coincide** | La información vive en seis planillas y nadie confía en ninguna. Cada reunión empieza discutiendo cuál número es el bueno. |
-| **Tu equipo carga los mismos datos tres veces** | Lo que entra por un lado se vuelve a tipear en otro. Eso se arregla, y no hace falta cambiar todos los sistemas para lograrlo. |
-| **Crecieron más rápido que la operación** | La demanda subió y el proceso quedó donde estaba. Sin capacidad, una buena campaña no es una oportunidad: es un problema de plazos. |
+| **Directos** | Te decimos con claridad lo que vemos y lo que conviene hacer. |
+| **Concretos** | Cada propuesta llega con números, plazos y resultados que se pueden medir. |
+| **Cercanos** | Trabajamos junto a tu equipo, de principio a fin. |
+| **Expertos** | Conocemos los procesos y la tecnología, y los ponemos al servicio de tu negocio. |
 
-**Visual:** un nodo de la cadena por tarjeta. **Sin íconos** — el §05 es explícito: con la cadena y la órbita alcanza.
+**CTA:** Conocé al equipo → `nosotros/`
 
 ---
 
-## 4 · Servicios
+## 4 · Qué hacemos
 
 **Etiqueta:** QUÉ HACEMOS
 **H2 (frase §07-A):** Primero el negocio. Después el software.
 
 **Bajada:** Contamos con seis frentes de trabajo que se contratan por separado o como programa completo, pero todos empiezan en el mismo lugar: el discovery. — Texto del cliente.
 
-`[A VALIDAR: nombres y alcance de los seis]` El manual **no define un catálogo de servicios**. Estos seis se derivaron del banco de frases (§07-B, C y D) y del territorio que el manual nombra —consultoría, transformación digital, analítica, automatización e IA—. Cada bajada incorpora una frase del banco.
+**Los seis servicios están confirmados por el cliente.** Nombran frentes de trabajo, no etapas del método: como todos «empiezan en el mismo lugar: el discovery», el discovery, la implementación y la adopción son etapas que recorre cualquiera de ellos, no servicios.
 
-**Los servicios nombran frentes de trabajo, no etapas del método.** La bajada confirmada por el cliente dice que los seis «empiezan en el mismo lugar: el discovery»; por eso el discovery, la implementación y la adopción no son servicios sino etapas que recorre cualquiera de ellos. Hasta octubre de 2026 tres tarjetas se llamaban como esas etapas (Discovery y hoja de ruta, Implementación, Adopción y gestión del cambio) y se pisaban con «Cómo trabajamos».
-
-| Servicio | Copy (una sola frase) | Frase del banco | Slug |
+| # | Servicio | Copy (una sola frase) | Identificador |
 |---|---|---|---|
-| **Rediseño de procesos** | Documentamos cómo se trabaja hoy y dejamos un circuito que no depende de una sola persona. | — | `/servicios/rediseno-de-procesos` |
-| **Automatización de procesos** | Eliminamos las tareas manuales que hoy se llevan las horas de tu mejor gente. | — | `/servicios/automatizacion-de-procesos` |
-| **Datos e indicadores** | Un tablero simple que se mira todas las semanas, no un informe que nadie abre. | — | `/servicios/datos-e-indicadores` |
-| **Inteligencia artificial aplicada** | La usamos donde mejora un número del negocio, no donde solo luce en una demo. | — | `/servicios/inteligencia-artificial-aplicada` |
-| **Selección e integración de sistemas** | Comparamos opciones según lo que necesita tu negocio y dejamos la elegida funcionando. | — | `/servicios/seleccion-e-integracion-de-sistemas` |
-| **Gestión del cambio y capacitación** | Acompañamos al equipo hasta que use el proceso porque le sirve, no porque se lo pidieron. | — | `/servicios/gestion-del-cambio-y-capacitacion` |
+| 01 | **Rediseño de procesos** | Documentamos cómo se trabaja hoy y dejamos un circuito que no depende de una sola persona. | `rediseno-de-procesos` |
+| 02 | **Automatización de procesos** | Eliminamos las tareas manuales que hoy se llevan las horas de tu mejor gente. | `automatizacion-de-procesos` |
+| 03 | **Datos e indicadores** | Un tablero simple que se mira todas las semanas, no un informe que nadie abre. | `datos-e-indicadores` |
+| 04 | **Inteligencia artificial aplicada** | La usamos donde mejora un número del negocio, no donde solo luce en una demo. | `inteligencia-artificial-aplicada` |
+| 05 | **Selección e integración de sistemas** | Comparamos opciones según lo que necesita tu negocio y dejamos la elegida funcionando. | `seleccion-e-integracion-de-sistemas` |
+| 06 | **Gestión del cambio y capacitación** | Acompañamos al equipo hasta que use el proceso porque le sirve, no porque se lo pidieron. | `gestion-del-cambio-y-capacitacion` |
+
+Cada tarjeta enlaza a `#contacto`; no hay páginas de detalle por servicio. Para la analítica, cada una lleva además un `service_id` fijo (`servicio-01` a `servicio-06`) que no cambia si el servicio se renombra. Ver [`09-analitica-y-conversion.md`](09-analitica-y-conversion.md).
 
 **Fondo:** Violeta Núcleo. Tarjetas con borde, no con sombra.
 
@@ -114,18 +121,19 @@ Confirmado por el cliente.
 ## 5 · Cómo trabajamos
 
 **Etiqueta:** CÓMO TRABAJAMOS
-**H2:** Cuatro etapas, y ninguna empieza por la herramienta.
+**H2:** Cuatro etapas. Ninguna empieza por la herramienta.
+**Bajada:** Antes de elegir un sistema definimos qué decisión tiene que mejorar. Sin eso, cualquier compra es una apuesta cara.
 
-Las cuatro etapas y sus bajadas son **literales de la pieza `post-03-metodo`**. No se reescriben.
+La bajada es el diferencial que se conservó de la sección «Por qué Evoltia», que se integró acá.
 
-| # | Etapa | Bajada (literal) | Entregable `[a validar]` |
+Las cuatro etapas vienen de la pieza `post-03-metodo`, con dos cambios pedidos por el cliente: «Diagnóstico» pasó a «Discovery», con duración de 4 a 6 semanas, y «funciona solo» pasó a subjuntivo.
+
+| # | Etapa | Bajada | Entregable |
 |---|---|---|---|
-| 01 | **Diagnóstico** | 4 semanas. Datos, no impresiones. | Informe y mapa de procesos |
+| 01 | **Discovery** | 4 a 6 semanas. Datos, no impresiones. | Informe y mapa de procesos |
 | 02 | **Priorización** | Por impacto en el negocio. | Hoja de ruta con plazos e indicadores |
 | 03 | **Implementación** | Con tu equipo adentro. | Procesos funcionando y documentados |
 | 04 | **Adopción** | Hasta que funcione solo. | Equipo capacitado y capacidad instalada |
-
-**Frase de cierre (§07-B):** Si no se mide, no lo llamamos transformación.
 
 **Visual:** la cadena como columna del proceso. Nodos de 14 / 18 / 23 / 29 px, conector de 9 px (62 % del nodo menor), color de Órbita a Pulso. Vertical en mobile, horizontal en desktop.
 
@@ -133,70 +141,53 @@ Las cuatro etapas y sus bajadas son **literales de la pieza `post-03-metodo`**. 
 
 ---
 
-## 6 · Página del caso — `casos/aberturas-fisa/`
+## 6 · Preguntas frecuentes
 
-Publicada con **contenido de ejemplo**, marcado como tal en la propia página. Estructura: migas de pan · cabecera con el título del caso · ficha (logo, sector, alcance, duración) · punto de partida · qué hicimos · resultados con tres huecos de métrica · cita del cliente · CTA.
-
-`[PENDIENTE CLIENTE]` Texto real, métricas con su línea base, duración y cita con nombre y cargo.
-
-El componente no se renderiza sin `consentApproved`. Estructura cuando se libere: contexto → problema → qué hicimos → resultado con cifra → cita del cliente. **Sin métricas inventadas:** el §06 exige cifras reales ("Reducimos 40 % el tiempo de cierre contable en cuatro meses"), y una cifra inventada rompe exactamente la promesa de credibilidad sobre la que está construida la marca.
-
----
-
-## 7 · Por qué Evoltia
-
-> **Integrada a «Cómo trabajamos» en octubre de 2026** para acortar la home: tres de los cuatro diferenciales repetían el valor «Concretos», el valor «Cercanos» y la etapa de adopción. El primero, «Empezamos por la decisión, no por la herramienta», quedó como bajada del método. Se conserva abajo como referencia.
-
-**Etiqueta:** POR QUÉ EVOLTIA
-**H2 (frase §07-A):** No vendemos tecnología: diseñamos decisiones.
-
-Los cuatro diferenciales desarrollan la personalidad del §01 — directos, concretos, cercanos, expertos — sin nombrarla.
-
-| Título | Copy |
-|---|---|
-| **Empezamos por la decisión, no por la herramienta** | Antes de elegir un sistema definimos qué decisión tiene que mejorar. Sin eso, cualquier compra es una apuesta cara. |
-| **Cifras, plazos y entregables antes que adjetivos** | Cada recomendación viene con un número y una fecha. Se puede auditar si funcionó, y lo hacemos. |
-| **Trabajamos con tu equipo adentro** | El proceso lo van a operar ellos. Si lo diseñamos sin ellos, vuelve al día siguiente de que nos vamos. |
-| **Nos quedamos hasta que funcione solo** | Te dejamos el proceso funcionando y documentado. El objetivo del proyecto es que no nos necesites. |
-
----
-
-## 8 · Preguntas frecuentes
-
+**Etiqueta:** PREGUNTAS FRECUENTES
 **H2:** Lo que nos preguntan antes de empezar
 
 | Pregunta | Respuesta | Estado |
 |---|---|---|
-| ¿Cuánto dura el diagnóstico? | Cuatro semanas. Entrevistas con quienes ejecutan, revisión de datos y una hoja de ruta priorizada. Al final tenés un documento que se puede leer en una reunión de directorio. | Confirmado por el manual |
-| ¿Con qué tamaño de empresa trabajan? | Empresas medianas que ya crecieron más de lo que su operación aguanta. Hablamos con dirección general, operaciones y finanzas: gente que decide y firma. | Literal del §01 |
-| ¿Hace falta tener sistemas antes de empezar? | No. En muchos casos el punto de partida son planillas y mensajería. Eso no es un obstáculo: es información sobre cómo funciona hoy tu operación. | Derivado |
+| ¿Cuánto dura el discovery? | Depende del caso: entre cuatro y seis semanas. Incluye entrevistas con quienes hacen el trabajo, revisión de datos y una hoja de ruta priorizada. Al final tenés un documento listo para presentar en el directorio. | Confirmado por el cliente |
+| ¿Con qué tamaño de empresa trabajan? | Empresas medianas que ya crecieron más de lo que su operación aguanta. Trabajamos con dirección general, operaciones y finanzas: quienes toman las decisiones. | Derivado del §01 |
+| ¿Hace falta tener sistemas antes de empezar? | No. En muchos casos el punto de partida son planillas y mensajería. Eso no es un obstáculo: nos muestra cómo funciona hoy tu operación. | Derivado |
 | ¿Desarrollan software propio? | No. Trabajamos con proveedores: elegimos con vos la herramienta del mercado que mejor resuelve el problema, la integramos y la dejamos funcionando con tu equipo. | Confirmado por el cliente |
-| ¿Cuánto cuesta? | — | `[PENDIENTE CLIENTE]` |
 
-JSON-LD `FAQPage` solo con las tres primeras, hasta que las otras estén confirmadas.
+El sitio no publica precios: la pregunta «¿Cuánto cuesta?» del plan original se descartó.
+
+No se publica el JSON-LD `FAQPage`.
 
 ---
 
-## 9 · Contacto
+## 7 · Contacto
 
 **Etiqueta:** CONTACTO
-**H2:** Contanos cómo trabaja tu operación hoy.
+**H2:** Contanos cómo funciona hoy tu operación.
 **Bajada:** Dos líneas alcanzan. Si podemos ayudar, te lo decimos; si no, también.
 
-Ese "si no, también" es la traducción directa de la personalidad *directa* del §01: decimos qué pasa, sin solemnidad.
+Ese «si no, también» es la traducción directa de la personalidad *directa* del §01.
 
-**Qué pasa después** — tres pasos: leemos y respondemos en 48 h · llamada de 30 minutos · propuesta de diagnóstico si tiene sentido avanzar.
+**Qué pasa después** (una línea): Respondemos en 48 horas hábiles y, si tiene sentido avanzar, coordinamos una llamada de 30 minutos para entender el contexto.
 
-**Campos:** Nombre y apellido · Email corporativo · Empresa · Rol (opc.) · Teléfono (opc.) · ¿Qué querés resolver? · ¿Cómo nos conociste? (opc.) · consentimiento · honeypot oculto.
+**Campos:** Nombre y apellido · Email corporativo · Empresa · Rol (opcional) · ¿Qué querés resolver? · consentimiento · honeypot oculto. Se quitaron «Teléfono» y «¿Cómo nos conociste?» para acortar la sección.
 
-**Botón:** Enviar consulta → `/gracias`.
+**Botón:** Enviar consulta.
+
+**El formulario no tiene backend, y está decidido que no lo tendrá.** Valida los campos, espera 700 ms y muestra el mensaje de éxito, pero la consulta no se envía a ningún lado. El canal que sí funciona es el enlace a `hola@evoltia.com` de la misma sección.
+
 **Fondo:** Tinta. Formulario en Blanco, que es su uso correcto según el §03: superficie apoyada.
 
 ---
 
-## 10 · Footer
+## 8 · Footer
 
-Logo en negativo · descripción de la empresa (literal del §01) · columnas Servicios / Compañía / Legales · `hola@evoltia.com` · `[PENDIENTE]` LinkedIn y datos societarios.
+Logo en negativo (SVG) · «Empresas que crecieron más rápido que sus procesos. Nosotros los ordenamos.» · tres columnas:
+
+- **Servicios:** los cuatro primeros, con enlace a `#servicios`.
+- **Compañía:** Nosotros · Cómo trabajamos · Casos · Contacto.
+- **Contacto:** Preguntas frecuentes · `hola@evoltia.com` · Preferencias de cookies (solo en la home, que es la única página con banner de cookies).
+
+Sin LinkedIn ni datos societarios: quedaron fuera de alcance.
 
 ---
 
@@ -207,12 +198,25 @@ Una por sección. Ninguna se repite.
 | Sección | Frase | Grupo |
 |---|---|---|
 | Hero | Evolución con dirección. | Claim |
-| Casos de éxito | Nos quedamos hasta que funcione solo. | B |
-| El problema | Toda empresa está en órbita. | A |
-| Servicios | Primero el negocio. Después el software. | A |
-| Método | Si no se mide, no lo llamamos transformación. | B |
-| Por qué Evoltia | No vendemos tecnología: diseñamos decisiones. | A |
+| Caso | Nos quedamos hasta que funcione solo. | B |
+| Qué hacemos | Primero el negocio. Después el software. | A |
 
-Quedan sin usar y disponibles para otras páginas: *El cambio se planifica. La ventaja se construye.* · *Trazamos la trayectoria. Ustedes la recorren.* · *Menos PowerPoint. Más producción.*
+Las tarjetas de servicios ya no llevan frases del banco: quedaron en una sola frase descriptiva cada una. *Tu operación, sin fricción.* se usa como cierre de `/nosotros`.
 
-*Tu operación, sin fricción.* se usa como cierre de la página del caso.
+Disponibles: *El cambio se planifica. La ventaja se construye.* · *Trazamos la trayectoria. Ustedes la recorren.* · *Menos PowerPoint. Más producción.* · *Si no se mide, no lo llamamos transformación.* · *No vendemos tecnología: diseñamos decisiones.* · *Toda empresa está en órbita.* (esta última está en el manifiesto de `/nosotros`).
+
+---
+
+## Historial de decisiones
+
+| Cuándo | Decisión |
+|---|---|
+| Sep 2026 | La sección «El problema» («Toda empresa está en órbita», tres tarjetas) se reemplazó por misión, visión y valores. |
+| Sep 2026 | Salieron del método y de «Por qué Evoltia» las frases «Si no se mide, no lo llamamos transformación» y «No vendemos tecnología: diseñamos decisiones». |
+| Sep 2026 | «Diagnóstico» pasó a «Discovery», de 4 a 6 semanas. El CTA «Agendá un diagnóstico» pasó a «Contactanos». |
+| Oct 2026 | El caso de FISA dejó de presentarse como caso de éxito: es una propuesta en evaluación. |
+| Oct 2026 | Tres servicios se renombraron para no repetir etapas del método (antes: Discovery y hoja de ruta, Implementación, Adopción y gestión del cambio). |
+| Oct 2026 | Revisión de redacción pedida por el cliente: tono más natural, «camine solo» y «funcione solo». |
+| Oct 2026 | «Por qué Evoltia» se integró a «Cómo trabajamos»: tres de sus cuatro diferenciales repetían otras secciones. |
+| Oct 2026 | Evoltia no desarrolla software: trabaja con proveedores. Cambió la pregunta del FAQ. |
+| Nov 2026 | Servicios confirmados; autorización de FISA cerrada; sin segundo caso; formulario sin backend; el contacto perdió dos campos opcionales. |

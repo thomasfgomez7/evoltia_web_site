@@ -10,8 +10,8 @@ Junto al PDF viene el kit de piezas, que también es fuente:
 
 | Grupo | Archivos |
 |---|---|
-| Logo | `evoltia-principal` · `evoltia-negativo` · `evoltia-blanco` · `evoltia-tinta` |
-| Isotipo | `isotipo-color` · `isotipo-blanco` · `isotipo-negativo` · `isotipo-tinta` |
+| Logo | `evoltia-principal` · `evoltia-negativo` · `evoltia-blanco` · `evoltia-tinta` (PNG y, desde septiembre de 2026, SVG) |
+| Isotipo | `isotipo-color` (PNG) / `isotipo-principal` (SVG) · `isotipo-blanco` · `isotipo-negativo` · `isotipo-tinta` |
 | Fondos | `fondo-01-orbita-oscuro` · `fondo-02-papel-claro` · `fondo-03-claim` · `fondo-04-degrade-limpio` |
 | Banners | **`web-hero-1920x720`** · `email-encabezado-1200x300` · `linkedin-perfil-1584x396` · `linkedin-empresa-1128x191` |
 | Redes | `post-01-claim` · `post-02-frase` · **`post-03-metodo`** · `story-1080x1920` · `avatar-800x800` |
@@ -46,11 +46,11 @@ De aquel archivo sobrevive un solo dato útil que el manual definitivo no contra
 
 ---
 
-## Documento de contexto, no autoritativo
+## Documentos del caso Aberturas FISA
 
-**`Documento de caso de negocio y relevamiento organizacional.pdf`** — trabajo de la Facultad de Ciencias Económicas (UBA), Actuación Profesional del Licenciado en Sistemas de Información. Caso: **Aberturas Fisa**.
+Cinco documentos de trabajo sobre **Aberturas FISA**: caso de negocio y relevamiento, arquitectura actual, visión destino, brechas y escenarios, y alcance y mercado de soluciones.
 
-Es un **caso de cliente**, no una fuente de marca. Se leyó como contexto y **no se usó** para definir servicios, voz ni identidad: todo eso sale del manual. Su único uso posible en el sitio es como caso de estudio, y requiere autorización del sponsor (Gabriel Nicolás Fisicaro).
+No son fuente de marca: no se usaron para definir servicios, voz ni identidad, que salen del manual. Son la fuente de la propuesta publicada en `/casos/aberturas-fisa/`, con autorización del cliente.
 
 ---
 
@@ -58,8 +58,8 @@ Es un **caso de cliente**, no una fuente de marca. Se leyó como contexto y **no
 
 | # | Laguna | Impacto |
 |---|---|---|
-| 1 | **Lavanda** se nombra en las reglas rápidas del §03 pero no está en la tabla de paleta | Se usa `#CEC4E8`, muestreado del hero oficial. Confirmar |
+| 1 | **Lavanda** se nombra en las reglas rápidas del §03 pero no está en la tabla de paleta | Resuelta sin esperar el HEX: el sitio usa solo los ocho colores tabulados. El texto secundario sobre oscuro va en Blanco al 80 %, que la misma regla admite |
 | 2 | ~~**No hay activos vectoriales**~~ | Resuelta: el cliente entregó el logo y el isotipo en SVG, en sus cuatro versiones |
 | 3 | Dos ratios de contraste del §03 difieren levemente del cálculo WCAG 2.1 | Sin impacto en decisiones; corregir en la próxima versión del manual |
-| 4 | El manual **no define un catálogo de servicios** | Los seis servicios del sitio se derivaron del banco de frases y del método. Requieren validación |
+| 4 | El manual **no define un catálogo de servicios** | Resuelta: el cliente confirmó los seis servicios del sitio |
 | 5 | Sin escala de espaciado ni guía de movimiento | Derivados y marcados como tales en el design system |
