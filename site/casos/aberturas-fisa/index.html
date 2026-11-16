@@ -149,6 +149,12 @@
           <button class="pestana" role="tab" type="button" id="tab-herramienta" aria-controls="herramienta" aria-selected="false" tabindex="-1">
             <span class="pestana__num" aria-hidden="true">05</span>La herramienta
           </button>
+          <button class="pestana" role="tab" type="button" id="tab-eleccion" aria-controls="eleccion" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">06</span>La elección
+          </button>
+          <button class="pestana" role="tab" type="button" id="tab-ia" aria-controls="ia" aria-selected="false" tabindex="-1">
+            <span class="pestana__num" aria-hidden="true">07</span>Innovación con IA
+          </button>
         </div>
       </div>
     </div>
@@ -1888,6 +1894,361 @@
           <a class="btn btn--secundario-claro panel-nav__anterior" href="#propuesta" data-ir-pestana="propuesta">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
             <span><span class="sr-only">Anterior: </span>La propuesta</span>
+          </a>
+          <a class="btn btn--primario-claro panel-nav__siguiente" href="#eleccion" data-ir-pestana="eleccion">
+            <span><span class="sr-only">Siguiente: </span>La elección</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ================= 06 · LA ELECCIÓN =================
+         Fuente: comparación de cumplimiento y evaluación económica; análisis de la propuesta comercial. -->
+    <section class="panel-caso" id="eleccion" role="tabpanel" aria-labelledby="tab-eleccion" tabindex="0" hidden>
+
+      <div class="seccion oscuro" id="resultado">
+        <div class="wrap">
+          <p class="etiqueta">La recomendación</p>
+          <h2 class="titular" style="color:var(--blanco)">Odoo con OP 2.1, implementado por Birtum</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Aplicamos la matriz de 41 requisitos a las dos propuestas que quedaron, con la
+            propuesta comercial de Birtum —partner argentino de Odoo— y una demostración sobre su
+            circuito real: pedido, stock y orden de fabricación.
+          </p>
+          <div class="marcador" role="group" aria-label="Puntaje final de las dos propuestas, sobre 100">
+            <div class="marcador__item marcador__item--gana">
+              <p class="marcador__rotulo">Odoo + OP 2.1</p>
+              <p class="marcador__valor">65,2<span> / 100</span></p>
+              <span class="marcador__barra" style="--v:65.2" aria-hidden="true"></span>
+              <p class="marcador__nota">Recomendada</p>
+            </div>
+            <div class="marcador__item">
+              <p class="marcador__rotulo">Contabilium + OP 2.1 + Google Drive</p>
+              <p class="marcador__valor">58,8<span> / 100</span></p>
+              <span class="marcador__barra" style="--v:58.8" aria-hidden="true"></span>
+              <p class="marcador__nota">Alternativa más barata</p>
+            </div>
+          </div>
+          <div class="grid grid--3" style="margin-top:var(--sp-8)">
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>La única que lleva la orden a la fábrica</h3>
+              <p>Orden de fabricación e instructivos en la tablet, dentro del mismo sistema, y el stock que se descuenta con cada pedido.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Una diferencia que no es empate</h3>
+              <p>Son 6,5 puntos, más que el margen de 5 que fijamos de antemano. Ninguna propuesta falla un requisito excluyente.</p>
+            </article>
+            <article class="tarjeta tarjeta--oscura">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Lista para la Fase 2</h3>
+              <p>La tienda online viene en la licencia y queda unida al mismo stock. Factura con ARCA y lleva la contabilidad desde la Fase 1.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="cumplimiento">
+        <div class="wrap">
+          <p class="etiqueta">Cuánto cumple cada una</p>
+          <h2 class="titular">Odoo gana en lo que importa; Contabilium, en el precio</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            La referencia es «Cumple», el 70 % de cada aspecto. Odoo lo supera en lo funcional y lo
+            técnico, y queda muy por debajo en lo económico.
+          </p>
+          <figure class="pares" role="group" aria-label="Cumplimiento por aspecto de las dos propuestas, en porcentaje" style="--ref:70"><figcaption class="pares__leyenda"><span class="pares__titulo">Por aspecto</span><span><i class="pares__muestra" aria-hidden="true"></i>Odoo + OP 2.1</span><span><i class="pares__muestra pares__muestra--alt" aria-hidden="true"></i>Contabilium + OP 2.1 + Google Drive</span><span><i class="pares__muestra pares__muestra--ref" aria-hidden="true"></i>«Cumple» · 70 %</span></figcaption><dl class="pares__lista"><div class="pares__fila"><dt>Proveedor · 30 %</dt><dd><span class="pares__barra" style="--v:58.8"><span class="pares__valor">58,8 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:50.5"><span class="pares__valor">50,5 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>Funcional · 35 %</dt><dd><span class="pares__barra" style="--v:80.4"><span class="pares__valor">80,4 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:51.2"><span class="pares__valor">51,2 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>Técnico · 15 %</dt><dd><span class="pares__barra" style="--v:93.3"><span class="pares__valor">93,3 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:83.5"><span class="pares__valor">83,5 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>Económico · 20 %</dt><dd><span class="pares__barra" style="--v:27.2"><span class="pares__valor">27,2 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:65.8"><span class="pares__valor">65,8 %</span><span class="sr-only"> Contabilium</span></span></dd></div></dl></figure>
+          <figure class="apiladas" role="group" aria-label="Composición del puntaje total por aspecto"><figcaption class="pares__leyenda"><span><i class="apiladas__muestra apiladas__muestra--0" aria-hidden="true"></i>Proveedor</span><span><i class="apiladas__muestra apiladas__muestra--1" aria-hidden="true"></i>Funcional</span><span><i class="apiladas__muestra apiladas__muestra--2" aria-hidden="true"></i>Técnico</span><span><i class="apiladas__muestra apiladas__muestra--3" aria-hidden="true"></i>Económico</span></figcaption><dl class="apiladas__lista"><div class="apiladas__fila"><dt>Odoo + OP 2.1</dt><dd><span class="apiladas__barra" style="--t:65.10"><span class="apiladas__seg apiladas__seg--0" style="--v:27.04" title="Proveedor: 17,6"><span class="apiladas__num">17,6</span><span class="sr-only"> Proveedor</span></span><span class="apiladas__seg apiladas__seg--1" style="--v:43.16" title="Funcional: 28,1"><span class="apiladas__num">28,1</span><span class="sr-only"> Funcional</span></span><span class="apiladas__seg apiladas__seg--2 apiladas__seg--angosto" style="--v:21.51" title="Técnico: 14,0"><span class="apiladas__num">14,0</span><span class="sr-only"> Técnico</span></span><span class="apiladas__seg apiladas__seg--3 apiladas__seg--chico apiladas__seg--angosto" style="--v:8.29" title="Económico: 5,4"><span class="apiladas__num">5,4</span><span class="sr-only"> Económico</span></span></span><b class="apiladas__total">65,2</b></dd></div><div class="apiladas__fila"><dt>Contabilium + OP 2.1 + Google Drive</dt><dd><span class="apiladas__barra" style="--t:58.80"><span class="apiladas__seg apiladas__seg--0 apiladas__seg--angosto" style="--v:25.85" title="Proveedor: 15,2"><span class="apiladas__num">15,2</span><span class="sr-only"> Proveedor</span></span><span class="apiladas__seg apiladas__seg--1" style="--v:30.44" title="Funcional: 17,9"><span class="apiladas__num">17,9</span><span class="sr-only"> Funcional</span></span><span class="apiladas__seg apiladas__seg--2 apiladas__seg--angosto" style="--v:21.26" title="Técnico: 12,5"><span class="apiladas__num">12,5</span><span class="sr-only"> Técnico</span></span><span class="apiladas__seg apiladas__seg--3 apiladas__seg--angosto" style="--v:22.45" title="Económico: 13,2"><span class="apiladas__num">13,2</span><span class="sr-only"> Económico</span></span></span><b class="apiladas__total">58,8</b></dd></div></dl></figure>
+          <figure class="pares" role="group" aria-label="Cumplimiento por categoría de las dos propuestas, en porcentaje del máximo de cada una" style="--ref:70"><figcaption class="pares__leyenda"><span class="pares__titulo">Por categoría</span><span><i class="pares__muestra" aria-hidden="true"></i>Odoo + OP 2.1</span><span><i class="pares__muestra pares__muestra--alt" aria-hidden="true"></i>Contabilium + OP 2.1 + Google Drive</span><span><i class="pares__muestra pares__muestra--ref" aria-hidden="true"></i>«Cumple» · 70 %</span></figcaption><dl class="pares__lista"><div class="pares__fila"><dt>1.1 Soporte e implementación local</dt><dd><span class="pares__barra" style="--v:60"><span class="pares__valor">60 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:50"><span class="pares__valor">50 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>1.2 Trayectoria y solidez</dt><dd><span class="pares__barra" style="--v:70"><span class="pares__valor">70 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:56"><span class="pares__valor">56 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>1.3 Datos y condiciones de salida</dt><dd><span class="pares__barra" style="--v:40"><span class="pares__valor">40 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:40"><span class="pares__valor">40 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>1.4 Capacitación y documentación</dt><dd><span class="pares__barra" style="--v:70"><span class="pares__valor">70 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:58"><span class="pares__valor">58 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>2.1 Stock y abastecimiento</dt><dd><span class="pares__barra" style="--v:94"><span class="pares__valor">94 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:60"><span class="pares__valor">60 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>2.2 Pedidos, presupuestos y cálculo</dt><dd><span class="pares__barra" style="--v:50"><span class="pares__valor">50 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:44"><span class="pares__valor">44 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>2.3 Producción y conocimiento técnico</dt><dd><span class="pares__barra" style="--v:100"><span class="pares__valor">100 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:40"><span class="pares__valor">40 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>2.4 Indicadores y canal digital</dt><dd><span class="pares__barra" style="--v:84"><span class="pares__valor">84 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:61"><span class="pares__valor">61 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>3.1 Acceso y movilidad</dt><dd><span class="pares__barra" style="--v:95"><span class="pares__valor">95 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:88"><span class="pares__valor">88 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>3.2 Usabilidad</dt><dd><span class="pares__barra" style="--v:100"><span class="pares__valor">100 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:85"><span class="pares__valor">85 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>3.3 Integración y seguridad</dt><dd><span class="pares__barra" style="--v:81"><span class="pares__valor">81 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:75"><span class="pares__valor">75 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>4.1 Inversión inicial</dt><dd><span class="pares__barra" style="--v:40"><span class="pares__valor">40 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:60"><span class="pares__valor">60 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>4.2 Costo recurrente</dt><dd><span class="pares__barra" style="--v:16"><span class="pares__valor">16 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:70"><span class="pares__valor">70 %</span><span class="sr-only"> Contabilium</span></span></dd></div><div class="pares__fila"><dt>4.3 Escalabilidad del costo</dt><dd><span class="pares__barra" style="--v:24"><span class="pares__valor">24 %</span><span class="sr-only"> Odoo</span></span><span class="pares__barra pares__barra--alt" style="--v:70"><span class="pares__valor">70 %</span><span class="sr-only"> Contabilium</span></span></dd></div></dl></figure>
+          <div class="desplegables"><details class="desplegable"><summary>Ver qué se esperaba y qué se obtuvo, aspecto por aspecto</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Aspecto</th><th scope="col">Esperado</th><th scope="col">Obtenido</th><th scope="col">Lectura</th></tr></thead><tbody><tr><th scope="row"><b>Proveedor</b></th><td>70 %</td><td>58,8 %</td><td>Debajo: las visitas a la fábrica se cobran aparte, y la salida depende también de OP 2.1.</td></tr><tr><th scope="row"><b>Funcional</b></th><td>70 %</td><td>80,4 %</td><td>Encima: stock, fabricación e instructivos en un solo sistema; OP 2.1 pasa la lista de materiales directo a Odoo.</td></tr><tr><th scope="row"><b>Técnico</b></th><td>70 %</td><td>93,3 %</td><td>Encima: 100 % web, uso en tablet y APIs abiertas en el plan propuesto.</td></tr><tr><th scope="row"><b>Económico</b></th><td>70 %</td><td>27,2 %</td><td>Muy debajo: el costo a 3 años es 4,3 veces el de la alternativa.</td></tr></tbody></table></div></div></details></div>
+        </div>
+      </div>
+
+      <div class="seccion oscuro" id="costos">
+        <div class="wrap">
+          <p class="etiqueta">Lo que cuesta</p>
+          <h2 class="titular" style="color:var(--blanco)">USD 26.996 en tres años, contra USD 6.240</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            En dólares constantes y sin IVA. La diferencia no está en el software —unos USD 2.700 en
+            tres años— sino en los servicios: la implementación y la conexión con OP 2.1 suman
+            USD 16.480. Contabilium no los cobra porque se configura solo, y en una empresa sin
+            personal de sistemas ese trabajo caería en el equipo.
+          </p>
+          <ul class="datos datos--cuatro" aria-label="Costos principales de Odoo con OP 2.1">
+            <li><span class="datos__valor">18.690</span><span class="datos__rotulo">USD de puesta en marcha</span></li>
+            <li><span class="datos__valor">141</span><span class="datos__rotulo">USD por mes de licencias el primer año; 195 desde el segundo</span></li>
+            <li><span class="datos__valor">~6</span><span class="datos__rotulo">meses de implementación, dentro de la Fase 1</span></li>
+            <li><span class="datos__valor">511</span><span class="datos__rotulo">USD de equipos para la fábrica</span></li>
+          </ul>
+          <figure class="flujo-fondos">
+            <figcaption class="pares__leyenda"><span class="pares__titulo">Flujo de fondos a 3 años</span>
+              <span><i class="pares__muestra" aria-hidden="true"></i>Odoo + OP 2.1</span>
+              <span><i class="pares__muestra pares__muestra--alt" aria-hidden="true"></i>Contabilium + OP 2.1 + Google Drive</span>
+              <span>Barras: costo del período · Líneas: acumulado</span></figcaption>
+            <svg viewBox="0 0 680 310" role="img" aria-labelledby="ff-t ff-d"><title id="ff-t">Flujo de fondos a tres años</title><desc id="ff-d">Costo de cada período y acumulado. Odoo con OP 2.1: Inicio USD 18.690, Año 1 USD 2.208, Año 2 USD 3.049, Año 3 USD 3.049; acumulado USD 26.996. Contabilium con OP 2.1 y Google Drive: Inicio USD 601, Año 1 USD 1.747, Año 2 USD 1.946, Año 3 USD 1.946; acumulado USD 6.240.</desc><g class="ff__ejes"><line x1="64" x2="600" y1="268.0" y2="268.0"/><text x="56" y="272.0" text-anchor="end">0</text><line x1="64" x2="600" y1="186.7" y2="186.7"/><text x="56" y="190.7" text-anchor="end">10.000</text><line x1="64" x2="600" y1="105.3" y2="105.3"/><text x="56" y="109.3" text-anchor="end">20.000</text><line x1="64" x2="600" y1="24.0" y2="24.0"/><text x="56" y="28.0" text-anchor="end">30.000</text></g><rect class="ff__barra" x="97.0" y="116.0" width="30" height="152.0" rx="3"/><rect class="ff__barra ff__barra--alt" x="135.0" y="263.1" width="30" height="4.9" rx="3"/><text class="ff__per" x="131.0" y="290" text-anchor="middle">Inicio</text><rect class="ff__barra" x="231.0" y="250.0" width="30" height="18.0" rx="3"/><rect class="ff__barra ff__barra--alt" x="269.0" y="253.8" width="30" height="14.2" rx="3"/><text class="ff__per" x="265.0" y="290" text-anchor="middle">Año 1</text><rect class="ff__barra" x="365.0" y="243.2" width="30" height="24.8" rx="3"/><rect class="ff__barra ff__barra--alt" x="403.0" y="252.2" width="30" height="15.8" rx="3"/><text class="ff__per" x="399.0" y="290" text-anchor="middle">Año 2</text><rect class="ff__barra" x="499.0" y="243.2" width="30" height="24.8" rx="3"/><rect class="ff__barra ff__barra--alt" x="537.0" y="252.2" width="30" height="15.8" rx="3"/><text class="ff__per" x="533.0" y="290" text-anchor="middle">Año 3</text><polyline class="ff__linea" points="131.0,116.0 265.0,98.0 399.0,73.2 533.0,48.4"/><circle class="ff__punto" cx="131.0" cy="116.0" r="5"/><circle class="ff__punto" cx="265.0" cy="98.0" r="5"/><circle class="ff__punto" cx="399.0" cy="73.2" r="5"/><circle class="ff__punto" cx="533.0" cy="48.4" r="5"/><polyline class="ff__linea ff__linea--alt" points="131.0,263.1 265.0,248.9 399.0,233.1 533.0,217.2"/><circle class="ff__punto ff__punto--alt" cx="131.0" cy="263.1" r="5"/><circle class="ff__punto ff__punto--alt" cx="265.0" cy="248.9" r="5"/><circle class="ff__punto ff__punto--alt" cx="399.0" cy="233.1" r="5"/><circle class="ff__punto ff__punto--alt" cx="533.0" cy="217.2" r="5"/><text class="ff__total" x="547.0" y="38.4">USD 26.996</text><text class="ff__total ff__total--alt" x="547.0" y="205.2">USD 6.240</text></svg>
+          </figure>
+          <figure class="apiladas" role="group" aria-label="Costo total a 3 años por rubro, en dólares"><figcaption class="pares__leyenda"><span><i class="apiladas__muestra apiladas__muestra--0" aria-hidden="true"></i>Puesta en marcha</span><span><i class="apiladas__muestra apiladas__muestra--1" aria-hidden="true"></i>Licencias y abono</span><span><i class="apiladas__muestra apiladas__muestra--2" aria-hidden="true"></i>Internet y línea de respaldo</span></figcaption><dl class="apiladas__lista"><div class="apiladas__fila"><dt>Odoo + OP 2.1</dt><dd><span class="apiladas__barra" style="--t:99.99"><span class="apiladas__seg apiladas__seg--0" style="--v:69.23" title="Puesta en marcha: USD 18.690"><span class="apiladas__num">18.690</span><span class="sr-only"> Puesta en marcha</span></span><span class="apiladas__seg apiladas__seg--1" style="--v:23.56" title="Licencias y abono: USD 6.360"><span class="apiladas__num">6.360</span><span class="sr-only"> Licencias y abono</span></span><span class="apiladas__seg apiladas__seg--2 apiladas__seg--angosto" style="--v:7.21" title="Internet y línea de respaldo: USD 1.946"><span class="apiladas__num">1.946</span><span class="sr-only"> Internet y línea de respaldo</span></span></span><b class="apiladas__total">USD 26.996</b></dd></div><div class="apiladas__fila"><dt>Contabilium + OP 2.1 + Google Drive</dt><dd><span class="apiladas__barra" style="--t:23.11"><span class="apiladas__seg apiladas__seg--0 apiladas__seg--chico apiladas__seg--angosto" style="--v:9.63" title="Puesta en marcha: USD 601"><span class="apiladas__num">601</span><span class="sr-only"> Puesta en marcha</span></span><span class="apiladas__seg apiladas__seg--1 apiladas__seg--angosto" style="--v:59.18" title="Licencias y abono: USD 3.693"><span class="apiladas__num">3.693</span><span class="sr-only"> Licencias y abono</span></span><span class="apiladas__seg apiladas__seg--2 apiladas__seg--angosto" style="--v:31.19" title="Internet y línea de respaldo: USD 1.946"><span class="apiladas__num">1.946</span><span class="sr-only"> Internet y línea de respaldo</span></span></span><b class="apiladas__total">USD 6.240</b></dd></div></dl></figure>
+          <div class="desplegables"><details class="desplegable"><summary>Ver el costo de puesta en marcha</summary><div class="desplegable__cuerpo"><p>La implementación de Birtum cuesta USD 10.880 y la conexión con OP 2.1, USD 5.600. Incluye ventas, contabilidad, facturación, compras, inventario, fabricación, planificación y calidad, en unos seis meses y siete cuotas.</p><div class="tabla-scroll"><table class="tabla tabla--detalle tabla--numeros"><thead><tr><th scope="col">Rubro</th><th scope="col">Odoo + OP 2.1</th><th scope="col">Contabilium + OP 2.1 + Drive</th></tr></thead><tbody><tr><th scope="row"><b>Personal o consultoría adicional</b></th><td>0</td><td>0</td></tr><tr><th scope="row"><b>Implementación, conexión con OP 2.1 y capacitación</b></th><td>16.480</td><td>35</td></tr><tr><th scope="row"><b>Tablet y router 4G</b></th><td>393</td><td>393</td></tr><tr><th scope="row"><b>Disco externo para copias</b></th><td>118</td><td>118</td></tr><tr><th scope="row"><b>Reserva del 10 %</b></th><td>1.699</td><td>55</td></tr><tr><th scope="row"><b>Total (USD, sin IVA)</b></th><td><b>18.690</b></td><td><b>601</b></td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver el abono mensual y los costos de cada año</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Concepto</th><th scope="col">Odoo + OP 2.1</th><th scope="col">Contabilium + OP 2.1 + Drive</th></tr></thead><tbody><tr><th scope="row"><b>Licencias y nube</b></th><td>USD 141 por mes el año 1 y USD 195 desde el año 2</td><td>Plan Pro: USD 103 por mes</td></tr><tr><th scope="row"><b>Usuarios</b></th><td>4 de la empresa y 1 del partner</td><td>Hasta 10</td></tr><tr><th scope="row"><b>Soporte del partner</b></th><td>Póliza bonificada, como condición para firmar</td><td>Sin costo</td></tr></tbody></table></div><div class="tabla-scroll"><table class="tabla tabla--detalle tabla--numeros"><thead><tr><th scope="col">Por año (USD, sin IVA)</th><th scope="col">Odoo año 1</th><th scope="col">Odoo años 2 y 3</th><th scope="col">Contab. año 1</th><th scope="col">Contab. años 2 y 3</th></tr></thead><tbody><tr><th scope="row"><b>Licencias, nube y soporte</b></th><td>1.692</td><td>2.334</td><td>1.231</td><td>1.231</td></tr><tr><th scope="row"><b>Internet y línea de respaldo</b></th><td>516</td><td>715</td><td>516</td><td>715</td></tr><tr><th scope="row"><b>Total</b></th><td><b>2.208</b></td><td><b>3.049</b></td><td><b>1.747</b></td><td><b>1.946</b></td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver el costo total a 3 años, período por período</summary><div class="desplegable__cuerpo"><p>No incluye la licencia propia de OP 2.1, que es igual en las dos, ni la Fase 2. En la Fase 2, la tienda de Odoo viene en la licencia; Contabilium necesitaría sumar Tiendanube.</p><div class="tabla-scroll"><table class="tabla tabla--detalle tabla--numeros"><thead><tr><th scope="col">Período</th><th scope="col">Odoo: costo</th><th scope="col">Odoo: acumulado</th><th scope="col">Contab.: costo</th><th scope="col">Contab.: acumulado</th></tr></thead><tbody><tr><th scope="row"><b>Inicio</b></th><td>18.690</td><td>18.690</td><td>601</td><td>601</td></tr><tr><th scope="row"><b>Año 1</b></th><td>2.208</td><td>20.898</td><td>1.747</td><td>2.348</td></tr><tr><th scope="row"><b>Año 2</b></th><td>3.049</td><td>23.947</td><td>1.946</td><td>4.294</td></tr><tr><th scope="row"><b>Año 3</b></th><td>3.049</td><td>26.996</td><td>1.946</td><td>6.240</td></tr></tbody></table></div></div></details></div>
+        </div>
+      </div>
+
+      <div class="seccion" id="equilibrio">
+        <div class="wrap">
+          <div class="dos-columnas dos-columnas--centrada">
+            <div>
+              <p class="etiqueta">Cuándo conviene</p>
+              <h2 class="titular">Odoo se paga si ahorra más de USD 577 por mes</h2>
+              <div class="articulo" style="margin-top:var(--sp-6)">
+                <p>
+                  Es la diferencia de costo repartida en 36 meses: unos ARS 906.000 por mes al
+                  cambio del 4 de noviembre de 2026. Se compara con lo que mida el registro de
+                  cuatro semanas: compras de urgencia más caras, horas del encargado explicando
+                  cada pedido y material perdido por errores de corte o de stock.
+                </p>
+                <p>
+                  El umbral mira solo la Fase 1. Con la venta online integrada al mismo stock, la
+                  ventaja de Odoo crece en la Fase 2. Si los ahorros no alcanzan, Contabilium es la
+                  opción para empezar, con la configuración a cargo del equipo.
+                </p>
+              </div>
+            </div>
+            <div class="destacado destacado--claro">
+              <p class="destacado__rotulo">Punto de equilibrio</p>
+              <p class="destacado__valor">USD 577 <span>por mes</span></p>
+              <p>USD 20.756 de diferencia en tres años, frente a Contabilium + OP 2.1 + Google Drive.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="brechas-propuesta">
+        <div class="wrap">
+          <p class="etiqueta">Antes de firmar</p>
+          <h2 class="titular">Doce puntos de la propuesta, cada uno con su respuesta</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Son los requisitos donde Odoo con OP 2.1 queda en 40 % o menos y las condiciones de
+            Birtum que cambian el costo o el trabajo de la empresa.
+          </p>
+          <div class="tratamientos"><section class="tratamiento"><header><b>4</b><h3>Se negocian</h3></header><ul><li><b>Implementación y licencias.</b> Precio cerrado de la implementación y un plan de varios años que mantenga el descuento de las licencias.</li><li><b>Soporte después de la puesta en marcha.</b> La póliza de soporte (USD 1.500 por año) bonificada, como condición para firmar.</li><li><b>Visitas a la empresa.</b> Que el relevamiento y la puesta en marcha incluyan visitas.</li><li><b>Contrato.</b> Dejar por escrito la propiedad de los datos y su exportación completa al salir.</li></ul></section><section class="tratamiento"><header><b>5</b><h3>Se aceptan</h3></header><ul><li><b>Moneda.</b> Se paga en pesos al tipo de cambio del Banco Nación.</li><li><b>Licencia por usuario.</b> El precio por usuario ya incluye las aplicaciones de las etapas siguientes.</li><li><b>Costo de crecer.</b> Sumar usuarios cuesta solo la parte proporcional hasta la renovación.</li><li><b>Capacitación a distancia.</b> La capacitación en línea alcanza para el equipo.</li><li><b>Presupuesto en dos sistemas.</b> El cálculo técnico sigue en OP 2.1, que hoy funciona bien.</li></ul></section><section class="tratamiento"><header><b>2</b><h3>Cambian un proceso</h3></header><ul><li><b>Resguardo de OP 2.1.</b> Copia semanal en un disco externo.</li><li><b>Carga de datos.</b> El encargado y la empleada preparan las planillas durante el relevamiento.</li></ul></section><section class="tratamiento"><header><b>1</b><h3>Se resuelve con un desarrollo</h3></header><ul><li><b>Conexión de OP 2.1 con Odoo.</b> Conector por API incluido en la propuesta: USD 5.600, con 90 días de garantía.</li></ul></section></div>
+          <h3 class="subtitulo" style="margin-top:var(--sp-10);color:var(--nucleo)">Equipos y resguardo para la fábrica</h3>
+          <div class="grid grid--3" style="margin-top:var(--sp-5)">
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Tablet y router 4G · USD 393</h3>
+              <p>Una tablet para consultar órdenes e instructivos y un router 4G para la conexión de respaldo. El módem del proveedor ya trae Wi-Fi.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Internet en la fábrica</h3>
+              <p>Fibra de 300 Mbps y una línea de celular de respaldo, con instalación sin costo en la promoción vigente.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__nodo" aria-hidden="true"></span>
+              <h3>Copia semanal · USD 118</h3>
+              <p>Un disco externo para resguardar OP 2.1, que sigue guardando sus datos en la notebook del local.</p>
+            </article>
+          </div>
+          <div class="desplegables"><details class="desplegable"><summary>Ver cómo se trabajó con los proveedores</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Actividad</th><th scope="col">Proveedor</th><th scope="col">Resultado</th></tr></thead><tbody><tr><th scope="row"><b>Consulta y matriz de requisitos</b></th><td>Birtum</td><td>Respondió la matriz y las consultas.</td></tr><tr><th scope="row"><b>Reunión y demostración</b></th><td>Birtum</td><td>Mostró el circuito completo con un caso de prueba —presupuesto, venta, compras por stock mínimo, fabricación, tienda, factura con ARCA y reportes— el 10/11/2026.</td></tr><tr><th scope="row"><b>Propuesta comercial</b></th><td>Birtum</td><td>Propuesta del 12/11/2026, con implementación, conexión con OP 2.1, licencias y soporte.</td></tr><tr><th scope="row"><b>Consulta</b></th><td>Axcelere</td><td>Precios de lista de licencias y nube, que se usan desde el segundo año.</td></tr><tr><th scope="row"><b>Información publicada</b></th><td>Megevand y Contabilium</td><td>Documentación oficial, incluida la API de OP 2.1.</td></tr></tbody></table></div></div></details></div>
+        </div>
+      </div>
+
+      <div class="seccion--corta docs-caso">
+        <div class="wrap docs-caso__inner">
+          <div>
+            <p class="etiqueta">Documentación asociada</p>
+            <p class="docs-caso__texto">
+              Los documentos completos —diagnóstico, cómo funcionan hoy, destino y brechas,
+              alcance y soluciones del mercado— están en una carpeta compartida de Google Drive.
+            </p>
+          </div>
+          <a class="btn btn--secundario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-eleccion">
+            Abrir la documentación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <span class="sr-only">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="panel-nav" aria-label="Recorrido de la propuesta">
+        <div class="wrap panel-nav__inner">
+          <a class="btn btn--secundario-claro panel-nav__anterior" href="#herramienta" data-ir-pestana="herramienta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            <span><span class="sr-only">Anterior: </span>La herramienta</span>
+          </a>
+          <a class="btn btn--primario-claro panel-nav__siguiente" href="#ia" data-ir-pestana="ia">
+            <span><span class="sr-only">Siguiente: </span>Innovación con IA</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ================= 07 · INNOVACIÓN CON IA =================
+         Fuente: oportunidad de innovación con IA generativa; diseño y validación de la solución. -->
+    <section class="panel-caso" id="ia" role="tabpanel" aria-labelledby="tab-ia" tabindex="0" hidden>
+
+      <div class="seccion oscuro" id="ia-oportunidad">
+        <div class="wrap">
+          <div class="dos-columnas">
+            <div>
+              <p class="etiqueta">Innovación con IA</p>
+              <h2 class="titular" style="color:var(--blanco)">Que el saber del encargado quede escrito, sin que tenga que escribirlo</h2>
+              <div class="articulo" style="margin-top:var(--sp-6)">
+                <p>
+                  Cómo se arma cada abertura está en una sola persona. Los operarios le preguntan
+                  todo al encargado, que además compra, planifica y atiende proveedores, y escribir
+                  instructivos a mano le lleva un tiempo que no tiene.
+                </p>
+                <p>
+                  Proponemos que el encargado explique en un audio cómo se arma cada tipo de
+                  abertura y que una IA generativa lo convierta en una ficha clara. Él la revisa y la
+                  aprueba, y la ficha aparece en la orden de la tablet. Si al operario le queda una
+                  duda, un asistente le responde con las fichas y la orden.
+                </p>
+                <p>
+                  Se arma configurando un asistente comercial y funciones que Odoo ya trae: no hace
+                  falta programar.
+                </p>
+              </div>
+            </div>
+            <ul class="datos datos--oscuro" aria-label="La solución en números">
+              <li><span class="datos__valor">8 de 9</span><span class="datos__rotulo">casos de prueba aprobados</span></li>
+              <li><span class="datos__valor">4</span><span class="datos__rotulo">semanas de piloto</span></li>
+              <li><span class="datos__valor">3</span><span class="datos__rotulo">líneas que más se fabrican</span></li>
+              <li><span class="datos__valor">0</span><span class="datos__rotulo">fichas publicadas sin aprobación</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion" id="ia-mapa">
+        <div class="wrap">
+          <p class="etiqueta">Dónde puede ayudar la IA</p>
+          <h2 class="titular">Cuatro oportunidades, y por qué elegimos una</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Buscamos en toda la operación. Las fichas de armado son la de mayor valor: atacan el
+            riesgo más grande de la empresa, cuestan poco y se apoyan en la tablet y en Odoo, que ya
+            llegan con la Fase 1.
+          </p>
+          <div class="oportunidades"><article class="oportunidad oportunidad--elegida">
+        <span class="chip chip--alta">La elegida</span>
+        <h3>Fichas de armado creadas con IA</h3>
+        <p>Menos interrupciones al encargado y armado sin errores</p>
+        <dl><div><dt>Proceso</dt><dd>Fabricación</dd></div><div><dt>Usuarios</dt><dd>Encargado y operarios</dd></div><div><dt>Complejidad</dt><dd>Media</dd></div><div><dt>Alineación</dt><dd>Alta</dd></div></dl>
+      </article><article class="oportunidad">
+        
+        <h3>Cotizador conversacional</h3>
+        <p>Presupuestos preliminares más rápidos y más consultas que terminan en venta</p>
+        <dl><div><dt>Proceso</dt><dd>Ventas y presupuestos</dd></div><div><dt>Usuarios</dt><dd>Empleada del local y clientes</dd></div><div><dt>Complejidad</dt><dd>Media-alta</dd></div><div><dt>Alineación</dt><dd>Media · Fase 2</dd></div></dl>
+      </article><article class="oportunidad">
+        
+        <h3>Asistente para planificar compras</h3>
+        <p>Bajar las compras urgentes del 30 % al 15 %</p>
+        <dl><div><dt>Proceso</dt><dd>Inventario y compras</dd></div><div><dt>Usuarios</dt><dd>Encargado</dd></div><div><dt>Complejidad</dt><dd>Media</dd></div><div><dt>Alineación</dt><dd>Alta</dd></div></dl>
+      </article><article class="oportunidad">
+        
+        <h3>Registro de calidad y postventa con fotos</h3>
+        <p>Detectar fallas repetidas y responder más rápido</p>
+        <dl><div><dt>Proceso</dt><dd>Calidad y postventa</dd></div><div><dt>Usuarios</dt><dd>Encargado y empleada del local</dd></div><div><dt>Complejidad</dt><dd>Media</dd></div><div><dt>Alineación</dt><dd>Media</dd></div></dl>
+      </article></div>
+        </div>
+      </div>
+
+      <div class="seccion" id="ia-flujo">
+        <div class="wrap">
+          <p class="etiqueta">Cómo funciona</p>
+          <h2 class="titular">Del audio del encargado a la tablet del taller</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Los pasos marcados son los que hace la IA; todo lo demás lo decide una persona. Cuando falta un dato, la respuesta del encargado queda guardada y el asistente la reutiliza la próxima vez.
+          </p>
+          <div class="carriles" role="group" aria-label="Flujo de las fichas de armado entre el encargado y el taller">
+            <div class="carriles__carril">
+              <h3 class="carriles__rotulo">Encargado</h3>
+              <ol class="carriles__pasos">
+                <li class="carriles__paso" style="--col:1"><span class="carriles__num">1</span>Graba un audio contando cómo se arma</li>
+                <li class="carriles__paso carriles__paso--friccion" style="--col:2"><span class="carriles__num">2</span>La IA arma la ficha y marca lo que completó<span class="carriles__marca">IA</span></li>
+                <li class="carriles__paso" style="--col:3"><span class="carriles__num">3</span>Revisa y aprueba la ficha</li>
+              </ol>
+            </div>
+            <div class="carriles__carril">
+              <h3 class="carriles__rotulo">Taller</h3>
+              <ol class="carriles__pasos" start="4">
+                <li class="carriles__paso" style="--col:4"><span class="carriles__num">4</span>La ficha aparece en la orden de la tablet</li>
+                <li class="carriles__paso carriles__paso--friccion" style="--col:5"><span class="carriles__num">5</span>El operario pregunta y el asistente responde<span class="carriles__marca">IA</span></li>
+                <li class="carriles__paso" style="--col:6"><span class="carriles__num">6</span>Si falta un dato, deriva al encargado</li>
+              </ol>
+            </div>
+          </div>
+          <div class="grid grid--2" style="margin-top:var(--sp-8)">
+            <article class="tarjeta">
+              <div class="chips"><span class="chip chip--alta">Puede</span></div>
+              <p>Ordenar una explicación oral en una ficha, buscar fichas, responder dudas con las fichas, las respuestas del encargado y la orden —indicando de dónde sale— y proponerle borradores al encargado.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="chips"><span class="chip">No puede</span></div>
+              <p>Calcular ni inventar medidas, cantidades o pasos propios de la empresa, ni publicar una ficha sin aprobación. Las medidas de corte salen siempre de la orden, que llega desde OP 2.1.</p>
+            </article>
+          </div>
+          <div class="desplegables"><details class="desplegable"><summary>Ver por qué IA y no algo más simple</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Alternativa</th><th scope="col">¿Sirve?</th><th scope="col">Por qué no alcanza</th></tr></thead><tbody><tr><th scope="row"><b>Que el encargado escriba los instructivos</b></th><td>Sí</td><td>Le lleva un tiempo que no tiene: es el mismo cuello de botella.</td></tr><tr><th scope="row"><b>Videos grabados en el taller</b></th><td>En parte</td><td>No se pueden buscar ni actualizar por partes, y no responden preguntas.</td></tr><tr><th scope="row"><b>Instrucciones de Odoo sin IA</b></th><td>En parte</td><td>Publican la ficha en la orden, pero no la redactan ni responden dudas.</td></tr><tr><th scope="row"><b>Buscador por palabras clave</b></th><td>En parte</td><td>No entiende preguntas en lenguaje natural.</td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver la relación con Odoo y OP 2.1</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Relación</th><th scope="col">¿Aplica?</th><th scope="col">Cómo</th></tr></thead><tbody><tr><th scope="row"><b>Complementa</b></th><td>Sí</td><td>Las fichas aprobadas se publican como instrucciones de cada operación de la orden.</td></tr><tr><th scope="row"><b>Usa sus datos</b></th><td>Sí</td><td>Las medidas salen de la lista de materiales que OP 2.1 pasa a Odoo; la IA no las calcula.</td></tr><tr><th scope="row"><b>Depende de ellos</b></th><td>Sí</td><td>Necesita la tablet y el internet de la fábrica de la Fase 1.</td></tr><tr><th scope="row"><b>Reemplaza algo</b></th><td>No</td><td>No reemplaza ninguna función del sistema de gestión.</td></tr><tr><th scope="row"><b>Requiere cambios</b></th><td>No</td><td>Usa funciones que Odoo ya trae.</td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver las herramientas y los datos que usa</summary><div class="desplegable__cuerpo"><p>Usa los audios del encargado y las fichas aprobadas. No usa datos de clientes: las fichas describen cómo se arma una abertura, no para quién.</p><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Componente</th><th scope="col">Herramienta</th><th scope="col">Costo</th><th scope="col">Privacidad</th></tr></thead><tbody><tr><th scope="row"><b>Armado de fichas</b></th><td>Asistente comercial (Claude), cuenta gratuita, con instrucciones fijas</td><td>Sin costo</td><td>Configurado para no entrenar con los datos</td></tr><tr><th scope="row"><b>Asistente del taller</b></th><td>El mismo asistente, con las fichas aprobadas como conocimiento</td><td>Sin costo</td><td>Configurado para no entrenar con los datos</td></tr><tr><th scope="row"><b>Publicación en la orden</b></th><td>Odoo, instrucciones por operación</td><td>Incluido en Odoo</td><td>Datos en la nube de Odoo</td></tr><tr><th scope="row"><b>Medidas de corte</b></th><td>OP 2.1 conectado con Odoo</td><td>Incluido</td><td>No se envían al asistente</td></tr></tbody></table></div></div></details></div>
+        </div>
+      </div>
+
+      <div class="seccion oscuro" id="ia-factibilidad">
+        <div class="wrap">
+          <p class="etiqueta">Factibilidad</p>
+          <h2 class="titular" style="color:var(--blanco)">Alto valor, baja complejidad y costo casi nulo</h2>
+          <ul class="factibilidad"><li><span class="chip chip--alta">Alta</span><b>Valor para el negocio</b><span>Ataca el principal riesgo: la dependencia del encargado</span></li><li><span class="chip chip--media">Media</span><b>Información disponible</b><span>Las fichas se crean desde cero con los audios</span></li><li><span class="chip chip--ok">Baja</span><b>Complejidad técnica</b><span>Un asistente comercial y funciones de Odoo; sin programar</span></li><li><span class="chip chip--ok">Bajo</span><b>Costo</b><span>Cuentas gratuitas del asistente</span></li><li><span class="chip chip--media">Medio</span><b>Riesgo de error</b><span>Lo controla la aprobación del encargado</span></li><li><span class="chip chip--media">Media</span><b>Adopción de los operarios</b><span>Voz, botones grandes y fichas cortas</span></li><li><span class="chip chip--media">Medio</span><b>Tiempo del encargado</b><span>Grabar y aprobar lleva mucho menos que escribir</span></li><li><span class="chip chip--alta">Alta</span><b>Alineación</b><span>Responde directo al objetivo de los 10 instructivos</span></li></ul>
+        </div>
+      </div>
+
+      <div class="seccion" id="ia-validacion">
+        <div class="wrap">
+          <p class="etiqueta">La prueba</p>
+          <h2 class="titular">Ocho de nueve casos aprobados</h2>
+          <p class="bajada" style="margin-top:var(--sp-5)">
+            Armamos una demo que recorre la solución completa: la vista del taller, pensada para la
+            tablet, y la del encargado, para su celular. Los nueve casos se corrieron en el modo que
+            funciona en cualquier computadora, sin IA generativa. El que no aprobó —explicar la jerga
+            del taller— es justamente lo que agrega la IA.
+          </p>
+          <ol class="casos" aria-label="Nueve casos de prueba: ocho aprobados"><li class="caso" title="P-01 · Normal: aprobó"><b>P-01</b><span>Normal</span><span class="sr-only">: aprobó</span></li><li class="caso" title="P-02 · Dato incompleto: aprobó"><b>P-02</b><span>Dato incompleto</span><span class="sr-only">: aprobó</span></li><li class="caso caso--no" title="P-03 · Jerga del taller: no aprobó"><b>P-03</b><span>Jerga del taller</span><span class="sr-only">: no aprobó</span></li><li class="caso" title="P-04 · Consulta: aprobó"><b>P-04</b><span>Consulta</span><span class="sr-only">: aprobó</span></li><li class="caso" title="P-05 · Concepto general: aprobó"><b>P-05</b><span>Concepto general</span><span class="sr-only">: aprobó</span></li><li class="caso" title="P-06 · Medida: aprobó"><b>P-06</b><span>Medida</span><span class="sr-only">: aprobó</span></li><li class="caso" title="P-07 · Precio o stock: aprobó"><b>P-07</b><span>Precio o stock</span><span class="sr-only">: aprobó</span></li><li class="caso" title="P-08 · Dato faltante: aprobó"><b>P-08</b><span>Dato faltante</span><span class="sr-only">: aprobó</span></li><li class="caso" title="P-09 · Respuesta reutilizada: aprobó"><b>P-09</b><span>Respuesta reutilizada</span><span class="sr-only">: aprobó</span></li></ol>
+          <div class="desplegables"><details class="desplegable"><summary>Ver los nueve casos de prueba</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col"></th><th scope="col">Tipo</th><th scope="col">Situación</th><th scope="col">Resultado</th><th scope="col">¿Aprobó?</th></tr></thead><tbody><tr><th scope="row"><b>P-01</b></th><td>Normal</td><td>Explicación del paño fijo</td><td>Ficha con 6 pasos, 1 cuidado y la posición de las calzas marcada para revisar</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-02</b></th><td>Dato incompleto</td><td>No dice a qué altura va la cerradura</td><td>Propuso cerca de 1 m del piso, marcado para revisar</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-03</b></th><td>Jerga del taller</td><td>Escuadra, ingletes, termopanel</td><td>Ordenó los pasos, pero no explicó los términos</td><td><span class="chip">No</span></td></tr><tr><th scope="row"><b>P-04</b></th><td>Consulta</td><td>¿Qué va primero, las ruedas o el vidrio?</td><td>Primero las ruedas y después el vidrio; citó la ficha</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-05</b></th><td>Concepto general</td><td>¿Para qué sirven las calzas?</td><td>Lo explicó y lo marcó como conocimiento general</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-06</b></th><td>Medida</td><td>¿Cuánto mide el travesaño?</td><td>4 de 720 mm a 45°, según la orden: no la calculó</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-07</b></th><td>Precio o stock</td><td>¿Cuánto stock de perfiles queda?</td><td>Indicó que se consulta en Odoo</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-08</b></th><td>Dato faltante</td><td>¿Qué hago si la cerradura viene sin llave?</td><td>Derivó la consulta al encargado con la orden</td><td><span class="chip chip--ok">Sí</span></td></tr><tr><th scope="row"><b>P-09</b></th><td>Respuesta reutilizada</td><td>La misma pregunta, ya respondida</td><td>Respondió con lo que dijo el encargado</td><td><span class="chip chip--ok">Sí</span></td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver las hipótesis que valida el piloto</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col"></th><th scope="col">Qué se espera</th></tr></thead><tbody><tr><th scope="row"><b>De valor</b></th><td>Los operarios resuelven al menos 8 de cada 10 dudas de armado sin interrumpir al encargado.</td></tr><tr><th scope="row"><b>Funcional</b></th><td>El encargado aprueba la ficha con correcciones menores en al menos 9 de cada 10 casos.</td></tr><tr><th scope="row"><b>De riesgo</b></th><td>El asistente nunca inventa medidas, cantidades ni pasos: deriva cuando tendría que hacerlo.</td></tr><tr><th scope="row"><b>Métrica principal</b></th><td>Dudas resueltas con la ficha o el asistente sobre el total de dudas.</td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver los riesgos y cómo se controlan</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Riesgo</th><th scope="col">Probabilidad</th><th scope="col">Impacto</th><th scope="col">Cómo se evita</th></tr></thead><tbody><tr><th scope="row"><b>Una ficha con un paso mal explicado</b></th><td>Media</td><td>Alto</td><td>Aprobación obligatoria del encargado antes de publicar.</td></tr><tr><th scope="row"><b>Una respuesta inventada</b></th><td>Media</td><td>Alto</td><td>Nunca inventa datos de la empresa: deriva al encargado y su respuesta queda como conocimiento.</td></tr><tr><th scope="row"><b>Medidas equivocadas</b></th><td>Baja</td><td>Alto</td><td>Las medidas salen de la orden; la IA nunca las calcula.</td></tr><tr><th scope="row"><b>Que los operarios no la usen</b></th><td>Media</td><td>Medio</td><td>Voz, botones grandes y fichas cortas.</td></tr><tr><th scope="row"><b>Fichas desactualizadas</b></th><td>Media</td><td>Medio</td><td>El encargado las revisa al sumar una línea o cambiar de proveedor.</td></tr></tbody></table></div></div></details><details class="desplegable"><summary>Ver quién supervisa cada paso</summary><div class="desplegable__cuerpo"><div class="tabla-scroll"><table class="tabla tabla--detalle"><thead><tr><th scope="col">Etapa</th><th scope="col">Qué hace la IA</th><th scope="col">Qué hace una persona</th></tr></thead><tbody><tr><th scope="row"><b>Creación de la ficha</b></th><td>Ordena el audio y completa lo que falta</td><td>El encargado revisa, corrige y aprueba</td></tr><tr><th scope="row"><b>Publicación</b></th><td>Nada</td><td>El encargado carga la ficha aprobada en Odoo</td></tr><tr><th scope="row"><b>Consulta en el taller</b></th><td>Responde con las fichas, la orden y su conocimiento general</td><td>El encargado responde lo derivado</td></tr><tr><th scope="row"><b>Mantenimiento</b></th><td>Nada</td><td>El encargado revisa las fichas al cambiar una línea</td></tr></tbody></table></div></div></details></div>
+          <div class="aviso">
+            <p class="aviso__rotulo">Nuestra recomendación</p>
+            <p>
+              Un piloto de cuatro semanas con las tres líneas que más se fabrican antes de decidir.
+              La solución resuelve el problema con bajo costo y riesgos controlados, pero su valor
+              depende de que el encargado grabe las fichas y de que los operarios usen la tablet, y
+              eso solo se confirma en el uso real. Con el resultado, se extienden las fichas hasta
+              los diez procedimientos del objetivo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion--corta docs-caso">
+        <div class="wrap docs-caso__inner">
+          <div>
+            <p class="etiqueta">Documentación asociada</p>
+            <p class="docs-caso__texto">
+              Los documentos completos —diagnóstico, cómo funcionan hoy, destino y brechas,
+              alcance y soluciones del mercado— están en una carpeta compartida de Google Drive.
+            </p>
+          </div>
+          <a class="btn btn--secundario-claro" href="https://drive.google.com/drive/folders/1efyWxGFbtdM_4VKYXAYQighAmCfCRTvy?usp=sharing" target="_blank" rel="noopener" data-cta="documentacion-ia">
+            Abrir la documentación
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <span class="sr-only">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="panel-nav" aria-label="Recorrido de la propuesta">
+        <div class="wrap panel-nav__inner">
+          <a class="btn btn--secundario-claro panel-nav__anterior" href="#eleccion" data-ir-pestana="eleccion">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            <span><span class="sr-only">Anterior: </span>La elección</span>
           </a>
         </div>
       </nav>
