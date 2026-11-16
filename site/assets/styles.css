@@ -1276,6 +1276,12 @@ button { font: inherit; }
 .cuadrante p:not([class]) { color: var(--gris); }
 .cuadrante--fuerte p:not([class]) { color: var(--blanco-suave); }
 .cuadrante__nada { color: var(--gris); }
+/* Participante de menor peso dentro de un cuadrante. */
+.cuadrante__secundario {
+  margin-top: auto; padding-top: var(--sp-3); border-top: 1px solid var(--borde-claro);
+  font-size: 0.875rem; color: var(--gris); line-height: 1.45;
+}
+.cuadrante__secundario b { font-weight: 500; color: var(--nucleo); }
 .cuadrante ul { display: grid; gap: var(--sp-3); }
 .cuadrante li { color: var(--gris); line-height: 1.45; }
 .cuadrante li b { font-weight: 500; color: var(--nucleo); }
@@ -1675,8 +1681,16 @@ button { font: inherit; }
   font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--senal);
 }
+/* Hitos pendientes: nodo hueco. Los cumplidos llevan una marca. */
+.linea-hitos li:not([data-cumplido])::before { background: transparent; box-shadow: inset 0 0 0 2px var(--senal); }
+.linea-hitos li:last-child:not([data-cumplido])::before { box-shadow: inset 0 0 0 2px var(--pulso); }
+.linea-hitos__estado {
+  justify-self: start;
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--senal);
+}
 @media (min-width: 768px) {
-  .linea-hitos li { grid-template-columns: 110px 130px minmax(0, 1fr); align-items: baseline; gap: var(--sp-4); }
+  .linea-hitos li { grid-template-columns: 110px 130px minmax(0, 1fr) auto; align-items: baseline; gap: var(--sp-4); }
 }
 
 /* Gráfico araña de tres estados. */
