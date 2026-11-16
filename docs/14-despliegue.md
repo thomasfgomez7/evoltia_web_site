@@ -2,13 +2,13 @@
 
 > **Estado: noviembre de 2026.** El sitio está desplegado en GitHub Pages (`https://thomasfgomez7.github.io/evoltia_web_site/`) desde la rama `main`, con el repositorio público. `main` está protegida y exige una aprobación por pull request; se trabaja en `develop`. El dominio previsto es `evoltia.com`, todavía sin configurar en Pages.
 
-**Contexto:** proyecto universitario, no productivo. Sin datos reales, sin necesidad de backend para el formulario y sin requisitos de seguridad. Eso cambia por completo qué plataforma conviene.
+**Contexto:** un sitio estático de tres páginas, sin backend para el formulario y sin datos de usuarios que custodiar. Eso define qué plataforma conviene.
 
 ## Recomendación: GitHub Pages
 
 | | GitHub Pages | Vercel | Cloudflare Pages |
 |---|---|---|---|
-| Costo para este caso | **Gratis** | Gratis (Hobby, uso no comercial — **acá sí aplica**) | Gratis |
+| Costo para este caso | **Gratis** | Gratis en el plan Hobby, que es solo para uso no comercial | Gratis |
 | Cuentas necesarias | Solo GitHub | GitHub **+ Vercel** | GitHub **+ Cloudflare** |
 | Servir desde `site/` | Action de 20 líneas (ya incluida) | Nativo por `vercel.json` | Config en el panel |
 | Previsualización por rama | ❌ | ✅ | ✅ |
@@ -17,17 +17,17 @@
 
 ### Por qué GitHub Pages, ahora
 
-1. **El repositorio ya va a estar en GitHub.** Es un trabajo de equipo que se entrega y se comparte; el código vive ahí de todos modos. Pages es una opción dentro del mismo repositorio: no hay una segunda cuenta, ni un permiso OAuth para una empresa, ni un panel más que revisar.
-2. **Menos piezas que se rompen.** El sitio se despliega solo con cada push a `main` y sigue existiendo mientras exista el repo. Un proyecto en Vercel es un objeto aparte que alguien tiene que mantener vinculado; para algo que se entrega y después se consulta cada tanto, es una dependencia de más.
-3. **Las ventajas de Vercel no se usan.** Funciones serverless, cabeceras, ISR, previsualizaciones por PR: nada de eso interviene en una landing estática de una página que se entrega una vez.
-4. **La URL se explica sola.** `usuario.github.io/evoltia-web-site` deja claro que es un trabajo académico, y el repositorio queda a la vista como parte del entregable.
+1. **El repositorio ya está en GitHub.** El código vive ahí de todos modos. Pages es una opción dentro del mismo repositorio: no hay una segunda cuenta, ni un permiso OAuth para una empresa, ni un panel más que revisar.
+2. **Menos piezas que se rompen.** El sitio se despliega solo con cada push a `main` y sigue existiendo mientras exista el repo. Un proyecto en Vercel es un objeto aparte que alguien tiene que mantener vinculado; para un sitio que cambia poco, es una dependencia de más.
+3. **Las ventajas de Vercel no se usan.** Funciones serverless, cabeceras, ISR, previsualizaciones por PR: nada de eso interviene en un sitio estático.
+4. **El dominio propio se suma después.** Pages permite apuntar `evoltia.com` al sitio sin cambiar nada del despliegue.
 
 ### La condición que decide
 
 **GitHub Pages en el plan gratuito solo funciona con repositorios públicos.** Con un repo privado hace falta GitHub Pro o Team.
 
-- ¿El repo puede ser **público**? → **GitHub Pages.** Para un trabajo universitario suele ser preferible: es material de portafolio.
-- ¿Tiene que ser **privado**? → **Vercel.** El plan Hobby permite repos privados y, al no ser uso comercial, es gratuito y legítimo. Haría falta crear un `vercel.json` con `outputDirectory: site`; el repo hoy no lo incluye.
+- ¿El repo puede ser **público**? → **GitHub Pages.**
+- ¿Tiene que ser **privado**? → **Vercel.** El plan Hobby permite repos privados, pero es solo para uso no comercial; un sitio de empresa necesita el plan pago. Haría falta crear un `vercel.json` con `outputDirectory: site`; el repo hoy no lo incluye.
 
 Cloudflare Pages queda como tercera opción: es perfectamente válida, pero no aporta nada que las otras dos no resuelvan y suma una cuenta más.
 

@@ -60,8 +60,8 @@ La palabra que hace el trabajo es **dirección**, y tiene dos sentidos ciertos a
 
 ## Qué queda abierto
 
-1. **«¿Cuánto cuesta?»**, la única pregunta frecuente sin publicar: falta definir cómo cobra Evoltia y si se publica un precio o un rango.
-2. **Lavanda** no tiene HEX oficial: el manual la nombra pero no la tabula. Se usa `#CEC4E8`, muestreado del hero.
-3. **Imagen para compartir en redes** (`og:image`): la home apunta a un archivo que todavía no existe.
+1. **Largo de la propuesta para Aberturas FISA:** las pestañas son extensas y conviene revisar si se pueden recortar.
+
+No se va a agregar imagen para compartir en redes, y el sitio no publica precios.
 
 Detalle en el [README](../README.md).

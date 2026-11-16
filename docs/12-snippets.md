@@ -95,7 +95,7 @@ export function ServiceCard({
 .dark        { background: var(--superficie-oscura); border-color: var(--borde-oscuro); }
 .dark .nodo  { background: var(--senal); }
 .dark .title { color: var(--blanco); }
-.dark .body  { color: var(--lavanda); }
+.dark .body  { color: var(--blanco-suave); }
 
 .link { transition: border-color 150ms var(--ease); }
 .link:hover { border-color: var(--senal); }

@@ -153,7 +153,7 @@ Las cuatro etapas vienen de la pieza `post-03-metodo`, con dos cambios pedidos p
 | ¿Hace falta tener sistemas antes de empezar? | No. En muchos casos el punto de partida son planillas y mensajería. Eso no es un obstáculo: nos muestra cómo funciona hoy tu operación. | Derivado |
 | ¿Desarrollan software propio? | No. Trabajamos con proveedores: elegimos con vos la herramienta del mercado que mejor resuelve el problema, la integramos y la dejamos funcionando con tu equipo. | Confirmado por el cliente |
 
-**Pregunta sin publicar: «¿Cuánto cuesta?».** Para responderla falta que el cliente defina cómo cobra Evoltia (por proyecto a precio cerrado, por etapa o por hora) y si el discovery tiene un precio o un rango que se pueda publicar. Si se decide no publicar precios, este pendiente se cierra.
+El sitio no publica precios: la pregunta «¿Cuánto cuesta?» del plan original se descartó.
 
 No se publica el JSON-LD `FAQPage`.
 
