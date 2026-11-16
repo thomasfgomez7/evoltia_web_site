@@ -22,7 +22,7 @@ La paleta se leyó del logo original. Va del violeta más profundo, que sostiene
 
 ### Solo los colores del manual
 
-**Regla del sitio, pedida por el cliente: todo color sale de los ocho de la tabla.** Lo que el manual no tabula se obtiene con transparencia sobre uno de ellos o mezclando dos, nunca con un valor nuevo. `styles.css` no contiene ningún otro HEX.
+**Regla del sitio, pedida por el cliente: todo color sale de los ocho de la tabla.** Lo que el manual no tabula se obtiene con transparencia sobre uno de ellos o mezclando dos, nunca con un valor nuevo. La única excepción, aprobada por el cliente, es el rojo de error del formulario (`#B3261E`); `styles.css` no contiene ningún otro HEX.
 
 | Necesidad | Token | Cómo se obtiene |
 |---|---|---|
@@ -33,12 +33,12 @@ La paleta se leyó del logo original. Va del violeta más profundo, que sostiene
 | Tarjetas sobre fondo oscuro | `--superficie-oscura` | Núcleo con 16 % de Órbita |
 | Degradé | `--degrade` | Tinta → Núcleo → Órbita |
 | Pasos intermedios de la cadena y de las prioridades | — | Mezcla de dos colores vecinos (`color-mix`) |
-| Error del formulario | `--error` | Núcleo, con borde de 2 px |
+| Error del formulario | `--error` | `#B3261E` — excepción aprobada; fondos y bordes, el mismo rojo con transparencia |
 | Éxito del formulario | `--ok` | Órbita |
 
 **Lavanda.** Las reglas rápidas del §03 dicen: *"Sobre fondo oscuro, el texto de cuerpo va en Blanco o **Lavanda**"*, pero Lavanda no está en la tabla de paleta ni en ninguna otra página del manual. Hasta noviembre de 2026 el sitio usó `#CEC4E8`, muestreado de la imagen del hero. Se reemplazó por la otra opción que da la misma regla, el Blanco, atenuado al 80 % para conservar la jerarquía entre titulares y bajadas.
 
-**Estados del formulario.** El manual no define rojo de error ni verde de éxito, así que no se usan. El error se distingue por el ícono, el texto del mensaje y un borde más grueso en Núcleo; no depende del color.
+**Estados del formulario.** El manual no define colores de estado. El cliente aprobó usar rojo para los errores, porque es la convención que cualquier persona reconoce; el éxito va en Órbita. El error tampoco depende solo del color: lleva ícono y mensaje.
 
 ### Combinaciones que el manual no tabula y que la web necesita
 
