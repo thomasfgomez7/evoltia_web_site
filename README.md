@@ -56,7 +56,7 @@ Después, abrir `http://localhost:4321`.
 | **§03** Pulso una sola vez por pieza | Punto del claim, nodo terminal de la cadena y su conector. Nada más |
 | **§03** Fondos grandes en Papel, Blanco solo para superficies apoyadas | `body` en Papel; Blanco solo en tarjetas y en el formulario |
 | **§03** Sobre oscuro, cuerpo en Blanco o Lavanda | Bajadas en Blanco al 80 % (`--blanco-suave`), porque el manual no da HEX para Lavanda; Señal reservado a etiquetas y detalles |
-| **§03** Solo la paleta del manual | Ningún HEX fuera de los ocho: bordes, superficies y estados se obtienen con transparencia o mezcla |
+| **§03** Solo la paleta del manual | Ningún HEX fuera de los ocho, salvo el rojo de error: bordes y superficies se obtienen con transparencia o mezcla |
 | **§04** Escala 96/72/48/32/21/17/12 | **Ningún** tamaño fuera de esa lista en toda la hoja de estilos |
 | **§04** Cuerpo en Light 300 | `body { font-weight: 300 }` |
 | **§04** Etiqueta en mayúsculas con +22 % de tracking | Aperturas de sección, pies de tarjeta, números del método, footer |
@@ -122,7 +122,7 @@ Después, abrir `http://localhost:4321`.
 - **El formulario no tiene backend ni lo tendrá.** Valida y muestra el mensaje de éxito, pero no envía la consulta. El contacto real es `hola@evoltia.com`.
 - **Aberturas FISA autorizó la publicación** y es el único caso: no habrá carrusel ni índice de casos.
 - **Los seis servicios están confirmados.**
-- **Colores: solo los del manual de marca.** Se dejó de usar Lavanda (`#CEC4E8`), que el manual nombra pero no tabula, y los rojos y verdes de estado del formulario.
+- **Colores: solo los del manual de marca.** Se dejó de usar Lavanda (`#CEC4E8`), que el manual nombra pero no tabula. Única excepción aprobada: el rojo de error del formulario (`#B3261E`).
 - **El sitio no publica precios:** se descartó la pregunta «¿Cuánto cuesta?».
 - No se agrega imagen para compartir en redes ni se cambia el mensaje del formulario.
 - **Misión, visión y valores se quedan en la home.**

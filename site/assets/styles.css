@@ -28,9 +28,9 @@
   --borde-oscuro: rgba(255, 255, 255, 0.14);           /* Blanco al 14 % */
   --borde-oscuro-fuerte: rgba(255, 255, 255, 0.45);    /* Blanco al 45 % */
   --superficie-oscura: color-mix(in srgb, var(--orbita) 16%, var(--nucleo));
-  /* El manual no define colores de estado: el error va en Núcleo y el éxito
-     en Órbita. La diferencia la llevan el ícono, el texto y el borde. */
-  --error: var(--nucleo);
+  /* Única excepción a la paleta, aprobada por el cliente: el rojo de error.
+     El manual no define colores de estado; el éxito va en Órbita. */
+  --error: #b3261e;
   --ok: var(--orbita);
 
   /* Tinta → Núcleo → Órbita. El último tope cae fuera del cuadro, así que en
@@ -1832,7 +1832,7 @@ img.miembro__foto { display: block; object-fit: cover; height: auto; }
 .campo textarea { min-height: 120px; resize: vertical; }
 .campo input:hover, .campo textarea:hover, .campo select:hover { border-color: var(--gris); }
 .campo input:focus, .campo textarea:focus, .campo select:focus { background: var(--blanco); border-color: var(--orbita); }
-.campo [aria-invalid="true"] { border-color: var(--error); border-width: 2px; background: rgba(126, 62, 208, 0.06); }
+.campo [aria-invalid="true"] { border-color: var(--error); background: rgba(179, 38, 30, 0.05); }
 .ayuda { font-size: var(--fs-cuerpo); color: var(--gris); }
 
 .campo__error {
@@ -1852,7 +1852,7 @@ img.miembro__foto { display: block; object-fit: cover; height: auto; }
   font-size: var(--fs-cuerpo); font-weight: 400;
 }
 .aviso.visible { display: flex; }
-.aviso--error { background: rgba(126, 62, 208, 0.08); color: var(--error); border: 2px solid var(--error); }
+.aviso--error { background: rgba(179, 38, 30, 0.07); color: var(--error); border: 1px solid rgba(179, 38, 30, 0.3); }
 .aviso--ok { background: rgba(126, 62, 208, 0.08); color: var(--nucleo); border: 1px solid var(--ok); }
 
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
