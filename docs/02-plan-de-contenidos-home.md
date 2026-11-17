@@ -151,9 +151,8 @@ Las cuatro etapas vienen de la pieza `post-03-metodo`, con dos cambios pedidos p
 | ¿Cuánto dura el discovery? | Depende del caso: entre cuatro y seis semanas. Incluye entrevistas con quienes hacen el trabajo, revisión de datos y una hoja de ruta priorizada. Al final tenés un documento listo para presentar en el directorio. | Confirmado por el cliente |
 | ¿Con qué tamaño de empresa trabajan? | Empresas medianas que ya crecieron más de lo que su operación aguanta. Trabajamos con dirección general, operaciones y finanzas: quienes toman las decisiones. | Derivado del §01 |
 | ¿Hace falta tener sistemas antes de empezar? | No. En muchos casos el punto de partida son planillas y mensajería. Eso no es un obstáculo: nos muestra cómo funciona hoy tu operación. | Derivado |
-| ¿Desarrollan software propio? | No. Trabajamos con proveedores: elegimos con vos la herramienta del mercado que mejor resuelve el problema, la integramos y la dejamos funcionando con tu equipo. | Confirmado por el cliente |
 
-El sitio no publica precios: la pregunta «¿Cuánto cuesta?» del plan original se descartó.
+El sitio no publica precios: la pregunta «¿Cuánto cuesta?» del plan original se descartó. También se quitó «¿Desarrollan software propio?»: no hace falta aclararlo.
 
 No se publica el JSON-LD `FAQPage`.
 
