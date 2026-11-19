@@ -76,7 +76,7 @@
         <li><a class="nav__link" href="#mvv">Valores</a></li>
         <li><a class="nav__link" href="#servicios">Qué hacemos</a></li>
         <li><a class="nav__link" href="#metodo">Cómo trabajamos</a></li>
-        <li><a class="nav__link" href="casos/aberturas-fisa/">Clientes</a></li>
+        <li><a class="nav__link" href="#casos">Clientes</a></li>
         <li><a class="nav__link" href="#faq">Preguntas</a></li>
       </ul>
     </nav>
@@ -104,7 +104,7 @@
       <li><a href="#mvv">Valores</a></li>
       <li><a href="#servicios">Qué hacemos</a></li>
       <li><a href="#metodo">Cómo trabajamos</a></li>
-      <li><a href="casos/aberturas-fisa/">Clientes</a></li>
+      <li><a href="#casos">Clientes</a></li>
       <li><a href="#faq">Preguntas</a></li>
     </ul>
   </nav>
@@ -153,51 +153,6 @@
     </div>
   </section>
 
-  <!-- ================= CASOS DE ÉXITO =================
-       Va inmediatamente después del hero porque es el bloque que más peso
-       tiene que cargar en la página. El logo del cliente se apoya sobre una
-       tarjeta Blanca: es el uso que el §03 le da al Blanco sobre Papel, y
-       además resuelve que el archivo del cliente venga con fondo blanco.
-       Toda la tarjeta es clicable mediante el enlace del título (::after). -->
-  <section class="seccion caso-destacado" id="casos" aria-labelledby="casos-t">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="etiqueta" id="casos-t">En qué estamos</p>
-      </div>
-
-      <article class="caso reveal">
-        <div class="caso__marca">
-          <img src="assets/img/clientes/aberturas-fisa.png"
-               width="420" height="133"
-               alt="Aberturas FISA">
-        </div>
-
-        <div class="caso__cuerpo">
-          <p class="caso__sector">Fabricación de aberturas de aluminio · Villa Bosch, Buenos Aires<span class="caso__estado">Propuesta en evaluación</span></p>
-
-          <h2 class="caso__titulo">
-            <a href="casos/aberturas-fisa/" data-cta="caso-aberturas-fisa">
-              Ordenar la operación antes de escalar la venta
-            </a>
-          </h2>
-
-          <p class="caso__texto">
-            La necesidad era vender más, pero el análisis demostró otra prioridad: ordenar
-            primero. Actualmente las órdenes de fabricación impresas se trasladan del local a
-            la fábrica, el stock se controla a ojo y el conocimiento se concentra en una sola
-            persona. Proponemos: un sistema en la nube, ordenar la operación y, cuando la
-            fábrica pueda acompañarla, abrir la venta online.
-          </p>
-
-          <span class="caso__cta">
-            Ver la propuesta
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </div>
-      </article>
-    </div>
-  </section>
-
   <!-- ================= EL PROBLEMA ================= -->
   <!-- ================= MISIÓN, VISIÓN Y VALORES =================
        El titular sale de la glosa que el manual hace del claim (§07):
@@ -209,9 +164,6 @@
       <div class="reveal">
         <p class="etiqueta">Misión, visión y valores</p>
         <h2 class="titular" id="mvv-t">Hacia dónde vamos y cómo llegamos.</h2>
-
-        <!-- Cadena reducida de tres nodos: separador entre bloques de texto (manual §05) -->
-        <div class="cadena" aria-hidden="true"><i></i><b></b><i></i><b></b><i></i></div>
       </div>
 
       <ul class="mv reveal">
@@ -356,6 +308,51 @@
           <span class="paso__entregable">Equipo capacitado y capacidad instalada</span>
         </li>
       </ol>      
+    </div>
+  </section>
+
+  <!-- ================= CASOS DE ÉXITO =================
+       Va después de «Cómo trabajamos» y antes de las preguntas: primero se
+       explica el método y después se muestra dónde se está aplicando. El logo del cliente se apoya sobre una
+       tarjeta Blanca: es el uso que el §03 le da al Blanco sobre Papel, y
+       además resuelve que el archivo del cliente venga con fondo blanco.
+       Toda la tarjeta es clicable mediante el enlace del título (::after). -->
+  <section class="seccion caso-destacado" id="casos" aria-labelledby="casos-t">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="etiqueta" id="casos-t">En qué estamos</p>
+      </div>
+
+      <article class="caso reveal">
+        <div class="caso__marca">
+          <img src="assets/img/clientes/aberturas-fisa.png"
+               width="420" height="133"
+               alt="Aberturas FISA">
+        </div>
+
+        <div class="caso__cuerpo">
+          <p class="caso__sector">Fabricación de aberturas de aluminio · Villa Bosch, Buenos Aires<span class="caso__estado">Propuesta en evaluación</span></p>
+
+          <h2 class="caso__titulo">
+            <a href="casos/aberturas-fisa/" data-cta="caso-aberturas-fisa">
+              Ordenar la operación antes de escalar la venta
+            </a>
+          </h2>
+
+          <p class="caso__texto">
+            La necesidad era vender más, pero el análisis demostró otra prioridad: ordenar
+            primero. Actualmente las órdenes de fabricación impresas se trasladan del local a
+            la fábrica, el stock se controla a ojo y el conocimiento se concentra en una sola
+            persona. Proponemos: un sistema en la nube, ordenar la operación y, cuando la
+            fábrica pueda acompañarla, abrir la venta online.
+          </p>
+
+          <span class="caso__cta">
+            Ver la propuesta
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </article>
     </div>
   </section>
 

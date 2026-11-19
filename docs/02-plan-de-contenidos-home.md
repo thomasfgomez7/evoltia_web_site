@@ -9,7 +9,7 @@ Todo el copy respeta el §06 (voz y tono) y el §07 (banco de frases) del manual
 **Meta title:** `Evoltia | Consultoría y transformación digital`
 **Meta description:** `Diagnosticamos con datos, priorizamos con criterio de negocio y nos quedamos hasta que el proceso camine solo. Consultoría y transformación digital.`
 
-**Orden de secciones:** Hero → Caso → Misión, visión y valores → Qué hacemos → Cómo trabajamos → Preguntas frecuentes → Contacto → Footer.
+**Orden de secciones:** Hero → Misión, visión y valores → Qué hacemos → Cómo trabajamos → En qué estamos (caso) → Preguntas frecuentes → Contacto → Footer.
 
 **Navegación:** Nosotros · Valores · Qué hacemos · Cómo trabajamos · Clientes · Preguntas, más el botón **Contactanos**. El menú de escritorio se muestra a partir de 1200 px: con seis ítems, no entra en menos.
 
