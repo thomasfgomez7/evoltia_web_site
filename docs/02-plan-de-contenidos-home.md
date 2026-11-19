@@ -55,7 +55,6 @@ El cliente pidió «camine», en subjuntivo; la pieza oficial dice «camina».
 | Campo | Contenido |
 |---|---|
 | Sector | Fabricación de aberturas de aluminio · Villa Bosch, Buenos Aires |
-| Distintivo | Propuesta en evaluación |
 | Título | Ordenar la operación antes de escalar la venta |
 | Texto | La necesidad era vender más, pero el análisis demostró otra prioridad: ordenar primero. Actualmente las órdenes de fabricación impresas se trasladan del local a la fábrica, el stock se controla a ojo y el conocimiento se concentra en una sola persona. Proponemos: un sistema en la nube, ordenar la operación y, cuando la fábrica pueda acompañarla, abrir la venta online. — Texto del cliente |
 | Enlace | Ver la propuesta → `casos/aberturas-fisa/` |
