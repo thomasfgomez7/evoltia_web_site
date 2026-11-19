@@ -246,7 +246,7 @@ button { font: inherit; }
 .nav__lista { display: flex; align-items: center; gap: var(--sp-5); }
 .nav__link {
   display: inline-block; padding: var(--sp-2) var(--sp-1);
-  /* Con cinco ítems, dejar que "Cómo trabajamos" se parta en dos líneas
+  /* Con seis ítems, dejar que "Cómo trabajamos" se parta en dos líneas
      desalinea toda la barra. */
   white-space: nowrap;
   color: var(--blanco-suave); text-decoration: none; font-size: var(--fs-cuerpo); font-weight: 400;
@@ -269,7 +269,7 @@ button { font: inherit; }
   border-radius: var(--r-sm); color: var(--papel); cursor: pointer;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .nav__menu { display: flex; align-items: center; }
   .nav__cta { display: inline-flex; }
   .nav__toggle { display: none; }
@@ -1908,7 +1908,7 @@ img.miembro__foto { display: block; object-fit: cover; height: auto; }
   transform: translateY(110%); transition: transform 250ms var(--ease);
 }
 .cta-flotante.visible { transform: none; }
-@media (min-width: 1100px) { .cta-flotante { display: none; } }
+@media (min-width: 1200px) { .cta-flotante { display: none; } }
 
 /* ---------- Banner de cookies ---------- */
 .cookies {

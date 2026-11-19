@@ -11,7 +11,7 @@
                            (#partida · #operacion · #destino · #propuesta · #herramienta)
 ```
 
-**Navegación:** `Servicios` · `Cómo trabajamos` · `Casos` · `Equipo` · `Preguntas` — botón **Contactanos**. Los cuatro primeros y «Preguntas» son anclas de la home; «Casos» lleva a la tarjeta del caso.
+**Navegación:** `Nosotros` · `Valores` · `Qué hacemos` · `Cómo trabajamos` · `Clientes` · `Preguntas` — botón **Contactanos**. «Nosotros» lleva a `/nosotros/`; «Clientes», directo a `/casos/aberturas-fisa/`, porque es el único caso. «Valores», «Qué hacemos», «Cómo trabajamos» y «Preguntas» son anclas de la home (`#mvv`, `#servicios`, `#metodo` y `#faq`).
 
 No hay más páginas. Servicios, método, preguntas y contacto son secciones de la home. No habrá índice de casos: Aberturas FISA es el único.
 
