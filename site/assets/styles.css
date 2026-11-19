@@ -958,20 +958,6 @@ button { font: inherit; }
 .docs-caso .btn svg { transition: transform 150ms var(--ease); }
 .docs-caso .btn:hover svg { transform: translate(2px, -2px); }
 
-/* Distintivo del estado de la propuesta en la tarjeta de la home. */
-.caso__estado {
-  display: inline-block; margin-left: var(--sp-3); padding: 2px 10px; border-radius: var(--r-pill);
-  background: rgba(169, 110, 252, 0.22); color: var(--senal);
-  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-}
-
-/* El estado de la propuesta, en la ficha de cabecera. */
-.estado {
-  display: inline-block; padding: 3px 12px; border-radius: var(--r-pill);
-  background: var(--nucleo); color: var(--blanco);
-  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-}
-
 /* ---------- Pie de cada pestaña: anterior y siguiente ---------- */
 .panel-nav { padding-block: var(--sp-7); background: var(--papel); border-top: 1px solid var(--borde-claro); }
 .panel-nav__inner { display: flex; flex-wrap: wrap; gap: var(--sp-4); justify-content: space-between; }
