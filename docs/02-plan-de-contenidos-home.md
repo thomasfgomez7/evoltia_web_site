@@ -11,7 +11,7 @@ Todo el copy respeta el §06 (voz y tono) y el §07 (banco de frases) del manual
 
 **Orden de secciones:** Hero → Caso → Misión, visión y valores → Qué hacemos → Cómo trabajamos → Preguntas frecuentes → Contacto → Footer.
 
-**Navegación:** Servicios · Cómo trabajamos · Casos · Equipo · Preguntas, más el botón **Contactanos**. El menú de escritorio se muestra a partir de 1100 px.
+**Navegación:** Nosotros · Valores · Qué hacemos · Cómo trabajamos · Clientes · Preguntas, más el botón **Contactanos**. El menú de escritorio se muestra a partir de 1200 px: con seis ítems, no entra en menos.
 
 ---
 
