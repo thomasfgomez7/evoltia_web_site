@@ -781,6 +781,13 @@ button { font: inherit; }
   border-bottom: 2px solid var(--nucleo);
 }
 .horizonte__cabecera h3 { font-size: var(--fs-sub); font-weight: 500; color: var(--nucleo); }
+/* Hacia dónde crecer: qué se logra, para quién y por qué canal, en cada fase. */
+.crecer { display: grid; gap: var(--sp-4); margin-top: var(--sp-4); }
+.crecer dt {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--nucleo);
+}
+.crecer dd { margin: var(--sp-1) 0 0; color: var(--gris); line-height: 1.65; }
 .horizonte__plazo {
   font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--orbita);
