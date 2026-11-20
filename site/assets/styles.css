@@ -2348,3 +2348,17 @@ html.bloqueado .candado {
 }
 .foto__grupo--aislado { background: var(--blanco); border: 1.5px dashed var(--orbita); }
 .foto__grupo--aislado h4 { font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--orbita); }
+/* Destino: marcas de Nuevo y Mejora sobre cada cuadro, y lo que sigue igual, punteado. */
+.foto__item { position: relative; }
+.foto__item .arq__marca { position: absolute; top: -9px; right: 10px; }
+.foto__items:has(.arq__marca) { row-gap: var(--sp-4); }
+.foto__item--igual { background: transparent; border-style: dashed; }
+.foto__item--igual b { color: var(--gris); }
+.foto__apps li { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0 var(--sp-2); }
+.foto__apps .arq__marca { margin-right: 2px; }
+.foto__apps .foto__app--clave { background: var(--nucleo); border-color: var(--nucleo); color: var(--blanco-suave); }
+.foto__apps .foto__app--clave b { color: var(--blanco); }
+.foto__apps .foto__app--igual { border: 1.5px dashed var(--gris); background: transparent; }
+.foto__apps .foto__app--igual b { color: var(--gris); }
+.foto__grupo--central { background: var(--blanco); border: 1.5px solid var(--orbita); }
+.foto__grupo--central h4 { font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--orbita); }
