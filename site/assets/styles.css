@@ -979,14 +979,18 @@ button { font: inherit; }
 
 /* Nuevo modelo de gestión: hoy (una tarjeta) → destino (cuatro tarjetas). */
 .modelo { display: grid; gap: var(--sp-5); margin-top: var(--sp-8); align-items: start; }
-/* Con «Cómo» y «Se mide con» las tarjetas del destino necesitan ancho: las tres
-   columnas recién desde 1200 px; antes, hoy arriba y el destino abajo. */
+/* Las tarjetas del destino necesitan ancho: las tres columnas recién desde 1200 px;
+   antes, hoy arriba y el destino abajo. */
 @media (min-width: 1200px) { .modelo { grid-template-columns: minmax(0, 1fr) auto minmax(0, 2fr); gap: var(--sp-6); } }
 .modelo__rotulo {
   font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--orbita); margin-bottom: var(--sp-4);
 }
 .modelo__hoy h3 { margin-bottom: var(--sp-4); }
+/* El rótulo de «Hoy» va fuera de la tarjeta, como el del destino: así las dos columnas
+   arrancan a la misma altura y la tarjeta acompaña el alto de las cuatro del destino. */
+.modelo__actual { display: flex; flex-direction: column; }
+@media (min-width: 1200px) { .modelo { align-items: stretch; } .modelo__hoy { flex: 1; } }
 .modelo__lista { display: grid; gap: var(--sp-2); }
 .modelo__lista li { position: relative; padding-left: var(--sp-5); color: var(--gris); line-height: 1.5; }
 .modelo__lista li::before {
@@ -1082,9 +1086,11 @@ button { font: inherit; }
   font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
 }
 .madurez__marca--meta { border-top-style: dashed; color: var(--senal); }
+.madurez__desc { font-size: 0.875rem; line-height: 1.4; opacity: 0.85; }
 @media (max-width: 639px) {
   .madurez__escala { grid-template-columns: minmax(0, 1fr); }
-  .madurez__escala li { flex-direction: row; align-items: baseline; gap: var(--sp-3); padding: var(--sp-3) var(--sp-4); }
+  .madurez__escala li { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: var(--sp-1) var(--sp-3); padding: var(--sp-3) var(--sp-4); }
+  .madurez__desc { order: 3; flex-basis: 100%; }
   .madurez__escala li:first-child { border-radius: var(--r-md) var(--r-md) 0 0; }
   .madurez__escala li:last-child { border-radius: 0 0 var(--r-md) var(--r-md); }
   .madurez__marca { position: static; margin-left: auto; padding: 0; border: 0; text-align: right; }
