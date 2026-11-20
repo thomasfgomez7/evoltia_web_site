@@ -978,8 +978,10 @@ button { font: inherit; }
 .aviso p:last-child { color: var(--tinta); }
 
 /* Nuevo modelo de gestión: hoy (una tarjeta) → destino (cuatro tarjetas). */
-.modelo { display: grid; gap: var(--sp-5); margin-top: var(--sp-8); align-items: center; }
-@media (min-width: 1024px) { .modelo { grid-template-columns: minmax(0, 1fr) auto minmax(0, 2fr); gap: var(--sp-6); } }
+.modelo { display: grid; gap: var(--sp-5); margin-top: var(--sp-8); align-items: start; }
+/* Con «Cómo» y «Se mide con» las tarjetas del destino necesitan ancho: las tres
+   columnas recién desde 1200 px; antes, hoy arriba y el destino abajo. */
+@media (min-width: 1200px) { .modelo { grid-template-columns: minmax(0, 1fr) auto minmax(0, 2fr); gap: var(--sp-6); } }
 .modelo__rotulo {
   font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--orbita); margin-bottom: var(--sp-4);
@@ -991,8 +993,9 @@ button { font: inherit; }
   content: ""; position: absolute; left: 0; top: 0.6em;
   width: 7px; height: 7px; border-radius: 50%; background: var(--orbita);
 }
-.modelo__flecha { justify-self: center; font-size: 2rem; line-height: 1; color: var(--orbita); rotate: 90deg; }
-@media (min-width: 1024px) { .modelo__flecha { rotate: none; } }
+.modelo__flecha { justify-self: center; align-self: center; font-size: 2rem; line-height: 1; color: var(--orbita); rotate: 90deg; }
+@media (min-width: 1200px) { .modelo__flecha { rotate: none; } }
+.modelo .tarjeta .crecer { margin-top: var(--sp-5); padding-top: var(--sp-4); border-top: 1px solid var(--borde-claro); }
 
 /* Valores declarados: una fila de chips, sin tarjetas. */
 .valores-fila { margin-top: var(--sp-8); }
