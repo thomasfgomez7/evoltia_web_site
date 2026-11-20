@@ -4,6 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Propuesta para Aberturas FISA | Evoltia</title>
+<meta name="robots" content="noindex, nofollow">
+<!-- Acceso con contraseña. El sitio es estático y sin servidor, así que esto es
+     una pantalla que tapa la página, no una protección real: el contenido sigue
+     en el código fuente y en el repositorio público. Antes de pintar se marca
+     <html> como bloqueado, salvo que la contraseña ya se haya ingresado en esta
+     sesión del navegador. El formulario está al inicio de <body>. -->
+<script>
+  (function () {
+    var abierto = false;
+    try { abierto = sessionStorage.getItem('fisa-acceso') === '1'; } catch (e) {}
+    if (!abierto) document.documentElement.classList.add('bloqueado');
+  })();
+</script>
 <meta name="description" content="Propuesta de consultoría de Evoltia para Aberturas FISA: lo que entendimos del negocio, la arquitectura destino, el alcance por fases y las soluciones preseleccionadas.">
 <link rel="icon" href="../../assets/img/isotipo-color.png" sizes="297x281">
 <link rel="icon" href="../../assets/img/isotipo-principal.svg" type="image/svg+xml">
@@ -41,6 +54,23 @@
 </head>
 
 <body>
+<div class="candado" id="candado">
+  <form class="form candado__form" id="candado-form" novalidate>
+    <img class="candado__logo" src="../../assets/img/evoltia-principal.svg" width="789" height="290" alt="Evoltia">
+    <div>
+      <p class="candado__etiqueta">Propuesta confidencial</p>
+      <h1 class="candado__titulo">Aberturas FISA</h1>
+      <p class="candado__texto">Para ver la propuesta, ingresá la contraseña que te compartimos.</p>
+    </div>
+    <div class="campo">
+      <label for="candado-clave">Contraseña</label>
+      <input id="candado-clave" name="clave" type="password" autocomplete="current-password" required aria-describedby="candado-error">
+      <p class="campo__error" id="candado-error" role="alert"></p>
+    </div>
+    <button class="btn btn--primario-claro btn--bloque" type="submit">Ingresar</button>
+  </form>
+</div>
+
 <a class="saltar" href="#main">Saltar al contenido principal</a>
 
 <!-- ================= NAV ================= -->
@@ -2205,6 +2235,45 @@
   </div>
 </footer>
 
+<script>
+  /* Valida la contraseña del candado. Se compara el SHA-256 para no dejar la
+     contraseña escrita en el código; no la vuelve secreta, solo evita leerla
+     de un vistazo. */
+  (function () {
+    var HASH = 'da25f6dcce0a511cff4c04dc9bacd7b777261df69140bb8e023fd6633cfd92f9';
+    var raiz = document.documentElement;
+    var form = document.getElementById('candado-form');
+    var campo = document.getElementById('candado-clave');
+    var error = document.getElementById('candado-error');
+    if (!raiz.classList.contains('bloqueado')) return;
+    campo.focus();
+
+    function mostrarError(texto) {
+      error.textContent = texto;
+      error.classList.add('visible');
+      campo.setAttribute('aria-invalid', 'true');
+      campo.select();
+    }
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var clave = campo.value.trim();
+      if (!clave) { mostrarError('Ingresá la contraseña.'); return; }
+      if (!window.crypto || !crypto.subtle) { mostrarError('Este navegador no puede validar la contraseña. Probá con otro.'); return; }
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(clave)).then(function (buf) {
+        var hex = Array.prototype.map.call(new Uint8Array(buf), function (b) {
+          return ('0' + b.toString(16)).slice(-2);
+        }).join('');
+        if (hex !== HASH) { mostrarError('La contraseña no es correcta. Revisala y probá de nuevo.'); return; }
+        try { sessionStorage.setItem('fisa-acceso', '1'); } catch (e) {}
+        raiz.classList.remove('bloqueado');
+        window.scrollTo(0, 0);
+        var main = document.getElementById('main');
+        if (main) { main.setAttribute('tabindex', '-1'); main.focus({ preventScroll: true }); }
+      });
+    });
+  })();
+</script>
 <script src="../../assets/main.js?v=28" defer></script>
 </body>
 </html>
