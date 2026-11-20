@@ -654,10 +654,15 @@
 
       <div class="seccion" id="arquitectura-actual">
         <div class="wrap">
+          <p class="bajada" style="margin-bottom:var(--sp-10)">
+            Para entender cómo funciona hoy la empresa usamos la arquitectura empresarial: una
+            mirada que la ordena en cuatro capas, que son los procesos, los datos, las aplicaciones
+            y la tecnología. Conocer bien el punto de partida es lo que permite definir a dónde ir.
+          </p>
           <div class="dos-columnas">
             <div>
               <p class="etiqueta">Cómo funcionan hoy</p>
-              <h2 class="titular">Doce procesos que funcionan sin estar escritos</h2>
+              <h2 class="titular">Mapa de procesos</h2>
               <div class="articulo" style="margin-top:var(--sp-6)">
                 <p>
                   Identificamos doce procesos, desde la dirección hasta la postventa. Ninguno está
@@ -701,16 +706,97 @@
       <div class="seccion" id="cuatro-capas">
         <div class="wrap">
           <p class="etiqueta">La foto completa</p>
-          <h2 class="titular">Las cuatro capas de la empresa, hoy</h2>
+          <h2 class="titular">Arquitectura empresarial actual</h2>
           <p class="bajada" style="margin-top:var(--sp-5)">
             Los procesos, las aplicaciones, los datos y los equipos, de un vistazo. Cada capa se
             apoya en la de abajo, y hoy ninguna está conectada con las otras.
           </p>
-          <div class="arq" role="group" aria-label="Arquitectura actual en cuatro capas">
-            <section class="arq__capa"><header class="arq__rotulo"><b>Negocio</b><span>12 procesos, ninguno escrito</span></header><div><ul class="arq__items"><li class="arq__item"><b>Estratégicos</b><span>Dirección y decisiones, por experiencia</span></li><li class="arq__item"><b>Operativos</b><span>Venta, compras, recepción, fabricación, entrega y postventa</span></li><li class="arq__item"><b>De apoyo</b><span>Administración, stock, saber técnico y equipos</span></li></ul></div></section>
-            <section class="arq__capa"><header class="arq__rotulo"><b>Aplicaciones</b><span>7 aplicaciones, ninguna conectada</span></header><div><ul class="arq__items"><li class="arq__item"><b>OP 2.1</b><span>Cálculo de materiales y despiece</span></li><li class="arq__item"><b>Excel</b><span>Caja, para el estudio contable</span></li><li class="arq__item"><b>WhatsApp</b><span>Consultas y presupuestos</span></li><li class="arq__item"><b>Instagram</b><span>Presencia comercial</span></li><li class="arq__item"><b>Sitio de ARCA</b><span>Facturación manual</span></li><li class="arq__item arq__item--inactivo"><b>Facebook</b><span>Inactivo</span></li><li class="arq__item arq__item--inactivo"><b>Sitio web</b><span>Inactivo</span></li></ul></div></section>
-            <section class="arq__capa"><header class="arq__rotulo"><b>Datos</b><span>7 lugares aislados, sin copias</span></header><div><div class="arq__flujo"><div class="arq__grupo"><p class="arq__grupo-rotulo">Dónde nace</p><ul class="arq__items"><li class="arq__item"><b>WhatsApp e Instagram</b><span>Consultas, medidas y presupuestos sueltos</span></li><li class="arq__item"><b>Agenda del celular</b><span>Contactos de proveedores</span></li></ul></div><span class="arq__flecha" aria-hidden="true">→</span><div class="arq__grupo arq__grupo--central"><p class="arq__grupo-rotulo">Repositorios aislados, sin respaldo</p><ul class="arq__items"><li class="arq__item"><b>Base de OP 2.1</b><span>Pedidos, medidas y cortes en una PC</span></li><li class="arq__item"><b>Planillas en papel</b><span>Viajan a pie a la fábrica</span></li><li class="arq__item"><b>Stock en la fábrica</b><span>Aluminio, vidrio y herrajes, a la vista</span></li><li class="arq__item"><b>Cuaderno y Excel</b><span>Caja diaria, a mano</span></li></ul></div><span class="arq__flecha" aria-hidden="true">→</span><div class="arq__grupo"><p class="arq__grupo-rotulo">A dónde va</p><ul class="arq__items"><li class="arq__item arq__item--clave"><b>Estudio contable</b><span>Recibe el Excel para liquidar impuestos. No hay indicadores de gestión</span></li></ul></div></div></div></section>
-            <section class="arq__capa"><header class="arq__rotulo"><b>Tecnología</b><span>Todo depende de una notebook</span></header><div><ul class="arq__items"><li class="arq__item"><b>Notebook en el local</b><span>Windows 11, 5 años · punto único de falla</span></li><li class="arq__item"><b>Celulares personales</b><span>Atención por WhatsApp e Instagram</span></li><li class="arq__item"><b>Impresora en el local</b><span>Imprescindible para la hoja de corte</span></li><li class="arq__item"><b>Wi-Fi hogareño</b><span>Solo en el local · la fábrica, sin conexión</span></li></ul></div></section>
+          <div class="foto" role="group" aria-label="Arquitectura empresarial actual en cuatro capas">
+            <section class="foto__capa" aria-labelledby="foto-negocio">
+              <h3 class="foto__titulo" id="foto-negocio">Arquitectura de negocio</h3>
+              <div class="foto__negocio">
+                <div class="foto__columna">
+                  <p class="foto__columna-rotulo">Procesos estratégicos</p>
+                  <div class="foto__grupo foto__grupo--alto">
+                    <ul class="foto__items foto__items--uno">
+                      <li class="foto__item"><b>Dirección general</b><span>Socios y encargado (informal)</span></li>
+                      <li class="foto__item"><b>Toma de decisiones</b><span>Por experiencia e intuición, sin KPIs</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="foto__columna foto__columna--operativa">
+                  <p class="foto__columna-rotulo">Procesos operativos</p>
+                  <div class="foto__grupo foto__grupo--alto">
+                    <ul class="foto__items foto__items--dos">
+                      <li class="foto__item"><b>Comercialización y ventas</b><span>Showroom Villa Bosch y redes, sin registro</span></li>
+                      <li class="foto__item"><b>Abastecimiento y compras</b><span>Reactivo por pedido (30&nbsp;% urgencias)</span></li>
+                      <li class="foto__item"><b>Recepción y almacenamiento</b><span>Control visual sin sistema</span></li>
+                      <li class="foto__item"><b>Fabricación</b><span>Hoja de corte impresa en papel e indicaciones verbales del encargado</span></li>
+                      <li class="foto__item"><b>Logística de salida</b><span>Camioneta o flete</span></li>
+                      <li class="foto__item"><b>Servicio postventa</b><span>Reclamos por WhatsApp</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="foto__columna">
+                  <p class="foto__columna-rotulo">Procesos de apoyo</p>
+                  <div class="foto__grupo foto__grupo--alto">
+                    <ul class="foto__items foto__items--dos">
+                      <li class="foto__item foto__item--ancho"><b>Administración y finanzas</b><span>Cuaderno manual de ingresos y egresos, y planilla Excel para el estudio contable</span></li>
+                      <li class="foto__item"><b>Gestión de stock</b><span>Revisión visual a ojo</span></li>
+                      <li class="foto__item"><b>Gestión del conocimiento</b><span>Oral en el encargado</span></li>
+                      <li class="foto__item foto__item--ancho"><b>Infraestructura y TI</b><span>1 PC en local · Fábrica sin PC ni internet</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="foto__capa" aria-labelledby="foto-aplicaciones">
+              <h3 class="foto__titulo" id="foto-aplicaciones">Arquitectura de aplicaciones</h3>
+              <ul class="foto__apps">
+                <li><b>Soft Alcemar OP 2.1</b> (cálculo y despiece)</li>
+                <li><b>Microsoft Excel</b> (caja contable)</li>
+                <li><b>WhatsApp</b> (consultas y presupuestos)</li>
+                <li><b>Instagram</b> (presencia comercial)</li>
+                <li><b>Sitio web de ARCA</b> (facturación manual)</li>
+                <li class="foto__app--inactiva"><b>Facebook</b> (inactivo)</li>
+                <li class="foto__app--inactiva"><b>Sitio web institucional</b> (inactivo)</li>
+              </ul>
+            </section>
+
+            <section class="foto__capa" aria-labelledby="foto-datos">
+              <h3 class="foto__titulo" id="foto-datos">Arquitectura de datos <span>(7 silos fragmentados)</span></h3>
+              <div class="foto__flujo">
+                <ul class="foto__items foto__items--uno foto__items--izq">
+                  <li class="foto__item"><b>WhatsApp / Instagram</b><span>Consultas, medidas y presupuestos dispersos en chats sin trazabilidad.</span></li>
+                  <li class="foto__item"><b>Agenda celular Android</b><span>Contactos de proveedores en el teléfono personal del encargado.</span></li>
+                </ul>
+                <span class="foto__flecha" aria-hidden="true">→</span>
+                <div class="foto__grupo foto__grupo--aislado">
+                  <h4>Repositorios aislados (sin integración ni backup)</h4>
+                  <ul class="foto__items foto__items--dos">
+                    <li class="foto__item"><b>BD Soft Alcemar OP 2.1</b><span>Pedidos, medidas y cortes en 1 PC</span></li>
+                    <li class="foto__item"><b>Planillas en papel</b><span>Traslado físico a pie (2 cuadras)</span></li>
+                    <li class="foto__item"><b>Stock físico en fábrica</b><span>Aluminio, vidrio y herrajes a simple vista</span></li>
+                    <li class="foto__item"><b>Cuaderno + Excel</b><span>Registro manual de caja diaria</span></li>
+                  </ul>
+                </div>
+                <span class="foto__flecha" aria-hidden="true">→</span>
+                <ul class="foto__items foto__items--uno foto__items--izq">
+                  <li class="foto__item foto__item--clave"><b>Estudio contable externo</b><span>Envío manual de planilla Excel para liquidación impositiva.</span><strong>Sin repositorios OLAP ni KPIs gerenciales.</strong></li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="foto__capa" aria-labelledby="foto-tecnologia">
+              <h3 class="foto__titulo" id="foto-tecnologia">Arquitectura tecnológica</h3>
+              <ul class="foto__items foto__items--cuatro foto__items--izq">
+                <li class="foto__item"><b>1 notebook en local</b><span>Windows 11 (5 años) · Punto único de falla</span></li>
+                <li class="foto__item"><b>Smartphones personales</b><span>Android 17 · Atención WhatsApp / IG</span></li>
+                <li class="foto__item"><b>Impresora en local</b><span>Crítica para emitir hojas de corte</span></li>
+                <li class="foto__item"><b>Wi-Fi hogareño (personal)</b><span>Solo en local · Fábrica desconectada</span></li>
+              </ul>
+            </section>
           </div>
         </div>
       </div>
