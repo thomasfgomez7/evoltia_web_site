@@ -977,6 +977,23 @@ button { font: inherit; }
 .aviso__rotulo { font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orbita); margin-bottom: var(--sp-2); }
 .aviso p:last-child { color: var(--tinta); }
 
+/* Nuevo modelo de gestión: hoy (una tarjeta) → destino (cuatro tarjetas). */
+.modelo { display: grid; gap: var(--sp-5); margin-top: var(--sp-8); align-items: center; }
+@media (min-width: 1024px) { .modelo { grid-template-columns: minmax(0, 1fr) auto minmax(0, 2fr); gap: var(--sp-6); } }
+.modelo__rotulo {
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--orbita); margin-bottom: var(--sp-4);
+}
+.modelo__hoy h3 { margin-bottom: var(--sp-4); }
+.modelo__lista { display: grid; gap: var(--sp-2); }
+.modelo__lista li { position: relative; padding-left: var(--sp-5); color: var(--gris); line-height: 1.5; }
+.modelo__lista li::before {
+  content: ""; position: absolute; left: 0; top: 0.6em;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--orbita);
+}
+.modelo__flecha { justify-self: center; font-size: 2rem; line-height: 1; color: var(--orbita); rotate: 90deg; }
+@media (min-width: 1024px) { .modelo__flecha { rotate: none; } }
+
 /* Valores declarados: una fila de chips, sin tarjetas. */
 .valores-fila { margin-top: var(--sp-8); }
 .valores-fila .chip { font-size: var(--fs-etiqueta); }
