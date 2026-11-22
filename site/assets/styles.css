@@ -2362,3 +2362,11 @@ html.bloqueado .candado {
 .foto__apps .foto__app--igual b { color: var(--gris); }
 .foto__grupo--central { background: var(--blanco); border: 1.5px solid var(--orbita); }
 .foto__grupo--central h4 { font-size: var(--fs-etiqueta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--orbita); }
+
+/* Tratamientos: subgrupos dentro de una tarjeta (p. ej., falta negociar / ya acordado) */
+.tratamiento__rotulo {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orbita);
+}
+.tratamiento__rotulo + ul { margin-top: var(--sp-2); }
